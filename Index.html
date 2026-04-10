@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV Scout — Bona Vacantia Property Finder</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;600;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#0d0f0e;color:#e8ede9;min-height:100vh;font-size:14px}
+header{border-bottom:1px solid #252925;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#0d0f0e;z-index:100}
+.logo{font-weight:900;font-size:22px;color:#b8f04a;letter-spacing:2px;text-transform:uppercase}
+.logo span{display:block;font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;font-weight:400;margin-top:2px;letter-spacing:1px}
+.pill{font-family:'DM Mono',monospace;font-size:10px;color:#b8f04a;border:1px solid #b8f04a;border-radius:20px;padding:4px 12px;display:flex;align-items:center;gap:6px}
+.dot{width:6px;height:6px;border-radius:50%;background:#b8f04a;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.wrap{padding:24px 20px 0}
+.label{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.filter-group{display:flex;align-items:center;gap:6px}
+.filter-group label{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;white-space:nowrap}
+select{background:#1c201e;border:1px solid #252925;border-radius:6px;padding:8px 10px;color:#e8ede9;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;cursor:pointer}
+select:focus{border-color:#b8f04a}
+.btn-main{width:100%;background:#b8f04a;color:#0d0f0e;border:none;border-radius:8px;padding:14px;font-weight:700;font-size:15px;cursor:pointer;margin-bottom:14px;transition:background .2s}
+.btn-main:disabled{background:#4a6a1a;cursor:not-allowed}
+.btn-main:hover:not(:disabled){background:#d4ff5c}
+.progress-wrap{margin-bottom:16px}
+.progress-label{font-family:'DM Mono',monospace;font-size:11px;color:#6b7a6d;margin-bottom:6px}
+.progress-bar{height:3px;background:#252925;border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:#b8f04a;transition:width .4s ease}
+.info-box{background:rgba(184,240,74,.06);border:1px solid rgba(184,240,74,.2);border-radius:8px;padding:14px 16px;font-size:13px;color:#9aaa9b;line-height:1.7;margin-bottom:20px}
+.info-box strong{color:#b8f04a}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+.step{background:#141816;border:1px solid #252925;border-radius:8px;padding:16px}
+.step-num{font-weight:900;font-size:28px;color:#252925;line-height:1;margin-bottom:6px}
+.step-title{font-weight:600;font-size:13px;color:#e8ede9;margin-bottom:4px}
+.step-desc{font-size:12px;color:#6b7a6d;line-height:1.5}
+.results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding:0 20px}
+.results-label{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;letter-spacing:2px}
+.results-count{font-family:'DM Mono',monospace;font-size:11px;color:#b8f04a}
+.cards{padding:0 20px 40px}
+.card{background:#161a17;border:1px solid #252925;border-radius:10px;padding:18px 20px;margin-bottom:10px;transition:all .2s;animation:fadeUp .3s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card.open{background:#1c201e;border-color:#b8f04a}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.company-name{font-weight:700;font-size:15px;color:#e8ede9;margin-bottom:3px}
+.company-num{font-family:'DM Mono',monospace;font-size:11px;color:#6b7a6d;margin-bottom:8px}
+.card-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:#6b7a6d}
+.diss-date{color:#f0b84a}
+.card-actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-family:'DM Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.badge-high{background:rgba(184,240,74,.15);color:#b8f04a;border:1px solid rgba(184,240,74,.4)}
+.badge-med{background:rgba(240,184,74,.15);color:#f0b84a;border:1px solid rgba(240,184,74,.4)}
+.badge-sic{background:rgba(255,255,255,.05);color:#6b7a6d;border:1px solid #252925;margin-top:8px}
+.btn-row{display:flex;gap:8px}
+.btn-sm{font-family:'DM Mono',monospace;font-size:11px;padding:7px 14px;border-radius:6px;cursor:pointer;transition:all .15s;border:1px solid #252925;background:transparent;color:#6b7a6d;text-decoration:none;display:inline-block}
+.btn-sm.accent{border-color:#b8f04a;color:#b8f04a}
+.btn-sm:hover,.btn-sm.accent:hover{background:#b8f04a;color:#0d0f0e;border-color:#b8f04a}
+.card-detail{border-top:1px solid #252925;margin-top:16px;padding-top:16px;display:none}
+.card-detail.open{display:block}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}
+.detail-title{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.detail-text{font-size:13px;color:#9aaa9b;line-height:1.6}
+.detail-text a{color:#b8f04a;text-decoration:none}
+.detail-text strong{color:#e8ede9}
+.warn{color:#f0b84a}
+.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid #252925}
+.email-box{position:relative;margin-top:12px;background:#141816;border:1px solid #252925;border-radius:8px;padding:14px;display:none}
+.email-box.open{display:block}
+.email-copy{position:absolute;top:10px;right:10px;font-family:'DM Mono',monospace;font-size:10px;padding:4px 10px;border-radius:4px;border:1px solid #252925;background:#1c201e;color:#6b7a6d;cursor:pointer}
+.email-copy:hover{border-color:#b8f04a;color:#b8f04a}
+.email-text{font-family:'DM Mono',monospace;font-size:11px;color:#e8ede9;line-height:1.7;white-space:pre-wrap}
+.demo-notice{background:rgba(240,184,74,.08);border:1px solid rgba(240,184,74,.3);border-radius:8px;padding:10px 14px;font-family:'DM Mono',monospace;font-size:11px;color:#f0b84a;margin-bottom:12px}
+.empty{text-align:center;padding:48px 0;color:#6b7a6d}
+.empty-icon{font-size:40px;margin-bottom:12px}
+footer{border-top:1px solid #252925;padding:16px 20px;font-family:'DM Mono',monospace;font-size:10px;color:#3a4a3c;line-height:1.6}
+#idle{padding:0 20px 32px}
+#results{display:none}
+#loading{display:none;text-align:center;padding:48px 20px}
+.spinner{width:36px;height:36px;border:2px solid #252925;border-top-color:#b8f04a;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-family:'DM Mono',monospace;font-size:12px;color:#6b7a6d}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">BV Scout<span>Bona Vacantia Property Intelligence</span></div>
+  <div class="pill"><div class="dot"></div>Live — Authenticated</div>
+</header>
+
+<div class="wrap">
+  <div class="label">// Search dissolved property companies — SIC codes included automatically</div>
+  <div class="filters">
+    <div class="filter-group">
+      <label>Location</label>
+      <select id="location">
+        <option value="">All England & Wales</option>
+        <optgroup label="London">
+          <option value="London">London (all)</option>
+          <option value="East London">East London</option>
+          <option value="North London">North London</option>
+          <option value="South London">South London</option>
+          <option value="West London">West London</option>
+          <option value="Central London">Central London</option>
+          <option value="City of London">City of London</option>
+        </optgroup>
+        <optgroup label="London Boroughs">
+          <option value="Hackney">Hackney</option>
+          <option value="Tower Hamlets">Tower Hamlets</option>
+          <option value="Newham">Newham</option>
+          <option value="Walthamstow">Walthamstow</option>
+          <option value="Chingford">Chingford</option>
+          <option value="Islington">Islington</option>
+          <option value="Camden">Camden</option>
+          <option value="Haringey">Haringey</option>
+          <option value="Southwark">Southwark</option>
+          <option value="Lewisham">Lewisham</option>
+          <option value="Greenwich">Greenwich</option>
+          <option value="Croydon">Croydon</option>
+          <option value="Wandsworth">Wandsworth</option>
+          <option value="Lambeth">Lambeth</option>
+          <option value="Hammersmith">Hammersmith</option>
+          <option value="Ealing">Ealing</option>
+          <option value="Barnet">Barnet</option>
+          <option value="Enfield">Enfield</option>
+          <option value="Ilford">Ilford</option>
+          <option value="Romford">Romford</option>
+          <option value="Barking">Barking</option>
+        </optgroup>
+        <optgroup label="Home Counties">
+          <option value="Essex">Essex</option>
+          <option value="Hertfordshire">Hertfordshire</option>
+          <option value="Kent">Kent</option>
+          <option value="Surrey">Surrey</option>
+        </optgroup>
+        <optgroup label="Other UK">
+          <option value="Manchester">Manchester</option>
+          <option value="Birmingham">Birmingham</option>
+          <option value="Leeds">Leeds</option>
+          <option value="Bristol">Bristol</option>
+          <option value="Liverpool">Liverpool</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Dissolved within</label>
+      <select id="years">
+        <option value="1">1 year</option>
+        <option value="2" selected>2 years</option>
+        <option value="3">3 years</option>
+        <option value="5">5 years</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Max</label>
+      <select id="limit">
+        <option value="20">20</option>
+        <option value="50" selected>50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+  </div>
+  <button class="btn-main" id="searchBtn" onclick="runSearch()">Find Leads</button>
+  <div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-label" id="progressLabel"></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+</div>
+
+<div id="idle">
+  <div class="info-box"><strong>How it works:</strong> Searches Companies House for recently dissolved property companies. Under <strong>Section 1012 Companies Act 2006</strong>, all assets at dissolution pass to the Crown as bona vacantia. Cross-reference with HMLR to confirm property titles, then contact BVD to acquire.</div>
+  <div class="steps">
+    <div class="step"><div class="step-num">01</div><div class="step-title">Find Dissolved Companies</div><div class="step-desc">BV Scout searches all property SIC codes automatically.</div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-title">Check Endole</div><div class="step-desc">Free pre-qualification — confirms company profile and balance sheet.</div></div>
+    <div class="step"><div class="step-num">03</div><div class="step-title">HMLR Title Search</div><div class="step-desc">£3 owner name search confirms properties registered to the dissolved company.</div></div>
+    <div class="step"><div class="step-num">04</div><div class="step-title">Contact BVD</div><div class="step-desc">Email GLD with company number + title numbers. Tool drafts the email.</div></div>
+  </div>
+</div>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <div class="loading-text" id="loadingText">Searching...</div>
+</div>
+
+<div id="results">
+  <div class="results-header">
+    <div class="results-label">// Dissolved company leads</div>
+    <div class="results-count" id="resultsCount"></div>
+  </div>
+  <div class="cards" id="cardsContainer"></div>
+</div>
+
+<footer>// Data: Companies House Public API · BVD: bvd.gld@governmentlegal.gov.uk · Duchy: bvdproperty@farrer.co.uk · Not legal advice.</footer>
+
+<script>
+const CH_API_KEY = '1f01e634-648d-4d3e-a1c2-e51502194d7b';
+const BVD_EMAIL = 'bvd.gld@governmentlegal.gov.uk';
+
+const SIC_CODES = {
+  '68100':'Buying & selling own real estate','68201':'Renting of residential properties',
+  '68202':'Letting of own or leased real estate','68209':'Other letting & operating of real estate',
+  '68310':'Real estate agencies','68320':'Management of real estate',
+  '41100':'Development of building projects','41201':'Construction of commercial buildings',
+  '41202':'Construction of domestic buildings','43999':'Specialised construction NEC'
+};
+
+const RISK_NOTES = {
+  '68100':{risk:'HIGH',note:'Freehold/leasehold buyer-seller — high probability of retained property at dissolution.'},
+  '68201':{risk:'HIGH',note:'Residential lettings — likely holds leasehold interests that vest in Crown on dissolution.'},
+  '68202':{risk:'HIGH',note:'Commercial letting — leasehold interests automatically vest in Crown on dissolution.'},
+  '68209':{risk:'HIGH',note:'Real estate operator — likely holds multiple property interests.'},
+  '68310':{risk:'MEDIUM',note:'Estate agency — may hold office premises or client deposits.'},
+  '68320':{risk:'MEDIUM',note:'Property manager — may hold service charge accounts or leasehold interests.'},
+  '41100':{risk:'HIGH',note:'Developer — may hold land with planning consent or part-completed schemes.'},
+  '41201':{risk:'HIGH',note:'Commercial builder — may hold development sites or part-completed projects.'},
+  '41202':{risk:'HIGH',note:'Residential builder — may hold development sites or part-completed projects.'},
+  '43999':{risk:'MEDIUM',note:'Specialist contractor — may hold partially completed projects.'}
+};
+
+const SEARCH_TERMS = ['property investments','property development','real estate','property management','lettings','property holdings'];
+
+let currentResults = [];
+
+function getRisk(sics) {
+  if (!sics) return {risk:'MEDIUM',note:'Cross-reference with Land Registry to confirm property holdings.'};
+  for (const s of sics) { if (RISK_NOTES[s]) return RISK_NOTES[s]; }
+  return {risk:'MEDIUM',note:'Cross-reference with Land Registry to confirm property holdings.'};
+}
+
+function fmtDate(d) {
+  if (!d) return null;
+  return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+}
+
+function fmtAddr(a) {
+  if (!a) return 'Address not available';
+  return [a.address_line_1,a.address_line_2,a.locality,a.postal_code].filter(Boolean).join(', ');
+}
+
+function yrsActive(c,d) {
+  if (!c||!d) return null;
+  return Math.round((new Date(d)-new Date(c))/(1000*60*60*24*365));
+}
+
+function genEmail(name,num) {
+  const today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  return `To: ${BVD_EMAIL}\nSubject: Bona Vacantia Property Enquiry — ${name} (${num})\n\nDear Bona Vacantia Division,\n\nI write to enquire about the real property assets of the above dissolved company, which I believe may have vested in the Crown as bona vacantia under Section 1012 of the Companies Act 2006.\n\nCompany Details:\n  Name: ${name}\n  Companies House Number: ${num}\n\nI am a commercial property agent with a genuine interest in acquiring any real property assets (freehold or leasehold interests) that may have passed to the Crown upon dissolution.\n\nI would be grateful if you could confirm:\n1. Whether you are aware of any property interests held by the company at the date of dissolution;\n2. Whether any such assets have been disclaimed or remain available for purchase;\n3. The process for submitting a formal expression of interest to acquire any such assets at open market value.\n\nI can provide Land Registry title numbers for any specific properties once confirmed.\n\nYours faithfully,\n\n[Your Name]\n[Agency Name]\n[Telephone]\n[Email]\n[Date: ${today}]`;
+}
+
+async function fetchCompanies(term, years) {
+  const cutoff = new Date();
+  cutoff.setFullYear(cutoff.getFullYear() - years);
+  const url = `https://api.company-information.service.gov.uk/search/companies?q=${encodeURIComponent(term)}&items_per_page=100`;
+  const resp = await fetch(url, { headers: { 'Authorization': 'Basic ' + btoa(CH_API_KEY + ':') } });
+  if (!resp.ok) throw new Error('API error ' + resp.status);
+  const data = await resp.json();
+  return (data.items || []).filter(c => {
+    if (c.company_status !== 'dissolved') return false;
+    if (!c.date_of_cessation) return true;
+    return new Date(c.date_of_cessation) >= cutoff;
+  });
+}
+
+async function runSearch() {
+  const loc = document.getElementById('location').value.trim();
+  const years = parseInt(document.getElementById('years').value);
+  const limit = parseInt(document.getElementById('limit').value);
+  const queries = SEARCH_TERMS.map(t => loc ? `${t} ${loc}` : t);
+
+  document.getElementById('idle').style.display = 'none';
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('progressWrap').style.display = 'block';
+  document.getElementById('searchBtn').disabled = true;
+
+  const seen = new Set();
+  let all = [];
+
+  for (let i = 0; i < queries.length; i++) {
+    document.getElementById('progressLabel').textContent = `Searching "${queries[i]}" (${i+1}/${queries.length})...`;
+    document.getElementById('loadingText').textContent = `Searching "${queries[i]}"...`;
+    document.getElementById('progressFill').style.width = Math.round((i/queries.length)*90)+'%';
+    try {
+      const items = await fetchCompanies(queries[i], years);
+      items.forEach(c => { if (c.company_number && !seen.has(c.company_number)) { seen.add(c.company_number); all.push(c); } });
+    } catch(e) { console.warn('Failed:', queries[i], e); }
+  }
+
+  all.sort((a,b) => {
+    if (!a.date_of_cessation) return 1;
+    if (!b.date_of_cessation) return -1;
+    return new Date(b.date_of_cessation) - new Date(a.date_of_cessation);
+  });
+
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('progressWrap').style.display = 'none';
+  document.getElementById('searchBtn').disabled = false;
+
+  const isDemo = all.length === 0;
+  currentResults = isDemo ? getDemoData() : all;
+  currentResults = currentResults.slice(0, limit);
+
+  renderResults(isDemo);
+}
+
+function renderResults(isDemo) {
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('resultsCount').textContent = currentResults.length + ' result' + (currentResults.length !== 1 ? 's' : '') + (isDemo ? ' (demo)' : ' (live)');
+
+  const container = document.getElementById('cardsContainer');
+  container.innerHTML = '';
+
+  if (isDemo) {
+    const notice = document.createElement('div');
+    notice.className = 'demo-notice';
+    notice.textContent = '// No live results returned — showing demo data. Check your API key or try a different location.';
+    container.appendChild(notice);
+  }
+
+  currentResults.forEach((c, i) => {
+    const {risk, note} = getRisk(c.sic_codes);
+    const addr = fmtAddr(c.registered_office_address);
+    const dissDate = fmtDate(c.date_of_cessation);
+    const active = yrsActive(c.date_of_creation, c.date_of_cessation);
+    const sicLabel = (c.sic_codes||[]).map(s => SIC_CODES[s]||s).filter(Boolean).join(' · ');
+    const chUrl = `https://find-and-update.company-information.service.gov.uk/company/${c.company_number}`;
+    const endoleUrl = `https://endole.co.uk/company/${c.company_number}`;
+    const hmlrUrl = `https://search-property-information.service.gov.uk/`;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.id = `card-${i}`;
+    card.style.animationDelay = (i*40)+'ms';
+
+    card.innerHTML = `
+      <div class="card-top">
+        <div style="flex:1">
+          <div class="company-name">${c.company_name}</div>
+          <div class="company-num">Co. No. ${c.company_number}</div>
+          <div class="card-meta">
+            <span>📍 ${addr}</span>
+            ${dissDate ? `<span class="diss-date">⚠ Dissolved: ${dissDate}</span>` : ''}
+            ${active ? `<span>Active ${active}yr${active!==1?'s':''}</span>` : ''}
+          </div>
+          ${sicLabel ? `<div><span class="badge badge-sic">${sicLabel}</span></div>` : ''}
+        </div>
+        <div class="card-actions">
+          <span class="badge ${risk==='HIGH'?'badge-high':'badge-med'}">BV ${risk} PRIORITY</span>
+          <div class="btn-row">
+            <button class="btn-sm accent" onclick="toggleCard(${i})">View Lead ▾</button>
+            <a class="btn-sm" href="${chUrl}" target="_blank">CH ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-detail" id="detail-${i}">
+        <div class="detail-grid">
+          <div>
+            <div class="detail-title">// Land Registry next step</div>
+            <div class="detail-text">Search HMLR for titles registered to <strong>${c.company_name}</strong>. Use the <a href="${hmlrUrl}" target="_blank">HMLR owner name search ↗</a> (£3). Each title = a property interest that passed to the Crown on dissolution.</div>
+          </div>
+          <div>
+            <div class="detail-title">// BV assessment</div>
+            <div class="detail-text">${note}<br><br><span class="warn">⚠ No title guarantee given. Due diligence essential.</span></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px">
+          <div class="detail-title">// Contact</div>
+          <div class="detail-text">GLD BVD: <a href="mailto:${BVD_EMAIL}">${BVD_EMAIL}</a> · Duchy: <a href="mailto:bvdproperty@farrer.co.uk">bvdproperty@farrer.co.uk</a></div>
+        </div>
+        <div class="action-row">
+          <button class="btn-sm accent" onclick="toggleEmail(${i})">📧 Draft BVD Email</button>
+          <a class="btn-sm" href="${hmlrUrl}" target="_blank">HMLR ↗</a>
+          <a class="btn-sm" href="${endoleUrl}" target="_blank">Endole ↗</a>
+          <a class="btn-sm" href="${chUrl}" target="_blank">Companies House ↗</a>
+        </div>
+        <div class="email-box" id="email-${i}">
+          <button class="email-copy" id="copybtn-${i}" onclick="copyEmail(${i})">Copy</button>
+          <div class="email-text" id="emailtext-${i}"></div>
+        </div>
+      </div>`;
+
+    container.appendChild(card);
+  });
+}
+
+function toggleCard(i) {
+  const detail = document.getElementById('detail-'+i);
+  const card = document.getElementById('card-'+i);
+  const isOpen = detail.classList.contains('open');
+  detail.classList.toggle('open', !isOpen);
+  card.classList.toggle('open', !isOpen);
+}
+
+function toggleEmail(i) {
+  const box = document.getElementById('email-'+i);
+  const isOpen = box.classList.contains('open');
+  if (!isOpen) {
+    const c = currentResults[i];
+    document.getElementById('emailtext-'+i).textContent = genEmail(c.company_name, c.company_number);
+    box.classList.add('open');
+  } else {
+    box.classList.remove('open');
+  }
+}
+
+function copyEmail(i) {
+  const text = document.getElementById('emailtext-'+i).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copybtn-'+i);
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+
+function getDemoData() {
+  return [
+    {company_name:'MERIDIAN PROPERTY INVESTMENTS LTD',company_number:'11847392',company_status:'dissolved',date_of_cessation:'2024-03-15',date_of_creation:'2018-06-20',registered_office_address:{address_line_1:'14 Commercial Road',locality:'London',postal_code:'E1 1LN'},sic_codes:['68100']},
+    {company_name:'WESTGATE DEVELOPMENTS (LONDON) LTD',company_number:'10234567',company_status:'dissolved',date_of_cessation:'2023-11-08',date_of_creation:'2016-09-14',registered_office_address:{address_line_1:'87 Victoria Street',locality:'London',postal_code:'SW1H 0HW'},sic_codes:['41100']},
+    {company_name:'OAKFIELD PROPERTY MANAGEMENT LTD',company_number:'09871234',company_status:'dissolved',date_of_cessation:'2024-07-22',date_of_creation:'2015-03-11',registered_office_address:{address_line_1:'33 Canary Wharf',locality:'London',postal_code:'E14 5AB'},sic_codes:['68320']},
+    {company_name:'ALBION COMMERCIAL ESTATES LTD',company_number:'12345678',company_status:'dissolved',date_of_cessation:'2023-08-30',date_of_creation:'2019-01-22',registered_office_address:{address_line_1:'7 Bishopsgate',locality:'London',postal_code:'EC2N 3AR'},sic_codes:['68202']},
+    {company_name:'PINNACLE MIXED USE HOLDINGS LTD',company_number:'13456789',company_status:'dissolved',date_of_cessation:'2024-01-14',date_of_creation:'2020-07-03',registered_office_address:{address_line_1:'120 Cheapside',locality:'London',postal_code:'EC2V 6DS'},sic_codes:['68100','68202']},
+    {company_name:'REDBRIDGE PROPERTY GROUP LTD',company_number:'08765432',company_status:'dissolved',date_of_cessation:'2022-12-19',date_of_creation:'2013-05-28',registered_office_address:{address_line_1:'45 High Street',locality:'Ilford',postal_code:'IG1 2AA'},sic_codes:['68310']},
+    {company_name:'THAMES VALLEY REFURBISHMENTS LTD',company_number:'11234567',company_status:'dissolved',date_of_cessation:'2024-05-03',date_of_creation:'2017-11-15',registered_office_address:{address_line_1:'22 Station Road',locality:'Reading',postal_code:'RG1 1JX'},sic_codes:['41201']},
+    {company_name:'CENTRAL LONDON LETTINGS LTD',company_number:'07654321',company_status:'dissolved',date_of_cessation:'2023-04-11',date_of_creation:'2011-08-09',registered_office_address:{address_line_1:'18 Oxford Street',locality:'London',postal_code:'W1C 1DU'},sic_codes:['68201','68310']},
+  ];
+}
+</script>
+
+</body>
+</html>
