@@ -1,0 +1,47 @@
+name: Rightmove daily sync
+
+on:
+  schedule:
+    # 06:00 UTC daily (07:00 BST / 06:00 GMT). GitHub only fires `schedule`
+    # triggers from the repository's default branch, so this won't actually
+    # run until this workflow is on that branch.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rightmove-daily-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Rightmove sync
+        run: python -m scraper.main
+
+      - name: Commit and push updated data
+        if: always()
+        run: |
+          git config user.name "rightmove-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ site/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Rightmove sync: $(date -u +%Y-%m-%d)"
+            git push
+          fi
