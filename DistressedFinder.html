@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distress Radar — UK Distressed Property Intelligence</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;600;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#0d0f0e;color:#e8ede9;min-height:100vh;font-size:14px}
+header{border-bottom:1px solid #252925;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#0d0f0e;z-index:200;flex-wrap:wrap;gap:10px}
+.logo{font-weight:900;font-size:22px;color:#b8f04a;letter-spacing:2px;text-transform:uppercase}
+.logo span{display:block;font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;font-weight:400;margin-top:2px;letter-spacing:1px}
+.header-right{display:flex;align-items:center;gap:10px}
+.pill{font-family:'DM Mono',monospace;font-size:10px;color:#b8f04a;border:1px solid #b8f04a;border-radius:20px;padding:4px 12px;display:flex;align-items:center;gap:6px}
+.dot{width:6px;height:6px;border-radius:50%;background:#b8f04a;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.gear{width:30px;height:30px;border-radius:6px;border:1px solid #252925;background:#141816;color:#9aaa9b;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.gear:hover{border-color:#b8f04a;color:#b8f04a}
+
+nav.tabs{display:flex;gap:2px;padding:0 20px;border-bottom:1px solid #252925;overflow-x:auto;background:#0d0f0e;position:sticky;top:65px;z-index:150}
+.tab-btn{font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:14px 16px;background:none;border:none;color:#6b7a6d;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s}
+.tab-btn:hover{color:#e8ede9}
+.tab-btn.active{color:#b8f04a;border-bottom-color:#b8f04a}
+.tab-badge{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:8px;font-size:9px;background:rgba(184,240,74,.15);color:#b8f04a}
+.tab-badge.manual{background:rgba(240,184,74,.15);color:#f0b84a}
+
+.wrap{padding:24px 20px 0}
+.label{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.filter-group{display:flex;flex-direction:column;gap:4px}
+.filter-group label{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;white-space:nowrap}
+select,input[type=text],input[type=email],input[type=password]{background:#1c201e;border:1px solid #252925;border-radius:6px;padding:8px 10px;color:#e8ede9;font-family:'DM Sans',sans-serif;font-size:13px;outline:none}
+select{cursor:pointer}
+select:focus,input:focus{border-color:#b8f04a}
+.chip-group{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:'DM Mono',monospace;font-size:11px;padding:6px 12px;border-radius:20px;border:1px solid #252925;background:#1c201e;color:#9aaa9b;cursor:pointer;user-select:none;transition:all .15s}
+.chip.on{border-color:#b8f04a;color:#b8f04a;background:rgba(184,240,74,.08)}
+.btn-main{background:#b8f04a;color:#0d0f0e;border:none;border-radius:8px;padding:14px 20px;font-weight:700;font-size:14px;cursor:pointer;transition:background .2s}
+.btn-main:disabled{background:#4a6a1a;cursor:not-allowed}
+.btn-main:hover:not(:disabled){background:#d4ff5c}
+.btn-ghost{background:transparent;border:1px solid #252925;color:#9aaa9b;border-radius:8px;padding:14px 18px;font-family:'DM Mono',monospace;font-size:12px;cursor:pointer}
+.btn-ghost:hover{border-color:#b8f04a;color:#b8f04a}
+.action-bar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.progress-wrap{margin-bottom:16px}
+.progress-label{font-family:'DM Mono',monospace;font-size:11px;color:#6b7a6d;margin-bottom:6px}
+.progress-bar{height:3px;background:#252925;border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:#b8f04a;transition:width .4s ease}
+.info-box{background:rgba(184,240,74,.06);border:1px solid rgba(184,240,74,.2);border-radius:8px;padding:14px 16px;font-size:13px;color:#9aaa9b;line-height:1.7;margin-bottom:16px}
+.info-box strong{color:#b8f04a}
+.info-box.warn{background:rgba(240,184,74,.06);border-color:rgba(240,184,74,.25)}
+.info-box.warn strong{color:#f0b84a}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-bottom:28px}
+.step{background:#141816;border:1px solid #252925;border-radius:8px;padding:16px}
+.step-num{font-weight:900;font-size:24px;color:#252925;line-height:1;margin-bottom:6px}
+.step-title{font-weight:600;font-size:13px;color:#e8ede9;margin-bottom:4px}
+.step-desc{font-size:12px;color:#6b7a6d;line-height:1.5}
+.results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding:0 20px;flex-wrap:wrap;gap:8px}
+.results-label{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;letter-spacing:2px}
+.results-count{font-family:'DM Mono',monospace;font-size:11px;color:#b8f04a}
+.cards{padding:0 20px 40px}
+.card{background:#161a17;border:1px solid #252925;border-radius:10px;padding:18px 20px;margin-bottom:10px;transition:all .2s;animation:fadeUp .3s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card.open{background:#1c201e;border-color:#b8f04a}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.company-name{font-weight:700;font-size:15px;color:#e8ede9;margin-bottom:3px}
+.company-num{font-family:'DM Mono',monospace;font-size:11px;color:#6b7a6d;margin-bottom:8px}
+.card-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:#6b7a6d}
+.flag{color:#f0b84a}
+.card-actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-family:'DM Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.badge-high{background:rgba(184,240,74,.15);color:#b8f04a;border:1px solid rgba(184,240,74,.4)}
+.badge-med{background:rgba(240,184,74,.15);color:#f0b84a;border:1px solid rgba(240,184,74,.4)}
+.badge-low{background:rgba(255,255,255,.05);color:#6b7a6d;border:1px solid #252925}
+.badge-sic{background:rgba(255,255,255,.05);color:#6b7a6d;border:1px solid #252925;margin-top:8px}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.btn-sm{font-family:'DM Mono',monospace;font-size:11px;padding:7px 14px;border-radius:6px;cursor:pointer;transition:all .15s;border:1px solid #252925;background:transparent;color:#6b7a6d;text-decoration:none;display:inline-block}
+.btn-sm.accent{border-color:#b8f04a;color:#b8f04a}
+.btn-sm:hover,.btn-sm.accent:hover{background:#b8f04a;color:#0d0f0e;border-color:#b8f04a}
+.card-detail{border-top:1px solid #252925;margin-top:16px;padding-top:16px;display:none}
+.card-detail.open{display:block}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}
+.detail-title{font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.detail-text{font-size:13px;color:#9aaa9b;line-height:1.6}
+.detail-text a{color:#b8f04a;text-decoration:none}
+.detail-text strong{color:#e8ede9}
+.warn-text{color:#f0b84a}
+.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid #252925}
+.email-box{position:relative;margin-top:12px;background:#141816;border:1px solid #252925;border-radius:8px;padding:14px;display:none}
+.email-box.open{display:block}
+.email-copy{position:absolute;top:10px;right:10px;font-family:'DM Mono',monospace;font-size:10px;padding:4px 10px;border-radius:4px;border:1px solid #252925;background:#1c201e;color:#6b7a6d;cursor:pointer}
+.email-copy:hover{border-color:#b8f04a;color:#b8f04a}
+.email-text{font-family:'DM Mono',monospace;font-size:11px;color:#e8ede9;line-height:1.7;white-space:pre-wrap}
+.demo-notice{background:rgba(240,184,74,.08);border:1px solid rgba(240,184,74,.3);border-radius:8px;padding:10px 14px;font-family:'DM Mono',monospace;font-size:11px;color:#f0b84a;margin-bottom:12px}
+.empty{text-align:center;padding:48px 0;color:#6b7a6d}
+.empty-icon{font-size:40px;margin-bottom:12px}
+footer{border-top:1px solid #252925;padding:16px 20px;font-family:'DM Mono',monospace;font-size:10px;color:#3a4a3c;line-height:1.6}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+#loading{display:none;text-align:center;padding:48px 20px}
+.spinner{width:36px;height:36px;border:2px solid #252925;border-top-color:#b8f04a;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-family:'DM Mono',monospace;font-size:12px;color:#6b7a6d}
+
+.directory{padding:0 20px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.dir-card{background:#161a17;border:1px solid #252925;border-radius:10px;padding:16px 18px}
+.dir-name{font-weight:700;font-size:14px;color:#e8ede9;margin-bottom:4px}
+.dir-desc{font-size:12px;color:#6b7a6d;line-height:1.5;margin-bottom:10px}
+.dir-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tag{font-family:'DM Mono',monospace;font-size:9px;padding:2px 8px;border-radius:10px;background:rgba(255,255,255,.04);color:#6b7a6d;border:1px solid #252925}
+
+.checklist{padding:0 20px 20px}
+.check-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #1c201e}
+.check-item input{margin-top:3px;accent-color:#b8f04a}
+.check-item label{font-size:13px;color:#9aaa9b;line-height:1.5}
+.check-item label strong{color:#e8ede9}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:#161a17;border:1px solid #252925;border-radius:12px;padding:24px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto}
+.modal h2{font-size:16px;margin-bottom:6px;color:#e8ede9}
+.modal .sub{font-size:12px;color:#6b7a6d;margin-bottom:20px;line-height:1.6}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.field input{width:100%}
+.field .hint{font-size:11px;color:#6b7a6d;margin-top:5px;line-height:1.5}
+.field .hint a{color:#b8f04a}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+
+.leads-fab{position:fixed;bottom:20px;right:20px;background:#b8f04a;color:#0d0f0e;border:none;border-radius:30px;padding:12px 20px;font-family:'DM Mono',monospace;font-weight:700;font-size:12px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.4);z-index:300}
+.leads-fab:hover{background:#d4ff5c}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Distress Radar<span>UK Distressed Property Intelligence</span></div>
+  <div class="header-right">
+    <div class="pill"><div class="dot"></div>Live — Public Data</div>
+    <button class="gear" onclick="openSettings()" title="API keys">⚙</button>
+  </div>
+</header>
+
+<nav class="tabs" id="tabNav">
+  <button class="tab-btn active" data-tab="insolvency" onclick="switchTab('insolvency')">Insolvency & Liquidation <span class="tab-badge">live</span></button>
+  <button class="tab-btn" data-tab="epc" onclick="switchTab('epc')">Neglected / EPC-Poor <span class="tab-badge">live</span></button>
+  <button class="tab-btn" data-tab="repo" onclick="switchTab('repo')">Repossessions <span class="tab-badge manual">manual</span></button>
+  <button class="tab-btn" data-tab="probate" onclick="switchTab('probate')">Probate & Estates <span class="tab-badge">notices</span></button>
+</nav>
+
+<!-- ================= INSOLVENCY TAB ================= -->
+<section class="tab-panel active" id="tab-insolvency">
+  <div class="wrap">
+    <div class="info-box"><strong>How it works:</strong> Searches Companies House for property-sector companies currently in <strong>administration, receivership, liquidation</strong> or a <strong>voluntary arrangement</strong> — the window while an insolvency practitioner (IP) is actively realising assets, well before any bona vacantia stage. Results are cross-checked against <strong>The Gazette</strong>'s free public insolvency notices where a match is found.</div>
+    <div class="label">// Filters</div>
+    <div class="filters">
+      <div class="filter-group">
+        <label>Location</label>
+        <input type="text" id="ins-location" placeholder="e.g. London, Manchester" style="width:180px">
+      </div>
+      <div class="filter-group">
+        <label>Status</label>
+        <div class="chip-group" id="ins-status-chips">
+          <div class="chip on" data-val="administration">Administration</div>
+          <div class="chip on" data-val="receivership">Receivership</div>
+          <div class="chip on" data-val="liquidation">Liquidation</div>
+          <div class="chip" data-val="voluntary-arrangement">CVA</div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Max results</label>
+        <select id="ins-limit"><option value="20">20</option><option value="50" selected>50</option><option value="100">100</option></select>
+      </div>
+    </div>
+    <div class="action-bar">
+      <button class="btn-main" id="ins-btn" onclick="runInsolvencySearch()">Find Leads</button>
+    </div>
+    <div class="progress-wrap" id="ins-progressWrap" style="display:none">
+      <div class="progress-label" id="ins-progressLabel"></div>
+      <div class="progress-bar"><div class="progress-fill" id="ins-progressFill" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div id="ins-loading"><div class="spinner"></div><div class="loading-text" id="ins-loadingText">Searching...</div></div>
+  <div id="ins-results" style="display:none">
+    <div class="results-header"><div class="results-label">// Insolvent property company leads</div><div class="results-count" id="ins-resultsCount"></div></div>
+    <div class="cards" id="ins-cards"></div>
+  </div>
+</section>
+
+<!-- ================= EPC TAB ================= -->
+<section class="tab-panel" id="tab-epc">
+  <div class="wrap">
+    <div class="info-box"><strong>How it works:</strong> Searches the government's <strong>EPC (Energy Performance Certificate) open data</strong> register for the worst-rated stock (<strong>E/F/G</strong>) whose certificate hasn't been refreshed in years — a proxy for long-term unsold, unlet or poorly-maintained property, not proof of distress. Verify each lead against current listings and Land Registry Price Paid data before contacting an owner.</div>
+    <div class="info-box warn" id="epc-key-warning"><strong>API key required.</strong> This tab needs a free EPC Open Data Communities key (email + key). <a href="#" onclick="openSettings();return false;" style="color:#f0b84a;text-decoration:underline">Add it in Settings ⚙</a> — registration is free at <a href="https://epc.opendatacommunities.org/" target="_blank" style="color:#f0b84a;text-decoration:underline">epc.opendatacommunities.org</a>.</div>
+    <div class="label">// Filters</div>
+    <div class="filters">
+      <div class="filter-group">
+        <label>Postcode or local authority</label>
+        <input type="text" id="epc-area" placeholder="e.g. E1 or Tower Hamlets" style="width:200px">
+      </div>
+      <div class="filter-group">
+        <label>Worst rating</label>
+        <div class="chip-group" id="epc-rating-chips">
+          <div class="chip on" data-val="G">G</div>
+          <div class="chip on" data-val="F">F</div>
+          <div class="chip on" data-val="E">E</div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Certificate age</label>
+        <select id="epc-age">
+          <option value="5">Older than 5 years</option>
+          <option value="7" selected>Older than 7 years</option>
+          <option value="10">Older than 10 years</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Max results</label>
+        <select id="epc-limit"><option value="20">20</option><option value="50" selected>50</option><option value="100">100</option></select>
+      </div>
+    </div>
+    <div class="action-bar">
+      <button class="btn-main" id="epc-btn" onclick="runEpcSearch()">Find Leads</button>
+    </div>
+    <div class="progress-wrap" id="epc-progressWrap" style="display:none">
+      <div class="progress-label" id="epc-progressLabel"></div>
+      <div class="progress-bar"><div class="progress-fill" id="epc-progressFill" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div id="epc-loading"><div class="spinner"></div><div class="loading-text" id="epc-loadingText">Searching...</div></div>
+  <div id="epc-results" style="display:none">
+    <div class="results-header"><div class="results-label">// Poor-EPC, stale-certificate leads</div><div class="results-count" id="epc-resultsCount"></div></div>
+    <div class="cards" id="epc-cards"></div>
+  </div>
+</section>
+
+<!-- ================= REPOSSESSIONS TAB ================= -->
+<section class="tab-panel" id="tab-repo">
+  <div class="wrap">
+    <div class="info-box warn"><strong>No free public feed exists for this signal.</strong> Individual repossession/receivership cases (county court possession orders, mortgagee-in-possession sales) are not published as open data or bulk API in England & Wales. The reliable public proxy is specialist property auction catalogues, which routinely flag lots as <strong>"in possession"</strong>, <strong>"receivership"</strong> or <strong>"mortgagee sale"</strong>. This tab is a curated directory + workflow, not a live scraper — scraping these commercial catalogue sites would likely breach their terms of use.</div>
+    <div class="label">// Auction houses that regularly list repossessed / distressed stock</div>
+  </div>
+  <div class="directory" id="repo-directory"></div>
+  <div class="wrap">
+    <div class="label">// Workflow checklist</div>
+  </div>
+  <div class="checklist" id="repo-checklist"></div>
+</section>
+
+<!-- ================= PROBATE TAB ================= -->
+<section class="tab-panel" id="tab-probate">
+  <div class="wrap">
+    <div class="info-box"><strong>How it works:</strong> <strong>The Gazette</strong> publishes free, live <strong>Deceased Estates notices</strong> (Trustee Act 1925, s.27) — personal representatives inviting creditor/beneficiary claims before distributing an estate. These name the deceased, date of death, last known address and the solicitor/executor handling the estate. It is a genuine live signal, but the notice itself rarely confirms a property is still held — treat every result as a lead to verify, not a confirmed vacant property.</div>
+    <div class="info-box warn"><strong>What isn't available:</strong> HM Courts &amp; Tribunals' probate register (<a href="https://probatesearch.service.gov.uk/" target="_blank" style="color:#f0b84a;text-decoration:underline">probatesearch.service.gov.uk</a>) only supports one-name-at-a-time lookups once you already have a name — it's a verification tool, not a discovery feed. There is no free bulk "probate + still owns a house" dataset in England &amp; Wales; some commercial data providers sell curated probate-lead lists if you need volume beyond what Gazette notices surface.</div>
+    <div class="label">// Filters</div>
+    <div class="filters">
+      <div class="filter-group">
+        <label>Keyword / area</label>
+        <input type="text" id="prob-term" placeholder="e.g. a surname or town" style="width:220px">
+      </div>
+      <div class="filter-group">
+        <label>Notices published within</label>
+        <select id="prob-days"><option value="30">30 days</option><option value="90" selected>90 days</option><option value="180">180 days</option><option value="365">365 days</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Max results</label>
+        <select id="prob-limit"><option value="20" selected>20</option><option value="50">50</option><option value="100">100</option></select>
+      </div>
+    </div>
+    <div class="action-bar">
+      <button class="btn-main" id="prob-btn" onclick="runProbateSearch()">Find Notices</button>
+    </div>
+    <div class="progress-wrap" id="prob-progressWrap" style="display:none">
+      <div class="progress-label" id="prob-progressLabel"></div>
+      <div class="progress-bar"><div class="progress-fill" id="prob-progressFill" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div id="prob-loading"><div class="spinner"></div><div class="loading-text" id="prob-loadingText">Searching The Gazette...</div></div>
+  <div id="prob-results" style="display:none">
+    <div class="results-header"><div class="results-label">// Deceased estates notices</div><div class="results-count" id="prob-resultsCount"></div></div>
+    <div class="cards" id="prob-cards"></div>
+  </div>
+</section>
+
+<button class="leads-fab" id="leadsFab" onclick="openLeads()" style="display:none">📌 Saved Leads (<span id="leadsCount">0</span>)</button>
+
+<!-- ================= SETTINGS MODAL ================= -->
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal">
+    <h2>API Keys</h2>
+    <div class="sub">Stored only in this browser's <code>localStorage</code> — never hardcoded into the page source, never sent anywhere except the API providers below.</div>
+    <div class="field">
+      <label>Companies House API key</label>
+      <input type="password" id="key-ch" placeholder="Your Companies House REST API key">
+      <div class="hint">Free. Register at <a href="https://developer.company-information.service.gov.uk/" target="_blank">developer.company-information.service.gov.uk</a> → create an application → copy the REST key.</div>
+    </div>
+    <div class="field">
+      <label>EPC Open Data Communities — email</label>
+      <input type="text" id="key-epc-email" placeholder="you@example.com">
+    </div>
+    <div class="field">
+      <label>EPC Open Data Communities — API key</label>
+      <input type="password" id="key-epc-key" placeholder="Your EPC API key">
+      <div class="hint">Free. Register at <a href="https://epc.opendatacommunities.org/" target="_blank">epc.opendatacommunities.org</a> → account → API key (under your profile).</div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-ghost" onclick="closeSettings()">Cancel</button>
+      <button class="btn-main" onclick="saveSettings()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= LEADS MODAL ================= -->
+<div class="modal-overlay" id="leadsModal">
+  <div class="modal" style="max-width:640px">
+    <h2>Saved Leads</h2>
+    <div class="sub">Leads you've flagged across all tabs. Export to CSV to work them in a spreadsheet or CRM.</div>
+    <div id="leadsListBody" style="max-height:50vh;overflow-y:auto"></div>
+    <div class="modal-actions">
+      <button class="btn-ghost" onclick="clearLeads()">Clear All</button>
+      <button class="btn-ghost" onclick="closeLeads()">Close</button>
+      <button class="btn-main" onclick="exportLeadsCsv()">Export CSV</button>
+    </div>
+  </div>
+</div>
+
+<footer>// Data: Companies House Public API · EPC Open Data Communities (MHCLG) · The Gazette (Crown Open Data, OGL) · Not legal or financial advice. Verify every lead independently before contacting an owner or IP.</footer>
+
+<script>
+/* ============ Settings / keys ============ */
+function loadSettings() {
+  return {
+    ch: localStorage.getItem('df_ch_key') || '',
+    epcEmail: localStorage.getItem('df_epc_email') || '',
+    epcKey: localStorage.getItem('df_epc_key') || ''
+  };
+}
+function openSettings() {
+  const s = loadSettings();
+  document.getElementById('key-ch').value = s.ch;
+  document.getElementById('key-epc-email').value = s.epcEmail;
+  document.getElementById('key-epc-key').value = s.epcKey;
+  document.getElementById('settingsModal').classList.add('open');
+}
+function closeSettings() { document.getElementById('settingsModal').classList.remove('open'); }
+function saveSettings() {
+  localStorage.setItem('df_ch_key', document.getElementById('key-ch').value.trim());
+  localStorage.setItem('df_epc_email', document.getElementById('key-epc-email').value.trim());
+  localStorage.setItem('df_epc_key', document.getElementById('key-epc-key').value.trim());
+  closeSettings();
+  updateEpcWarning();
+}
+function updateEpcWarning() {
+  const s = loadSettings();
+  document.getElementById('epc-key-warning').style.display = (s.epcEmail && s.epcKey) ? 'none' : 'block';
+}
+
+/* ============ Tabs ============ */
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + tab));
+}
+
+/* ============ Saved leads (shared across tabs) ============ */
+let savedLeads = JSON.parse(localStorage.getItem('df_leads') || '[]');
+function refreshLeadsFab() {
+  document.getElementById('leadsCount').textContent = savedLeads.length;
+  document.getElementById('leadsFab').style.display = savedLeads.length ? 'block' : 'none';
+}
+function saveLead(lead) {
+  if (savedLeads.some(l => l.key === lead.key)) return;
+  savedLeads.push(lead);
+  localStorage.setItem('df_leads', JSON.stringify(savedLeads));
+  refreshLeadsFab();
+}
+function openLeads() {
+  const body = document.getElementById('leadsListBody');
+  body.innerHTML = savedLeads.length ? '' : '<div class="empty"><div class="empty-icon">📭</div>No leads saved yet.</div>';
+  savedLeads.forEach((l, i) => {
+    const row = document.createElement('div');
+    row.style.cssText = 'padding:10px 0;border-bottom:1px solid #1c201e;display:flex;justify-content:space-between;align-items:center;gap:10px';
+    row.innerHTML = `<div><div style="font-weight:600;font-size:13px">${l.name}</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#6b7a6d">${l.source} · ${l.detail||''}</div></div><button class="btn-sm" onclick="removeLead(${i})">Remove</button>`;
+    body.appendChild(row);
+  });
+  document.getElementById('leadsModal').classList.add('open');
+}
+function closeLeads() { document.getElementById('leadsModal').classList.remove('open'); }
+function removeLead(i) { savedLeads.splice(i,1); localStorage.setItem('df_leads', JSON.stringify(savedLeads)); refreshLeadsFab(); openLeads(); }
+function clearLeads() { savedLeads = []; localStorage.setItem('df_leads', '[]'); refreshLeadsFab(); openLeads(); }
+function exportLeadsCsv() {
+  if (!savedLeads.length) return;
+  const rows = [['Source','Name','Detail','Link']];
+  savedLeads.forEach(l => rows.push([l.source, l.name, l.detail||'', l.link||'']));
+  const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'distress-radar-leads.csv';
+  a.click();
+}
+
+/* ============ Shared helpers ============ */
+function fmtDate(d) {
+  if (!d) return null;
+  return new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+}
+function fmtAddr(a) {
+  if (!a) return 'Address not available';
+  return [a.address_line_1,a.address_line_2,a.locality,a.postal_code].filter(Boolean).join(', ');
+}
+function toggleCard(prefix, i) {
+  const detail = document.getElementById(prefix+'-detail-'+i);
+  const card = document.getElementById(prefix+'-card-'+i);
+  const isOpen = detail.classList.contains('open');
+  detail.classList.toggle('open', !isOpen);
+  card.classList.toggle('open', !isOpen);
+}
+function toggleEmail(prefix, i, gen) {
+  const box = document.getElementById(prefix+'-email-'+i);
+  const isOpen = box.classList.contains('open');
+  if (!isOpen) {
+    document.getElementById(prefix+'-emailtext-'+i).textContent = gen();
+    box.classList.add('open');
+  } else { box.classList.remove('open'); }
+}
+function copyEmail(prefix, i) {
+  const text = document.getElementById(prefix+'-emailtext-'+i).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById(prefix+'-copybtn-'+i);
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+
+/* ============================================================
+   TAB 1 — INSOLVENCY & LIQUIDATION (Companies House, live)
+   ============================================================ */
+const SIC_CODES = {
+  '68100':'Buying & selling own real estate','68201':'Renting of residential properties',
+  '68202':'Letting of own or leased real estate','68209':'Other letting & operating of real estate',
+  '68310':'Real estate agencies','68320':'Management of real estate',
+  '41100':'Development of building projects','41201':'Construction of commercial buildings',
+  '41202':'Construction of domestic buildings','43999':'Specialised construction NEC'
+};
+const PROPERTY_SICS = Object.keys(SIC_CODES);
+const STATUS_RISK = {
+  'administration': {risk:'HIGH', note:'In administration — an administrator is actively realising assets now. This is the best window to approach: property is often still intact and a sale process may already be underway.'},
+  'receivership': {risk:'HIGH', note:'In receivership — a receiver (often LPA receiver) has been appointed over specific assets, commonly property. Strong signal of a distressed, sellable property.'},
+  'liquidation': {risk:'MEDIUM', note:'In liquidation — a liquidator is winding up the company and disposing of remaining assets, including any property.'},
+  'voluntary-arrangement': {risk:'MEDIUM', note:'Company Voluntary Arrangement — company is trading under a repayment plan; property assets may still be sold to fund it.'}
+};
+let insResults = [];
+
+async function chFetch(url) {
+  const s = loadSettings();
+  if (!s.ch) throw new Error('no-key');
+  const resp = await fetch(url, { headers: { 'Authorization': 'Basic ' + btoa(s.ch + ':') } });
+  if (!resp.ok) throw new Error('API error ' + resp.status);
+  return resp.json();
+}
+
+async function fetchInsolvent(status, location, sic) {
+  let url = `https://api.company-information.service.gov.uk/advanced-search/companies?company_status=${status}&sic_codes=${sic}&size=100`;
+  if (location) url += `&location=${encodeURIComponent(location)}`;
+  const data = await chFetch(url);
+  return data.items || [];
+}
+
+async function gazetteCheck(companyName) {
+  try {
+    const url = `https://www.thegazette.co.uk/all-notices/notice/data.json?text=${encodeURIComponent(companyName)}&notice-type=corporate-insolvency&results-page-size=1`;
+    const resp = await fetch(url);
+    if (!resp.ok) return false;
+    const data = await resp.json();
+    return (data.entry && data.entry.length > 0);
+  } catch(e) { return false; }
+}
+
+async function runInsolvencySearch() {
+  const s = loadSettings();
+  if (!s.ch) { alert('Add your free Companies House API key in Settings (⚙) first.'); openSettings(); return; }
+
+  const statuses = Array.from(document.querySelectorAll('#ins-status-chips .chip.on')).map(c => c.dataset.val);
+  const location = document.getElementById('ins-location').value.trim();
+  const limit = parseInt(document.getElementById('ins-limit').value);
+  if (!statuses.length) { alert('Select at least one status.'); return; }
+
+  document.getElementById('ins-results').style.display = 'none';
+  document.getElementById('ins-loading').style.display = 'block';
+  document.getElementById('ins-progressWrap').style.display = 'block';
+  document.getElementById('ins-btn').disabled = true;
+
+  const seen = new Set();
+  let all = [];
+  const combos = [];
+  statuses.forEach(st => PROPERTY_SICS.forEach(sic => combos.push({st, sic})));
+
+  for (let i = 0; i < combos.length; i++) {
+    const {st, sic} = combos[i];
+    document.getElementById('ins-progressLabel').textContent = `Searching ${st} · SIC ${sic} (${i+1}/${combos.length})...`;
+    document.getElementById('ins-loadingText').textContent = `Searching ${st}...`;
+    document.getElementById('ins-progressFill').style.width = Math.round((i/combos.length)*90)+'%';
+    try {
+      const items = await fetchInsolvent(st, location, sic);
+      items.forEach(c => {
+        if (c.company_number && !seen.has(c.company_number)) {
+          seen.add(c.company_number);
+          c._status = st;
+          all.push(c);
+        }
+      });
+      if (all.length >= limit * 2) break;
+    } catch(e) { console.warn('Failed:', st, sic, e); }
+  }
+
+  document.getElementById('ins-progressFill').style.width = '100%';
+  document.getElementById('ins-loading').style.display = 'none';
+  document.getElementById('ins-progressWrap').style.display = 'none';
+  document.getElementById('ins-btn').disabled = false;
+
+  insResults = all.slice(0, limit);
+  renderInsolvency();
+}
+
+function renderInsolvency() {
+  document.getElementById('ins-results').style.display = 'block';
+  const isEmpty = insResults.length === 0;
+  document.getElementById('ins-resultsCount').textContent = insResults.length + ' result' + (insResults.length!==1?'s':'') + ' (live)';
+  const container = document.getElementById('ins-cards');
+  container.innerHTML = '';
+
+  if (isEmpty) {
+    container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div>No matching companies found. Try broadening location or status filters.</div>';
+    return;
+  }
+
+  insResults.forEach((c, i) => {
+    const sr = STATUS_RISK[c._status] || {risk:'MEDIUM', note:'Check current filing history on Companies House for status detail.'};
+    const addr = fmtAddr(c.registered_office_address || c.address);
+    const sicLabel = (c.sic_codes||[]).map(s => SIC_CODES[s]||s).filter(Boolean).join(' · ');
+    const chUrl = `https://find-and-update.company-information.service.gov.uk/company/${c.company_number}`;
+    const gazetteUrl = `https://www.thegazette.co.uk/all-notices/notice?text=${encodeURIComponent(c.company_name)}`;
+    const hmlrUrl = `https://search-property-information.service.gov.uk/`;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.id = `ins-card-${i}`;
+    card.style.animationDelay = (i*40)+'ms';
+    card.innerHTML = `
+      <div class="card-top">
+        <div style="flex:1">
+          <div class="company-name">${c.company_name}</div>
+          <div class="company-num">Co. No. ${c.company_number}</div>
+          <div class="card-meta">
+            <span>📍 ${addr}</span>
+            <span class="flag">⚠ Status: ${c._status.replace('-',' ')}</span>
+          </div>
+          ${sicLabel ? `<div><span class="badge badge-sic">${sicLabel}</span></div>` : ''}
+        </div>
+        <div class="card-actions">
+          <span class="badge ${sr.risk==='HIGH'?'badge-high':'badge-med'}">${sr.risk} PRIORITY</span>
+          <div class="btn-row">
+            <button class="btn-sm accent" onclick="toggleCard('ins',${i})">View Lead ▾</button>
+            <a class="btn-sm" href="${chUrl}" target="_blank">CH ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-detail" id="ins-detail-${i}">
+        <div class="detail-grid">
+          <div>
+            <div class="detail-title">// Assessment</div>
+            <div class="detail-text">${sr.note}</div>
+          </div>
+          <div>
+            <div class="detail-title">// Next steps</div>
+            <div class="detail-text">1. Check CH filing history for the "Appointment of ${c._status.includes('admin')?'administrator':(c._status==='receivership'?'receiver':'liquidator')}" document — it names the insolvency practitioner and their firm.<br>2. Search <a href="${gazetteUrl}" target="_blank">The Gazette ↗</a> for the formal insolvency notice.<br>3. Confirm any property via <a href="${hmlrUrl}" target="_blank">HMLR owner-name search ↗</a> (£3/title).</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <button class="btn-sm accent" onclick="toggleEmail('ins',${i}, () => genInsEmail('${c.company_name.replace(/'/g,"\\'")}','${c.company_number}','${c._status}'))">📧 Draft IP Enquiry</button>
+          <a class="btn-sm" href="${gazetteUrl}" target="_blank">Gazette ↗</a>
+          <a class="btn-sm" href="${hmlrUrl}" target="_blank">HMLR ↗</a>
+          <a class="btn-sm" href="${chUrl}" target="_blank">Companies House ↗</a>
+          <button class="btn-sm" onclick='saveLead({key:"ins-${c.company_number}",source:"Insolvency",name:"${c.company_name.replace(/"/g,"&quot;")}",detail:"${c._status} · ${c.company_number}",link:"${chUrl}"})'>📌 Save</button>
+        </div>
+        <div class="email-box" id="ins-email-${i}">
+          <button class="email-copy" id="ins-copybtn-${i}" onclick="copyEmail('ins',${i})">Copy</button>
+          <div class="email-text" id="ins-emailtext-${i}"></div>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+function genInsEmail(name, num, status) {
+  const today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  return `To: [Insolvency practitioner / firm — see CH filing history]\nSubject: Enquiry re: Property Assets — ${name} (${num})\n\nDear Sir/Madam,\n\nI understand you have been appointed in respect of the above company, currently in ${status.replace('-',' ')}.\n\nI am a property investor/agent with a genuine interest in any real property assets (freehold or leasehold) held by the company that may be available for sale as part of the ${status.includes('admin')?'administration':(status==='receivership'?'receivership':'insolvency process')}.\n\nI would be grateful if you could confirm:\n1. Whether the company holds any real property assets;\n2. Whether these are currently marketed, or available for a direct approach;\n3. The appropriate process for submitting an offer or expression of interest.\n\nI can provide proof of funds and act quickly where required.\n\nYours faithfully,\n\n[Your Name]\n[Company]\n[Telephone]\n[Email]\n[Date: ${today}]`;
+}
+
+/* ============================================================
+   TAB 2 — NEGLECTED / EPC-POOR STOCK (EPC Open Data, live)
+   ============================================================ */
+let epcResults = [];
+
+async function epcFetch(area, ratings, maxAgeYears) {
+  const s = loadSettings();
+  if (!s.epcEmail || !s.epcKey) throw new Error('no-key');
+  const cutoff = new Date();
+  cutoff.setFullYear(cutoff.getFullYear() - maxAgeYears);
+  const cutoffStr = cutoff.toISOString().slice(0,10);
+  const auth = btoa(s.epcEmail + ':' + s.epcKey);
+  let all = [];
+  for (const rating of ratings) {
+    const params = new URLSearchParams({
+      postcode: area, size: '100'
+    });
+    let url = `https://epc.opendatacommunities.org/api/v1/domestic/search?${params.toString()}`;
+    // If not a postcode-shaped string, try local-authority param instead
+    if (!/^[A-Z]{1,2}\d/i.test(area)) {
+      url = `https://epc.opendatacommunities.org/api/v1/domestic/search?local-authority=${encodeURIComponent(area)}&size=100`;
+    }
+    const resp = await fetch(url, { headers: { 'Authorization': 'Basic ' + auth, 'Accept': 'application/json' } });
+    if (!resp.ok) { if (resp.status === 401) throw new Error('unauthorized'); continue; }
+    const data = await resp.json();
+    const rows = (data.rows || []).filter(r => r['current-energy-rating'] === rating && r['lodgement-date'] && r['lodgement-date'] <= cutoffStr);
+    all = all.concat(rows);
+  }
+  return all;
+}
+
+async function runEpcSearch() {
+  const s = loadSettings();
+  if (!s.epcEmail || !s.epcKey) { alert('Add your free EPC Open Data Communities email + key in Settings (⚙) first.'); openSettings(); return; }
+
+  const area = document.getElementById('epc-area').value.trim();
+  if (!area) { alert('Enter a postcode or local authority.'); return; }
+  const ratings = Array.from(document.querySelectorAll('#epc-rating-chips .chip.on')).map(c => c.dataset.val);
+  const ageYears = parseInt(document.getElementById('epc-age').value);
+  const limit = parseInt(document.getElementById('epc-limit').value);
+  if (!ratings.length) { alert('Select at least one rating.'); return; }
+
+  document.getElementById('epc-results').style.display = 'none';
+  document.getElementById('epc-loading').style.display = 'block';
+  document.getElementById('epc-progressWrap').style.display = 'block';
+  document.getElementById('epc-btn').disabled = true;
+  document.getElementById('epc-progressLabel').textContent = `Searching EPC register for ${area}...`;
+  document.getElementById('epc-progressFill').style.width = '30%';
+
+  try {
+    let rows = await epcFetch(area, ratings, ageYears);
+    document.getElementById('epc-progressFill').style.width = '100%';
+    rows.sort((a,b) => new Date(a['lodgement-date']) - new Date(b['lodgement-date']));
+    epcResults = rows.slice(0, limit);
+    renderEpc();
+  } catch(e) {
+    if (e.message === 'unauthorized') alert('EPC API rejected your key — check the email/key pair in Settings.');
+    else alert('EPC search failed: ' + e.message);
+  } finally {
+    document.getElementById('epc-loading').style.display = 'none';
+    document.getElementById('epc-progressWrap').style.display = 'none';
+    document.getElementById('epc-btn').disabled = false;
+  }
+}
+
+function renderEpc() {
+  document.getElementById('epc-results').style.display = 'block';
+  document.getElementById('epc-resultsCount').textContent = epcResults.length + ' result' + (epcResults.length!==1?'s':'') + ' (live)';
+  const container = document.getElementById('epc-cards');
+  container.innerHTML = '';
+
+  if (!epcResults.length) {
+    container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div>No matching certificates found. Try a different postcode/area or widen the rating/age filters.</div>';
+    return;
+  }
+
+  epcResults.forEach((r, i) => {
+    const addr = [r.address1, r.address2, r.address3, r.posttown, r.postcode].filter(Boolean).join(', ');
+    const lodged = fmtDate(r['lodgement-date']);
+    const rating = r['current-energy-rating'];
+    const potential = r['potential-energy-rating'];
+    const propType = r['property-type'] || r['built-form'] || 'Unknown type';
+    const rightmoveUrl = `https://www.rightmove.co.uk/property-for-sale/find.html?searchLocation=${encodeURIComponent(r.postcode||'')}`;
+    const zooplaUrl = `https://www.zoopla.co.uk/for-sale/property/${encodeURIComponent((r.postcode||'').replace(/\s+/g,'-').toLowerCase())}/`;
+    const pricePaidUrl = `https://landregistry.data.gov.uk/app/ppd/search?postcode=${encodeURIComponent(r.postcode||'')}`;
+    const hmlrUrl = `https://search-property-information.service.gov.uk/`;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.id = `epc-card-${i}`;
+    card.style.animationDelay = (i*40)+'ms';
+    card.innerHTML = `
+      <div class="card-top">
+        <div style="flex:1">
+          <div class="company-name">${addr || 'Address withheld'}</div>
+          <div class="company-num">${propType}</div>
+          <div class="card-meta">
+            <span class="flag">⚠ Rating ${rating}${potential? ' → potential '+potential:''}</span>
+            ${lodged ? `<span>Last certified: ${lodged}</span>` : ''}
+          </div>
+        </div>
+        <div class="card-actions">
+          <span class="badge ${rating==='G'?'badge-high':(rating==='F'?'badge-med':'badge-low')}">EPC ${rating}</span>
+          <div class="btn-row">
+            <button class="btn-sm accent" onclick="toggleCard('epc',${i})">View Lead ▾</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-detail" id="epc-detail-${i}">
+        <div class="detail-grid">
+          <div>
+            <div class="detail-title">// Assessment</div>
+            <div class="detail-text">Rated <strong>${rating}</strong>, certificate last lodged <strong>${lodged||'unknown'}</strong> — a stale, poor-rated certificate suggests the property hasn't recently changed hands or been re-let, and may need significant work.<br><br><span class="warn-text">⚠ Not proof of vacancy or distress — verify current occupancy and ownership before contacting anyone.</span></div>
+          </div>
+          <div>
+            <div class="detail-title">// Verify before contact</div>
+            <div class="detail-text">1. Check current listings on <a href="${rightmoveUrl}" target="_blank">Rightmove ↗</a> / <a href="${zooplaUrl}" target="_blank">Zoopla ↗</a>.<br>2. Check last sale date via <a href="${pricePaidUrl}" target="_blank">Land Registry Price Paid ↗</a>.<br>3. Confirm current owner via <a href="${hmlrUrl}" target="_blank">HMLR ↗</a> (£3/title).</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <button class="btn-sm accent" onclick="toggleEmail('epc',${i}, () => genEpcLetter(${JSON.stringify(addr).replace(/'/g,"&#39;")}))">✉ Draft Owner Letter</button>
+          <a class="btn-sm" href="${rightmoveUrl}" target="_blank">Rightmove ↗</a>
+          <a class="btn-sm" href="${pricePaidUrl}" target="_blank">Price Paid ↗</a>
+          <a class="btn-sm" href="${hmlrUrl}" target="_blank">HMLR ↗</a>
+          <button class="btn-sm" onclick='saveLead({key:"epc-${(addr||"").replace(/"/g,"")}-${i}",source:"EPC",name:${JSON.stringify(addr||"Address withheld")},detail:"Rating "+${JSON.stringify(rating)},link:${JSON.stringify(rightmoveUrl)}})'>📌 Save</button>
+        </div>
+        <div class="email-box" id="epc-email-${i}">
+          <button class="email-copy" id="epc-copybtn-${i}" onclick="copyEmail('epc',${i})">Copy</button>
+          <div class="email-text" id="epc-emailtext-${i}"></div>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+function genEpcLetter(addr) {
+  const today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  return `Dear Homeowner,\n\nRE: ${addr}\n\nMy name is [Your Name] and I am a local property buyer/investor. I write on the off-chance that you might be considering selling ${addr.split(',')[0] || 'your property'} — whether it needs updating, has been empty for a while, or you'd simply value a straightforward, no-obligation cash offer.\n\nI buy properties in any condition, handle all legal costs, and can move at a pace that suits you.\n\nIf this isn't relevant to you, please accept my apologies for the letter and disregard it entirely.\n\nIf you'd like to have a no-pressure chat, I'd be glad to hear from you.\n\nKind regards,\n\n[Your Name]\n[Telephone]\n[Email]\n${today}`;
+}
+
+/* ============================================================
+   TAB 3 — REPOSSESSIONS (manual directory, no live API exists)
+   ============================================================ */
+const AUCTION_HOUSES = [
+  {name:'Allsop', desc:'UK\'s largest residential & commercial property auctioneer — regularly lists receivership and mortgagee-in-possession lots.', url:'https://www.allsop.co.uk/property-auctions/residential/catalogue', tags:['Residential','Commercial','Receivership']},
+  {name:'Savills Auctions', desc:'National auction house; catalogue lots are searchable and often flagged "in possession".', url:'https://www.savills.co.uk/auctions/', tags:['Residential','Commercial']},
+  {name:'SDL Property Auctions', desc:'One of the UK\'s biggest online auction platforms; filter by lot notes for possession/repossession.', url:'https://www.sdlauctions.co.uk/auction-catalogue', tags:['Residential','Online']},
+  {name:'Auction House UK', desc:'Regional network of local auction rooms; strong for smaller/regional distressed lots.', url:'https://www.auctionhouse.co.uk/property-search', tags:['Regional','Residential']},
+  {name:'Barnett Ross', desc:'London/South-East specialist, frequent commercial and mixed-use receivership instructions.', url:'https://www.barnettross.co.uk/auctions/', tags:['London','Commercial']},
+  {name:'Pugh Auctions', desc:'National coverage with a large volume of repossession and asset-recovery instructions.', url:'https://www.pugh-auctions.com/property-search/', tags:['Residential','Commercial']},
+  {name:'Clive Emson', desc:'Land and development-site specialist auctioneer, South of England focus.', url:'https://www.cliveemson.co.uk/auction-catalogue', tags:['Land','Development']},
+  {name:'Bond Wolfe', desc:'Midlands-based, large lot volume, frequently includes bank/receiver instructions.', url:'https://www.bondwolfe.com/property-auctions/', tags:['Midlands','Commercial']},
+  {name:'Network Auctions', desc:'Online auction house that aggregates instructions from receivers and asset managers nationally.', url:'https://www.networkauctions.co.uk/property-for-sale/', tags:['Online','National']}
+];
+
+function renderRepoDirectory() {
+  const container = document.getElementById('repo-directory');
+  container.innerHTML = '';
+  AUCTION_HOUSES.forEach(h => {
+    const el = document.createElement('div');
+    el.className = 'dir-card';
+    el.innerHTML = `
+      <div class="dir-name">${h.name}</div>
+      <div class="dir-desc">${h.desc}</div>
+      <div class="dir-tags">${h.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <a class="btn-sm accent" href="${h.url}" target="_blank">Open Catalogue ↗</a>`;
+    container.appendChild(el);
+  });
+}
+
+const REPO_CHECKLIST = [
+  'Open each catalogue and filter/search lot descriptions for "in possession", "repossession", "receivership", "mortgagee" or "LPA receiver".',
+  'Note the guide price — possession lots are typically priced to sell quickly, below open-market value.',
+  'Cross-check the address against Companies House / Land Registry if the seller is a corporate receiver, to understand the chain of title.',
+  'Check legal pack (usually free to download pre-auction) for outstanding charges, tenancies, or planning issues before bidding.',
+  'Set a personal maximum bid based on your own valuation + refurb costs — auction rooms move fast and there\'s no cooling-off period once the hammer falls.',
+  'Save promising lots to your Leads list below so you can track them across catalogue refreshes.'
+];
+function renderRepoChecklist() {
+  const container = document.getElementById('repo-checklist');
+  container.innerHTML = '';
+  REPO_CHECKLIST.forEach((text, i) => {
+    const el = document.createElement('div');
+    el.className = 'check-item';
+    el.innerHTML = `<input type="checkbox" id="repo-chk-${i}"><label for="repo-chk-${i}">${text}</label>`;
+    container.appendChild(el);
+  });
+}
+
+/* ============================================================
+   TAB 4 — PROBATE & DECEASED ESTATES (Gazette, live notices)
+   ============================================================ */
+let probResults = [];
+
+async function fetchDeceasedEstateNotices(term, days) {
+  const start = new Date();
+  start.setDate(start.getDate() - days);
+  const startStr = start.toISOString().slice(0,10);
+  const params = new URLSearchParams({
+    text: term || '',
+    'notice-type': 'deceased-estates',
+    'start-publish-date': startStr,
+    'results-page-size': '100'
+  });
+  const url = `https://www.thegazette.co.uk/all-notices/notice/data.json?${params.toString()}`;
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error('Gazette API error ' + resp.status);
+  const data = await resp.json();
+  return data.entry || [];
+}
+
+async function runProbateSearch() {
+  const term = document.getElementById('prob-term').value.trim();
+  const days = parseInt(document.getElementById('prob-days').value);
+  const limit = parseInt(document.getElementById('prob-limit').value);
+
+  document.getElementById('prob-results').style.display = 'none';
+  document.getElementById('prob-loading').style.display = 'block';
+  document.getElementById('prob-progressWrap').style.display = 'block';
+  document.getElementById('prob-btn').disabled = true;
+  document.getElementById('prob-progressLabel').textContent = 'Searching The Gazette deceased estates notices...';
+  document.getElementById('prob-progressFill').style.width = '40%';
+
+  try {
+    const entries = await fetchDeceasedEstateNotices(term, days);
+    document.getElementById('prob-progressFill').style.width = '100%';
+    probResults = entries.slice(0, limit);
+    renderProbate();
+  } catch(e) {
+    console.warn(e);
+    probResults = [];
+    renderProbate(true);
+  } finally {
+    document.getElementById('prob-loading').style.display = 'none';
+    document.getElementById('prob-progressWrap').style.display = 'none';
+    document.getElementById('prob-btn').disabled = false;
+  }
+}
+
+function extractText(entry) {
+  if (typeof entry.summary === 'string') return entry.summary;
+  if (entry.summary && entry.summary['#text']) return entry.summary['#text'];
+  if (entry.content && entry.content['#text']) return entry.content['#text'];
+  return '';
+}
+
+function renderProbate(failed) {
+  document.getElementById('prob-results').style.display = 'block';
+  document.getElementById('prob-resultsCount').textContent = probResults.length + ' notice' + (probResults.length!==1?'s':'');
+  const container = document.getElementById('prob-cards');
+  container.innerHTML = '';
+
+  if (failed) {
+    container.innerHTML = '<div class="demo-notice">// The Gazette API request failed (network/CORS or no results for this filter). Try a shorter date range, a different keyword, or search directly on <a href="https://www.thegazette.co.uk/all-notices/notice?text=&notice-type=deceased-estates" target="_blank" style="color:#f0b84a">thegazette.co.uk ↗</a>.</div>';
+    return;
+  }
+  if (!probResults.length) {
+    container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div>No deceased estates notices matched. Widen the date range or clear the keyword.</div>';
+    return;
+  }
+
+  probResults.forEach((entry, i) => {
+    const title = entry.title || 'Deceased Estates Notice';
+    const published = fmtDate(entry.published || entry.updated);
+    const summary = extractText(entry).slice(0, 400);
+    const link = (entry.link && entry.link.href) ? entry.link.href : (entry.id || '#');
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.id = `prob-card-${i}`;
+    card.style.animationDelay = (i*40)+'ms';
+    card.innerHTML = `
+      <div class="card-top">
+        <div style="flex:1">
+          <div class="company-name">${title}</div>
+          <div class="card-meta">${published ? `<span>📅 Published: ${published}</span>` : ''}</div>
+        </div>
+        <div class="card-actions">
+          <span class="badge badge-med">VERIFY</span>
+          <div class="btn-row">
+            <button class="btn-sm accent" onclick="toggleCard('prob',${i})">View ▾</button>
+            <a class="btn-sm" href="${link}" target="_blank">Notice ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-detail" id="prob-detail-${i}">
+        <div class="detail-grid">
+          <div>
+            <div class="detail-title">// Notice extract</div>
+            <div class="detail-text">${summary || 'Open the full notice for details of the deceased, date of death and the personal representative / solicitor handling the estate.'}</div>
+          </div>
+          <div>
+            <div class="detail-title">// Next steps</div>
+            <div class="detail-text">1. Read the full notice for the deceased's last known address and the handling solicitor.<br>2. Cross-check the name on <a href="https://probatesearch.service.gov.uk/" target="_blank">gov.uk Probate Search ↗</a> to confirm grant status.<br>3. If a property address is named, check current ownership via <a href="https://search-property-information.service.gov.uk/" target="_blank">HMLR ↗</a>.<br>4. Contact the named solicitor/executor directly — never approach the family without their involvement.</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <button class="btn-sm accent" onclick="toggleEmail('prob',${i}, () => genProbateEmail(${JSON.stringify(title).replace(/'/g,"&#39;")}))">📧 Draft Solicitor Enquiry</button>
+          <a class="btn-sm" href="${link}" target="_blank">Full Notice ↗</a>
+          <a class="btn-sm" href="https://probatesearch.service.gov.uk/" target="_blank">Probate Search ↗</a>
+          <button class="btn-sm" onclick='saveLead({key:"prob-${i}-${(entry.id||"").replace(/[^a-zA-Z0-9]/g,"")}",source:"Probate",name:${JSON.stringify(title)},detail:${JSON.stringify(published||"")},link:${JSON.stringify(link)}})'>📌 Save</button>
+        </div>
+        <div class="email-box" id="prob-email-${i}">
+          <button class="email-copy" id="prob-copybtn-${i}" onclick="copyEmail('prob',${i})">Copy</button>
+          <div class="email-text" id="prob-emailtext-${i}"></div>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+function genProbateEmail(title) {
+  const today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  return `To: [Solicitor/executor named in the notice]\nSubject: Enquiry re: Estate Property — ${title}\n\nDear Sir/Madam,\n\nI note the notice published in The Gazette regarding the above estate.\n\nI am a property buyer and write to ask, in case it is of use to the estate, whether the estate includes a residential or commercial property that the personal representatives may be considering for sale. I would welcome the opportunity to make a genuine, no-obligation offer, and can move at whatever pace suits the estate's administration.\n\nIf this is not relevant, I apologise for the intrusion and please disregard.\n\nYours faithfully,\n\n[Your Name]\n[Company]\n[Telephone]\n[Email]\n[Date: ${today}]`;
+}
+
+/* ============ Chip toggles ============ */
+document.querySelectorAll('.chip-group').forEach(group => {
+  group.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (chip) chip.classList.toggle('on');
+  });
+});
+
+/* ============ Init ============ */
+updateEpcWarning();
+refreshLeadsFab();
+renderRepoDirectory();
+renderRepoChecklist();
+</script>
+
+</body>
+</html>
