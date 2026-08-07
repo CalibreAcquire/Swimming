@@ -52,7 +52,7 @@ None of these are needed to explore the app in mock mode — only when you're re
    npm run setup:monday
    ```
    This creates the four boards (safe to re-run) and prints the `MONDAY_BOARD_*` values to add to `.env`.
-6. **Vercel** (recommended host) — [vercel.com](https://vercel.com), import this repo, add every `.env` var as a Project Environment Variable. Vercel Cron picks up `vercel.json` automatically.
+6. **Vercel** (recommended host) — [vercel.com](https://vercel.com), import this repo, add every `.env` var as a Project Environment Variable. Vercel Cron picks up `vercel.json` automatically. The build command (`prisma migrate deploy && next build`) applies any pending database migrations automatically on every deploy — no manual migration step needed once `DATABASE_URL` is set as an env var.
 
 Once real keys are in place, set `MOCK_INTEGRATIONS=false` and redeploy.
 
