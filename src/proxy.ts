@@ -4,7 +4,7 @@ import { verifySessionToken } from "@/lib/session";
 const PUBLIC_PATHS = new Set(["/login"]);
 const PUBLIC_API_PREFIXES = ["/api/auth/login", "/api/webhooks", "/api/cron"];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (PUBLIC_PATHS.has(pathname) || PUBLIC_API_PREFIXES.some((p) => pathname.startsWith(p))) {
