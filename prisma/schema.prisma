@@ -1,0 +1,299 @@
+// Lettings AI System — data model
+// Postgres via Prisma. See README.md for provisioning a database (Neon recommended).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ── People ──────────────────────────────────────────────────────────────
+
+enum ContactKind {
+  LEAD
+  TENANT
+  LANDLORD
+  CONTRACTOR
+}
+
+model Contact {
+  id        String      @id @default(cuid())
+  kind      ContactKind
+  name      String
+  email     String?
+  phone     String? // E.164, used for both SMS and WhatsApp
+  whatsappOptIn Boolean @default(false)
+  notes     String?
+  mondayItemId String? // used for LEAD contacts synced to the Leads & Viewings board
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  messages           Message[]
+  actions            Action[]
+  viewingSlotBookings ViewingSlot[]     @relation("BookedBy")
+  landlordProperties Property[]        @relation("Landlord")
+  tenancies          Tenancy[]         @relation("Tenant")
+  maintenanceTickets MaintenanceTicket[] @relation("MaintenanceTenant")
+  contractorTickets  MaintenanceTicket[] @relation("MaintenanceContractor")
+
+  @@index([kind])
+  @@index([email])
+  @@index([phone])
+}
+
+// ── Properties & tenancies ─────────────────────────────────────────────
+
+enum PropertyStatus {
+  AVAILABLE
+  UNDER_OFFER
+  LET
+  OFF_MARKET
+}
+
+model Property {
+  id           String         @id @default(cuid())
+  addressLine1 String
+  addressLine2 String?
+  city         String
+  postcode     String
+  bedrooms     Int?
+  rentPcm      Int? // pence, avoid float rounding
+  status       PropertyStatus @default(AVAILABLE)
+  landlordId   String?
+  landlord     Contact?       @relation("Landlord", fields: [landlordId], references: [id])
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  tenancies         Tenancy[]
+  viewingSlots      ViewingSlot[]
+  maintenanceTickets MaintenanceTicket[]
+  complianceItems   ComplianceItem[]
+
+  @@index([status])
+}
+
+model Tenancy {
+  id              String   @id @default(cuid())
+  propertyId      String
+  property        Property @relation(fields: [propertyId], references: [id])
+  tenantId        String
+  tenant          Contact  @relation("Tenant", fields: [tenantId], references: [id])
+  startDate       DateTime
+  endDate         DateTime?
+  rentDueDay      Int // day of month, 1-28
+  rentPcm         Int // pence
+  depositProtected Boolean @default(false)
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  arrearsCases ArrearsCase[]
+
+  @@index([propertyId])
+  @@index([tenantId])
+}
+
+model ViewingSlot {
+  id            String            @id @default(cuid())
+  propertyId    String
+  property      Property          @relation(fields: [propertyId], references: [id])
+  startsAt      DateTime
+  endsAt        DateTime
+  status        ViewingSlotStatus @default(OPEN)
+  bookedById    String?
+  bookedBy      Contact?          @relation("BookedBy", fields: [bookedById], references: [id])
+  mondayItemId  String?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@index([propertyId, status])
+}
+
+enum ViewingSlotStatus {
+  OPEN
+  BOOKED
+  CANCELLED
+}
+
+// ── Messages (the full inbound/outbound log across channels) ────────────
+
+enum Channel {
+  EMAIL
+  SMS
+  WHATSAPP
+  INTERNAL // alerts to staff, not a tenant/lead-facing channel
+}
+
+enum Direction {
+  INBOUND
+  OUTBOUND
+}
+
+// Which workflow area a message/action belongs to
+enum Workflow {
+  LEAD
+  MAINTENANCE
+  ARREARS
+  COMPLIANCE
+  GENERAL
+}
+
+model Message {
+  id          String    @id @default(cuid())
+  contactId   String?
+  contact     Contact?  @relation(fields: [contactId], references: [id])
+  channel     Channel
+  direction   Direction
+  workflow    Workflow  @default(GENERAL)
+  subject     String?
+  body        String
+  externalId  String? // provider message id (Postmark/Twilio), for threading
+  threadId    String? // groups a conversation together
+  relatedType String? // "MaintenanceTicket" | "ArrearsCase" | "ComplianceItem" | "ViewingSlot"
+  relatedId   String?
+  createdAt   DateTime  @default(now())
+
+  @@index([contactId])
+  @@index([threadId])
+  @@index([workflow])
+}
+
+// ── Maintenance ──────────────────────────────────────────────────────────
+
+enum MaintenanceUrgency {
+  EMERGENCY
+  URGENT
+  ROUTINE
+}
+
+enum MaintenanceStatus {
+  NEW
+  ACKNOWLEDGED
+  CONTRACTOR_ASSIGNED
+  IN_PROGRESS
+  RESOLVED
+}
+
+model MaintenanceTicket {
+  id            String             @id @default(cuid())
+  propertyId    String
+  property      Property           @relation(fields: [propertyId], references: [id])
+  tenantId      String
+  tenant        Contact            @relation("MaintenanceTenant", fields: [tenantId], references: [id])
+  category      String // plumbing, electrical, heating, appliance, pest, structural, other
+  urgency       MaintenanceUrgency
+  description   String
+  status        MaintenanceStatus  @default(NEW)
+  contractorId  String?
+  contractor    Contact?           @relation("MaintenanceContractor", fields: [contractorId], references: [id])
+  mondayItemId  String?
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+
+  @@index([status])
+  @@index([urgency])
+}
+
+// ── Arrears ──────────────────────────────────────────────────────────────
+
+enum ArrearsStage {
+  REMINDER_1
+  REMINDER_2
+  FORMAL_NOTICE
+  ESCALATED
+  RESOLVED
+}
+
+model ArrearsCase {
+  id            String       @id @default(cuid())
+  tenancyId     String
+  tenancy       Tenancy      @relation(fields: [tenancyId], references: [id])
+  amountOwedPence Int
+  daysOverdue   Int          @default(0)
+  stage         ArrearsStage @default(REMINDER_1)
+  lastActionAt  DateTime?
+  mondayItemId  String?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  @@index([stage])
+}
+
+// ── Compliance ───────────────────────────────────────────────────────────
+
+enum ComplianceType {
+  GAS_SAFETY
+  EICR
+  EPC
+  DEPOSIT_PROTECTION
+  RIGHT_TO_RENT
+}
+
+enum ComplianceStatus {
+  VALID
+  DUE_SOON
+  OVERDUE
+  RESOLVED
+}
+
+model ComplianceItem {
+  id           String           @id @default(cuid())
+  propertyId   String
+  property     Property         @relation(fields: [propertyId], references: [id])
+  type         ComplianceType
+  dueDate      DateTime
+  status       ComplianceStatus @default(VALID)
+  mondayItemId String?
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  @@index([status])
+  @@index([dueDate])
+}
+
+// ── Action queue (every AI-decided send or Monday write) ─────────────────
+
+enum ActionStatus {
+  PENDING // needs human approval
+  APPROVED // approved, awaiting the send processor
+  REJECTED
+  SENT
+  FAILED
+}
+
+model Action {
+  id          String       @id @default(cuid())
+  type        String // e.g. "lead.faq_reply", "arrears.formal_notice" — see lib/rules.ts
+  workflow    Workflow
+  autoSend    Boolean // rule-tier decision at creation time
+  status      ActionStatus @default(PENDING)
+  channel     Channel
+  contactId   String?
+  contact     Contact?     @relation(fields: [contactId], references: [id])
+  relatedType String? // "MaintenanceTicket" | "ArrearsCase" | "ComplianceItem" | "ViewingSlot"
+  relatedId   String?
+  subject     String?
+  body        String // the drafted message, editable before send
+  reasoning   String? // short AI rationale, shown to approver for context
+  decidedBy   String? // staff name/email who approved/rejected (no full auth system yet)
+  decidedAt   DateTime?
+  sentAt      DateTime?
+  error       String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([status])
+  @@index([workflow])
+}
+
+// ── Staff (attribution only for now; see README on auth) ─────────────────
+
+model StaffUser {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
