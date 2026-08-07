@@ -65,7 +65,7 @@ Once real keys are in place, set `MOCK_INTEGRATIONS=false` and redeploy.
 
 `vercel.json` schedules:
 - `/api/cron/daily` once a day — ages arrears cases, checks compliance deadlines, nudges stale leads.
-- `/api/cron/process-actions` hourly — safety-net retry for anything stuck mid-send.
+- `/api/cron/process-actions` once daily — safety-net retry for anything stuck mid-send. (Vercel's Hobby plan caps cron jobs at once/day; bump this to hourly in `vercel.json` if you're on Pro.)
 
 Set `CRON_SECRET` to any random string; Vercel sends it automatically as a bearer token once the env var exists.
 
