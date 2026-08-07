@@ -6,6 +6,15 @@
 // It prints the MONDAY_BOARD_* env vars to add to your .env afterwards.
 
 import "dotenv/config";
+import { ProxyAgent, setGlobalDispatcher } from "undici";
+
+// Node's built-in fetch doesn't honor HTTPS_PROXY/https_proxy on its own —
+// unlike curl, npm, etc. Respect it explicitly so this script also works
+// from behind a corporate/sandboxed proxy, not just on an open network.
+const proxyUrl = process.env.HTTPS_PROXY || process.env.https_proxy;
+if (proxyUrl) {
+  setGlobalDispatcher(new ProxyAgent(proxyUrl));
+}
 
 const MONDAY_API_URL = "https://api.monday.com/v2";
 const TOKEN = process.env.MONDAY_API_TOKEN;
