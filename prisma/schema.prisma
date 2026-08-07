@@ -2,7 +2,8 @@
 // Postgres via Prisma. See README.md for provisioning a database (Neon recommended).
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {

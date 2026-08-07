@@ -1,8 +1,6 @@
 // Seeds enough data to click through every screen and workflow in mock mode.
 // Run with: npm run db:seed
-import { PrismaClient } from "@prisma/client";
-
-const db = new PrismaClient();
+import { db } from "../src/lib/db";
 
 async function main() {
   await db.action.deleteMany();
