@@ -73,10 +73,11 @@ Upload `_youtube_v1.srt` (Subtitles > Add language > English > Upload file > Wit
 Want to know what your property is realistically worth? Instant valuation: https://www.calibreacquire.co.uk/instant-valuation
 ```
 
-### End screen (last 20 seconds, from 2:03)
+### End screen (last 10 seconds, from 2:13)
 - Video: "How a Property Valuation Actually Gets Calculated" (follows on from the instant valuation line)
 - Subscribe button
-Elements on the right-hand side; the register URL card sits on the left.
+Put them in the top-right and bottom-right corners: the register URL card (about 2:15 to 2:20)
+runs across the middle of the screen and should stay readable.
 
 ---
 
