@@ -61,3 +61,8 @@ under speech, mix at −14 LUFS / −1.5 dBTP.
 ## Notes for next time
 - Film in 4K if possible: sharper zooms and reels.
 - A lavalier or wireless mic would improve the audio more than any processing.
+
+## 22 Oct: caption overlap fix
+- calibre_edit.py held each caption at least 0.35 s, which could run past the next caption, and split key words into tiny chunks. Fixed in chunk() and caption_events.
+- Re-rendered Reel 1 and Reel 3 as v2: 0 overlaps, −14.0 LUFS, −1.5 / −1.2 dBTP. The Outlook events now point to the v2 files.
+- The published YouTube video (v1) has 3 overlaps of about 0.15 s, at ~0:52, 1:20 and 1:23. Not worth re-uploading (it would lose views and the URL). Reel 1 v1 on Instagram has 1.
