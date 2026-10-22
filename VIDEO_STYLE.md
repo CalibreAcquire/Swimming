@@ -3,6 +3,17 @@
 The editing rules applied to every YouTube video and Instagram reel. Update this
 file as the style is refined.
 
+## Look and feel
+Every video should feel **luxurious, engaging, authentic and professional**.
+
+- **Luxurious** — restrained, elegant typography; generous spacing on cards;
+  clean colour grade; refined music. No cheap effects, stickers or emoji.
+- **Engaging** — fast cuts, varied captions, zooms and text cards keep momentum.
+- **Authentic** — real footage and real properties; keep the speaker's natural
+  delivery; B-roll only when relevant.
+- **Professional** — consistent brand fonts, colours and logo use; clean audio;
+  smooth eased zooms; hard cuts over flashy transitions.
+
 ## Deliverables per raw video
 - **YouTube** — full edit, 16:9 (1920×1080).
 - **Reels** — several 9:16 (1080×1920) clips cut from the same footage:
