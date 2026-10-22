@@ -36,3 +36,8 @@ under voice. Caption overlaps: 0 (after fixing the overlap bug).
 1. Filmed 28 Aug: "one has completed, another completes this month, and the third is under
    offer". Is that still the status? If not, add an update card instead of re-shooting.
 2. "£80 million" (video) vs "£30 million" (CLAUDE.md rule). Which is right?
+
+## Draft 3 (22 Oct): audio
+- Jake: "the sound echoes, can we make it fuller". Room echo measured ~0.8-1.0 s RT60 (camera mic).
+- Strong suppression sounded robotic; Jake chose the gentle setting (Option A). Preset `full` in all four EDLs.
+- QA: all four −14.0 LUFS, −1.6 dBTP, music 14–16 dB under voice, 0 caption overlaps. AAC now 320 kbps.
