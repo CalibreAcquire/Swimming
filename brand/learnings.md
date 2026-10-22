@@ -14,6 +14,9 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Jake can't plan content ahead: for every finished video, put each post (YouTube, reels,
   Story) in his Outlook diary as its own event with the file name, steps and caption to
   paste. He saves the exports himself. (22 Oct 2026)
+- Every reel also goes up as a YouTube Short the same day: original export file, the
+  full video as Related video, a plain title and short description. Put them in the same
+  diary event as the reel. (22 Oct 2026)
 - Post a calculator (comment SEND) reel when Jake is around to reply, not just before
   he's away. (22 Oct 2026)
 
