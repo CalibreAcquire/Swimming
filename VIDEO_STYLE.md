@@ -109,6 +109,14 @@ Keep logo use light — subtle watermark and occasional card use, never dominant
   dB under speech; fade in at the start, fade out over the last few seconds.
 - Voice preset: `deep` (deeper, fuller tone) — chosen by the user.
 
+## Writing style (titles, descriptions, captions)
+- **No emojis.** They make copy look AI-written.
+- No long dashes (—) and no neat three-part slogans ("Same X. Different Y.
+  Different Z."). Use commas and full stops.
+- Plain, measured, first person ("I", "we"). Reuse Jake's own phrasing from the
+  video wherever possible; it's how he actually talks.
+- UK English (£, "let", "HMO"). Keep hashtags to the end, 6–8 on Instagram.
+
 ## Process
 - Take time over each video. Quality beats speed.
 - Before rendering, share a breakdown (planned cuts, captions, cards, B-roll)
