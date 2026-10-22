@@ -1,7 +1,11 @@
 # Calibre Acquire video editing
 
 This repo is the video editing pipeline for Calibre Acquire's YouTube videos and
-Instagram reels (property content).
+Instagram reels (property content), for Jake Benson (founder).
+
+**Memory:** read `LOG.md` first — it records everything done for Jake and every
+decision he's made. Add an entry at the end of every piece of work, and put
+lasting preferences in `VIDEO_STYLE.md` too.
 
 - `VIDEO_STYLE.md` — the house editing style. Follow it for every edit and
   update it when the user refines a preference.
@@ -17,7 +21,7 @@ Instagram reels (property content).
   `medium`; pass the read-aloud script when there is one.
 - `tools/find_retakes.py <video> [--json transcript.json]` — phrase-by-phrase
   transcript and restart/retake detector.
-- `tools/calibre_edit.py plan|render|stills <edit.json> …` — the editor. An edit
+- `tools/calibre_edit.py plan|render|cards|srt|stills <edit.json> …` — the editor. An edit
   file lists cuts (retakes), shots/zooms, caption markup and cards; see the
   docstring at the top of the file for every key and the markup syntax.
 
@@ -32,4 +36,7 @@ Instagram reels (property content).
 3. Write `youtube.json` and `reel-*.json`, `plan` them, render `--draft`,
    check frames, write `BREAKDOWN.md`, share stills for approval.
 4. QA: run `find_retakes.py` on the rendered draft — it must report none.
-5. Render finals (without `--draft`) once approved.
+5. Render finals (without `--draft`) once approved, plus `srt` subtitles,
+   `COPY.md` (title, description with chapters, tags, reel captions — no
+   emojis), a thumbnail (see `projects/01-valuation/thumbnail/make_thumb.py`)
+   and end screen suggestions. Log it in `LOG.md`.

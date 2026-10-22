@@ -124,3 +124,28 @@ If you'd like access to properties before they reach the open market, you can ap
 - **Instagram bio link:** point it at https://www.calibreacquire.co.uk/register while
   Reel 4 is live, and at the calculators page while Reel 3 is live if you're not
   using auto-DMs.
+
+---
+
+## YouTube end screen
+
+Video elements: "End screen" > Add. The end screen can run for the last 5-20 seconds.
+
+- **Start time:** 2:50, when you start "If you'd like access to properties...". Before that, the video is still
+  explaining the main point, so elements would cover it.
+- **Layout:** you sit left of centre, so put everything on the right-hand side over the wall and laptop.
+- **Elements (in order of preference):**
+  1. **Video: "Four questions to ask before you make an offer"**, the natural next step. They've learnt how
+     a property is valued; next is what to check before they offer.
+  2. **Video: "611 Roman Road: Development Breakdown"**, a real deal with real numbers, showing the
+     valuation thinking in practice.
+  3. **Subscribe button.**
+  If neither video is published yet, use **"Best for viewer"** (YouTube picks from your channel) plus Subscribe.
+- **Later:** once you have 4-5 videos, make a playlist (e.g. "Property investing fundamentals") and use it as
+  the main end screen element. Playlists keep people watching longer than a single video.
+
+## Subtitles
+
+Upload `01 How a valuation actually gets calculated - English.srt`: Video elements > Subtitles > Add >
+Upload file > "With timing". It uses the corrected wording, so it's more accurate than YouTube's
+automatic captions and helps search.

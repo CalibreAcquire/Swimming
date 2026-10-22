@@ -10,6 +10,7 @@ Usage:
   calibre_edit.py plan   <edit.json>                 print cuts, shots, captions, cards
   calibre_edit.py render <edit.json> <out.mp4> [--draft]
   calibre_edit.py cards  <edit.json> <outdir>         preview every card as a PNG
+  calibre_edit.py srt    <edit.json> <out.srt>        subtitle file for YouTube
   calibre_edit.py stills <edit.json> <video> <outdir> <t> [<t> ...]
 
 Edit file keys (times are SOURCE seconds unless noted):
@@ -347,6 +348,7 @@ def align(tokens, words):
         if op == "equal":
             for k in range(i2 - i1):
                 tokens[i1 + k]["s"], tokens[i1 + k]["e"] = words[j1 + k]["s"], words[j1 + k]["e"]
+                tokens[i1 + k]["heard"] = words[j1 + k]["w"]
         elif op == "replace":
             s, e = words[j1]["s"], words[j2 - 1]["e"]
             n = i2 - i1
@@ -832,6 +834,65 @@ def card_stills(edit_path, outdir):
     print(f"{len(spans)} cards -> {outdir}")
 
 
+ACRONYMS = {"HMO", "HMOS", "UK", "VAT", "SDLT", "ROI", "LTV", "GDV", "BTL", "EPC"}
+
+
+def srt(edit_path, out):
+    """Subtitle file (.srt) for upload to YouTube, from the caption text and word timings.
+    Key words are written in capitals for the on-screen style; subtitles use the
+    spelling as spoken. One sentence per subtitle, long ones split evenly."""
+    edit = Edit(edit_path)
+    toks = align(parse_markup(edit.cfg.get("captions", "")), edit.kept_words)
+    words = []
+    for t in toks:
+        if not (edit.in_kept(t["s"]) or edit.in_kept(t["e"])):
+            continue
+        text = t["text"]
+        if t["style"] == "key" and text.isupper():
+            heard = re.sub(r"[^\w£$%'-]", "", t.get("heard", ""))
+            punct = re.sub(r"^.*?([.,?!;:]*)$", r"\1", text)
+            core = text[:len(text) - len(punct)]
+            text = (heard if heard and norm(heard) == norm(core) else
+                    core if core in ACRONYMS else core.lower()) + punct
+        words.append(dict(text=text, s=edit.out_time(t["s"]), e=edit.out_time(t["e"])))
+
+    sentences, cur = [], []
+    for w in words:
+        cur.append(w)
+        if re.search(r"[.?!]$", w["text"]):
+            sentences.append(cur)
+            cur = []
+    if cur:
+        sentences.append(cur)
+    cues = []
+    for snt in sentences:
+        n = max(1, math.ceil(len(" ".join(w["text"] for w in snt)) / 80))
+        size = len(snt) / n
+        for k in range(n):
+            part = snt[round(k * size):round((k + 1) * size)]
+            if part:
+                cues.append(part)
+
+    def ts(t):
+        ms = int(round(max(0, t) * 1000))
+        h, ms = divmod(ms, 3600000)
+        m, ms = divmod(ms, 60000)
+        s, ms = divmod(ms, 1000)
+        return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+    lines = []
+    for i, c in enumerate(cues):
+        text = " ".join(x["text"] for x in c)
+        if len(text) > 42:  # two balanced lines
+            ws = text.split()
+            best = min(range(1, len(ws)), key=lambda k: abs(len(" ".join(ws[:k])) - len(text) / 2))
+            text = " ".join(ws[:best]) + "\n" + " ".join(ws[best:])
+        end = min(c[-1]["e"] + 0.4, cues[i + 1][0]["s"]) if i + 1 < len(cues) else c[-1]["e"] + 0.4
+        lines.append(f"{i + 1}\n{ts(c[0]['s'])} --> {ts(max(end, c[0]['s'] + 0.8))}\n{text}\n")
+    open(out, "w").write("\n".join(lines))
+    print(f"{len(cues)} subtitles -> {out}")
+
+
 def stills(video, outdir, times):
     os.makedirs(outdir, exist_ok=True)
     for t in times:
@@ -847,6 +908,8 @@ if __name__ == "__main__":
         plan(sys.argv[2])
     elif cmd == "render":
         render(sys.argv[2], sys.argv[3], draft="--draft" in sys.argv)
+    elif cmd == "srt":
+        srt(sys.argv[2], sys.argv[3])
     elif cmd == "cards":
         card_stills(sys.argv[2], sys.argv[3])
     elif cmd == "stills":
