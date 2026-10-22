@@ -8,9 +8,14 @@ Presets (chosen per edit with "audio": {"preset": ...}):
             expander that shortens the room tail between phrases
   deep    — studio's cleanup with a deeper, fuller tone: more chest and body,
             softer top, denser compression
+  full    — for echoey rooms: stronger WPE plus late-reverb suppression, deep's
+            tone with more body, gentle compression so the room tail stays down
+            (Jake's default from 22 Oct 2026)
 Optional "pitch": semitones (e.g. -1) lowers the voice, formants preserved.
 
-Everything ends with two-pass loudness normalisation to -14 LUFS / -1.5 dBTP.
+Everything ends at -14 LUFS / -1.3 dBTP via a plain gain and a peak limiter.
+(ffmpeg's loudnorm falls back to dynamic mode when it can't hit the target
+linearly, and that brings the room echo back up between words.)
 """
 import json, re, subprocess
 
@@ -31,6 +36,14 @@ EQ_DEEP = ("highpass=f=70:poles=2,"
            "highshelf=f=8000:g=-1,"                # softer top end
            "deesser=i=0.35")
 
+EQ_FULL = ("highpass=f=70:poles=2,"
+           "lowshelf=f=160:g=5.5,"                  # weight and chest
+           "equalizer=f=250:t=q:w=0.9:g=2.5,"      # body
+           "equalizer=f=450:t=q:w=1.2:g=-3,"       # boxiness
+           "equalizer=f=3000:t=q:w=1.0:g=2,"       # presence
+           "highshelf=f=8000:g=-0.5,"
+           "deesser=i=0.35")
+
 PRESETS = {
     "basic":  dict(wpe=None, chain="highpass=f=70,acompressor=threshold=-21dB:ratio=2.5:attack=8:release=160:makeup=2"),
     "clean":  dict(wpe=(20, 3), chain=EQ_CLEAN + ",acompressor=threshold=-24dB:ratio=3:attack=6:release=140:knee=4:makeup=3"),
@@ -38,6 +51,8 @@ PRESETS = {
                                        "agate=threshold=0.012:ratio=1.8:range=0.35:attack=8:release=250:knee=4"),
     "deep":   dict(wpe=(30, 2), chain=EQ_DEEP + ",acompressor=threshold=-27dB:ratio=4:attack=6:release=140:knee=4:makeup=4,"
                                      "agate=threshold=0.012:ratio=1.8:range=0.35:attack=8:release=250:knee=4"),
+    # chain runs on the voice levelled to -20 LUFS (see process)
+    "full":   dict(wpe=(40, 2), reverb=(1.0, -18), chain=EQ_FULL + ",acompressor=threshold=-18dB:ratio=2:attack=10:release=200:knee=6"),
 }
 
 
@@ -79,15 +94,58 @@ def dereverb(path_in, path_out, taps, delay, block=20.0, overlap=1.0):
     sf.write(path_out, np.repeat(out[:, None], x.shape[1], axis=1), sr, subtype="PCM_24")
 
 
-def loudnorm(path_in, path_out, chain, sr=48000):
-    """Apply chain, then two-pass loudnorm so the level is exact without pumping."""
-    target = "I=-14:TP=-1.5:LRA=9"
-    r = subprocess.run(["ffmpeg", "-v", "info", "-i", path_in, "-af", f"{chain},loudnorm={target}:print_format=json",
+def suppress_reverb(path_in, path_out, rt60=0.8, delay=0.05, floor_db=-14.0):
+    """Late-reverb suppression (Lebart et al.): the room tail at each moment is
+    predicted from the signal `delay` seconds earlier, decayed at the room's RT60,
+    and subtracted spectrally. Takes out the echo WPE leaves behind in lively rooms.
+    """
+    import scipy.signal as ss
+    x, sr = sf.read(path_in, always_2d=True)
+    mono = x.mean(axis=1)
+    nper, hop = 1024, 256
+    f, t, Y = ss.stft(mono, sr, nperseg=nper, noverlap=nper - hop)
+    P = np.abs(Y) ** 2
+    # smooth the power over ~30 ms so the prediction follows the envelope, not each frame
+    k = np.ones(5) / 5
+    Ps = np.apply_along_axis(lambda r: np.convolve(r, k, "same"), 1, P)
+    nd = max(1, int(round(delay * sr / hop)))
+    decay = np.exp(-2 * (3 * np.log(10) / rt60) * delay)
+    late = np.zeros_like(Ps)
+    late[:, nd:] = decay * Ps[:, :-nd]
+    g = np.maximum(1 - late / (Ps + 1e-12), 10 ** (floor_db / 10))
+    g = np.sqrt(g)
+    # smooth the gain across time and frequency to avoid watery artefacts
+    g = ss.convolve2d(g, np.ones((3, 3)) / 9, mode="same", boundary="symm")
+    _, z = ss.istft(Y * g, sr, nperseg=nper, noverlap=nper - hop)
+    z = z[:len(mono)]
+    sf.write(path_out, np.repeat(z[:, None], x.shape[1], axis=1), sr, subtype="PCM_24")
+
+
+def measure(path):
+    """Integrated loudness (LUFS) and true peak (dBTP)."""
+    r = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-af", "ebur128=framelog=quiet:peak=true",
                         "-f", "null", "-"], capture_output=True, text=True)
-    m = json.loads(re.findall(r"\{[^{}]*\"input_i\"[^{}]*\}", r.stderr)[-1])
-    second = (f"{chain},loudnorm={target}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
-              f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", path_in, "-af", second, "-ar", str(sr), path_out], check=True)
+    return (float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)[-1]),
+            float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", r.stderr)[-1]))
+
+
+def loudnorm(path_in, path_out, chain, sr=48000, target=-14.0, ceiling=-1.6):
+    """Apply chain, then a plain gain to the target loudness and a peak limiter.
+
+    No dynamic loudness processing: what the chain did to the dynamics is what you hear.
+    """
+    tmp = path_out + ".pre.wav"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", path_in, "-af", chain, "-c:a", "pcm_f32le", tmp], check=True)
+    gain = target - measure(tmp)[0]
+    for _ in range(3):  # limiting lowers the loudness a little; correct and redo
+        lim = f"volume={gain:.2f}dB,alimiter=limit={10 ** (ceiling / 20):.4f}:attack=2:release=80:level=0"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-af", lim, "-ar", str(sr), "-c:a", "pcm_s24le",
+                        path_out], check=True)
+        i, _ = measure(path_out)
+        if abs(i - target) < 0.15:
+            break
+        gain += target - i
+    __import__("os").remove(tmp)
 
 
 def process(path_in, path_out, preset="clean", pitch=0):
@@ -96,7 +154,13 @@ def process(path_in, path_out, preset="clean", pitch=0):
     if p["wpe"]:
         src = path_out + ".wpe.wav"
         dereverb(path_in, src, *p["wpe"])
-    loudnorm(src, path_out, pitch_filter(pitch) + p["chain"])
+    pre = ""
+    if p.get("reverb"):
+        sup = path_out + ".sup.wav"
+        suppress_reverb(src, sup, *p["reverb"])
+        src = sup
+        pre = f"volume={-20 - integrated_lufs(src):.2f}dB,"
+    loudnorm(src, path_out, pre + pitch_filter(pitch) + p["chain"])
 
 
 # ---------------------------------------------------------------- music bed

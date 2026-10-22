@@ -43,6 +43,10 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 ## Audio
 - Voice preset `deep` (deeper, fuller): Jake chose it over clean/studio/pitch-shifted.
   No pitch shift. (22 Oct 2026)
+- "The sound echoes, can we make it fuller" (Craig video): preset `full` is now the default. Stronger
+  dereverb plus late-reverb suppression, more body in the EQ, gentle compression. Heavy compression
+  and ffmpeg loudnorm's dynamic mode both lift the room echo back up between words, so the chain
+  now ends with plain gain plus a limiter. Measure the echo tail on every new room. (22 Oct 2026)
 - Music used on video 01: "Autofahren" (YouTube), "House 02" (reels), from brand/music. (22 Oct 2026)
 
 ## Graphics

@@ -109,7 +109,8 @@ Keep logo use light — subtle watermark and occasional card use, never dominant
   (elegant, steady deep house).
 - Level: bed at −30 LUFS on YouTube, −27 on reels (voice is −14), dipping a few
   dB under speech; fade in at the start, fade out over the last few seconds.
-- Voice preset: `deep` (deeper, fuller tone) — chosen by the user.
+- Voice preset: `full` (the `deep` tone with echo removal and more body), from 22 Oct 2026.
+  Jake first chose `deep`, then asked for less echo and a fuller sound.
 
 ## Links and handles
 - Website: https://www.calibreacquire.co.uk

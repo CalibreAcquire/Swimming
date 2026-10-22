@@ -125,7 +125,7 @@ Place graphics wherever the script calls for them (graphic cues appear in grey b
 
 * Light noise reduction, high-pass around 80 Hz, gentle compression, de-ess if needed.
 * Loudness target: −14 LUFS integrated, −1 dBTP true peak for both YouTube and Instagram.
-* Voice: `deep` preset (`scripts/voice.py`), chosen by Jake.
+* Voice: `full` preset (`scripts/voice.py`): the `deep` tone Jake chose, plus echo removal and more body (his correction, 22 Oct 2026).
 * Background music on every video from `brand/music/`, chosen per video: bed around −30 LUFS on YouTube and −27 LUFS on reels (voice at −14), ducked under speech, fading in and out.
 
 ### Step 7: Colour
@@ -233,10 +233,10 @@ Keep it short. Jake will reply with corrections; apply them, export a new versio
 * **Scripts so far** (`scripts/`):
   * `find_retakes.py <video> --json transcript.json`: transcribes phrase by phrase between pauses (whole-file transcription merges false starts into the next take) and lists restart/retake candidates. Run it on the raw footage and again on the render as QA.
   * `transcribe.py`: whole-file word-level transcription (fallback).
-  * `calibre_edit.py plan|render|cards|srt|stills <edl.json>`: renders from an EDL (cuts, punch-ins, captions, cards, audio, music). See its docstring. It implements Jake's style (`VIDEO_STYLE.md`). Still to add: 30 fps reel export and AAC 320 kbps / −1 dBTP from Step 9 and Step 6.
+  * `calibre_edit.py plan|render|cards|srt|stills <edl.json>`: renders from an EDL (cuts, punch-ins, captions, cards, audio, music). See its docstring. It implements Jake's style (`VIDEO_STYLE.md`). Audio is AAC 320 kbps / 48 kHz, −14 LUFS, about −1.3 dBTP. Still to add: 30 fps reel export (Step 9).
   * `qa.py <render.mp4> …`: loudness, true peak, voice-vs-music gap and caption overlaps (reads the .ass next to the render). Run on every draft and final.
   * `make_cover.py`: reel/Short cover (1080x1920) from a frame of Jake plus a stacked headline. `make_story.py`: Instagram Story for a YouTube launch.
-  * `voice.py`: voice chain (`deep` preset chosen by Jake: dereverb, fuller EQ, de-ess, compression) and music ducking. Dereverb runs in 20 s blocks (whole-file runs out of memory).
+  * `voice.py`: voice chain and music ducking. Preset `full` (default): WPE dereverb, late-reverb suppression, fuller EQ, de-ess, gentle compression, then plain gain plus limiter (never loudnorm's dynamic mode, it brings the echo back). Dereverb runs in 20 s blocks (whole-file runs out of memory).
 * **Music:** `brand/music/library.json` lists approved Mixkit tracks (free licence, commercial use, no attribution); files download into `brand/music/cache/`.
 * **Posting schedule (Jake can't plan ahead):** after a video is approved, plan when each post goes out (YouTube + reels + Story) around Jake's Outlook diary (Microsoft 365 connector; read the week first, avoid clashes, he's away 29 Oct-8 Nov 2026). Create one short Outlook event per posting slot (each reel slot also covers its YouTube Short) with: what to post, the exact export file name, steps, and the caption to copy and paste (no emojis). Record the slots and event ids in `publish/schedule.md`. Never post anything yourself.
 * **Style:** `VIDEO_STYLE.md` is the video style (Jake retracted the brief's style rules on 22 Oct 2026). `LOG.md` is the history of video 01.

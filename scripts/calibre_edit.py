@@ -31,7 +31,7 @@ Edit file keys (times are SOURCE seconds unless noted):
                              talking head while he speaks (video: "start" into the clip; image:
                              slow push-in to "zoom")
   grade                      ffmpeg filter string for the colour grade
-  audio                      {"preset": "basic"|"clean"|"studio"|"deep", "pitch": semitones}
+  audio                      {"preset": "basic"|"clean"|"studio"|"deep"|"full", "pitch": semitones}
                              voice processing, see voice.py
   music                      {"track": id from brand/music/library.json, "start": s, "bed": LUFS, "duck": ratio}
 """
@@ -838,7 +838,7 @@ def render(edit_path, out, draft=False):
              *[x for f in broll_files for x in ("-i", f)],
              "-filter_complex", fc, "-map", "[v]", "-map", "1:a",
              "-c:v", "libx264", "-preset", "veryfast" if draft else "slow", "-crf", "20" if draft else "17",
-             "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k",
+             "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "320k", "-ar", "48000",
              "-movflags", "+faststart", "-shortest", out])
     finally:
         shutil.rmtree(tmp, ignore_errors=True)

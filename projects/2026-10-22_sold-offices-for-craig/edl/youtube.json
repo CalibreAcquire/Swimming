@@ -57,7 +57,7 @@
     }
   ],
   "audio": {
-    "preset": "deep"
+    "preset": "full"
   },
   "music": {
     "track": 770,
