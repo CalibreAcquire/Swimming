@@ -6,6 +6,9 @@ Presets (chosen per edit with "audio": {"preset": ...}):
             de-essing, smoother compression
   studio  — + stronger dereverb, a touch of warmth, firmer compression and a soft
             expander that shortens the room tail between phrases
+  deep    — studio's cleanup with a deeper, fuller tone: more chest and body,
+            softer top, denser compression
+Optional "pitch": semitones (e.g. -1) lowers the voice, formants preserved.
 
 Everything ends with two-pass loudness normalisation to -14 LUFS / -1.5 dBTP.
 """
@@ -20,13 +23,29 @@ EQ_CLEAN = ("highpass=f=80:poles=2,"
             "highshelf=f=10000:g=1.5,"             # air
             "deesser=i=0.35")
 EQ_STUDIO = EQ_CLEAN + ",lowshelf=f=140:g=1.5"     # a little chest warmth
+EQ_DEEP = ("highpass=f=70:poles=2,"
+           "lowshelf=f=170:g=3.5,"                  # weight and chest
+           "equalizer=f=230:t=q:w=0.9:g=1.5,"      # body
+           "equalizer=f=380:t=q:w=1.2:g=-2.5,"     # keep the boxiness out above the body
+           "equalizer=f=3500:t=q:w=1.0:g=1.5,"     # enough presence to stay clear
+           "highshelf=f=8000:g=-1,"                # softer top end
+           "deesser=i=0.35")
 
 PRESETS = {
     "basic":  dict(wpe=None, chain="highpass=f=70,acompressor=threshold=-21dB:ratio=2.5:attack=8:release=160:makeup=2"),
     "clean":  dict(wpe=(20, 3), chain=EQ_CLEAN + ",acompressor=threshold=-24dB:ratio=3:attack=6:release=140:knee=4:makeup=3"),
     "studio": dict(wpe=(30, 2), chain=EQ_STUDIO + ",acompressor=threshold=-26dB:ratio=4:attack=5:release=120:knee=4:makeup=4,"
                                        "agate=threshold=0.012:ratio=1.8:range=0.35:attack=8:release=250:knee=4"),
+    "deep":   dict(wpe=(30, 2), chain=EQ_DEEP + ",acompressor=threshold=-27dB:ratio=4:attack=6:release=140:knee=4:makeup=4,"
+                                     "agate=threshold=0.012:ratio=1.8:range=0.35:attack=8:release=250:knee=4"),
 }
+
+
+def pitch_filter(semitones):
+    """Lower/raise pitch without changing timing; formants are kept so it still sounds like you."""
+    if not semitones:
+        return ""
+    return f"rubberband=pitch={2 ** (semitones / 12):.5f}:formant=preserved:pitchq=quality,"
 
 
 def dereverb(path_in, path_out, taps, delay):
@@ -55,10 +74,10 @@ def loudnorm(path_in, path_out, chain, sr=48000):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", path_in, "-af", second, "-ar", str(sr), path_out], check=True)
 
 
-def process(path_in, path_out, preset="clean"):
+def process(path_in, path_out, preset="clean", pitch=0):
     p = PRESETS[preset]
     src = path_in
     if p["wpe"]:
         src = path_out + ".wpe.wav"
         dereverb(path_in, src, *p["wpe"])
-    loudnorm(src, path_out, p["chain"])
+    loudnorm(src, path_out, pitch_filter(pitch) + p["chain"])

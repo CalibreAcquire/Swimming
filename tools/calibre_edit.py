@@ -26,7 +26,8 @@ Edit file keys (times are SOURCE seconds unless noted):
   cards                      [{"from": t, "to": t, "style": "black"|"white", "text": markup}]
   title_card                 {"text": markup, "dur": s}  hook title over the opening (reels)
   grade                      ffmpeg filter string for the colour grade
-  audio                      {"preset": "basic"|"clean"|"studio"}  voice processing, see voice.py
+  audio                      {"preset": "basic"|"clean"|"studio"|"deep", "pitch": semitones}
+                             voice processing, see voice.py
 """
 import json, math, os, re, subprocess, sys, difflib, shutil, tempfile, wave
 from concurrent.futures import ThreadPoolExecutor
@@ -723,7 +724,8 @@ def render_audio(edit, tmp):
         w.setframerate(SR)
         w.writeframes(np.clip(np.vstack(parts), -32768, 32767).astype(np.int16).tobytes())
     out = os.path.join(tmp, "audio.wav")
-    voice.process(cut, out, edit.cfg.get("audio", {}).get("preset", "clean"))
+    a = edit.cfg.get("audio", {})
+    voice.process(cut, out, a.get("preset", "clean"), a.get("pitch", 0))
     return out
 
 
