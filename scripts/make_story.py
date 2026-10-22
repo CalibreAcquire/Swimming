@@ -38,11 +38,15 @@ def story(thumb, out, title_lines):
     spaced(d, (W / 2, 410), "NEW ON YOUTUBE", label, (190, 190, 190), 9)
     d.line([(W / 2 - 40, 442), (W / 2 + 40, 442)], fill=(120, 120, 120), width=2)
 
-    serif = ImageFont.truetype(os.path.join(F, "CormorantGaramond-500-Italic.ttf"), 104)
+    size = 104
+    serif = ImageFont.truetype(os.path.join(F, "CormorantGaramond-500-Italic.ttf"), size)
+    while max(serif.getlength(l) for l in title_lines) > W * 0.84:  # keep clear of the edges
+        size -= 4
+        serif = ImageFont.truetype(os.path.join(F, "CormorantGaramond-500-Italic.ttf"), size)
     y = 530
     for line in title_lines:
         d.text((W / 2, y), line, font=serif, fill="white", anchor="ms")
-        y += 98
+        y += round(size * 0.94)
 
     t = Image.open(thumb).convert("RGB").resize((940, 529), Image.LANCZOS)
     top = y - 30  # y is one line below the last baseline

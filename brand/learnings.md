@@ -4,6 +4,8 @@ Read at the start of every job. Newest at the bottom of each section. Where this
 file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 
 ## Copy (titles, descriptions, captions)
+- The "transacted over £Xm" line: Jake says £80m in some videos and £30m in others. Use whatever
+  the video says. YouTube only (video, description), never on Instagram. (22 Oct 2026)
 - No emojis anywhere: they make copy look AI-written. (22 Oct 2026)
 - No long dashes (—) and no neat three-part slogans ("Same X. Different Y. Different Z.").
   Use commas and full stops. (22 Oct 2026)
