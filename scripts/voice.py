@@ -94,7 +94,7 @@ def dereverb(path_in, path_out, taps, delay, block=20.0, overlap=1.0):
     sf.write(path_out, np.repeat(out[:, None], x.shape[1], axis=1), sr, subtype="PCM_24")
 
 
-def suppress_reverb(path_in, path_out, rt60=0.8, delay=0.05, floor_db=-14.0):
+def suppress_reverb(path_in, path_out, rt60=0.8, delay=0.05, floor_db=-14.0, smooth=(3, 3)):
     """Late-reverb suppression (Lebart et al.): the room tail at each moment is
     predicted from the signal `delay` seconds earlier, decayed at the room's RT60,
     and subtracted spectrally. Takes out the echo WPE leaves behind in lively rooms.
@@ -114,8 +114,10 @@ def suppress_reverb(path_in, path_out, rt60=0.8, delay=0.05, floor_db=-14.0):
     late[:, nd:] = decay * Ps[:, :-nd]
     g = np.maximum(1 - late / (Ps + 1e-12), 10 ** (floor_db / 10))
     g = np.sqrt(g)
-    # smooth the gain across time and frequency to avoid watery artefacts
-    g = ss.convolve2d(g, np.ones((3, 3)) / 9, mode="same", boundary="symm")
+    # smooth the gain across frequency bins and time frames: heavy smoothing keeps the
+    # voice natural (fast, narrow gain changes are what sound robotic)
+    from scipy.ndimage import uniform_filter
+    g = uniform_filter(g, size=smooth, mode="nearest")
     _, z = ss.istft(Y * g, sr, nperseg=nper, noverlap=nper - hop)
     z = z[:len(mono)]
     sf.write(path_out, np.repeat(z[:, None], x.shape[1], axis=1), sr, subtype="PCM_24")
