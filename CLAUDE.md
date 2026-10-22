@@ -234,6 +234,7 @@ Keep it short. Jake will reply with corrections; apply them, export a new versio
   * `find_retakes.py <video> --json transcript.json`: transcribes phrase by phrase between pauses (whole-file transcription merges false starts into the next take) and lists restart/retake candidates. Run it on the raw footage and again on the render as QA.
   * `transcribe.py`: whole-file word-level transcription (fallback).
   * `calibre_edit.py plan|render|cards|srt|stills <edl.json>`: renders from an EDL (cuts, punch-ins, captions, cards, audio, music). See its docstring. It implements Jake's style (`VIDEO_STYLE.md`). Still to add: 30 fps reel export and AAC 320 kbps / −1 dBTP from Step 9 and Step 6.
+  * `qa.py <render.mp4> …`: loudness, true peak, voice-vs-music gap and caption overlaps (reads the .ass next to the render). Run on every draft and final.
   * `make_cover.py`: reel/Short cover (1080x1920) from a frame of Jake plus a stacked headline. `make_story.py`: Instagram Story for a YouTube launch.
   * `voice.py`: voice chain (`deep` preset chosen by Jake: dereverb, fuller EQ, de-ess, compression) and music ducking. Dereverb runs in 20 s blocks (whole-file runs out of memory).
 * **Music:** `brand/music/library.json` lists approved Mixkit tracks (free licence, commercial use, no attribution); files download into `brand/music/cache/`.

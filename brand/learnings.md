@@ -32,6 +32,14 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Cut audible breaths before the first word of a phrase. Jake spotted a big one at
   0:38 on video 01; the renderer now trims them automatically. (22 Oct 2026)
 
+## B-roll
+- Vertical (9:16) clips cropped into 16:9 only work for wide shots (rooms, exteriors); a
+  person walking becomes a close-up of their back. Use those shots in the reels. (22 Oct 2026)
+- Check B-roll for other companies' names or logos (e.g. a tenant's sign) and burned-in text
+  before using it. (22 Oct 2026)
+- Footage filmed weeks before posting: check any "this month" / deal-status lines are still
+  true before publishing. (22 Oct 2026)
+
 ## Audio
 - Voice preset `deep` (deeper, fuller): Jake chose it over clean/studio/pitch-shifted.
   No pitch shift. (22 Oct 2026)

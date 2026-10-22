@@ -1,0 +1,4 @@
+
+CANDIDATE RETAKES (earlier attempt -> restart)
+     6.91-  23.63  "Craig had three offices in the development in Harlow."  ->  "Craig had three offices in a development in Harlow."
+   116.85- 121.69  "most agents."  ->  "most agents wait for the phone to ring."

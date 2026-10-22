@@ -26,6 +26,10 @@ Edit file keys (times are SOURCE seconds unless noted):
   captions                   caption markup, see parse_markup()
   cards                      [{"from": t, "to": t, "style": "black"|"white", "text": markup}]
   title_card                 {"text": markup, "dur": s}  hook title over the opening (reels)
+  broll                      [{"from": t, "to": t, "file": path, "start": s, "focus": [fx, fy],
+                               "zoom": z, "move": "none"}]  property footage / photos over the
+                             talking head while he speaks (video: "start" into the clip; image:
+                             slow push-in to "zoom")
   grade                      ffmpeg filter string for the colour grade
   audio                      {"preset": "basic"|"clean"|"studio"|"deep", "pitch": semitones}
                              voice processing, see voice.py
@@ -150,7 +154,9 @@ class Edit:
 
     # -- silences from the audio, cached next to the source
     def _silences(self):
-        cache = self.src + ".silences.json"
+        work = os.path.join(self.dir, "..", "work")  # raw/ is read-only: keep caches in work/
+        cache = (os.path.join(work, os.path.basename(self.src) + ".silences.json")
+                 if os.path.isdir(work) else self.src + ".silences.json")
         if os.path.exists(cache):
             return json.load(open(cache))
         r = subprocess.run(["ffmpeg", "-v", "info", "-i", self.src, "-af",
@@ -381,7 +387,7 @@ def chunk(tokens):
                    or re.search(r"[.?!:;]$", prev["text"])
                    or (not manual and re.search(r",$", prev["text"]) and words_in >= 2)
                    or (prev["style"] == "key" and t["style"] != "key")
-                   or (words_in >= max_words and t["group"] != prev["group"])
+                   or (words_in >= max_words and t["group"] != prev["group"] and t["style"] != "key")
                    or t["s"] - prev["e"] > 0.6
                    or t["e"] - cur[0]["s"] > 2.4)
             if brk:
@@ -568,7 +574,8 @@ def caption_events(edit, card_spans):
         reveal_at = [edit.out_time(t["s"]) for t in order]
         start = reveal_at[0]
         nxt = edit.out_time(timed[n + 1][0]["s"]) if n + 1 < len(timed) else edit.out_time(ch[-1]["e"]) + 0.6
-        end = max(min(nxt, edit.out_time(ch[-1]["e"]) + 0.7), start + 0.35)
+        # hold briefly after the last word, but never past the start of the next caption
+        end = min(max(edit.out_time(ch[-1]["e"]) + 0.7, start + 0.35), nxt)
         for k in range(len(order)):
             s = max(start, reveal_at[k])
             e = reveal_at[k + 1] if k + 1 < len(order) else end
@@ -609,7 +616,8 @@ def card_events(edit):
         styles = {"bold": "card_plain", "italic": "card_italic", "key": key, "label": "card_label"}.get
         sizes = dict(card_plain=F["card_plain"], card_italic=F["card_italic"], card_label=F["card_label"],
                      card_key_black=F["card_key"], card_key_white=F["card_italic"] * 1.1)
-        lines = stack(layout_lines(parse_markup(c["text"]), styles, sizes, W * 0.8, card=True), 0, gap_ratio=0.24)
+        lines = stack(layout_lines(parse_markup(c["text"]), styles, sizes, W * 0.8, card=True), 0,
+                      gap_ratio=0.24 if len(parse_markup(c["text"])) < 12 else 0.5)  # lists need air
         labelled = len(lines) > 1 and all(r["style"] == "card_label" for r in lines[0].runs)
         if labelled:  # breathing room for the hairline under the label
             lines[0].baseline -= F["card_label"] * 0.9
@@ -745,6 +753,43 @@ def render_audio(edit, tmp):
     return out
 
 
+IMAGE_EXT = (".jpg", ".jpeg", ".png", ".webp")
+
+
+def broll_spans(edit):
+    """B-roll inserts mapped to the output timeline: (out_start, duration, spec)."""
+    spans = []
+    for b in edit.cfg.get("broll", []):
+        a, e = edit.out_time(b["from"]), edit.out_time(b["to"])
+        if e - a >= 0.4:
+            spans.append((snap(a), snap(e - a, up=True), b))
+    return spans
+
+
+def render_broll(edit, i, a, dur, b, tmp, draft):
+    """One B-roll insert rendered at the output size and frame rate.
+    Video: cropped to fill the frame ("focus": [fx, fy] picks the area, 0-1).
+    Image: fills the frame with a slow push-in (or "move": "none")."""
+    W, H = edit.F["W"], edit.F["H"]
+    src = edit._p(b["file"])
+    n = round(dur * FPS)
+    fx, fy = b.get("focus", [0.5, 0.5])
+    out = os.path.join(tmp, f"broll{i:03d}.mp4")
+    cover = (f"scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase:flags=lanczos,"
+             f"crop={W * 2}:{H * 2}:(iw-{W * 2})*{fx}:(ih-{H * 2})*{fy}")
+    if src.lower().endswith(IMAGE_EXT):
+        z1 = 1.0 if b.get("move") == "none" else b.get("zoom", 1.08)
+        vf = (f"{cover},zoompan=z='1+({z1}-1)*on/{max(1, n - 1)}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
+              f"d={n}:s={W}x{H}:fps={FPS},setsar=1")
+        cmd = ["ffmpeg", "-v", "error", "-y", "-i", src]
+    else:
+        vf = f"{cover},scale={W}:{H}:flags=lanczos,fps={FPS},setsar=1"
+        cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(b.get("start", 0)), "-i", src, "-an"]
+    run(cmd + ["-vf", vf, "-frames:v", str(n), "-c:v", "libx264", "-preset", "ultrafast" if draft else "veryfast",
+               "-crf", "14", "-pix_fmt", "yuv420p", out])
+    return out
+
+
 def render(edit_path, out, draft=False):
     edit = Edit(edit_path)
     F = edit.F
@@ -753,6 +798,8 @@ def render(edit_path, out, draft=False):
         with ThreadPoolExecutor(max_workers=os.cpu_count() or 4) as ex:
             segs = list(ex.map(lambda a: render_segment(edit, a[0], a[1], tmp, draft), enumerate(edit.segments)))
             audio_f = ex.submit(render_audio, edit, tmp)
+            brolls = broll_spans(edit)
+            broll_files = list(ex.map(lambda x: render_broll(edit, x[0], *x[1], tmp, draft), enumerate(brolls)))
             audio = audio_f.result()
         lst = os.path.join(tmp, "list.txt")
         open(lst, "w").write("".join(f"file '{s}'\n" for s in segs))
@@ -772,7 +819,13 @@ def render(edit_path, out, draft=False):
 
         W, H = F["W"], F["H"]
         wm, m = F["wm"], F["wm_margin"]
-        fc = (f"[0:v]subtitles={ass}:fontsdir={FONTS}[s];"
+        # B-roll goes over the talking head, under captions, cards and logos
+        fc, prev = "", "0:v"
+        for k, (a, dur, _) in enumerate(brolls):
+            fc += (f"[{5 + k}:v]setpts=PTS-STARTPTS+{a:.3f}/TB[br{k}];"
+                   f"[{prev}][br{k}]overlay=0:0:eof_action=pass:enable='between(t,{a:.3f},{a + dur - 0.001:.3f})'[bv{k}];")
+            prev = f"bv{k}"
+        fc += (f"[{prev}]subtitles={ass}:fontsdir={FONTS}[s];"
               f"[2:v]scale={wm}:-1,format=rgba,colorchannelmixer=aa=0.6[wm];"
               f"[3:v]scale={round(wm * 0.8)}:-1[cw];[4:v]scale={round(wm * 0.8)}:-1[cb];"
               f"[s][wm]overlay={W - wm - m}:{m}:enable='eq(0,{when()})'[a];"
@@ -782,6 +835,7 @@ def render(edit_path, out, draft=False):
              "-i", os.path.join(LOGOS, "monogram-white.png"),
              "-i", os.path.join(LOGOS, "monogram-white.png"),
              "-i", os.path.join(LOGOS, "monogram-black.png"),
+             *[x for f in broll_files for x in ("-i", f)],
              "-filter_complex", fc, "-map", "[v]", "-map", "1:a",
              "-c:v", "libx264", "-preset", "veryfast" if draft else "slow", "-crf", "20" if draft else "17",
              "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k",
