@@ -3,7 +3,7 @@
 Raw: `JTYA9564.MP4` (Drive), 4:54, 1280×720, 25fps. Script: `script.txt`.
 Edit files: `youtube.json`, `reel-*.json` — render with `tools/calibre_edit.py`.
 
-**Status: approved and delivered (22 Oct 2026).** Voice preset `deep`; music
+**Status: published.** YouTube video and Reel 1 posted 22 Oct 2026 (https://youtu.be/AgJApz5CToA). Remaining reels scheduled in `publish/schedule.md`. Voice preset `deep`; music
 "Autofahren" (YouTube) and "House 02" (reels) from `music/library.json`.
 
 ## YouTube (16:9) — 3:03
