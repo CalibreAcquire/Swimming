@@ -58,12 +58,17 @@ Fonts live in `brand/fonts/` (all SIL Open Font License).
 ## Full-screen text cards
 Cut away from the talking footage to a full-screen card for emphasis.
 
-| Card  | Background | Standard text | Emphasis options                   |
-|-------|------------|---------------|------------------------------------|
-| Brand | Black      | White         | Bold, italic                       |
-| Light | White      | Black         | Bold, italic, `#FFDE59` key words  |
+| Card  | Background | Standard text | Emphasis options |
+|-------|------------|---------------|------------------|
+| Brand | Black      | White         | Bold, italic     |
+| Light | White      | Black         | Bold, italic     |
 
-The black card is the Calibre Acquire brand look.
+The black card is the Calibre Acquire brand look. **No yellow on cards** — it
+looks cheap on white; `#FFDE59` is reserved for key words in captions over footage.
+
+Card typography: a small spaced-out label in caps (Montserrat SemiBold), a fine
+hairline under it, then the headline in Cormorant Garamond italic. Supporting
+lines in Montserrat Medium. Plenty of empty space; small monogram at the bottom.
 
 ## Logos
 Files in `brand/logos/` (transparent PNGs; supplied originals in `originals/`).
@@ -87,6 +92,12 @@ Keep logo use light — subtle watermark and occasional card use, never dominant
 ## Property footage
 - When a specific property is discussed, show its footage while it's being
   talked about, especially for specific details of that property.
+
+## Audio
+- Voice chain (`tools/voice.py`): high-pass, light dereverb, EQ (less boxiness,
+  more presence and air), de-essing, compression, -14 LUFS.
+- Best results start at the shoot: a lavalier or shotgun mic close to the
+  speaker beats any processing of a camera mic across the room.
 
 ## Music
 - Background music chosen per video to suit its tone, kept well under speech.

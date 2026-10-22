@@ -9,6 +9,7 @@ text cards, logo watermark, a light grade and loudness-normalised audio.
 Usage:
   calibre_edit.py plan   <edit.json>                 print cuts, shots, captions, cards
   calibre_edit.py render <edit.json> <out.mp4> [--draft]
+  calibre_edit.py cards  <edit.json> <outdir>         preview every card as a PNG
   calibre_edit.py stills <edit.json> <video> <outdir> <t> [<t> ...]
 
 Edit file keys (times are SOURCE seconds unless noted):
@@ -25,6 +26,7 @@ Edit file keys (times are SOURCE seconds unless noted):
   cards                      [{"from": t, "to": t, "style": "black"|"white", "text": markup}]
   title_card                 {"text": markup, "dur": s}  hook title over the opening (reels)
   grade                      ffmpeg filter string for the colour grade
+  audio                      {"preset": "basic"|"clean"|"studio"}  voice processing, see voice.py
 """
 import json, math, os, re, subprocess, sys, difflib, shutil, tempfile, wave
 from concurrent.futures import ThreadPoolExecutor
@@ -32,6 +34,9 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 from PIL import ImageFont
 from fontTools.ttLib import TTFont
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import voice  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(REPO, "brand", "fonts")
@@ -57,7 +62,7 @@ FONT_STYLES = {
     "card_plain":  ("Montserrat Medium", "Montserrat-500.ttf", 0, 0),
     "card_italic": ("Cormorant Garamond Medium", "CormorantGaramond-500-Italic.ttf", 0, 1),
     "card_key_black": ("Montserrat ExtraBold", "Montserrat-800.ttf", 0, 0),
-    "card_key_white": ("Cormorant Garamond", "CormorantGaramond-700-Italic.ttf", 1, 1),
+    "card_key_white": ("Cormorant Garamond Medium", "CormorantGaramond-500-Italic.ttf", 0, 1),
     "card_label":  ("Montserrat SemiBold", "Montserrat-600.ttf", 0, 0),
 }
 
@@ -590,15 +595,27 @@ def card_events(edit):
         key = "card_key_black" if black else "card_key_white"
         styles = {"bold": "card_plain", "italic": "card_italic", "key": key, "label": "card_label"}.get
         sizes = dict(card_plain=F["card_plain"], card_italic=F["card_italic"], card_label=F["card_label"],
-                     card_key_black=F["card_key"], card_key_white=F["card_italic"] * 1.05)
+                     card_key_black=F["card_key"], card_key_white=F["card_italic"] * 1.1)
         lines = stack(layout_lines(parse_markup(c["text"]), styles, sizes, W * 0.8, card=True), 0, gap_ratio=0.24)
+        labelled = len(lines) > 1 and all(r["style"] == "card_label" for r in lines[0].runs)
+        if labelled:  # breathing room for the hairline under the label
+            lines[0].baseline -= F["card_label"] * 0.9
+            lines[0].top -= F["card_label"] * 0.9
         top, bottom = lines[0].top, lines[-1].baseline + lines[-1].desc
         shift = H / 2 - (top + bottom) / 2 - H * 0.02
         for ln in lines:
             ln.baseline += shift
-        colours = {"card_key_white": rf"\1c{YELLOW}\3c&H000000&\bord1.5",
+            ln.top += shift
+        colours = {"card_key_white": rf"\1c{fg}",
                    "card_plain": rf"\1c{fg}", "card_italic": rf"\1c{fg}",
                    "card_key_black": rf"\1c{fg}", "card_label": rf"\1c{fg}\1a&H50&"}
+        # a fine hairline between a label and the headline under it
+        if labelled:
+            y = (lines[0].baseline + lines[0].desc + lines[1].top) / 2
+            rw = F["card_label"] * 1.6
+            ev.append(f"Dialogue: 6,{ass_time(a)},{ass_time(b)},Card,,0,0,0,,"
+                      rf"{{\an7\pos({W / 2 - rw / 2:.0f},{y:.0f})\p1\bord0\shad0\1c{fg}\1a&H70&}}"
+                      f"m 0 0 l {rw:.0f} 0 {rw:.0f} 2 0 2{{\\p0}}\n")
         build = c.get("build", True)
         step = min(0.45, (b - a) * 0.5 / max(1, len(lines))) if build else 0
         for i, ln in enumerate(lines):
@@ -706,9 +723,7 @@ def render_audio(edit, tmp):
         w.setframerate(SR)
         w.writeframes(np.clip(np.vstack(parts), -32768, 32767).astype(np.int16).tobytes())
     out = os.path.join(tmp, "audio.wav")
-    run(["ffmpeg", "-v", "error", "-y", "-i", cut, "-af",
-         "highpass=f=70,acompressor=threshold=-21dB:ratio=2.5:attack=8:release=160:makeup=2,"
-         "loudnorm=I=-14:TP=-1.5:LRA=9", "-ar", str(SR), out])
+    voice.process(cut, out, edit.cfg.get("audio", {}).get("preset", "clean"))
     return out
 
 
@@ -782,6 +797,25 @@ def plan(edit_path):
         print(f"  {edit.out_time(c['from']):7.2f}-{edit.out_time(c['to']):7.2f}  {c.get('style', 'black'):5}  {c['text']}")
 
 
+def card_stills(edit_path, outdir):
+    """Render every card as a PNG for approval, without rendering the video."""
+    edit = Edit(edit_path)
+    F = edit.F
+    os.makedirs(outdir, exist_ok=True)
+    cards, spans = card_events(edit)
+    ass = os.path.join(outdir, "cards.ass")
+    open(ass, "w").write(ass_header(F["W"], F["H"]) + cards)
+    for i, (a, b, style) in enumerate(spans):
+        logo = os.path.join(LOGOS, "monogram-white.png" if style == "black" else "monogram-black.png")
+        wm, m = F["wm"], F["wm_margin"]
+        run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", f"color=black:s={F['W']}x{F['H']}:d={b + 1}",
+             "-i", logo, "-filter_complex",
+             f"[0]subtitles={ass}:fontsdir={FONTS}[s];[1]scale={round(wm * 0.8)}:-1[l];"
+             f"[s][l]overlay=(W-w)/2:H-h-{m + 20}", "-ss", f"{b - 0.05:.2f}", "-frames:v", "1",
+             os.path.join(outdir, f"card{i + 1:02d}.png")])
+    print(f"{len(spans)} cards -> {outdir}")
+
+
 def stills(video, outdir, times):
     os.makedirs(outdir, exist_ok=True)
     for t in times:
@@ -797,6 +831,8 @@ if __name__ == "__main__":
         plan(sys.argv[2])
     elif cmd == "render":
         render(sys.argv[2], sys.argv[3], draft="--draft" in sys.argv)
+    elif cmd == "cards":
+        card_stills(sys.argv[2], sys.argv[3])
     elif cmd == "stills":
         stills(sys.argv[3], sys.argv[4], sys.argv[5:])
     else:
