@@ -86,10 +86,11 @@ def dereverb(path_in, path_out, taps, delay, block=20.0, overlap=1.0):
                 statistics_mode="full").transpose(1, 2, 0)
         z = istft(Z, size=size, shift=shift)[0][:len(seg)]
         w = np.ones(len(seg))
+        n = min(2 * ov, len(seg))  # the last block can be shorter than the crossfade
         if a > 0:
-            w[:2 * ov] = np.linspace(0, 1, 2 * ov)
+            w[:n] = np.linspace(0, 1, n)
         if b < len(mono):
-            w[-2 * ov:] = np.linspace(1, 0, 2 * ov)
+            w[-n:] = np.linspace(1, 0, n)
         out[a:a + len(z)] += z * w[:len(z)]
         weight[a:a + len(z)] += w[:len(z)]
     out /= np.maximum(weight, 1e-6)
