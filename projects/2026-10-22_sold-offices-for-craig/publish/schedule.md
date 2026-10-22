@@ -12,3 +12,5 @@ his shoots, calls and the 6 Nov BoE video.
 | Sat 7 Nov 11:40 | Reel 3 + Short 3: Database first, then a full campaign | `_reel3-database-first_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_C3PBAAA |
 
 Moved on 22 Oct from 12, 14 and 20 Nov after Jake said he's fine to upload from Dubai.
+
+monday.com: Content & Filming (Master) item 3219054484 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219054484).

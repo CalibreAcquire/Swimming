@@ -19,3 +19,5 @@ full video set as its Related video. Short titles and descriptions are in each e
 **22 Oct, v2 files:** Reel 1 (for Short 1) and Reel 3 were re-rendered as v2 after a caption
 timing fix (captions briefly overlapped). Both events now name the v2 files. Reel 1 v1 is
 already on Instagram; it's a ~0.15 s overlap, not worth re-posting.
+
+monday.com: Content & Filming (Master) item 3219062138 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219062138).

@@ -13,6 +13,8 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Instagram: @calibreacquire (company), @jake_s_benson (Jake). Website calibreacquire.co.uk.
 
 ## Publishing
+- Keep the monday.com "Content & Filming (Master)" board updated for every video (status, dates,
+  notes, group). Jake asked for this on 22 Oct 2026; see CLAUDE.md environment notes.
 - Jake is happy to upload and post while travelling (Dubai, 29 Oct-8 Nov 2026). Don't hold posts
   back for trips; pick slots around his shoots and calls and give the local time too. (22 Oct 2026)
 - Jake can't plan content ahead: for every finished video, put each post (YouTube, reels,
