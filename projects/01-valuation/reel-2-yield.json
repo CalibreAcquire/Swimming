@@ -1,0 +1,47 @@
+{
+  "source": "src/raw.mp4",
+  "transcript": "transcript.json",
+  "format": "9x16",
+  "max_gap": 0.3,
+  "anchor": [
+    565,
+    235
+  ],
+  "zoom": {
+    "wide": 1.0,
+    "tight": 1.15,
+    "every": 2.6
+  },
+  "captions": "Most people think | a *valuation* is a [GUESS] | based on what *similar properties* | have sold for [NEARBY.] That's part of it, | but on its own | it misses what *actually drives* | the [VALUE] | of an *investment property.* In this video | I'm going to show you | the *process* we actually use | to [VALUE] a property | and why it's *different* | for [RESIDENTIAL] | compared to [COMMERCIAL] | and *investment property.* I'm Jake, | the founder of | [CALIBRE ACQUIRE.] I've worked in property | for [14 YEARS] | and transacted on over | [£80 MILLION] | worth of *commercial property investments* | in the past year *alone.* I help investors | get out of *underperforming* | property assets | into ones that actually | work [HARDER] | for them. For a standard *residential property,* | value mostly comes from | [COMPARABLE EVIDENCE.] What have *similar properties* | on similar streets | sold for [RECENTLY?] Size, | condition | and [LOCATION] | adjust the number from there. For an investment or commercial property, | the [RENT] it produces | matters *just as much* | as the comparables, | sometimes [MORE.] Two buildings | can look [IDENTICAL] | and sell for | *very different prices* | because the [INCOME] | behind them | is *different.* The first thing we look at | is the [INCOME.] What [RENT] | is the property producing, | and what rent | could it *reasonably* produce | if it were [LET?] This isn't just | a *headline* rent figure. We look at the [LEASE TERMS,] | who the [TENANT] is | and how *secure* | that income | actually is. If you're considering a property | and want to [STRESS TEST] it | within a *few minutes,* | I built [CALCULATORS] | for *mixed-use,* | [HMO] | and *single residential* deals, | so you can put in | the [REAL NUMBERS] | and see what a deal | *actually returns.* completely [FREE.] | Comment the word [SEND] | below, | or use the link below | to get *access.* From the income | we work out | the [REFLECTED YIELD.] Yield is the relationship | between the [INCOME] | a property produces | and its [VALUE,] | expressed as a *percentage.* Different *locations,* | [ASSET TYPES] | and *tenant strengths* | command [DIFFERENT YIELDS.] A strong [COVENANT] | on a *long lease* | in a good location | will achieve a [LOWER YIELD,] | meaning a [HIGHER VALUE,] | than a *weaker tenant* | on a short lease | in a *secondary location.* Alongside this, | we work out the | [PRICE PER SQUARE FOOT] | based on *comparable evidence.* What have similar buildings | in *similar locations,* | with similar *specifications,* | sold for recently, | expressed [PER SQUARE FOOT?] This gives us | a [SECOND FIGURE] | to check the valuation against, | *independent* | of the [INCOME.] The final step | is [BLENDING] | the two *together.* If the *income-based valuation* | and the *comparable-based valuation* | are [CLOSE,] | that gives *confidence* | in the figure. If they're [FAR APART,] | that's usually a sign | something needs | a *closer look,* | either in the [INCOME,] | the [COMPARABLES,] | or *both.* If you're only looking | at what's sold *nearby,* | you can end up [OVERPAYING] | for a property | with *weak income,* | or [UNDERPAYING] | for one with | *strong income* | that hasn't been reflected | in the price *yet.* Understanding *both sides* | of the valuation | gives you a much [CLEARER PICTURE] | of what you're | *actually buying.* If you'd like access | to properties | before they reach the [OPEN MARKET,] | you can [APPLY] | using the link *below.* I go through | every application [PERSONALLY,] | and if it's a *good fit* | and we've got positions available, | I'll be in [TOUCH.] I'll see you | in the *next video.*",
+  "title": "Yield explained",
+  "window": [
+    133.6,
+    178.5
+  ],
+  "cuts": [
+    [
+      148.96,
+      168.55
+    ]
+  ],
+  "shots": [
+    {
+      "at": 168.6,
+      "zoom": 1.0,
+      "move": "push",
+      "to": 1.12
+    }
+  ],
+  "title_card": {
+    "text": "What *actually* sets / [the value?]",
+    "dur": 2.8
+  },
+  "cards": [
+    {
+      "from": 138.65,
+      "to": 143.71,
+      "style": "black",
+      "text": "~Yield~ / *income ÷ value*"
+    }
+  ]
+}

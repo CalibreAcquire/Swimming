@@ -1,0 +1,10 @@
+# Footage and renders live on Google Drive, never in git
+projects/*/src/
+projects/*/renders/
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.wav
+*.silences.json
+__pycache__/
