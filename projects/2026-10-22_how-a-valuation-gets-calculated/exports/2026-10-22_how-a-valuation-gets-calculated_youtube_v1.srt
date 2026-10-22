@@ -1,0 +1,283 @@
+1
+00:00:00,000 --> 00:00:03,130
+Most people think a valuation is a guess
+
+2
+00:00:03,130 --> 00:00:06,710
+based on what similar properties
+have sold for nearby.
+
+3
+00:00:06,740 --> 00:00:09,690
+That's part of it, but
+on its own it misses
+
+4
+00:00:09,690 --> 00:00:12,960
+what actually drives the value
+of an investment property.
+
+5
+00:00:12,960 --> 00:00:15,440
+In this video I'm going
+to show you the process
+
+6
+00:00:15,440 --> 00:00:18,520
+we actually use to value
+a property and why
+
+7
+00:00:18,520 --> 00:00:22,360
+it's different for residential compared
+to commercial and investment property.
+
+8
+00:00:22,360 --> 00:00:24,960
+I'm Jake, the founder of Calibre Acquire.
+
+9
+00:00:24,960 --> 00:00:28,690
+I've worked in property for 14
+years and transacted on over £80
+
+10
+00:00:28,690 --> 00:00:32,070
+million worth of commercial property
+investments in the past year alone.
+
+11
+00:00:32,070 --> 00:00:34,800
+I help investors get out of
+underperforming property
+
+12
+00:00:34,800 --> 00:00:37,800
+assets into ones that actually
+work harder for them.
+
+13
+00:00:37,800 --> 00:00:40,090
+For a standard residential property, value
+
+14
+00:00:40,090 --> 00:00:42,680
+mostly comes from comparable evidence.
+
+15
+00:00:42,680 --> 00:00:46,250
+What have similar properties on
+similar streets sold for recently?
+
+16
+00:00:46,250 --> 00:00:50,000
+Size, condition and location
+adjust the number from there.
+
+17
+00:00:50,000 --> 00:00:53,040
+For an investment or commercial
+property, the rent it produces
+
+18
+00:00:53,040 --> 00:00:56,920
+matters just as much as the
+comparables, sometimes more.
+
+19
+00:00:56,920 --> 00:00:59,640
+Two buildings can look
+identical and sell for very
+
+20
+00:00:59,640 --> 00:01:02,400
+different prices because the
+income behind them is different.
+
+21
+00:01:02,400 --> 00:01:04,680
+The first thing we look at is the income.
+
+22
+00:01:04,680 --> 00:01:07,170
+What rent is the property
+producing, and what
+
+23
+00:01:07,170 --> 00:01:09,800
+rent could it reasonably
+produce if it were let?
+
+24
+00:01:09,800 --> 00:01:11,960
+This isn't just a headline rent figure.
+
+25
+00:01:11,960 --> 00:01:14,030
+We look at the lease terms, who the
+
+26
+00:01:14,030 --> 00:01:17,480
+tenant is and how secure
+that income actually is.
+
+27
+00:01:17,480 --> 00:01:20,660
+If you're considering a property
+and want to stress test it within a
+
+28
+00:01:20,660 --> 00:01:26,250
+few minutes, I built calculators for mixed-use,
+HMO and single residential deals, so you
+
+29
+00:01:26,250 --> 00:01:29,540
+can put in the real numbers and
+see what a deal actually returns.
+
+30
+00:01:29,540 --> 00:01:30,400
+completely free.
+
+31
+00:01:30,400 --> 00:01:33,840
+Comment the word send below, or
+use the link below to get access.
+
+32
+00:01:33,840 --> 00:01:36,440
+From the income we work
+out the reflected yield.
+
+33
+00:01:36,440 --> 00:01:39,160
+Yield is the relationship
+between the income a
+
+34
+00:01:39,160 --> 00:01:42,880
+property produces and its value,
+expressed as a percentage.
+
+35
+00:01:42,880 --> 00:01:47,280
+Different locations, asset types and
+tenant strengths command different yields.
+
+36
+00:01:47,280 --> 00:01:50,530
+A strong covenant on a long
+lease in a good location
+
+37
+00:01:50,530 --> 00:01:53,700
+will achieve a lower yield,
+meaning a higher value, than
+
+38
+00:01:53,700 --> 00:01:57,000
+a weaker tenant on a short
+lease in a secondary location.
+
+39
+00:01:57,000 --> 00:01:59,520
+Alongside this, we work out the price
+
+40
+00:01:59,520 --> 00:02:02,680
+per square foot based
+on comparable evidence.
+
+41
+00:02:02,680 --> 00:02:05,910
+What have similar buildings
+in similar locations, with
+
+42
+00:02:05,910 --> 00:02:10,120
+similar specifications, sold for
+recently, expressed per square foot?
+
+43
+00:02:10,120 --> 00:02:12,670
+This gives us a second figure to check
+
+44
+00:02:12,670 --> 00:02:15,960
+the valuation against,
+independent of the income.
+
+45
+00:02:15,960 --> 00:02:19,000
+The final step is blending
+the two together.
+
+46
+00:02:19,000 --> 00:02:22,770
+If the income-based valuation and
+the comparable-based valuation
+
+47
+00:02:22,770 --> 00:02:25,560
+are close, that gives
+confidence in the figure.
+
+48
+00:02:25,560 --> 00:02:29,090
+If they're far apart, that's
+usually a sign something needs
+
+49
+00:02:29,090 --> 00:02:33,040
+a closer look, either in the
+income, the comparables, or both.
+
+50
+00:02:33,040 --> 00:02:36,090
+If you're only looking at
+what's sold nearby, you can end
+
+51
+00:02:36,090 --> 00:02:41,040
+up overpaying for a property with
+weak income, or underpaying for one
+
+52
+00:02:41,040 --> 00:02:44,360
+with strong income that hasn't
+been reflected in the price yet.
+
+53
+00:02:44,360 --> 00:02:47,110
+Understanding both sides
+of the valuation gives you
+
+54
+00:02:47,110 --> 00:02:50,040
+a much clearer picture of
+what you're actually buying.
+
+55
+00:02:50,040 --> 00:02:52,610
+If you'd like access to
+properties before they reach the
+
+56
+00:02:52,610 --> 00:02:55,580
+open market, you can apply
+using the link below.
+
+57
+00:02:55,600 --> 00:02:58,320
+I go through every application
+personally, and if it's a
+
+58
+00:02:58,320 --> 00:03:01,550
+good fit and we've got positions
+available, I'll be in touch.
+
+59
+00:03:01,550 --> 00:03:03,010
+I'll see you in the next video.

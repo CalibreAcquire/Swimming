@@ -107,9 +107,9 @@ REPO = __import__("os").path.dirname(__import__("os").path.dirname(__import__("o
 def music_file(track_id):
     """Path to a library track, downloading it into music/cache/ the first time."""
     import os
-    lib = json.load(open(os.path.join(REPO, "music", "library.json")))["tracks"]
+    lib = json.load(open(os.path.join(REPO, "brand", "music", "library.json")))["tracks"]
     t = next(x for x in lib if x["id"] == int(track_id))
-    path = os.path.join(REPO, "music", "cache", f"{t['id']}.mp3")
+    path = os.path.join(REPO, "brand", "music", "cache", f"{t['id']}.mp3")
     if not os.path.exists(path):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         subprocess.run(["curl", "-sS", "-L", "-o", path, t["url"]], check=True)

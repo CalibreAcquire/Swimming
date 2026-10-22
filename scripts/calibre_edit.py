@@ -29,7 +29,7 @@ Edit file keys (times are SOURCE seconds unless noted):
   grade                      ffmpeg filter string for the colour grade
   audio                      {"preset": "basic"|"clean"|"studio"|"deep", "pitch": semitones}
                              voice processing, see voice.py
-  music                      {"track": id from music/library.json, "start": s, "bed": LUFS, "duck": ratio}
+  music                      {"track": id from brand/music/library.json, "start": s, "bed": LUFS, "duck": ratio}
 """
 import json, math, os, re, subprocess, sys, difflib, shutil, tempfile, wave
 from concurrent.futures import ThreadPoolExecutor

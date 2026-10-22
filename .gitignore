@@ -1,6 +1,8 @@
 # Footage and renders live on Google Drive, never in git
-projects/*/src/
-projects/*/renders/
+projects/*/raw/
+projects/*/work/
+inbox/*
+!inbox/.gitkeep
 *.mp4
 *.MP4
 *.mov
@@ -8,5 +10,5 @@ projects/*/renders/
 *.wav
 *.silences.json
 __pycache__/
-music/cache/
+brand/music/cache/
 *.mp3

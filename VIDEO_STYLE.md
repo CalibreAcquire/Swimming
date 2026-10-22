@@ -1,3 +1,5 @@
+> **Superseded** by `CLAUDE.md` (22 Oct 2026) and `brand/learnings.md`. Kept for history.
+
 # Calibre Acquire — Video Style Guide
 
 The editing rules applied to every YouTube video and Instagram reel. Update this

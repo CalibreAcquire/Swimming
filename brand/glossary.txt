@@ -1,0 +1,39 @@
+# Spelling list for transcription correction (one term per line).
+# Add any term whisper gets wrong.
+Calibre Acquire
+Jake Benson
+JakeBensonProperty
+calibreacquire.co.uk
+HMO
+HMOs
+mixed-use
+freehold
+leasehold
+share of freehold
+covenant
+comparables
+comparable evidence
+yield
+reflected yield
+gross yield
+net yield
+let
+lettings
+sq ft
+price per square foot
+site value
+GDV
+EPC
+SDLT
+stamp duty
+BTL
+LTV
+ICR
+title split
+ground rent
+service charge
+permitted development
+Class MA
+Roman Road
+Hornsey Road
+Brentwood

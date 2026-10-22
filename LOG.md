@@ -1,3 +1,5 @@
+> **Superseded** by `CLAUDE.md` (22 Oct 2026) and `brand/learnings.md`. Kept for history.
+
 # Work log
 
 Everything done for Jake (Calibre Acquire), newest first. Read this at the start of

@@ -1,7 +1,7 @@
 {
   "title": "How a valuation actually gets calculated",
-  "source": "src/raw.mp4",
-  "transcript": "transcript.json",
+  "source": "../raw/JTYA9564.MP4",
+  "transcript": "../transcript/transcript.json",
   "format": "16x9",
   "window": [
     17.5,
