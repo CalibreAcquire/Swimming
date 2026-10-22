@@ -3,12 +3,13 @@
 Raw: `JTYA9564.MP4` (Drive), 4:54, 1280×720, 25fps. Script: `script.txt`.
 Edit files: `youtube.json`, `reel-*.json` — render with `tools/calibre_edit.py`.
 
-## YouTube (16:9) — 3:07
+## YouTube (16:9) — 3:04
 
-**Cut from the raw:** dead air before/after, every pause over 0.45s, and five retakes:
+**Cut from the raw:** dead air before/after, every pause over 0.45s, and six retakes:
 
 | Raw time  | What was removed                                                      |
 |-----------|-----------------------------------------------------------------------|
+| 0:42–0:44 | False start "I'm Jake, found—" (missed in draft 1, caught in review) |
 | 1:15–1:20 | First attempt at "For an investment or commercial property…"          |
 | 1:28–1:32 | First attempt at "Two buildings can look identical…"                  |
 | 2:29–2:48 | First attempt at "A strong covenant on a long lease…" (plus the break) |

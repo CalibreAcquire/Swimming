@@ -15,6 +15,8 @@ Instagram reels (property content).
 - `tools/transcribe.py <video> <out.json> [script.txt]` — word-level transcript
   (faster-whisper, `pip install faster-whisper fonttools`). Default model is
   `medium`; pass the read-aloud script when there is one.
+- `tools/find_retakes.py <video> [--json transcript.json]` — phrase-by-phrase
+  transcript and restart/retake detector.
 - `tools/calibre_edit.py plan|render|stills <edit.json> …` — the editor. An edit
   file lists cuts (retakes), shots/zooms, caption markup and cards; see the
   docstring at the top of the file for every key and the markup syntax.
@@ -23,8 +25,11 @@ Instagram reels (property content).
 1. Download from Drive into `src/` — files over 10MB can't go through the Drive
    connector; use `curl -L "https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t"`
    (the folder is shared by link).
-2. Transcribe, compare against the script, find retakes/fluffs (look for
-   repeated phrases and long gaps).
+2. Run `tools/find_retakes.py src/raw.mp4 --json transcript.json`: it
+   transcribes phrase by phrase (more accurate than a whole-file pass, which
+   merges false starts into the next take) and lists candidate retakes. Also
+   read the phrase list against the script for fluffs and asides.
 3. Write `youtube.json` and `reel-*.json`, `plan` them, render `--draft`,
    check frames, write `BREAKDOWN.md`, share stills for approval.
-4. Render finals (without `--draft`) once approved.
+4. QA: run `find_retakes.py` on the rendered draft — it must report none.
+5. Render finals (without `--draft`) once approved.
