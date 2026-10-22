@@ -157,7 +157,8 @@ def process(path_in, path_out, preset="clean", pitch=0):
     pre = ""
     if p.get("reverb"):
         sup = path_out + ".sup.wav"
-        suppress_reverb(src, sup, *p["reverb"])
+        rt60, floor = p["reverb"]
+        suppress_reverb(src, sup, rt60=rt60, floor_db=floor)
         src = sup
         pre = f"volume={-20 - integrated_lufs(src):.2f}dB,"
     loudnorm(src, path_out, pre + pitch_filter(pitch) + p["chain"])
