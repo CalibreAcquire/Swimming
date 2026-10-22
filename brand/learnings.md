@@ -17,6 +17,9 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Every reel also goes up as a YouTube Short the same day: original export file, the
   full video as Related video, a plain title and short description. Put them in the same
   diary event as the reel. (22 Oct 2026)
+- Every reel gets a 1080x1920 cover (`scripts/make_cover.py`): frame of Jake, stacked
+  headline in the caption style over his chest, black monogram. Used as the Instagram
+  cover and the Shorts thumbnail. (22 Oct 2026)
 - Post a calculator (comment SEND) reel when Jake is around to reply, not just before
   he's away. (22 Oct 2026)
 
