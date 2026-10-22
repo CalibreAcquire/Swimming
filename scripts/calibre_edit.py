@@ -889,6 +889,10 @@ def card_stills(edit_path, outdir):
 
 
 ACRONYMS = {"HMO", "HMOS", "UK", "VAT", "SDLT", "ROI", "LTV", "GDV", "BTL", "EPC"}
+# capitalised words from brand/glossary.txt (names, places), keyed by lower case
+GLOSSARY_CASE = {w.lower().strip(".,"): w.strip(".,") for line in open(os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "brand", "glossary.txt"))
+    if not line.startswith("#") for w in line.split() if any(c.isupper() for c in w)}
 
 
 def srt(edit_path, out):
@@ -903,11 +907,14 @@ def srt(edit_path, out):
             continue
         text = t["text"]
         if t["style"] == "key" and text.isupper():
-            heard = re.sub(r"[^\w£$%'-]", "", t.get("heard", ""))
+            # key words are capitals on screen; subtitles take names and acronyms from the
+            # glossary and lower-case the rest (whisper's own capitals are unreliable,
+            # e.g. "The Vendors Motivation.")
             punct = re.sub(r"^.*?([.,?!;:]*)$", r"\1", text)
             core = text[:len(text) - len(punct)]
-            text = (heard if heard and norm(heard) == norm(core) else
-                    core if core in ACRONYMS else core.lower()) + punct
+            text = (core if core in ACRONYMS else GLOSSARY_CASE.get(core.lower(), core.lower())) + punct
+        if not words or re.search(r"[.?!]$", words[-1]["text"]):  # sentence start
+            text = text[:1].upper() + text[1:]
         words.append(dict(text=text, s=edit.out_time(t["s"]), e=edit.out_time(t["e"])))
 
     sentences, cur = [], []
