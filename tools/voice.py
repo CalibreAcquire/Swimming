@@ -48,19 +48,35 @@ def pitch_filter(semitones):
     return f"rubberband=pitch={2 ** (semitones / 12):.5f}:formant=preserved:pitchq=quality,"
 
 
-def dereverb(path_in, path_out, taps, delay):
-    """Weighted Prediction Error dereverberation (nara_wpe), channel by channel."""
+def dereverb(path_in, path_out, taps, delay, block=20.0, overlap=1.0):
+    """Weighted Prediction Error dereverberation (nara_wpe).
+
+    Runs on the mono voice in overlapping ~20 s blocks (whole-file WPE needs many GB
+    of memory) and crossfades the blocks back together.
+    """
     from nara_wpe.wpe import wpe
     from nara_wpe.utils import stft, istft
     x, sr = sf.read(path_in, always_2d=True)
+    mono = x.mean(axis=1)
     size, shift = 1536, 384  # 32 ms / 8 ms at 48 kHz
-    out = np.zeros_like(x)
-    for c in range(x.shape[1]):
-        Y = stft(x[:, c][None], size=size, shift=shift)
+    hop, ov = int(block * sr), int(overlap * sr)
+    out, weight = np.zeros_like(mono), np.zeros_like(mono)
+    for start in range(0, len(mono), hop):
+        a, b = max(0, start - ov), min(len(mono), start + hop + ov)
+        seg = mono[a:b]
+        Y = stft(seg[None], size=size, shift=shift)
         Z = wpe(Y.transpose(2, 0, 1), taps=taps, delay=delay, iterations=3,
                 statistics_mode="full").transpose(1, 2, 0)
-        out[:, c] = istft(Z, size=size, shift=shift)[0][:len(x)]
-    sf.write(path_out, out, sr, subtype="PCM_24")
+        z = istft(Z, size=size, shift=shift)[0][:len(seg)]
+        w = np.ones(len(seg))
+        if a > 0:
+            w[:2 * ov] = np.linspace(0, 1, 2 * ov)
+        if b < len(mono):
+            w[-2 * ov:] = np.linspace(1, 0, 2 * ov)
+        out[a:a + len(z)] += z * w[:len(z)]
+        weight[a:a + len(z)] += w[:len(z)]
+    out /= np.maximum(weight, 1e-6)
+    sf.write(path_out, np.repeat(out[:, None], x.shape[1], axis=1), sr, subtype="PCM_24")
 
 
 def loudnorm(path_in, path_out, chain, sr=48000):
