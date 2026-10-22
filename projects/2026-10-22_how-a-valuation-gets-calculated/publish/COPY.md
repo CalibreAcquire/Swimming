@@ -65,54 +65,72 @@ property valuation, how is a property valued, commercial property valuation, res
 
 ## Instagram reels
 
-### Reel 1: Valuation is not a guess
+Post in this order. Captions follow CLAUDE.md section 9 (bullets, YouTube line, register line).
+
+### 1st: Reel 1 (Valuation is not a guess), same day as the YouTube video
 ```
 Two buildings can look identical and sell for very different prices.
 
-Most people think a valuation is based on what's sold nearby. For investment and commercial property, the rent it produces matters just as much as the comparables, and sometimes more. The difference in price usually comes down to the income behind the building.
+- A residential valuation mostly comes from comparable evidence: what similar properties on similar streets have sold for.
+- For investment and commercial property, the rent it produces matters just as much as the comparables, and sometimes more.
+- The difference in price usually comes down to the income behind the building.
 
-The full breakdown is on our YouTube channel, link in bio.
+Full breakdown and property details are on our YouTube channel now. Link's in bio.
 
-#propertyinvestment #commercialproperty #propertyvaluation #ukproperty #propertyinvestor #investmentproperty #calibreacquire
+To see properties before they reach the open market, apply to join the list: calibreacquire.co.uk/register
+
+#propertyinvestment #commercialproperty #propertyvaluation #ukproperty #propertyinvestor #calibreacquire
 ```
 
-### Reel 2: What actually sets the value
-```
-What actually sets the value of an investment property?
-
-We start with the income and work out the reflected yield, which is the income as a percentage of the value. A strong tenant on a long lease in a good location will achieve a lower yield, which means a higher value, than a weaker tenant on a short lease in a secondary location.
-
-Worth keeping in mind on your next deal.
-
-#rentalyield #propertyinvestment #commercialproperty #ukproperty #propertyinvestor #investmentproperty #calibreacquire
-```
-
-### Reel 3: Free deal calculators
-```
-If you're considering a property and want to stress test it within a few minutes, I built free calculators for mixed-use, HMO and single residential deals.
-
-Put in the real numbers and see what a deal actually returns.
-
-Comment "send" and I'll send you access.
-
-#propertydeals #hmo #mixeduse #propertyinvestment #ukproperty #propertyinvestor #calibreacquire
-```
-If you use an auto-DM tool (e.g. ManyChat), set the trigger word to "send".
-
-### Reel 4: Are you overpaying?
+### 2nd: Reel 4 (Are you overpaying?), two days later
 ```
 Are you overpaying for property?
 
-If you're only looking at what's sold nearby, you can end up overpaying for a property with weak income, or underpaying for one with strong income that hasn't been reflected in the price yet.
+- If you only look at what's sold nearby, you can overpay for a property with weak income.
+- You can also underpay for one with strong income that hasn't been reflected in the price yet.
+- We value the income and the comparables separately. If the two figures are close, that gives confidence. If they're far apart, something needs a closer look.
 
-We value both the income and the comparables. If the two figures are close, that gives confidence. If they're far apart, something needs a closer look.
+Full breakdown and property details are on our YouTube channel now. Link's in bio.
 
-If you'd like access to properties before they reach the open market, you can apply via the link in our bio.
+To see properties before they reach the open market, apply to join the list: calibreacquire.co.uk/register
 
-#propertyinvestment #offmarketproperty #commercialproperty #ukproperty #propertyinvestor #propertyvaluation #calibreacquire
+#propertyinvestment #propertyvaluation #commercialproperty #ukproperty #propertyinvestor #calibreacquire
 ```
 
----
+### 3rd: Reel 2 (What actually sets the value), two days later
+```
+What sets the value of an investment property?
+
+- We start with the income and work out the reflected yield.
+- Yield is the income as a percentage of the value.
+- A strong tenant on a long lease in a good location achieves a lower yield, which means a higher value.
+- A weaker tenant on a short lease in a secondary location achieves a higher yield, which means a lower value.
+
+Full breakdown and property details are on our YouTube channel now. Link's in bio.
+
+To see properties before they reach the open market, apply to join the list: calibreacquire.co.uk/register
+
+#rentalyield #propertyinvestment #commercialproperty #ukproperty #propertyinvestor #calibreacquire
+```
+
+### 4th: Reel 3 (Free deal calculators), two days later
+```
+Stress test a property deal in a few minutes.
+
+- Free calculators for mixed-use, HMO and single residential deals.
+- Put in the real numbers and see what a deal actually returns.
+
+Comment SEND and I'll send you access.
+
+To see properties before they reach the open market, apply to join the list: calibreacquire.co.uk/register
+
+#propertydeals #hmo #mixeduse #propertyinvestment #ukproperty #calibreacquire
+```
+If you use an auto-DM tool (e.g. ManyChat), set the trigger word to SEND.
+
+### Reminder: Stories
+On the day the YouTube video goes live (and again with each reel if you like), post a Story with a
+link sticker to the YouTube video.
 
 ## Posting suggestions
 - **Order:** YouTube first, then the reels across the week: Reel 1 (strongest hook),
