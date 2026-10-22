@@ -48,3 +48,12 @@ None contain the £80m line.
 All five −14.0 LUFS, −1.5/−1.6 dBTP, music 12.5–16 dB under voice, 0 caption overlaps. Frames at
 every YouTube cut: no black or flash frames. Reel titles inside the safe zone.
 Fixed on the way: dereverb crashed when the last 20 s block was shorter than the crossfade.
+
+## Finals (22 Oct)
+- Exports v1: YouTube 3:01, four reels (0:21 / 0:25 / 0:24 / 0:26), story, SRT. Thumbnails A/B/C
+  (frame at 0:36.5, sharpest hands), four covers.
+- QA: all five −14.0 LUFS, −1.5/−1.6 dBTP, music 12.5–16 dB under voice, 0 caption overlaps.
+  Retake check on the render: none.
+- SRT fix: key words took whisper's capitals ("the vendor's Motivation"); now glossary casing,
+  sentence-start capitals. Craig SRT regenerates identical.
+- Posting: Wed 4 Nov (YouTube + Reel 1 + Story, from Dubai), Tue 10, Thu 12, Sat 14 Nov.
