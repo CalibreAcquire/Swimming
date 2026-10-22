@@ -205,6 +205,15 @@ class Edit:
                 nxt = [a for a, b in self.silences if a >= e and a - e < 0.3]
                 if nxt:
                     e = min(nxt)
+            # breaths: a short burst, a pause, then a word whose timing swallows both
+            # (whisper stretches the word over the breath). Start after the pause;
+            # likewise drop a breath after the last word.
+            for a, b in self.silences:
+                if s < a < s + 0.7 and b - a >= 0.12 and g[0]["e"] > b:
+                    s = b
+            for a, b in reversed(self.silences):
+                if e - 0.7 < b < e and b - a >= 0.12 and g[-1]["s"] < a:
+                    e = a
             # split on long silences inside the group (whisper sometimes stretches words over pauses)
             pieces, start = [], s
             for a, b in self.silences:
