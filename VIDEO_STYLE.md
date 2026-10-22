@@ -109,6 +109,12 @@ Keep logo use light — subtle watermark and occasional card use, never dominant
   dB under speech; fade in at the start, fade out over the last few seconds.
 - Voice preset: `deep` (deeper, fuller tone) — chosen by the user.
 
+## Links and handles
+- Website: https://www.calibreacquire.co.uk
+- Free deal calculators: https://www.calibreacquire.co.uk/investment-calculators
+- Off-market access / register: https://www.calibreacquire.co.uk/register
+- Instagram: @calibreacquire (company), @jake_s_benson (Jake)
+
 ## Writing style (titles, descriptions, captions)
 - **No emojis.** They make copy look AI-written.
 - No long dashes (—) and no neat three-part slogans ("Same X. Different Y.

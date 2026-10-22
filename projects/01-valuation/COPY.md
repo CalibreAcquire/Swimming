@@ -1,7 +1,7 @@
 # 01: Upload copy
 
 Written to the house writing style in `VIDEO_STYLE.md` (no emojis, no long dashes,
-plain first-person language). Only the Instagram handle is still a placeholder.
+plain first-person language). All links and handles are filled in.
 
 ---
 
@@ -44,7 +44,8 @@ ABOUT
 I'm Jake, founder of Calibre Acquire. I've worked in property for 14 years and transacted on over £80 million of commercial property investments in the past year alone. I help investors get out of underperforming property assets and into ones that work harder for them.
 
 Website: https://www.calibreacquire.co.uk
-Instagram: [@HANDLE]
+Instagram: @calibreacquire
+Jake on Instagram: @jake_s_benson
 
 This video is for general information only and isn't financial or investment advice.
 
