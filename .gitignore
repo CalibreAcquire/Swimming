@@ -12,3 +12,4 @@ inbox/*
 __pycache__/
 brand/music/cache/
 *.mp3
+projects/*/exports/*.ass
