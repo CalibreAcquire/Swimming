@@ -167,3 +167,9 @@ Video elements: "End screen" > Add. The end screen can run for the last 5-20 sec
 Upload `01 How a valuation actually gets calculated - English.srt`: Video elements > Subtitles > Add >
 Upload file > "With timing". It uses the corrected wording, so it's more accurate than YouTube's
 automatic captions and helps search.
+
+## Instagram Story (YouTube launch)
+- Image: `exports/2026-10-22_how-a-valuation-gets-calculated_story_v1.png` (1080x1920).
+- Add a link sticker in the space under "Tap the link below to watch":
+  https://youtu.be/AgJApz5CToA
+- Sticker text (optional): "Watch on YouTube".
