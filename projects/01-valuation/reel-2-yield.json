@@ -43,5 +43,13 @@
       "style": "black",
       "text": "~Yield~ / *income ÷ value*"
     }
-  ]
+  ],
+  "audio": {
+    "preset": "deep"
+  },
+  "music": {
+    "track": 744,
+    "start": 25,
+    "bed": -27
+  }
 }

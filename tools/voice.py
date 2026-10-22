@@ -81,3 +81,51 @@ def process(path_in, path_out, preset="clean", pitch=0):
         src = path_out + ".wpe.wav"
         dereverb(path_in, src, *p["wpe"])
     loudnorm(src, path_out, pitch_filter(pitch) + p["chain"])
+
+
+# ---------------------------------------------------------------- music bed
+
+REPO = __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__)))
+
+
+def music_file(track_id):
+    """Path to a library track, downloading it into music/cache/ the first time."""
+    import os
+    lib = json.load(open(os.path.join(REPO, "music", "library.json")))["tracks"]
+    t = next(x for x in lib if x["id"] == int(track_id))
+    path = os.path.join(REPO, "music", "cache", f"{t['id']}.mp3")
+    if not os.path.exists(path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        subprocess.run(["curl", "-sS", "-L", "-o", path, t["url"]], check=True)
+    return path
+
+
+def integrated_lufs(path, start=0.0, dur=None):
+    cmd = ["ffmpeg", "-v", "info", "-ss", str(start)] + (["-t", str(dur)] if dur else []) + \
+          ["-i", path, "-af", "ebur128=framelog=quiet", "-f", "null", "-"]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    return float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)[-1])
+
+
+def mix_music(voice_wav, out_wav, music):
+    """Lay a music bed under the processed voice.
+
+    music = {"track": <library id>, "start": seconds into the track,
+             "bed": LUFS of the bed before ducking (default -30), "duck": dB-ish strength}
+    The bed dips under speech (sidechain compression), fades in/out, and the
+    finished mix is normalised to -14 LUFS.
+    """
+    dur = sf.info(voice_wav).duration
+    src = music_file(music["track"])
+    start = music.get("start", 0.0)
+    gain = music.get("bed", -30.0) - integrated_lufs(src, start, min(dur, 120))
+    fade_out = min(3.0, dur / 4)
+    premix = out_wav + ".premix.wav"
+    fc = (f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{dur:.3f},asetpts=N/SR/TB,"
+          f"volume={gain:.2f}dB,afade=t=in:d=0.8,afade=t=out:st={dur - fade_out:.3f}:d={fade_out:.3f}[m];"
+          f"[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asplit=2[v][sc];"
+          f"[m][sc]sidechaincompress=threshold=0.1:ratio={music.get('duck', 2.5)}:attack=50:release=600:knee=4[md];"
+          f"[v][md]amix=inputs=2:normalize=0:duration=first")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", voice_wav, "-stream_loop", "-1", "-ss", str(start), "-i", src,
+                    "-filter_complex", fc, "-ar", "48000", premix], check=True)
+    loudnorm(premix, out_wav, "anull")

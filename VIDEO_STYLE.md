@@ -100,7 +100,14 @@ Keep logo use light — subtle watermark and occasional card use, never dominant
   speaker beats any processing of a camera mic across the room.
 
 ## Music
-- Background music chosen per video to suit its tone, kept well under speech.
+- Chosen per video from `music/library.json` (Mixkit free licence: commercial
+  use, no attribution). Prefer tracks with no vocals, little energy in the
+  300 Hz–3.5 kHz speech band and steady energy (no big drops or builds).
+- Defaults: YouTube — "Autofahren" (luxury deep house); reels — "House 02"
+  (elegant, steady deep house).
+- Level: bed at −30 LUFS on YouTube, −27 on reels (voice is −14), dipping a few
+  dB under speech; fade in at the start, fade out over the last few seconds.
+- Voice preset: `deep` (deeper, fuller tone) — chosen by the user.
 
 ## Process
 - Take time over each video. Quality beats speed.

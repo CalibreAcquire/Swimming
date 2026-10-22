@@ -129,5 +129,13 @@
       "style": "black",
       "text": "~Off-market access~ / *link below*"
     }
-  ]
+  ],
+  "audio": {
+    "preset": "deep"
+  },
+  "music": {
+    "track": 770,
+    "start": 20,
+    "bed": -30
+  }
 }

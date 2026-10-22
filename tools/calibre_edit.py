@@ -28,6 +28,7 @@ Edit file keys (times are SOURCE seconds unless noted):
   grade                      ffmpeg filter string for the colour grade
   audio                      {"preset": "basic"|"clean"|"studio"|"deep", "pitch": semitones}
                              voice processing, see voice.py
+  music                      {"track": id from music/library.json, "start": s, "bed": LUFS, "duck": ratio}
 """
 import json, math, os, re, subprocess, sys, difflib, shutil, tempfile, wave
 from concurrent.futures import ThreadPoolExecutor
@@ -726,6 +727,10 @@ def render_audio(edit, tmp):
     out = os.path.join(tmp, "audio.wav")
     a = edit.cfg.get("audio", {})
     voice.process(cut, out, a.get("preset", "clean"), a.get("pitch", 0))
+    if edit.cfg.get("music"):
+        mixed = os.path.join(tmp, "mix.wav")
+        voice.mix_music(out, mixed, edit.cfg["music"])
+        out = mixed
     return out
 
 

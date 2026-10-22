@@ -30,5 +30,13 @@
       "style": "black",
       "text": "~Free deal calculators~ / Comment [SEND]"
     }
-  ]
+  ],
+  "audio": {
+    "preset": "deep"
+  },
+  "music": {
+    "track": 744,
+    "start": 50,
+    "bed": -27
+  }
 }

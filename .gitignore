@@ -8,3 +8,5 @@ projects/*/renders/
 *.wav
 *.silences.json
 __pycache__/
+music/cache/
+*.mp3

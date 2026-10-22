@@ -40,5 +40,13 @@
     "text": "Valuation is *not* / [A GUESS]",
     "dur": 2.8
   },
-  "cards": []
+  "cards": [],
+  "audio": {
+    "preset": "deep"
+  },
+  "music": {
+    "track": 744,
+    "start": 0,
+    "bed": -27
+  }
 }
