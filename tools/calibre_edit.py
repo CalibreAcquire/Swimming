@@ -45,7 +45,7 @@ FORMATS = {
                  italic=96, bold=66, key=150, card_plain=70, card_italic=160, card_key=78, card_label=34,
                  wm=72, wm_margin=48),
     "9x16": dict(W=1080, H=1920, cap_base=1460, cap_maxw=0.86,
-                 italic=134, bold=92, key=220, card_plain=68, card_italic=144, card_key=78, card_label=34,
+                 italic=134, bold=92, key=220, card_plain=84, card_italic=176, card_key=96, card_label=40,
                  wm=64, wm_margin=56),
 }
 
@@ -608,15 +608,18 @@ def card_events(edit):
 
 
 def title_events(edit):
-    """Hook title over the opening seconds: {"text": markup, "dur": seconds}."""
+    """Hook title over the opening seconds: {"text": markup, "dur": seconds}.
+    Write key words in capitals; titles keep the author's case."""
     ti = edit.cfg.get("title_card")
     if not ti:
         return ""
     F = edit.F
     W, H = F["W"], F["H"]
     styles = {"bold": "bold", "italic": "italic", "key": "key", "label": "card_label"}.get
-    sizes = dict(bold=F["bold"] * 0.85, italic=F["italic"] * 0.95, key=F["key"] * 0.55, card_label=F["card_label"])
-    lines = stack(layout_lines(parse_markup(ti["text"]), styles, sizes, W * 0.86, card=True), H * 0.27, gap_ratio=0.18)
+    sizes = dict(bold=F["bold"], italic=F["italic"] * 1.05, key=F["key"] * 0.7, card_label=F["card_label"])
+    # sits where the captions go; captions start once it's gone
+    lines = stack(layout_lines(parse_markup(ti["text"]), styles, sizes, W * F["cap_maxw"], card=True),
+                  F["cap_base"], gap_ratio=0.18)
     colours = dict(key=rf"\1c{YELLOW}")
     dur = ti.get("dur", 3.0)
     tags = r"\bord3\3c&H000000&\3a&H90&\blur4\fad(120,200)"
@@ -725,8 +728,9 @@ def render(edit_path, out, draft=False):
 
         cards, spans = card_events(edit)
         ass = os.path.join(tmp, "subs.ass")
-        open(ass, "w").write(ass_header(F["W"], F["H"]) + caption_events(edit, [(a, b) for a, b, _ in spans])
-                            + cards + title_events(edit))
+        ti = edit.cfg.get("title_card")
+        hide = [(a, b) for a, b, _ in spans] + ([(0, ti.get("dur", 3.0))] if ti else [])
+        open(ass, "w").write(ass_header(F["W"], F["H"]) + caption_events(edit, hide) + cards + title_events(edit))
         shutil.copy(ass, os.path.splitext(out)[0] + ".ass")
 
         def when(style=None):
