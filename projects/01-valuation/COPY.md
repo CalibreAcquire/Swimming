@@ -1,6 +1,6 @@
 # 01 — Upload copy
 
-Replace the `[…]` placeholders with your links before posting.
+Links filled in. Only the Instagram handle is still a placeholder.
 
 ---
 
@@ -20,10 +20,10 @@ Most people think a property valuation is a guess based on what's sold nearby. T
 In this video I walk through the four-step process we use to value a property, and why it's different for residential compared to commercial and investment property.
 
 🧮 FREE DEAL CALCULATORS
-Stress test a mixed-use, HMO or single residential deal in minutes — put in the real numbers and see what it actually returns. Comment "SEND" or get access here: [CALCULATOR LINK]
+Stress test a mixed-use, HMO or single residential deal in minutes — put in the real numbers and see what it actually returns. Comment "SEND" or get access here: https://www.calibreacquire.co.uk/investment-calculators
 
 🔑 OFF-MARKET ACCESS
-Want to see properties before they reach the open market? Apply here: [APPLICATION LINK]
+Want to see properties before they reach the open market? Apply here: https://www.calibreacquire.co.uk/register
 I review every application personally.
 
 CHAPTERS
@@ -40,7 +40,7 @@ CHAPTERS
 ABOUT
 I'm Jake, founder of Calibre Acquire. I've worked in property for 14 years and transacted on over £80 million of commercial property investments in the past year alone. I help investors get out of underperforming property and into assets that work harder for them.
 
-🌐 [WEBSITE]
+🌐 https://www.calibreacquire.co.uk
 📸 Instagram: [@HANDLE]
 
 This video is for general information only and isn't financial or investment advice.
@@ -118,4 +118,5 @@ Want access to deals before they hit the open market? Apply via the link in bio.
 ## Posting suggestions
 - **Order:** YouTube first, then reels across the week — Reel 1 (strongest hook) → Reel 4 → Reel 2 → Reel 3 (lead magnet, so you can respond to the comments).
 - **Cover frames:** pick a frame with a yellow key word on screen (e.g. IDENTICAL, OVERPAYING) for the reel covers.
-- **Pinned comment on YouTube:** "Comment SEND for the free deal calculators 👇".
+- **Pinned comment on YouTube:** "Free deal calculators 👉 https://www.calibreacquire.co.uk/investment-calculators".
+- **Instagram bio link:** point it at https://www.calibreacquire.co.uk/register while Reel 4 is live (it says "apply via the link in bio"), and at the calculators page while Reel 3 is live if you're not using auto-DMs.
