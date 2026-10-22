@@ -324,10 +324,10 @@ def parse_markup(text):
       [WORDS]          key words: captions big yellow caps; cards bold (black) or yellow serif (white)
       ~words~          cards only: small spaced-out label, e.g. ~Step 1~
       |                force a new caption chunk
-      /                force a new line
+      /                force a new line (only on its own, so URLs keep their slashes)
     """
     toks, chunk_br, line_br, group = [], False, False, 0
-    for m in re.finditer(r"\[[^\]]+\]|\*[^*]+\*|~[^~]+~|\||/|[^\s\[\]*~|/]+", text):
+    for m in re.finditer(r"\[[^\]]+\]|\*[^*]+\*|~[^~]+~|\||(?<!\S)/(?!\S)|[^\s\[\]*~|]+", text):
         s = m.group(0)
         if s == "|":
             chunk_br = True

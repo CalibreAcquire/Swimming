@@ -41,3 +41,10 @@ under voice. Caption overlaps: 0 (after fixing the overlap bug).
 - Jake: "the sound echoes, can we make it fuller". Room echo measured ~0.8-1.0 s RT60 (camera mic).
 - Strong suppression sounded robotic; Jake chose the gentle setting (Option A). Preset `full` in all four EDLs.
 - QA: all four −14.0 LUFS, −1.6 dBTP, music 14–16 dB under voice, 0 caption overlaps. AAC now 320 kbps.
+
+## Finals (22 Oct)
+- Exports v1: YouTube 2:23, reels 0:22 / 0:24 / 0:33, story, SRT. Thumbnails A/B/C, three covers.
+- QA: all four −14.0 LUFS, −1.6 dBTP, music 14–16 dB under voice, 0 caption overlaps. 1080p25, AAC 320k.
+- SRT: "/" in the register URL was being read as caption line-break markup; parser fixed (slash
+  is a line break only when it stands alone), SRT regenerated before delivery.
+- Posting: Fri 30 Oct, Tue 3 Nov, Sat 7 Nov from Dubai (see publish/schedule.md).
