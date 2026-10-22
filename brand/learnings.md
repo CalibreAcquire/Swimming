@@ -33,9 +33,9 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Video 01 was 720p from a camera mic. 4K and the wireless mic make punch-ins, reels and
   audio noticeably better.
 
-## Changed by the 22 Oct 2026 CLAUDE.md (supersedes what video 01 used)
-Video 01 used: stacked word-by-word captions burned in on YouTube and reels, #FFDE59
-key words, Montserrat, zoom pops/push-ins, a music bed on a talking head, chapters on an
-educational video, no intro sting or end card. From the next video, CLAUDE.md applies:
-SRT only on YouTube, minimal two-line DM Sans captions on reels, black/white/grey only,
-straight cuts with subtle punch-ins, intro beat and end card on every video.
+## Style
+- Jake retracted the style rules in the 22 Oct 2026 CLAUDE.md brief (DM Sans/Jost,
+  black/white/grey only, straight cuts, SRT-only YouTube, minimal reel captions, intro
+  sting, end card). **Keep the original style in `VIDEO_STYLE.md`**: stacked word-by-word
+  captions burned in on YouTube and reels, #FFDE59 key words, Montserrat + Cormorant
+  Garamond, zooms, black/white cards, music beds. (22 Oct 2026)

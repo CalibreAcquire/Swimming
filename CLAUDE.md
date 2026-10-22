@@ -27,8 +27,8 @@ Jake's main channel is YouTube (JakeBensonProperty), with Instagram used for rea
 brand/
   logos/          Calibre Acquire logo files (white/black, PNG + SVG)
   templates/      intro, end card, lower third, FAQ card, URL card
-  fonts/          Cormorant Garamond, DM Sans, Jost
-  music/          intro beat + approved background beds
+  fonts/          Montserrat, Cormorant Garamond, EB Garamond (DM Sans, Jost also available)
+  music/          approved background beds
   sfx/
   glossary.txt    spelling list for transcription correction
   learnings.md    running list of Jake's corrections and preferences
@@ -79,7 +79,7 @@ Identify the type before editing. If it isn't obvious from the script or the fol
 
 Use this to check nothing is missing and to place graphics:
 
-Intro sting → Hook (a real outcome or result, never a question) → "Welcome back…" channel line → "In today's video…" → Self-introduction → Pain point → Proof (real deals) → Promise → Calculator CTA at roughly 30% in → Main content → Share/subscribe prompt → Main CTA (register for the off-market list, or book a strategy call) → End card.
+Hook (a real outcome or result, never a question) → "Welcome back…" channel line → "In today's video…" → Self-introduction → Pain point → Proof (real deals) → Promise → Calculator CTA at roughly 30% in → Main content → Share/subscribe prompt → Main CTA (register for the off-market list, or book a strategy call).
 
 Listing videos are different: hook → location and building breakdown → deal status → register CTA. No self-introduction, no calculator CTA, no share/subscribe.
 
@@ -109,14 +109,14 @@ Jake reads full word-for-word scripts, filmed in blocks of two or three lines as
 
 * Remove false starts, repeated lines, dead air, clapperboard moments and off-script chatter.
 * Tighten pauses between sentences to a natural rhythm, not robotic. Leave a beat after important figures.
-* Straight cuts only. No transitions, wipes, zooms-for-effect or whooshes.
-* Use punch-ins (scale 110–120% on a 4K source) on jump cuts within the same shot to hide the cut. Keep it subtle.
+* Follow Jake's video style in `VIDEO_STYLE.md`: fast cuts with zoom in, zoom out and mini zooms (alternate wide and tight at jump cuts, occasional eased zoom pops and slow push-ins). No transitions, wipes or whooshes.
 
 ### Step 5: Graphics
 
 Place graphics wherever the script calls for them (graphic cues appear in grey boxes in Jake's script PDFs). Use the templates in `brand/templates/`.
 
-* Lower thirds: black bar, white DM Sans text, 3-second hold.
+* Full-screen black and white text cards as in `VIDEO_STYLE.md` (small spaced label, hairline, Cormorant Garamond italic headline; no yellow on cards).
+* Lower thirds: black bar, white Montserrat text, 3-second hold.
 * FAQ cards: number plus question, nothing else.
 * Figures, prices, yields and percentages on screen must match the script exactly.
 * Calculator CTA: on-screen URL card at the point Jake mentions it.
@@ -125,8 +125,8 @@ Place graphics wherever the script calls for them (graphic cues appear in grey b
 
 * Light noise reduction, high-pass around 80 Hz, gentle compression, de-ess if needed.
 * Loudness target: −14 LUFS integrated, −1 dBTP true peak for both YouTube and Instagram.
-* Background music (if used) sits well under the voice, around −24 to −28 dB relative, ducked under speech. Talking-head educational videos usually need little or no music.
-* Intro beat is the same on every video.
+* Voice: `deep` preset (`scripts/voice.py`), chosen by Jake.
+* Background music on every video from `brand/music/`, chosen per video: bed around −30 LUFS on YouTube and −27 LUFS on reels (voice at −14), ducked under speech, fading in and out.
 
 ### Step 7: Colour
 
@@ -134,9 +134,9 @@ Place graphics wherever the script calls for them (graphic cues appear in grey b
 
 ### Step 8: Captions
 
-* Generate an `.srt` for every YouTube video (upload as a caption file, don't burn in).
-* Burn captions into every Instagram reel.
-* Caption style: DM Sans, white, two lines maximum, clean and minimal. Keep inside Instagram's safe zone (clear of the bottom 20% and the right-hand icon column). No emoji, no bouncing or gimmicky animation. Highlighting a key figure is fine.
+* Burn captions into every YouTube video and every reel in Jake's stacked word-by-word style (`VIDEO_STYLE.md`): Montserrat ExtraBold white, Cormorant Garamond italic for softer emphasis, key words and figures in Montserrat Black caps #FFDE59. Reels also get a hook title in the first seconds.
+* Keep reel captions inside Instagram's safe zone (clear of the bottom 20% and the right-hand icon column). No emoji.
+* Also generate an `.srt` for every YouTube video to upload as a caption file (search and accessibility).
 * Proofread captions against the script for spelling and figures.
 
 ### Step 9: Export
@@ -153,7 +153,7 @@ Run this every time and record the results in `notes.md`:
 * Loudness measured and within target
 * Every on-screen figure matches the script
 * Captions proofread
-* Intro and end card present and correct
+* Cards correct (black or white, no yellow on cards)
 * No banned content (see section 8)
 * Brand colours and fonts correct throughout
 * Reels checked for safe-zone and cropping problems
@@ -162,14 +162,10 @@ Run this every time and record the results in `notes.md`:
 
 ### Look
 
-* Colours: black (#0a0a0a), white and grey only. Never cream, gold or warm tones.
-* Fonts: Cormorant Garamond for display/titles, DM Sans or Jost for body text and lower thirds.
-* Straight cuts only.
-* End card: Calibre Acquire logo plus `calibreacquire.co.uk`, nothing else.
-
-### Intro (every video)
-
-Same music beat, plain black background, one or two short text lines, then the Calibre Acquire logo. The wording must make the video feel useful and value-giving, never like a sales pitch.
+* Video style: `VIDEO_STYLE.md`, the style Jake chose: luxurious, engaging, authentic, professional.
+* Colours: black, white and grey; #FFDE59 only for key words in captions over footage, never on cards.
+* Fonts: Montserrat (captions, body text), Cormorant Garamond (serif emphasis, card headlines), EB Garamond (alternate serif).
+* Logos: used lightly. Small "C." monogram watermark on footage and on cards.
 
 ### Tone on screen
 
@@ -237,7 +233,7 @@ Keep it short. Jake will reply with corrections; apply them, export a new versio
 * **Scripts so far** (`scripts/`):
   * `find_retakes.py <video> --json transcript.json`: transcribes phrase by phrase between pauses (whole-file transcription merges false starts into the next take) and lists restart/retake candidates. Run it on the raw footage and again on the render as QA.
   * `transcribe.py`: whole-file word-level transcription (fallback).
-  * `calibre_edit.py plan|render|cards|srt|stills <edl.json>`: renders from an EDL (cuts, punch-ins, captions, cards, audio, music). See its docstring. **Video 01 was built in the earlier house style (stacked word-by-word captions, #FFDE59 key words, Montserrat, zoom moves); the renderer still needs updating to the rules above (DM Sans/Jost, no yellow, straight cuts with subtle punch-ins only, SRT-only on YouTube, minimal two-line reel captions, intro sting and end card, export specs).**
+  * `calibre_edit.py plan|render|cards|srt|stills <edl.json>`: renders from an EDL (cuts, punch-ins, captions, cards, audio, music). See its docstring. It implements Jake's style (`VIDEO_STYLE.md`). Still to add: 30 fps reel export and AAC 320 kbps / −1 dBTP from Step 9 and Step 6.
   * `voice.py`: voice chain (`deep` preset chosen by Jake: dereverb, fuller EQ, de-ess, compression) and music ducking. Dereverb runs in 20 s blocks (whole-file runs out of memory).
-* **Music:** `brand/music/library.json` lists approved Mixkit tracks (free licence, commercial use, no attribution); files download into `brand/music/cache/`. The intro beat is still needed from Jake.
-* **Older notes:** `LOG.md` and `VIDEO_STYLE.md` predate this file and are kept for history; where they disagree, this file and `brand/learnings.md` win.
+* **Music:** `brand/music/library.json` lists approved Mixkit tracks (free licence, commercial use, no attribution); files download into `brand/music/cache/`.
+* **Style:** `VIDEO_STYLE.md` is the video style (Jake retracted the brief's style rules on 22 Oct 2026). `LOG.md` is the history of video 01.

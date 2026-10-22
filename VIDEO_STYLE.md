@@ -1,4 +1,4 @@
-> **Superseded** by `CLAUDE.md` (22 Oct 2026) and `brand/learnings.md`. Kept for history.
+> **The video style.** Jake's chosen style; `CLAUDE.md` points here. Corrections also go in `brand/learnings.md`.
 
 # Calibre Acquire — Video Style Guide
 

@@ -1,4 +1,4 @@
-> **Superseded** by `CLAUDE.md` (22 Oct 2026) and `brand/learnings.md`. Kept for history.
+> History of video 01. Ongoing corrections go in `brand/learnings.md`; each project keeps its own `notes.md`.
 
 # Work log
 
