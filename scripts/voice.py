@@ -8,8 +8,8 @@ Presets (chosen per edit with "audio": {"preset": ...}):
             expander that shortens the room tail between phrases
   deep    — studio's cleanup with a deeper, fuller tone: more chest and body,
             softer top, denser compression
-  full    — for echoey rooms: stronger WPE plus late-reverb suppression, deep's
-            tone with more body, gentle compression so the room tail stays down
+  full    — for echoey rooms: WPE plus gentle, smoothed late-reverb suppression,
+            deep's tone with more body, gentle compression so the room tail stays down
             (Jake's default from 22 Oct 2026)
 Optional "pitch": semitones (e.g. -1) lowers the voice, formants preserved.
 
@@ -52,7 +52,9 @@ PRESETS = {
     "deep":   dict(wpe=(30, 2), chain=EQ_DEEP + ",acompressor=threshold=-27dB:ratio=4:attack=6:release=140:knee=4:makeup=4,"
                                      "agate=threshold=0.012:ratio=1.8:range=0.35:attack=8:release=250:knee=4"),
     # chain runs on the voice levelled to -20 LUFS (see process)
-    "full":   dict(wpe=(40, 2), reverb=(1.0, -18), chain=EQ_FULL + ",acompressor=threshold=-18dB:ratio=2:attack=10:release=200:knee=6"),
+    # reverb: (rt60, floor dB, gain smoothing bins x frames); Jake chose this gentle
+    # setting (Option A): stronger or faster suppression sounded robotic
+    "full":   dict(wpe=(30, 2), reverb=(0.8, -8, (9, 9)), chain=EQ_FULL + ",acompressor=threshold=-18dB:ratio=2:attack=10:release=200:knee=6"),
 }
 
 
@@ -159,8 +161,8 @@ def process(path_in, path_out, preset="clean", pitch=0):
     pre = ""
     if p.get("reverb"):
         sup = path_out + ".sup.wav"
-        rt60, floor = p["reverb"]
-        suppress_reverb(src, sup, rt60=rt60, floor_db=floor)
+        rt60, floor, smooth = p["reverb"]
+        suppress_reverb(src, sup, rt60=rt60, floor_db=floor, smooth=smooth)
         src = sup
         pre = f"volume={-20 - integrated_lufs(src):.2f}dB,"
     loudnorm(src, path_out, pre + pitch_filter(pitch) + p["chain"])

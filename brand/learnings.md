@@ -47,6 +47,9 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
   dereverb plus late-reverb suppression, more body in the EQ, gentle compression. Heavy compression
   and ffmpeg loudnorm's dynamic mode both lift the room echo back up between words, so the chain
   now ends with plain gain plus a limiter. Measure the echo tail on every new room. (22 Oct 2026)
+- Strong echo suppression sounded robotic to Jake. He chose the gentle setting (Option A, about
+  2.5 dB less echo). Don't push suppression harder; test any change on a short A/B clip first,
+  before rendering whole videos. (22 Oct 2026)
 - Music used on video 01: "Autofahren" (YouTube), "House 02" (reels), from brand/music. (22 Oct 2026)
 
 ## Graphics
