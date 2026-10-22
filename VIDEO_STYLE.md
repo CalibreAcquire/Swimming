@@ -22,7 +22,14 @@ Every video should feel **luxurious, engaging, authentic and professional**.
 
 ## Pacing
 - Fast cuts throughout to keep the audience engaged.
-- Remove dead air, pauses, ums/ahs and retakes.
+- Remove dead air, pauses, ums/ahs and retakes. Target: no gap longer than
+  ~0.3s between words (reels); slightly more breathing room on YouTube.
+- Something changes on screen roughly every 2–3s on reels (cut, zoom, card,
+  footage) and every 3–5s on YouTube.
+
+## Script structure (reels)
+Hook (first 3–5s) → problem → solution → proof (numbers) → credibility → CTA.
+Each new section gets a fresh visual: a card, property footage or new framing.
 
 ## Typography
 Fonts live in `brand/fonts/` (all SIL Open Font License).
@@ -38,6 +45,15 @@ Fonts live in `brand/fonts/` (all SIL Open Font License).
 - Standard words: white (`#FFFFFF`).
 - Key words: `#FFDE59` (yellow) and/or *italic*.
 - Vary the caption format through the video so it doesn't feel static.
+- **Stacked word-by-word captions** (main reel style): 1–3 words on screen,
+  built up in tiers in the lower-middle of the frame:
+  - connective words — Cormorant Garamond *italic*, white
+  - supporting words — Montserrat ExtraBold, white
+  - the key word — Montserrat Black CAPS, `#FFDE59`, large
+- Numbers, prices and names are always key words ("£180K", "40% BELOW").
+- **CTA switch**: for the final call to action, change to sentence chunks in
+  black boxes, so it reads as "this is the ask".
+- See `reference/example-01-analysis.md` for the reference this came from.
 
 ## Full-screen text cards
 Cut away from the talking footage to a full-screen card for emphasis.
