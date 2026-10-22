@@ -65,9 +65,9 @@ property valuation, how is a property valued, commercial property valuation, res
 
 ## Instagram reels
 
-Post in this order. Captions follow CLAUDE.md section 9 (bullets, YouTube line, register line).
+Post in this order (see `schedule.md` for the dates in Jake's diary). Captions follow CLAUDE.md section 9 (bullets, YouTube line, register line).
 
-### 1st: Reel 1 (Valuation is not a guess), same day as the YouTube video
+### 1st: Reel 1 (Valuation is not a guess), Thu 22 Oct with the YouTube video
 ```
 Two buildings can look identical and sell for very different prices.
 
@@ -82,7 +82,7 @@ To see properties before they reach the open market, apply to join the list: cal
 #propertyinvestment #commercialproperty #propertyvaluation #ukproperty #propertyinvestor #calibreacquire
 ```
 
-### 2nd: Reel 4 (Are you overpaying?), two days later
+### 2nd: Reel 4 (Are you overpaying?), Sat 24 Oct
 ```
 Are you overpaying for property?
 
@@ -97,7 +97,7 @@ To see properties before they reach the open market, apply to join the list: cal
 #propertyinvestment #propertyvaluation #commercialproperty #ukproperty #propertyinvestor #calibreacquire
 ```
 
-### 3rd: Reel 2 (What actually sets the value), two days later
+### 4th: Reel 2 (What actually sets the value), Wed 28 Oct (swapped with Reel 3)
 ```
 What sets the value of an investment property?
 
@@ -113,7 +113,7 @@ To see properties before they reach the open market, apply to join the list: cal
 #rentalyield #propertyinvestment #commercialproperty #ukproperty #propertyinvestor #calibreacquire
 ```
 
-### 4th: Reel 3 (Free deal calculators), two days later
+### 3rd: Reel 3 (Free deal calculators), Mon 26 Oct (before Dubai, to reply to SEND comments)
 ```
 Stress test a property deal in a few minutes.
 

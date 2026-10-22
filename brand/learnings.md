@@ -10,6 +10,13 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Reuse Jake's own phrasing from the video wherever possible. (22 Oct 2026)
 - Instagram: @calibreacquire (company), @jake_s_benson (Jake). Website calibreacquire.co.uk.
 
+## Publishing
+- Jake can't plan content ahead: for every finished video, put each post (YouTube, reels,
+  Story) in his Outlook diary as its own event with the file name, steps and caption to
+  paste. He saves the exports himself. (22 Oct 2026)
+- Post a calculator (comment SEND) reel when Jake is around to reply, not just before
+  he's away. (22 Oct 2026)
+
 ## Transcription
 - "if it were **let**", not "there"/"rent": whisper mishears it. Check against the script. (22 Oct 2026)
 - Whole-file transcription hides false starts ("I'm Jake, found— I'm Jake, the founder…").
