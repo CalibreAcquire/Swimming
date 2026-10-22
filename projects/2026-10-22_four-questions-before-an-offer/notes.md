@@ -43,3 +43,8 @@ suits explainers); reels: "House 02" (744).
 3. Why is the vendor selling? (0:24)
 4. Who would buy it later? (0:26)
 None contain the £80m line.
+
+## QA (drafts, 22 Oct)
+All five −14.0 LUFS, −1.5/−1.6 dBTP, music 12.5–16 dB under voice, 0 caption overlaps. Frames at
+every YouTube cut: no black or flash frames. Reel titles inside the safe zone.
+Fixed on the way: dereverb crashed when the last 20 s block was shorter than the crossfade.
