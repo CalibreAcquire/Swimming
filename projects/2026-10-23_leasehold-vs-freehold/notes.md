@@ -42,3 +42,10 @@ monday.com: Content & Filming (Master) item 3304694673.
 ## QA (drafts, 23 Oct)
 All five −14.0 LUFS, −1.5/−1.6 dBTP, music 13–16 dB under voice, 0 caption overlaps. Frames at
 every YouTube cut: no black or flash frames. Reel titles inside the safe zone.
+
+## Finals (23 Oct)
+- Exports v1: YouTube 3:24, four reels (0:36 / 0:17 / 0:15 / 0:32), story, SRT. Thumbnails A/B/C
+  (frame at 2:14.5), four covers.
+- QA: all five −14.0 LUFS, −1.5/−1.6 dBTP, music 13–16 dB under voice, 0 caption overlaps.
+  Retake check on the render: none. SRT proofread (lease length, than service charge, open market).
+- Posting: Thu 19 Nov (YouTube + Reel 1 + Story), Sat 21, Tue 24, Thu 26 Nov.
