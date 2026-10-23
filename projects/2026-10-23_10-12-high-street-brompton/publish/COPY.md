@@ -6,8 +6,9 @@ No other companies, portals or data sources named. All figures from the investme
 (brochure, October 2026), subject to contract. No £Xm "transacted" line in this video.
 
 Files (all named `2026-10-23_10-12-high-street-brompton_…`):
-- YouTube: `_youtube_v1.mp4` (2:42), captions `_youtube_v1.srt`
-- Reels: `_reel1-the-deal_v1.mp4` (0:20), `_reel2-the-building_v2.mp4` (0:27), `_reel3-the-numbers_v2.mp4` (0:32) (v2: clipped last words fixed)
+- YouTube: `_youtube_v2.mp4` (2:26), captions `_youtube_v2.srt`
+- Reels: `_reel1-the-deal_v2.mp4` (0:19), `_reel2-the-building_v3.mp4` (0:25), `_reel3-the-numbers_v3.mp4` (0:32)
+  (latest versions: repeated line at 1:08 cut, pauses tightened, clipped words fixed)
 - Thumbnails (`thumbnails/`): `_thumb-A_v1.jpg`, `_thumb-B_v1.jpg`, `_thumb-C_v1.jpg`
 - Reel / Short covers (`thumbnails/`): `_reel1-cover_v1.jpg` to `_reel3-cover_v1.jpg`
 - Story: `_story_v1.png`
@@ -62,14 +63,14 @@ mixed use freehold for sale, property for sale Brompton, Medway investment prope
 ```
 
 ### Captions file
-Upload `_youtube_v1.srt` (Subtitles > Add language > English > Upload file > With timing).
+Upload `_youtube_v2.srt` (Subtitles > Add language > English > Upload file > With timing).
 
 ### Pinned comment
 ```
 Investment summary and viewings: https://www.calibreacquire.co.uk/register
 ```
 
-### End screen (last 10 seconds, from 2:32)
+### End screen (last 10 seconds, from 2:16)
 - Video: "Leasehold vs Freehold" once live, or "How a Property Valuation Actually Gets Calculated"
 - Subscribe button
 Top-right and bottom-right corners.

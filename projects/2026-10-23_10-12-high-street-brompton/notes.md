@@ -53,3 +53,17 @@ end 93.5 → 93.9, keeps "year"), Reel 3 lost "yield" (cut 130.0 → 130.45) and
 (163.1). Re-rendered as `_reel2-the-building_v2.mp4` and `_reel3-the-numbers_v2.mp4`; Outlook
 events for 31 Oct and 2 Nov now point at v2. YouTube master and Reel 1 unaffected.
 calibre_edit.py now warns when a window end or cut start falls inside a word.
+
+## v2 YouTube / v2-v3 reels (23 Oct, Jake's notes)
+- 1:08 "I repeat myself": "In total, it's 3,829 square feet" was said three times; whisper had merged
+  the first two into one 10-second word, so the retake check missed it. First two takes cut
+  (93.9–103.4), transcript patched with re-transcribed word times (backup in work/).
+- Reel 3 0:19 "pause too long": 1.1 s of near-silence before "With a 30% deposit". The renderer's
+  fixed −38 dB silence threshold was below this room's noise floor (about −35 dB), so pauses weren't
+  seen. Now `silence_db: auto` (threshold from the recording, −31.9 dB here). Whisper had also
+  mistimed "£36,380", and the old gap rule dropped "eighty"; gaps now count as pauses only where the
+  audio is quiet.
+- Exports: `_youtube_v2.mp4` (2:26) + `.srt`, `_reel1-the-deal_v2.mp4` (0:19),
+  `_reel2-the-building_v3.mp4` (0:25), `_reel3-the-numbers_v3.mp4` (0:32). QA: −14.0/−14.1 LUFS,
+  −1.3/−1.5 dBTP, 0 caption overlaps; "In total" once; finance sentence complete (checked by
+  transcribing the render section). Outlook events (25, 31 Oct, 2 Nov) point at these files.

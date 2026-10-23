@@ -79,3 +79,5 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
   captions burned in on YouTube and reels, #FFDE59 key words, Montserrat + Cormorant
   Garamond, zooms, black/white cards, music beds. (22 Oct 2026)
 - Past-sale figures Jake says on camera (e.g. £3.65m where the board shows £3.6m) stay as spoken when the gap is small; don't hold the video for them (23 Oct 2026).
+- Pauses: Jake notices pauses over about half a second as awkward (reel, 23 Oct 2026). Every EDL uses `silence_db: auto` so pauses are measured against the room's noise floor.
+- Repeats: whisper can merge a repeated line into one long word. Check any word over 1.6 s and re-transcribe that span with large-v3 before rendering (23 Oct 2026).
