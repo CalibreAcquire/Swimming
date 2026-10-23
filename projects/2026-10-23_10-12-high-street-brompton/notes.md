@@ -45,3 +45,11 @@ monday.com: Content & Filming (Master) item 3305252775.
   overlaps. Black-frame scan: the only black runs are the five black cards (10.3, 78.7, 122.0,
   148.0, 154.9 s). SRT figures checked: £90,320, £78,380, £39,500, £36,380 (whisper's "$" fixed),
   register URL intact.
+
+## v2 reels (23 Oct)
+Final QA on the next two videos found cut points sitting inside a word: the renderer judges a
+word by its midpoint, so the word was dropped and clipped. Here: Reel 2 ended on "£13,200 a" (window
+end 93.5 → 93.9, keeps "year"), Reel 3 lost "yield" (cut 130.0 → 130.45) and "in" at the end
+(163.1). Re-rendered as `_reel2-the-building_v2.mp4` and `_reel3-the-numbers_v2.mp4`; Outlook
+events for 31 Oct and 2 Nov now point at v2. YouTube master and Reel 1 unaffected.
+calibre_edit.py now warns when a window end or cut start falls inside a word.

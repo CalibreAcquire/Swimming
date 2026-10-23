@@ -185,6 +185,13 @@ class Edit:
             m = (w["s"] + w["e"]) / 2
             return not (lo <= m <= hi) or any(a <= m <= b for a, b in cuts)
 
+        # a window end or cut start inside a word drops that word (it's judged by its midpoint)
+        # and clips its sound: warn so the point can be moved to the word's end
+        for t in [hi] + [a for a, b in cuts]:
+            for w in self.words:
+                if w["s"] + 0.03 < t < w["e"] - 0.03:
+                    print(f"WARNING: cut at {t} is inside '{w['w']}' ({w['s']:.2f}-{w['e']:.2f})",
+                          file=sys.stderr)
         kept = [w for w in self.words if not cut(w)]
         groups, cur = [], []
         for w in kept:

@@ -7,7 +7,7 @@ No other companies, portals or data sources named. All figures from the investme
 
 Files (all named `2026-10-23_10-12-high-street-brompton_…`):
 - YouTube: `_youtube_v1.mp4` (2:42), captions `_youtube_v1.srt`
-- Reels: `_reel1-the-deal_v1.mp4` (0:20), `_reel2-the-building_v1.mp4` (0:27), `_reel3-the-numbers_v1.mp4` (0:32)
+- Reels: `_reel1-the-deal_v1.mp4` (0:20), `_reel2-the-building_v2.mp4` (0:27), `_reel3-the-numbers_v2.mp4` (0:32) (v2: clipped last words fixed)
 - Thumbnails (`thumbnails/`): `_thumb-A_v1.jpg`, `_thumb-B_v1.jpg`, `_thumb-C_v1.jpg`
 - Reel / Short covers (`thumbnails/`): `_reel1-cover_v1.jpg` to `_reel3-cover_v1.jpg`
 - Story: `_story_v1.png`
