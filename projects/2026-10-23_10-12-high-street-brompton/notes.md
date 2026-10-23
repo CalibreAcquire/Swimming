@@ -38,3 +38,10 @@ where possible; thumbnail C uses the upper part only (shop signs and phone numbe
 3. The numbers (0:32): passing rent, net yield, returns (income split and SDLT cut).
 
 monday.com: Content & Filming (Master) item 3305252775.
+
+## Finals (23 Oct, rendered while Jake was away; drafts not reviewed by him)
+- Exports v1: YouTube 2:42, reels 0:20 / 0:27 / 0:32, story, SRT (38 subtitles).
+- QA: all four −14.0/−14.1 LUFS, −1.2 to −1.5 dBTP, music 13.8–17.1 dB under voice, 0 caption
+  overlaps. Black-frame scan: the only black runs are the five black cards (10.3, 78.7, 122.0,
+  148.0, 154.9 s). SRT figures checked: £90,320, £78,380, £39,500, £36,380 (whisper's "$" fixed),
+  register URL intact.

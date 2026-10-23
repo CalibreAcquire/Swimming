@@ -1,0 +1,172 @@
+{
+  "title": "Stamp duty on mixed-use buildings",
+  "type": "educational",
+  "source": "../raw/C0373S03.MP4",
+  "transcript": "../transcript/transcript.json",
+  "format": "16x9",
+  "window": [
+    31.75,
+    455.8
+  ],
+  "cuts": [
+    [
+      228.45,
+      235.2
+    ],
+    [
+      292.3,
+      316.85
+    ],
+    [
+      366.2,
+      376.6
+    ],
+    [
+      411.2,
+      419.6
+    ]
+  ],
+  "max_gap": 0.45,
+  "anchor": [
+    680,
+    220
+  ],
+  "zoom": {
+    "wide": 1.0,
+    "tight": 1.28,
+    "every": 5.0
+  },
+  "shots": [
+    {
+      "at": 118.8,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 184.3,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 223.1,
+      "zoom": 1.0,
+      "move": "push",
+      "to": 1.12
+    },
+    {
+      "at": 270.6,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 364.0,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 437.3,
+      "zoom": 1.0,
+      "move": "push",
+      "to": 1.12
+    }
+  ],
+  "audio": {
+    "preset": "full"
+  },
+  "music": {
+    "track": 770,
+    "start": 200,
+    "bed": -30
+  },
+  "broll": [
+    {
+      "from": 187.25,
+      "to": 191.0,
+      "file": "../../2026-10-23_10-12-high-street-brompton/raw/photos/exterior/DSC00647.jpg",
+      "focus": [
+        0.5,
+        0.38
+      ],
+      "zoom": 1.1
+    }
+  ],
+  "cards": [
+    {
+      "from": 52.2,
+      "to": 55.65,
+      "style": "black",
+      "text": "~Stamp duty on £1,200,000~ / Residential, with 5% surcharge: £123,750 / Non-residential: £49,500 / *£74,250 difference*"
+    },
+    {
+      "from": 91.3,
+      "to": 95.0,
+      "style": "black",
+      "text": "~Mixed-use and stamp duty~ / *Which rates apply*"
+    },
+    {
+      "from": 110.5,
+      "to": 115.1,
+      "style": "black",
+      "text": "~Free deal calculators~ / *calibreacquire.co.uk/investment-calculators* / Comment [SEND]"
+    },
+    {
+      "from": 118.8,
+      "to": 125.0,
+      "style": "white",
+      "text": "~Mixed-use~ / *Residential and commercial parts* / e.g. flats above a let shop"
+    },
+    {
+      "from": 141.0,
+      "to": 161.5,
+      "style": "white",
+      "text": "~Residential rates · at the time of filming~ / Up to £125,000: 0% / £125,001 to £250,000: 2% / £250,001 to £925,000: 5% / £925,001 to £1.5m: 10% / Above £1.5m: 12% / *+5% on the whole price* if you already own a property or buy through a company"
+    },
+    {
+      "from": 161.5,
+      "to": 170.8,
+      "style": "white",
+      "text": "~Non-residential rates · at the time of filming~ / Up to £150,000: 0% / £150,001 to £250,000: 2% / Above £250,000: 5%"
+    },
+    {
+      "from": 195.2,
+      "to": 204.2,
+      "style": "white",
+      "text": "~Brompton · offers in the region of £1,000,000~ / Mixed-use: *£39,500* / All residential, with surcharge: £93,750"
+    },
+    {
+      "from": 213.2,
+      "to": 221.3,
+      "style": "white",
+      "text": "~Hornsey Road · under offer · £1,300,000~ / Residential, with surcharge: £138,750 / Mixed-use: *£54,500*"
+    },
+    {
+      "from": 235.25,
+      "to": 241.6,
+      "style": "black",
+      "text": "~Genuine commercial~ / Its own business rates assessment / Its own entrance / A trading business in it"
+    },
+    {
+      "from": 346.55,
+      "to": 355.5,
+      "style": "white",
+      "text": "~Cash in on £1,200,000~ / Residential, 25% deposit: £423,750 / Mixed-use, 30% deposit: £409,500 / *About £14,000 difference*"
+    },
+    {
+      "from": 431.4,
+      "to": 436.4,
+      "style": "black",
+      "text": "~The deciding factor~ / *The individual building* / its income, condition and location"
+    },
+    {
+      "from": 444.4,
+      "to": 451.6,
+      "style": "black",
+      "text": "~Apply to join the list~ / *calibreacquire.co.uk/register*"
+    }
+  ],
+  "captions": "On a [£1.2 MILLION] purchase, | buying as *residential* | with the *5% surcharge* | costs [£123,750] | in stamp duty. With *one genuine commercial unit* | on the ground floor, | the stamp duty is [£49,500.] That's a difference of | [£74,250,] | and it comes down to | which set of rates | the building is [TAXED UNDER.] I'm Jake, | the founder of | [CALIBRE ACQUIRE.] I've worked in property | for [14 YEARS,] | and last year | we transacted on over | [£30 MILLION] | in property. I help investors | get out of *underperforming* property assets | and into property assets | that work [HARDER] | for them. If you're buying a building | and the stamp duty | is eating into the [DEPOSIT,] | this matters. A lot of what we sell | is [MIXED-USE,] | like *339 to 343 Commercial Road,* | three shops and eight flats, | sold at [£3.65 MILLION.] In this video, | I'll cover | what counts as [MIXED-USE,] | the *two sets of rates* | side by side, | with [TWO LIVE EXAMPLES,] | what makes the commercial part | [GENUINE,] | the *full cost to buy,* | not just the stamp duty, | and when the saving | [ISN'T WORTH IT.] If you're considering a property | and want to [TEST IT] | within a few minutes, | I built a set of | *investment calculators* | you can use for [FREE.] Comment [SEND] | or use the link below. A mixed-use building | is one with both | *residential* | and *commercial* parts, | like flats | above a [LET SHOP.] When that's the case, | the *whole purchase* | is charged at | [NON-RESIDENTIAL RATES,] | not just the shop. One shop changes | which [RULEBOOK] | the whole building | is taxed under. Here are the rates | at the *time of filming.* [RESIDENTIAL:] | nothing up to [£125,000,] | [2%] up to £250,000, | [5%] up to £925,000, | [10%] up to £1.5 million | and [12%] above that. If you already own a property | or you're buying through | a *limited company,* | there's a further [5%] | on the *whole price.* [NON-RESIDENTIAL:] | nothing up to [£150,000,] | [2%] up to £250,000 | and [5%] | on everything above that. On [£1.2 MILLION,] | the residential stamp duty | with the surcharge | is [£123,750.] At non-residential rates, | it's [£49,500.] Here are | [TWO LIVE EXAMPLES.] We have a building | for sale in [BROMPTON] | at offers in the region of | [£1 MILLION:] | two shops, | seven HMO rooms | and a flat. As mixed-use, | the stamp duty is [£39,500.] If it were all residential | with the surcharge, | it would be [£93,750.] And we have a building | on [HORNSEY ROAD,] | *under offer,* | four units, | asking price [£1.3 MILLION.] As residential | with the surcharge, | that would be [£138,750.] As mixed-use, | it's [£54,500.] The commercial part | has to be [GENUINE.] A let shop | with a *proper lease* | is clear. So is a unit | with its own | *business rates assessment,* | its own *entrance* | and a *trading business* | in it. A garden, | a parking space | or a storeroom | you decide to call commercial | [ISN'T.] And claims like that | are regularly [CHALLENGED.] If you get it wrong, | you pay the difference | plus *interest* | and possibly [PENALTIES.] Take advice | from a *solicitor* | or a *tax adviser* | before you rely on it. There's also | a second route | worth knowing. Buying [SIX OR MORE DWELLINGS] | in one transaction | can also qualify | for *non-residential rates.* That has its own rules, | and I'll cover it | in a separate video. Now the [FULL COST] | to buy, | because stamp duty | isn't the only number | that changes. A mixed-use building | usually needs a | [COMMERCIAL LENDER.] The choice of lenders | is *smaller* | than for a buy-to-let. Loan-to-value | is often lower, | around [65 TO 75%,] | and the interest rates | are usually [HIGHER.] So take the | [£1.2 MILLION] | as an example. As a residential purchase | with a [25% DEPOSIT,] | that's £300,000 deposit, | plus £123,750 stamp duty. So [£423,750] | in cash. As mixed-use | with a [30% DEPOSIT,] | that's £360,000 deposit, | plus £49,500 stamp duty. So [£409,500] | in total. You still [SAVE,] | but the gap is closer to | [£14,000] | than £74,000, | because more of your money | goes into the *deposit.* Run your own numbers | with the *lender's terms* | before you count on the saving. And then there's | the [SHOP] itself. If it goes empty, | you lose the rent | and you pay the [BUSINESS RATES,] | usually after the first | three months. Commercial units | can take *longer* to re-let | than flats, | and a weak shop | in the wrong location | can cost you more | over a few years | than the stamp duty [SAVED.] The saving makes sense | when the shop is let | to a *solid tenant* | on a decent lease, | in a location | where shops [LET.] It makes less sense | when the commercial unit | is the [WEAKEST PART] | of the building. So the stamp duty saving | on a mixed-use building | is [REAL,] | but it comes with | a *commercial tenant,* | a different type of *lender* | and a different kind of [RISK.] The deciding factor | is the [INDIVIDUAL BUILDING:] | its *income,* | its *condition* | and its *location.* If you found this useful, | send it to someone | who's looking at buying a building, | and if you want to be kept up to date | with new property strategies, | then [SUBSCRIBE.] If you want to be notified | when mixed-use buildings like this | become available, | you can register | at calibreacquire.co.uk/register. I look at every registration | [PERSONALLY,] | and I'll be in touch | if it's a good fit."
+}

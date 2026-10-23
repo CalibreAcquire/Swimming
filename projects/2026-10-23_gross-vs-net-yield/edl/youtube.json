@@ -1,0 +1,224 @@
+{
+  "title": "Gross yield vs net yield",
+  "type": "educational",
+  "source": "../raw/C0372S03.MP4",
+  "transcript": "../transcript/transcript.json",
+  "format": "16x9",
+  "window": [
+    94.9,
+    649.6
+  ],
+  "cuts": [
+    [
+      145.15,
+      150.25
+    ],
+    [
+      222.75,
+      229.8
+    ],
+    [
+      281.15,
+      287.75
+    ],
+    [
+      309.5,
+      313.35
+    ],
+    [
+      333.45,
+      336.95
+    ],
+    [
+      339.8,
+      345.1
+    ],
+    [
+      390.8,
+      449.0
+    ],
+    [
+      460.6,
+      492.5
+    ],
+    [
+      500.0,
+      527.7
+    ],
+    [
+      565.2,
+      572.8
+    ],
+    [
+      608.7,
+      614.5
+    ]
+  ],
+  "max_gap": 0.45,
+  "anchor": [
+    680,
+    220
+  ],
+  "zoom": {
+    "wide": 1.0,
+    "tight": 1.28,
+    "every": 5.0
+  },
+  "shots": [
+    {
+      "at": 186.4,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 242.9,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 301.4,
+      "zoom": 1.0,
+      "move": "push",
+      "to": 1.12
+    },
+    {
+      "at": 369.8,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 556.8,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    },
+    {
+      "at": 614.5,
+      "zoom": 1.0,
+      "move": "push",
+      "to": 1.12
+    },
+    {
+      "at": 624.8,
+      "zoom": 1.0,
+      "move": "pop",
+      "to": 1.3
+    }
+  ],
+  "audio": {
+    "preset": "full"
+  },
+  "music": {
+    "track": 609,
+    "start": 40,
+    "bed": -30
+  },
+  "broll": [
+    {
+      "from": 492.55,
+      "to": 495.3,
+      "file": "../../2026-10-23_10-12-high-street-brompton/raw/photos/exterior/DSC00647.jpg",
+      "focus": [
+        0.5,
+        0.38
+      ],
+      "zoom": 1.1
+    }
+  ],
+  "cards": [
+    {
+      "from": 158.5,
+      "to": 162.0,
+      "style": "black",
+      "text": "~Gross yield vs net yield~ / *What actually lands* / in your account"
+    },
+    {
+      "from": 180.4,
+      "to": 185.3,
+      "style": "black",
+      "text": "~Free deal calculators~ / *calibreacquire.co.uk/investment-calculators* / Comment [SEND]"
+    },
+    {
+      "from": 188.2,
+      "to": 196.3,
+      "style": "white",
+      "text": "~The definitions~ / *Gross yield* / annual rent ÷ price / *Net yield* / (annual rent − running costs) ÷ price"
+    },
+    {
+      "from": 202.2,
+      "to": 206.4,
+      "style": "black",
+      "text": "~The five costs~ / Service charge / Ground rent / Management / Voids / Repairs and maintenance"
+    },
+    {
+      "from": 244.3,
+      "to": 251.9,
+      "style": "white",
+      "text": "~Leasehold flat~ / *£250,000* / rent £16,250 a year · 6.5% gross"
+    },
+    {
+      "from": 290.4,
+      "to": 299.7,
+      "style": "white",
+      "text": "~After costs~ / Service charge £2,500 / Ground rent £300 / Management (12%) £1,950 / One month’s void £1,354 / *£10,146 · 4.1% net*"
+    },
+    {
+      "from": 323.7,
+      "to": 329.5,
+      "style": "white",
+      "text": "~Freehold · shop and three flats · illustrative~ / *£800,000* / rent £60,000 a year · 7.5% gross"
+    },
+    {
+      "from": 353.5,
+      "to": 358.1,
+      "style": "white",
+      "text": "~After costs~ / Building insurance £2,500 / Repairs reserve £3,000 / Management (10%) £6,000 / One month’s void £3,750 / *£44,750 · 5.6% net*"
+    },
+    {
+      "from": 371.6,
+      "to": 376.7,
+      "style": "black",
+      "text": "~Trap 1~ / *The asking rent* / not the rent being paid"
+    },
+    {
+      "from": 449.0,
+      "to": 452.0,
+      "style": "black",
+      "text": "~Trap 2~ / *Rents that include bills*"
+    },
+    {
+      "from": 495.3,
+      "to": 499.95,
+      "style": "white",
+      "text": "~10 & 12 High Street, Brompton~ / *9.03% gross* / 7.84% after landlord-paid bills"
+    },
+    {
+      "from": 535.7,
+      "to": 549.9,
+      "style": "black",
+      "text": "~Before you make an offer, ask for~ / Service charge accounts, last three years / Notices of planned major works / The insurance schedule / Tenancy agreements and rent statements / On a freehold: a survey for the next five years"
+    },
+    {
+      "from": 578.6,
+      "to": 587.4,
+      "style": "white",
+      "text": "~Brompton · 30% deposit · 6% interest-only~ / *£36,380 a year after interest* / 10.7% return on cash invested · illustrative"
+    },
+    {
+      "from": 620.1,
+      "to": 623.9,
+      "style": "black",
+      "text": "*Gross yield gets your attention.* / Net yield tells you whether to buy."
+    },
+    {
+      "from": 640.9,
+      "to": 646.1,
+      "style": "black",
+      "text": "~Apply to join the list~ / *calibreacquire.co.uk/register*"
+    }
+  ],
+  "captions": "A [£250,000] flat | advertised at [6.5%] yield | earns closer to [4.1%] | once the *service charge,* | *ground rent,* | *management* | and one month's *void* | come off. That gap is the difference | between [GROSS YIELD] | and [NET YIELD,] | and it's the number that decides | whether a property *pays you* | or [COSTS YOU.] I'm Jake, | the founder of | [CALIBRE ACQUIRE.] I've worked in property | for [14 YEARS,] | and last year | we transacted on over | [£30 MILLION] | in property. I help investors | get out of *underperforming* property assets | and into property assets | that work [HARDER] | for them. If you've bought something | on the *advertised yield* | and the money landing in your account | is far less | than you expected, | this is [WHY.] We've sold buildings like | [FABIAN HOUSE] | on Cannon Street Road, | which has *nine flats* | and *two shops,* | at [£4,775,000.] On every sale like that, | the buyer priced the building | on what was left | after [COSTS,] | not on the figure | in the advert. In this video, | I'll cover the | [FIVE COSTS] | that come off every yield, | worked through a *leasehold flat* | and a *freehold building* | side by side, | show you the [TWO TRAPS] | that make advertised yields | look better than they are, | and explain how *finance* | changes the picture. If you're considering a property | and want to [STRESS TEST] it | within a few minutes, | I built a set of | *investment calculators* | you can use for [FREE.] Comment [SEND] | or use the link below. First, | the [DEFINITIONS.] Gross yield | is the *annual rent* | divided by the [PRICE.] Net yield | is the annual rent | minus the *running costs,* | divided by the [PRICE.] Gross yield | is your *salary before tax.* Net yield | is what [LANDS] | in your account. Now, | the [COSTS.] First, | there's the [SERVICE CHARGE.] On a leasehold flat, | it's often the | *biggest single cost,* | and it can rise | [YEAR ON YEAR.] Then there's | [GROUND RENT,] | which is smaller, | but check the lease | for any increases | *built in.* There's [MANAGEMENT,] | usually [10 TO 15%] | of the rent | if you use an agent. There's [VOIDS,] | the weeks between tenants | with *no rent* coming in. And then there's | [REPAIRS AND MAINTENANCE,] | which never appear in the advert, | but *always* appear | in your accounts. Here's the [FLAT.] [£250,000,] | with a rent of | [£16,250] a year. That's [6.5%] | in the advert. Take off | a [£2,500] service charge, | [£300] ground rent, | [£1,950] for management | at 12%, | [£1,354] for one month's void. That leaves | [£10,146.] Divided by £250,000, | that's [4.1%,] | and that's before | a *single repair.* A freehold building | works [DIFFERENTLY.] There's no service charge | or ground rent, | but you're responsible | for the *whole building,* | including the *roof* | and the [STRUCTURE.] Here's an *illustrative example:* | a freehold | with a *shop* | and *three flats,* | priced at [£800,000.] With total rent | of [£60,000] a year, | that's [7.5% GROSS.] Take off | [£2,500] | for building insurance, | [£3,000] | for a repairs reserve, | [£6,000] | for management at 10% | and [£3,750] | for one month's void | on the flats. That leaves | [£44,750,] | which is [5.6%.] Both lose money | to [COSTS.] The freehold starts *higher,* | and with no service charge, | less of the rent disappears | before it [REACHES YOU.] Next, | the [TWO TRAPS.] First, | advertised yields are often based | on the [ASKING RENT,] | not the rent | being [PAID.] A flat marketed | at [£1,400] a month | that's actually let | at [£1,250] | has a *lower yield* | than the advert suggests. Always ask | for the *tenancy agreements* | and proof the rent | is being [PAID.] The second | is rents that | [INCLUDE BILLS.] HMO rooms | are often let | with *bills included,* | so the rent figure | looks *higher,* | but the landlord pays | the *council tax,* | *utilities* | and *wifi.* We have a building | for sale in [BROMPTON] | right now, | as an example. It's [9% GROSS] | and [7.8%] | after the bills | the landlord pays | on the rooms. The brochure shows | [BOTH NUMBERS,] | because the second one | is the one | that you *live on.* Before you make an offer, | ask for [THESE.] The *service charge accounts* | for the last three years, | any notices | of *planned major works,* | the *insurance schedule,* | the *tenancy agreements* | and the *rent statements,* | and on a freehold, | a [SURVEY] | that tells you | what the building will need | in the next [FIVE YEARS.] With those in front of you, | you can work out | the net yield [PROPERLY,] | rather than trusting the figure | on the listing. The last part | is [FINANCE.] Net yield | tells you | what the *building* earns. Return on cash | tells you | what *you* earn | on the money you put in. Using the Brompton figures, | with a [30% DEPOSIT] | and interest-only finance | at [6%,] | the income after interest | is [£36,380] a year. That's a | [10.7% RETURN] | on the cash you put in. Those figures are *illustrative* | and set out in the | *investment summary.* Borrowing can increase | the return on your cash, | but only if the net yield | is [HIGHER] | than your borrowing cost. If the net yield | is *below* the interest rate, | the debt [COSTS YOU] | money every month. That's why | you work out the net yield [FIRST,] | then decide | how to finance it. So when you look | at your next listing, | ask for the [COSTS] | before you look | at the yield. Gross yield | gets your *attention.* Net yield | is what tells you | whether to [BUY.] If you found this useful, | send it to someone | who's looking at | their *first investment property.* And if you want to be kept up to date | with new property strategies, | then [SUBSCRIBE.] If you want to be notified | when properties like this | become available, | you can register | at calibreacquire.co.uk/register. I look at every registration | [PERSONALLY,] | and I'll be in touch | if it's a good fit."
+}
