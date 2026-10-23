@@ -67,3 +67,7 @@ calibre_edit.py now warns when a window end or cut start falls inside a word.
   `_reel2-the-building_v3.mp4` (0:25), `_reel3-the-numbers_v3.mp4` (0:32). QA: −14.0/−14.1 LUFS,
   −1.3/−1.5 dBTP, 0 caption overlaps; "In total" once; finance sentence complete (checked by
   transcribing the render section). Outlook events (25, 31 Oct, 2 Nov) point at these files.
+- 1:49 (Jake): "which is a 10.7% return" said twice; whisper left the first out of the transcript.
+  Cut 155.62–159.2 in the YouTube and Reel 3. Plan now warns on kept sound with no words.
+  Exports: `_youtube_v3.mp4` (2:23) + `.srt`, `_reel3-the-numbers_v4.mp4` (0:30); Reel 1 v2 and
+  Reel 2 v3 unchanged. QA −14.0 LUFS, −1.3/−1.5 dBTP, 0 overlaps.
