@@ -54,8 +54,8 @@ than you expected, this is why.
 
 12
 00:00:41,170 --> 00:00:45,170
-We've sold buildings like fabian
-house on Cannon Street Road,
+We've sold buildings like Fabian
+House on Cannon Street Road,
 
 13
 00:00:45,170 --> 00:00:49,000
@@ -156,311 +156,315 @@ check the lease for any
 increases built in.
 
 34
-00:01:49,460 --> 00:01:54,320
+00:01:49,460 --> 00:01:53,960
 There's management, usually 10 to
 15% of the rent if you use an agent.
 
 35
-00:01:54,880 --> 00:01:58,680
+00:01:53,960 --> 00:01:57,760
 There's voids, the weeks between
 tenants with no rent coming in.
 
 36
-00:01:58,680 --> 00:02:01,960
+00:01:57,760 --> 00:02:01,040
 And then there's repairs and
 maintenance, which never appear
 
 37
-00:02:01,960 --> 00:02:04,320
+00:02:01,040 --> 00:02:03,400
 in the advert, but always
 appear in your accounts.
 
 38
-00:02:04,320 --> 00:02:05,700
+00:02:03,400 --> 00:02:04,780
 Here's the flat.
 
 39
-00:02:05,700 --> 00:02:10,820
+00:02:04,780 --> 00:02:09,900
 £250,000, with a rent of £16,250 a year.
 
 40
-00:02:10,820 --> 00:02:13,300
+00:02:09,900 --> 00:02:12,380
 That's 6.5% in the advert.
 
 41
-00:02:13,300 --> 00:02:20,840
+00:02:12,380 --> 00:02:19,920
 Take off a £2,500 service
 charge, £300 ground rent, £1,950
 
 42
-00:02:20,840 --> 00:02:24,990
+00:02:19,920 --> 00:02:24,910
 for management at 12%,
 £1,354 for one month's void.
 
 43
-00:02:24,990 --> 00:02:29,110
+00:02:24,910 --> 00:02:29,030
 That leaves £10,146.
 
 44
-00:02:29,110 --> 00:02:34,990
+00:02:29,030 --> 00:02:34,910
 Divided by £250,000, that's 4.1%,
 and that's before a single repair.
 
 45
-00:02:34,990 --> 00:02:36,840
+00:02:34,910 --> 00:02:36,760
 A freehold building works differently.
 
 46
-00:02:36,840 --> 00:02:40,120
+00:02:36,760 --> 00:02:40,040
 There's no service charge or ground
 rent, but you're responsible
 
 47
-00:02:40,120 --> 00:02:43,040
+00:02:40,040 --> 00:02:42,960
 for the whole building, including
 the roof and the structure.
 
 48
-00:02:43,040 --> 00:02:46,630
+00:02:42,960 --> 00:02:46,550
 Here's an illustrative
 example: a freehold with a
 
 49
-00:02:46,630 --> 00:02:54,770
+00:02:46,550 --> 00:02:54,690
 shop and three flats, priced at £800,000.
 
 50
-00:02:54,770 --> 00:02:59,690
+00:02:54,690 --> 00:02:59,610
 With total rent of £60,000
 a year, that's 7.5% gross.
 
 51
-00:02:59,690 --> 00:03:07,320
+00:02:59,610 --> 00:03:07,160
 Take off £2,500 for building insurance,
 £3,000 for a repairs reserve, £6,000
 
 52
-00:03:07,320 --> 00:03:13,680
+00:03:07,160 --> 00:03:13,520
 for management at 10% and £3,750
 for one month's void on the flats.
 
 53
-00:03:13,680 --> 00:03:20,350
+00:03:13,520 --> 00:03:20,190
 That leaves £44,750, which is 5.6%.
 
 54
-00:03:20,350 --> 00:03:22,380
+00:03:20,190 --> 00:03:22,220
 Both lose money to costs.
 
 55
-00:03:22,380 --> 00:03:25,580
+00:03:22,220 --> 00:03:25,420
 The freehold starts higher,
 and with no service charge,
 
 56
-00:03:25,580 --> 00:03:28,410
+00:03:25,420 --> 00:03:28,250
 less of the rent disappears
 before it reaches you.
 
 57
-00:03:28,410 --> 00:03:30,150
+00:03:28,250 --> 00:03:29,990
 Next, the two traps.
 
 58
-00:03:30,180 --> 00:03:33,360
+00:03:30,020 --> 00:03:33,200
 First, advertised yields
 are often based on the
 
 59
-00:03:33,360 --> 00:03:35,490
+00:03:33,200 --> 00:03:35,330
 asking rent, not the rent being paid.
 
 60
-00:03:35,490 --> 00:03:39,910
+00:03:35,330 --> 00:03:39,750
 A flat marketed at £1,400 a
 month that's actually let
 
 61
-00:03:39,910 --> 00:03:43,690
+00:03:39,750 --> 00:03:43,530
 at £1,250 has a lower yield
 than the advert suggests.
 
 62
-00:03:43,690 --> 00:03:47,690
+00:03:43,530 --> 00:03:47,530
 Always ask for the tenancy agreements
 and proof the rent is being paid.
 
 63
-00:03:47,690 --> 00:03:50,710
+00:03:47,530 --> 00:03:50,550
 The second is rents that include bills.
 
 64
-00:03:50,710 --> 00:03:54,990
+00:03:50,550 --> 00:03:54,830
 HMO rooms are often let with bills
 included, so the rent figure
 
 65
-00:03:54,990 --> 00:03:59,470
+00:03:54,830 --> 00:03:59,850
 looks higher, but the landlord pays
-the council tax, utilities and We
+the council tax, utilities and wifi.
 
 66
-00:03:59,470 --> 00:04:02,170
-have a building for sale in
-brompton right now, as an example.
+00:03:59,850 --> 00:04:02,730
+We have a building for sale in
+Brompton right now, as an example.
 
 67
-00:04:02,170 --> 00:04:07,330
+00:04:02,730 --> 00:04:07,690
 It's 9% gross and 7.8% after the
-bills the landlord pays on the The
+bills the landlord pays on the rooms.
 
 68
-00:04:07,330 --> 00:04:11,810
-brochure shows both numbers, because the
-second one is the one that you live on.
+00:04:07,690 --> 00:04:10,830
+The brochure shows both
+numbers, because the second
 
 69
-00:04:11,810 --> 00:04:14,130
-Before you make an offer, ask for these.
+00:04:10,830 --> 00:04:12,690
+one is the one that you live on.
 
 70
-00:04:14,130 --> 00:04:17,690
+00:04:12,690 --> 00:04:15,010
+Before you make an offer, ask for these.
+
+71
+00:04:15,010 --> 00:04:18,570
 The service charge accounts for
 the last three years, any notices
 
-71
-00:04:17,690 --> 00:04:22,170
+72
+00:04:18,570 --> 00:04:23,050
 of planned major works, the insurance
 schedule, the tenancy agreements and
 
-72
-00:04:22,170 --> 00:04:25,810
+73
+00:04:23,050 --> 00:04:26,690
 the rent statements, and on a
 freehold, a survey that tells
 
-73
-00:04:25,810 --> 00:04:28,590
+74
+00:04:26,690 --> 00:04:29,470
 you what the building will
 need in the next five years.
 
-74
-00:04:28,590 --> 00:04:30,730
+75
+00:04:29,470 --> 00:04:31,610
 With those in front of
 you, you can work out the
 
-75
-00:04:30,730 --> 00:04:33,710
+76
+00:04:31,610 --> 00:04:34,590
 net yield properly, rather than
 trusting the figure on the listing.
 
-76
-00:04:33,710 --> 00:04:35,510
+77
+00:04:34,590 --> 00:04:36,390
 The last part is finance.
 
-77
-00:04:35,510 --> 00:04:37,970
+78
+00:04:36,390 --> 00:04:38,850
 Net yield tells you what
 the building earns.
 
-78
-00:04:37,970 --> 00:04:42,050
+79
+00:04:38,850 --> 00:04:42,810
 Return on cash tells you what you
 earn on the money you put in.
 
-79
-00:04:42,050 --> 00:04:46,310
+80
+00:04:42,810 --> 00:04:47,070
 Using the Brompton figures, with
 a 30% deposit and interest-only
 
-80
-00:04:46,310 --> 00:04:52,850
+81
+00:04:47,070 --> 00:04:53,610
 finance at 6%, the income after
 interest is £36,380 a year.
 
-81
-00:04:52,850 --> 00:04:56,950
+82
+00:04:53,610 --> 00:04:57,710
 That's a 10.7% return
 on the cash you put in.
 
-82
-00:04:56,970 --> 00:05:00,470
+83
+00:04:57,730 --> 00:05:01,230
 Those figures are illustrative and
 set out in the investment summary.
 
-83
-00:05:00,470 --> 00:05:03,270
+84
+00:05:01,230 --> 00:05:04,030
 Borrowing can increase the
 return on your cash, but only
 
-84
-00:05:03,270 --> 00:05:06,250
+85
+00:05:04,030 --> 00:05:07,010
 if the net yield is higher
 than your borrowing cost.
 
-85
-00:05:06,250 --> 00:05:08,470
+86
+00:05:07,010 --> 00:05:09,230
 If the net yield is below the interest
 
-86
-00:05:08,470 --> 00:05:11,190
+87
+00:05:09,230 --> 00:05:11,950
 rate, the debt costs
 you money every month.
 
-87
-00:05:11,190 --> 00:05:15,240
+88
+00:05:11,950 --> 00:05:16,000
 That's why you work out the net yield
 first, then decide how to finance it.
 
-88
-00:05:15,240 --> 00:05:17,640
+89
+00:05:16,000 --> 00:05:18,400
 So when you look at your next listing, ask
 
-89
-00:05:17,640 --> 00:05:20,060
+90
+00:05:18,400 --> 00:05:20,820
 for the costs before
 you look at the yield.
 
-90
-00:05:20,060 --> 00:05:21,920
+91
+00:05:20,820 --> 00:05:22,680
 Gross yield gets your attention.
 
-91
-00:05:21,920 --> 00:05:24,140
+92
+00:05:22,680 --> 00:05:24,900
 Net yield is what tells
 you whether to buy.
 
-92
-00:05:24,140 --> 00:05:26,060
+93
+00:05:24,900 --> 00:05:26,820
 If you found this useful, send it to
 
-93
-00:05:26,060 --> 00:05:32,780
+94
+00:05:26,820 --> 00:05:33,540
 someone who's looking at their
 first investment property.
 
-94
-00:05:32,780 --> 00:05:33,760
+95
+00:05:33,540 --> 00:05:34,520
 And if you want to be kept up
 
-95
-00:05:33,760 --> 00:05:36,040
+96
+00:05:34,520 --> 00:05:36,800
 to date with new property
 strategies, then subscribe.
 
-96
-00:05:36,040 --> 00:05:38,120
+97
+00:05:36,800 --> 00:05:38,880
 If you want to be notified when properties
 
-97
-00:05:38,120 --> 00:05:44,480
+98
+00:05:38,880 --> 00:05:45,240
 like this become available, you can
 register at calibreacquire.co.uk/register.
 
-98
-00:05:44,660 --> 00:05:46,740
+99
+00:05:45,420 --> 00:05:47,500
 I look at every registration
 personally, and I'll
 
-99
-00:05:46,740 --> 00:05:48,420
+100
+00:05:47,500 --> 00:05:49,180
 be in touch if it's a good fit.
