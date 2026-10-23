@@ -78,3 +78,4 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
   sting, end card). **Keep the original style in `VIDEO_STYLE.md`**: stacked word-by-word
   captions burned in on YouTube and reels, #FFDE59 key words, Montserrat + Cormorant
   Garamond, zooms, black/white cards, music beds. (22 Oct 2026)
+- Past-sale figures Jake says on camera (e.g. £3.65m where the board shows £3.6m) stay as spoken when the gap is small; don't hold the video for them (23 Oct 2026).

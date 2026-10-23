@@ -23,8 +23,8 @@ video) → full cost to buy → empty shop risk → when it's worth it → share
 - £1.2m residential with 5% surcharge: 2,500 + 33,750 + 27,500 + 60,000 = £123,750. Non-residential: 2,000 + 47,500 = £49,500. Difference £74,250.
 - Brompton £1m: £93,750 vs £39,500 (brochure £39,500). Hornsey Road £1.3m: £138,750 vs £54,500.
 - Cash in: 300,000 + 123,750 = £423,750; 360,000 + 49,500 = £409,500; gap £14,250 ("closer to 14,000").
-- Not verifiable: "339 to 343 Commercial Road… sold at £3.65 million". Property (Master) shows
-  £3,600,000. Spoken figure kept in captions only (no card); flagged to Jake.
+- "339 to 343 Commercial Road… sold at £3.65 million": Property (Master) shows £3,600,000. Jake
+  (23 Oct): keep as spoken. Captions only, no card.
 - Hornsey Road "under offer" is true now; may be out of date later (posting 27 Oct keeps it current).
 
 ## Graphics
