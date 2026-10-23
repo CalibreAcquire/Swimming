@@ -169,7 +169,7 @@ Here are two live examples.
 36
 00:02:23,250 --> 00:02:25,850
 We have a building for sale
-in brompton at offers in the
+in Brompton at offers in the
 
 37
 00:02:25,850 --> 00:02:30,510
@@ -208,220 +208,224 @@ As mixed-use, it's £54,500.
 The commercial part has to be genuine.
 
 45
-00:02:57,690 --> 00:03:00,230
+00:02:57,690 --> 00:03:00,150
 A let shop with a proper lease is clear.
 
 46
-00:03:00,230 --> 00:03:03,930
+00:03:00,150 --> 00:03:03,850
 So is a unit with its own
 business rates assessment,
 
 47
-00:03:03,970 --> 00:03:06,810
+00:03:03,890 --> 00:03:06,730
 its own entrance and a
 trading business in it.
 
 48
-00:03:06,810 --> 00:03:12,730
+00:03:06,730 --> 00:03:12,650
 A garden, a parking space or a storeroom
 you decide to call commercial isn't.
 
 49
-00:03:12,750 --> 00:03:14,950
+00:03:12,670 --> 00:03:14,870
 And claims like that are
 regularly challenged.
 
 50
-00:03:14,950 --> 00:03:16,330
+00:03:14,870 --> 00:03:16,250
 If you get it wrong, you pay
 
 51
-00:03:16,330 --> 00:03:19,090
+00:03:16,250 --> 00:03:19,010
 the difference plus interest
 and possibly penalties.
 
 52
-00:03:19,090 --> 00:03:23,050
+00:03:19,010 --> 00:03:22,970
 Take advice from a solicitor or a
 tax adviser before you rely on it.
 
 53
-00:03:23,050 --> 00:03:25,090
+00:03:22,970 --> 00:03:25,010
 There's also a second route worth knowing.
 
 54
-00:03:25,090 --> 00:03:26,850
+00:03:25,010 --> 00:03:26,770
 Buying six or more dwellings in one
 
 55
-00:03:26,850 --> 00:03:30,570
+00:03:26,770 --> 00:03:30,490
 transaction can also qualify
 for non-residential rates.
 
 56
-00:03:30,570 --> 00:03:33,950
+00:03:30,490 --> 00:03:33,870
 That has its own rules, and I'll
 cover it in a separate video.
 
 57
-00:03:33,950 --> 00:03:39,590
+00:03:33,870 --> 00:03:39,510
 Now the full cost to buy, because stamp
 duty isn't the only number that changes.
 
 58
-00:03:39,590 --> 00:03:42,670
+00:03:39,510 --> 00:03:42,590
 A mixed-use building usually
-needs a commercial lender.
+needs a Commercial lender.
 
 59
-00:03:42,670 --> 00:03:46,000
+00:03:42,590 --> 00:03:45,920
 The choice of lenders is
 smaller than for a buy-to-let.
 
 60
-00:03:46,000 --> 00:03:50,650
+00:03:45,920 --> 00:03:50,570
 Loan-to-value is often
 lower, around 65 to 75%,
 
 61
-00:03:50,650 --> 00:03:53,420
+00:03:50,570 --> 00:03:53,340
 and the interest rates are usually higher.
 
 62
-00:03:53,420 --> 00:03:56,890
+00:03:53,340 --> 00:03:56,810
 So take the £1.2 million as an example.
 
 63
-00:03:56,890 --> 00:04:00,730
+00:03:56,810 --> 00:04:00,650
 As a residential purchase
 with a 25% deposit,
 
 64
-00:04:00,730 --> 00:04:07,610
+00:04:00,650 --> 00:04:07,530
 that's £300,000 deposit,
 plus £123,750 stamp duty.
 
 65
-00:04:07,610 --> 00:04:11,850
+00:04:07,530 --> 00:04:11,770
 So £423,750 in cash.
 
 66
-00:04:11,850 --> 00:04:14,770
+00:04:11,770 --> 00:04:14,690
 As mixed-use with a 30% deposit,
 
 67
-00:04:14,770 --> 00:04:21,130
+00:04:14,690 --> 00:04:21,050
 that's £360,000 deposit,
 plus £49,500 stamp duty.
 
 68
-00:04:21,130 --> 00:04:25,090
+00:04:21,050 --> 00:04:25,010
 So £409,500 in total.
 
 69
-00:04:25,090 --> 00:04:29,090
+00:04:25,010 --> 00:04:29,010
 You still save, but the
 gap is closer to £14,000
 
 70
-00:04:29,090 --> 00:04:33,470
+00:04:29,010 --> 00:04:33,390
 than £74,000, because more of
 your money goes into the deposit.
 
 71
-00:04:33,470 --> 00:04:37,230
+00:04:33,390 --> 00:04:37,150
 Run your own numbers with the lender's
 terms before you count on the saving.
 
 72
-00:04:37,630 --> 00:04:39,510
+00:04:37,550 --> 00:04:39,430
 And then there's the shop itself.
 
 73
-00:04:39,510 --> 00:04:42,090
+00:04:39,430 --> 00:04:42,010
 If it goes empty, you
 lose the rent and you
 
 74
-00:04:42,090 --> 00:04:45,200
+00:04:42,010 --> 00:04:45,120
 pay the business rates, usually
 after the first three months.
 
 75
-00:04:45,200 --> 00:04:50,330
+00:04:45,120 --> 00:04:50,250
 Commercial units can take longer to
 re-let than flats, and a weak shop in the
 
 76
-00:04:50,330 --> 00:04:54,880
+00:04:50,250 --> 00:04:54,800
 wrong location can cost you more over
 a few years than the stamp duty saved.
 
 77
-00:04:54,880 --> 00:04:58,620
+00:04:54,800 --> 00:04:58,540
 The saving makes sense when
 the shop is let to a solid
 
 78
-00:04:58,620 --> 00:05:02,520
+00:04:58,540 --> 00:05:02,440
 tenant on a decent lease, in
 a location where shops let.
 
 79
-00:05:02,520 --> 00:05:09,040
+00:05:02,440 --> 00:05:08,960
 It makes less sense when
 the commercial unit
 
 80
-00:05:09,040 --> 00:05:10,880
+00:05:08,960 --> 00:05:10,800
 is the weakest part of the building.
 
 81
-00:05:10,880 --> 00:05:17,560
+00:05:10,800 --> 00:05:17,480
 So the stamp duty saving on a mixed-use
 building is real, but it comes
 
 82
-00:05:17,560 --> 00:05:22,060
+00:05:17,480 --> 00:05:21,980
 with a commercial tenant, a different type
 of lender and a different kind of risk.
 
 83
-00:05:22,060 --> 00:05:24,820
+00:05:21,980 --> 00:05:24,740
 The deciding factor is
 the individual building:
 
 84
-00:05:24,820 --> 00:05:27,660
+00:05:24,740 --> 00:05:27,580
 its income, its condition
 and its location.
 
 85
-00:05:27,660 --> 00:05:29,900
+00:05:27,580 --> 00:05:29,820
 If you found this useful,
 send it to someone who's
 
 86
-00:05:29,900 --> 00:05:32,180
+00:05:29,820 --> 00:05:32,100
 looking at buying a building,
 and if you want to be
 
 87
-00:05:32,180 --> 00:05:34,620
+00:05:32,100 --> 00:05:34,540
 kept up to date with new property
 strategies, then subscribe.
 
 88
-00:05:34,620 --> 00:05:37,620
+00:05:34,540 --> 00:05:37,540
 If you want to be notified
 when mixed-use buildings
 
 89
-00:05:37,620 --> 00:05:42,200
+00:05:37,540 --> 00:05:42,120
 like this become available, you can
 register at calibreacquire.co.uk/register.
 
 90
-00:05:42,200 --> 00:05:46,240
-I look at every registration personally,
-and I'll be in touch if it's a good
+00:05:42,120 --> 00:05:44,640
+I look at every registration
+personally, and I'll
+
+91
+00:05:44,640 --> 00:05:46,640
+be in touch if it's a good fit.
