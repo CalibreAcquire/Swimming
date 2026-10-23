@@ -13,6 +13,11 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Instagram: @calibreacquire (company), @jake_s_benson (Jake). Website calibreacquire.co.uk.
 
 ## Publishing
+- Don't cut extra or shorter reels from videos that are already done to fill the schedule; keep
+  the reels as made. More reels come from new videos. (23 Oct 2026)
+- Dubai/Binghatti: location shoots couldn't be arranged. Dubai content is a talking head on what's
+  available and the market from what we know (diary: Wed 4 Nov, Dubai). Every Dubai post uses
+  "comment DUBAI". (23 Oct 2026)
 - Keep the monday.com "Content & Filming (Master)" board updated for every video (status, dates,
   notes, group). Jake asked for this on 22 Oct 2026; see CLAUDE.md environment notes.
 - Jake is happy to upload and post while travelling (Dubai, 29 Oct-8 Nov 2026). Don't hold posts
