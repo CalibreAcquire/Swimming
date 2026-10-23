@@ -22,7 +22,12 @@
     31.75,
     59.9
   ],
-  "cuts": [],
+  "cuts": [
+    [
+      32.47,
+      35.15
+    ]
+  ],
   "shots": [],
   "title_card": {
     "text": "One commercial unit: / [£74,250 LESS] / [STAMP DUTY]",
@@ -32,5 +37,6 @@
     "track": 744,
     "start": 25,
     "bed": -27
-  }
+  },
+  "silence_db": "auto"
 }

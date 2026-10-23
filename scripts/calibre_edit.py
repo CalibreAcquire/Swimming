@@ -155,10 +155,16 @@ class Edit:
     # -- silences from the audio, cached next to the source
     def _silences(self):
         work = os.path.join(self.dir, "..", "work")  # raw/ is read-only: keep caches in work/
-        cache = (os.path.join(work, os.path.basename(self.src) + ".silences.json")
-                 if os.path.isdir(work) else self.src + ".silences.json")
+        mode = self.cfg.get("silence_db")
+        tag = "" if mode is None else f".{mode}"
+        cache = (os.path.join(work, os.path.basename(self.src) + f"{tag}.silences.json")
+                 if os.path.isdir(work) else self.src + f"{tag}.silences.json")
         if os.path.exists(cache):
             return json.load(open(cache))
+        if mode is not None:
+            sil = self._silences_rms(mode)
+            json.dump(sil, open(cache, "w"))
+            return sil
         r = subprocess.run(["ffmpeg", "-v", "info", "-i", self.src, "-af",
                             "silencedetect=noise=-38dB:d=0.2", "-f", "null", "-"],
                            capture_output=True, text=True)
@@ -167,6 +173,45 @@ class Edit:
         sil = [[a, b] for a, b in zip(st, en)]
         json.dump(sil, open(cache, "w"))
         return sil
+
+    def _silences_rms(self, mode):
+        """Pauses from the speech level rather than a fixed -38 dB: rooms with a noise floor
+        above that (office hum, wireless mic hiss) otherwise show no pauses at all, and a
+        word whisper stretches over a pause keeps the whole pause. "auto" puts the threshold
+        12 dB above the quietest 10% of the recording; a number sets it in dBFS."""
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", self.src, "-ac", "1", "-ar", "16000",
+                              "-f", "s16le", "-"], capture_output=True).stdout
+        x = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
+        hop, win = 160, 480  # 10 ms hop, 30 ms frames
+        n = (len(x) - win) // hop
+        idx = np.arange(win)[None, :] + hop * np.arange(n)[:, None]
+        db = 20 * np.log10(np.sqrt((x[idx] ** 2).mean(1)) + 1e-9)
+        thr = float(mode) if mode != "auto" else float(np.clip(np.percentile(db, 10) + 12, -40, -28))
+        quiet = db < thr
+        sil, start, loud = [], None, 0
+        for i, q in enumerate(quiet):
+            if q:
+                start, loud = (i if start is None else start), 0
+            elif start is not None:
+                loud += 1
+                if loud > 6:  # more than 60 ms of sound ends the pause
+                    end = i - loud + 1
+                    if (end - start) * 0.01 >= 0.2:
+                        sil.append([round(start * 0.01 + 0.015, 3), round(end * 0.01 + 0.015, 3)])
+                    start, loud = None, 0
+        print(f"silences: threshold {thr:.1f} dB, {len(sil)} pauses", file=sys.stderr)
+        return sil
+
+    def _pause(self, a, b):
+        """A gap between two words long enough to cut. Whisper's word times drift on spoken
+        numbers ("thirty-six thousand three hundred and eighty"), leaving gaps that are really
+        speech, so with measured silences a gap only counts if the audio is quiet through it."""
+        if b - a <= self.max_gap:
+            return False
+        if self.cfg.get("silence_db") is None:
+            return True
+        quiet = sum(max(0, min(b, y) - max(a, x)) for x, y in self.silences)
+        return (b - a) - quiet < 0.15
 
     def _in_silence(self, t):
         for a, b in self.silences:
@@ -195,7 +240,7 @@ class Edit:
         kept = [w for w in self.words if not cut(w)]
         groups, cur = [], []
         for w in kept:
-            if cur and (w["s"] - cur[-1]["e"] > self.max_gap or self._cut_between(cur[-1], w, cuts)):
+            if cur and (self._pause(cur[-1]["e"], w["s"]) or self._cut_between(cur[-1], w, cuts)):
                 groups.append(cur)
                 cur = []
             cur.append(w)
@@ -252,6 +297,16 @@ class Edit:
             elif b - a >= 0.2:
                 out.append([a, b])
         self.kept_words = kept
+        if c.get("silence_db") is not None:  # sound left out between kept ranges, outside cuts
+            for (_, b0), (a1, _) in zip(out, out[1:]):
+                gap = [(b0, a1)]
+                for ca, cb in cuts:
+                    gap = [p for x, y in gap for p in ((x, min(y, ca)), (max(x, cb), y)) if p[1] > p[0]]
+                for x, y in gap:
+                    loud = (y - x) - sum(max(0, min(y, q) - max(x, p)) for p, q in self.silences)
+                    if loud > 0.15:
+                        print(f"WARNING: {loud:.2f}s of sound dropped between {x:.2f} and {y:.2f}"
+                              " (speech, or a breath?)", file=sys.stderr)
         return [dict(a=a, b=b) for a, b in out]
 
     @staticmethod
