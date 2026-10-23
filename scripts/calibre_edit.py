@@ -174,19 +174,35 @@ class Edit:
         json.dump(sil, open(cache, "w"))
         return sil
 
+    def _levels(self, mode):
+        """Speech level every 10 ms (30 ms frames) and the pause threshold, cached in work/.
+        "auto" puts the threshold 12 dB above the quietest 10% of the recording; a number
+        sets it in dBFS."""
+        work = os.path.join(self.dir, "..", "work")
+        cache = os.path.join(work if os.path.isdir(work) else os.path.dirname(self.src),
+                             os.path.basename(self.src) + ".levels.npy")
+        if os.path.exists(cache):
+            db = np.load(cache)
+        else:
+            raw = subprocess.run(["ffmpeg", "-v", "error", "-i", self.src, "-ac", "1", "-ar", "16000",
+                                  "-f", "s16le", "-"], capture_output=True).stdout
+            x = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
+            hop, win = 160, 480
+            n = (len(x) - win) // hop
+            db = np.empty(n, dtype=np.float32)
+            for k in range(0, n, 20000):  # in blocks: an 11-minute file is 66k frames
+                i = np.arange(k, min(n, k + 20000))
+                idx = np.arange(win)[None, :] + hop * i[:, None]
+                db[i] = 20 * np.log10(np.sqrt((x[idx] ** 2).mean(1)) + 1e-9)
+            np.save(cache, db)
+        thr = float(mode) if mode != "auto" else float(np.clip(np.percentile(db, 10) + 12, -40, -28))
+        return db, thr
+
     def _silences_rms(self, mode):
         """Pauses from the speech level rather than a fixed -38 dB: rooms with a noise floor
         above that (office hum, wireless mic hiss) otherwise show no pauses at all, and a
-        word whisper stretches over a pause keeps the whole pause. "auto" puts the threshold
-        12 dB above the quietest 10% of the recording; a number sets it in dBFS."""
-        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", self.src, "-ac", "1", "-ar", "16000",
-                              "-f", "s16le", "-"], capture_output=True).stdout
-        x = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
-        hop, win = 160, 480  # 10 ms hop, 30 ms frames
-        n = (len(x) - win) // hop
-        idx = np.arange(win)[None, :] + hop * np.arange(n)[:, None]
-        db = 20 * np.log10(np.sqrt((x[idx] ** 2).mean(1)) + 1e-9)
-        thr = float(mode) if mode != "auto" else float(np.clip(np.percentile(db, 10) + 12, -40, -28))
+        word whisper stretches over a pause keeps the whole pause."""
+        db, thr = self._levels(mode)
         quiet = db < thr
         sil, start, loud = [], None, 0
         for i, q in enumerate(quiet):
@@ -205,13 +221,17 @@ class Edit:
     def _pause(self, a, b):
         """A gap between two words long enough to cut. Whisper's word times drift on spoken
         numbers ("thirty-six thousand three hundred and eighty"), leaving gaps that are really
-        speech, so with measured silences a gap only counts if the audio is quiet through it."""
+        speech, so with measured levels a gap is kept only if speech-level sound (10 dB over
+        the pause threshold) fills a good part of it. Room noise and shuffling between takes
+        still count as a pause."""
         if b - a <= self.max_gap:
             return False
-        if self.cfg.get("silence_db") is None:
+        mode = self.cfg.get("silence_db")
+        if mode is None:
             return True
-        quiet = sum(max(0, min(b, y) - max(a, x)) for x, y in self.silences)
-        return (b - a) - quiet < 0.15
+        db, thr = self._levels(mode)
+        seg = db[max(0, int(a * 100)):int(b * 100)]
+        return len(seg) == 0 or (seg > thr + 10).mean() < 0.35
 
     def _in_silence(self, t):
         for a, b in self.silences:
@@ -307,6 +327,18 @@ class Edit:
                     if loud > 0.15:
                         print(f"WARNING: {loud:.2f}s of sound dropped between {x:.2f} and {y:.2f}"
                               " (speech, or a breath?)", file=sys.stderr)
+            # sound kept with no words on it: whisper leaves out a repeated line, so this is
+            # usually a retake the transcript doesn't show
+            for a, b in out:
+                spans = [(a, b)]
+                for w in kept:
+                    spans = [p for x, y in spans for p in ((x, min(y, w["s"])), (max(x, w["e"]), y))
+                             if p[1] > p[0]]
+                for x, y in spans:
+                    loud = (y - x) - sum(max(0, min(y, q) - max(x, p)) for p, q in self.silences)
+                    if loud > 0.5:
+                        print(f"WARNING: {loud:.2f}s of sound kept with no transcript words between"
+                              f" {x:.2f} and {y:.2f} (a retake whisper left out?)", file=sys.stderr)
         return [dict(a=a, b=b) for a, b in out]
 
     @staticmethod
