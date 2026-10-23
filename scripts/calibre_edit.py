@@ -311,7 +311,8 @@ class Edit:
 
     @staticmethod
     def _cut_between(w1, w2, cuts):
-        return any(w1["e"] <= a and b <= w2["s"] for a, b in cuts)
+        # any cut reaching into the gap: a cut may start inside the last kept word's tail
+        return any(a < w2["s"] and b > w1["e"] for a, b in cuts)
 
     # -- zoom rhythm
     def _assign_shots(self):

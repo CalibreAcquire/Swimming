@@ -43,3 +43,13 @@ Preset `full`. YouTube music: "Moon Walk" (609, from 40 s); reels "House 02" (74
 None contain the £30m line.
 
 monday.com: Content & Filming (Master) item 3305366116.
+
+## Fixes after final QA (23 Oct, before hand-back)
+- Cut points that sat inside words moved to the word end (they dropped "wifi", "rooms", "you",
+  "repair", "listing" and clipped "per cent").
+- Two retakes whisper had merged into one stretched word, found by re-transcribing with large-v3:
+  "a freehold with a shop and three flats, priced at £800,000" (first take 315.45–320.5 cut) and
+  "If you found this useful…" (first take 624.45–628.85 cut). Transcript patched with large-v3 word
+  times there (backup in work/).
+- Renderer now measures pauses against this recording's noise floor (`silence_db: auto`), so long
+  pauses are tightened; YouTube about 5:26.

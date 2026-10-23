@@ -42,3 +42,11 @@ Preset `full`. YouTube music: "Autofahren" (770, from 200 s); reels "House 02" (
 None contain the £30m line. Reel events carry a Budget check (rates as at filming).
 
 monday.com: Content & Filming (Master) item 3305374498.
+
+## Fixes after final QA (23 Oct, before hand-back)
+- Opening stumble hidden in a stretched word: "On a… what… on a £1.2 million". Now "On" +
+  cut 32.47–35.15 + "a £1.2 million purchase".
+- Hidden retake: "It makes less sense when the commercial unit is the weakest part" said twice;
+  first take 401.3–405.55 cut (large-v3 word times patched in, backup in work/).
+- Cut points inside words moved ("under", "it", "deposit", "fit", "clear").
+- Pauses measured against the noise floor (`silence_db: auto`); YouTube about 5:25.
