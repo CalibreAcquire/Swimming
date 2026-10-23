@@ -38,3 +38,7 @@ Preset `full`. YouTube music: "Autofahren" (770, from 60 s); reels "House 02" (7
 None contain the £80m line.
 
 monday.com: Content & Filming (Master) item 3304694673.
+
+## QA (drafts, 23 Oct)
+All five −14.0 LUFS, −1.5/−1.6 dBTP, music 13–16 dB under voice, 0 caption overlaps. Frames at
+every YouTube cut: no black or flash frames. Reel titles inside the safe zone.
