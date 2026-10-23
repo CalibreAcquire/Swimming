@@ -13,3 +13,5 @@ launch event asks Jake to check that Brompton is still for sale (the video says 
 | Sat 28 Nov 11:40 | Reel 4 + Short 4: Before you offer, ask for these | `_reel4-ask-for-these_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8ngAA |
 
 monday.com item 3305366116.
+
+Google Drive: YouTube › Edited › Gross yield vs net yield (folder 1nBpt4Xx-oc4H_BJjFZXAqUqPoL6zq2hG, Reels 1tVdxHremRduSSavcp-vNizG1U6WiBvvL). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.

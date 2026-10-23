@@ -44,3 +44,29 @@ Fabian House
 Cannon Street Road
 Hornsey Road
 Commercial Road
+High Street
+Medway
+Kent
+HMOs
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+London
+UK
+England

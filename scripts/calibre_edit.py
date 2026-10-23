@@ -983,11 +983,27 @@ def card_stills(edit_path, outdir):
     print(f"{len(spans)} cards -> {outdir}")
 
 
-ACRONYMS = {"HMO", "HMOS", "UK", "VAT", "SDLT", "ROI", "LTV", "GDV", "BTL", "EPC"}
+ACRONYMS = {"HMO", "UK", "VAT", "SDLT", "ROI", "LTV", "GDV", "BTL", "EPC"}
 # capitalised words from brand/glossary.txt (names, places), keyed by lower case
-GLOSSARY_CASE = {w.lower().strip(".,"): w.strip(".,") for line in open(os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "brand", "glossary.txt"))
-    if not line.startswith("#") for w in line.split() if any(c.isupper() for c in w)}
+_GLOSSARY = [l.strip() for l in open(os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "brand", "glossary.txt")) if l.strip() and not l.startswith("#")]
+# single words ("Brompton", "HMOs") set a word's case anywhere; multi-word terms ("Fabian House",
+# "Commercial Road") only where the whole phrase appears, so "commercial lender" stays lower case
+GLOSSARY_CASE = {w.lower().strip(".,"): w.strip(".,") for w in _GLOSSARY
+                 if " " not in w and any(c.isupper() for c in w)}
+GLOSSARY_PHRASES = [w.split() for w in _GLOSSARY if " " in w and any(c.isupper() for c in w)]
+
+
+def _phrase_case(words):
+    """Apply multi-word glossary terms to a list of {"text": ...} words, in place."""
+    bare = [re.sub(r"[^\w'-]", "", w["text"]).lower() for w in words]
+    for ph in GLOSSARY_PHRASES:
+        low = [p.lower() for p in ph]
+        for i in range(len(words) - len(ph) + 1):
+            if bare[i:i + len(ph)] == low:
+                for k, form in enumerate(ph):
+                    t = words[i + k]["text"]
+                    words[i + k]["text"] = re.sub(re.escape(bare[i + k]), form, t, count=1, flags=re.I)
 
 
 def srt(edit_path, out):
@@ -998,7 +1014,7 @@ def srt(edit_path, out):
     toks = align(parse_markup(edit.cfg.get("captions", "")), edit.kept_words)
     words = []
     for t in toks:
-        if not (edit.in_kept(t["s"]) or edit.in_kept(t["e"])):
+        if not any(sg["a"] < t["e"] and sg["b"] > t["s"] for sg in edit.segments):
             continue
         text = t["text"]
         if t["style"] == "key" and text.isupper():
@@ -1011,6 +1027,7 @@ def srt(edit_path, out):
         if not words or re.search(r"[.?!]$", words[-1]["text"]):  # sentence start
             text = text[:1].upper() + text[1:]
         words.append(dict(text=text, s=edit.out_time(t["s"]), e=edit.out_time(t["e"])))
+    _phrase_case(words)
 
     sentences, cur = [], []
     for w in words:

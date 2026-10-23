@@ -12,3 +12,5 @@ events carry a check: if the Budget changes stamp duty rates, hold the post and 
 | Fri 6 Nov 11:40 (15:40 Dubai) | Reel 3 + Short 3: The saving isn't the whole story | `_reel3-full-cost_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8hQAA |
 
 monday.com item 3305374498.
+
+Google Drive: YouTube › Edited › Stamp duty on mixed-use (folder 1G93VW70sCPiAW9k4IL4-KgJzsyLzjIVj, Reels 1cW4eRrYTgt8UvKllv2ZkJjsyFogWfK9M). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.
