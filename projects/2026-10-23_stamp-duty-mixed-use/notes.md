@@ -50,3 +50,10 @@ monday.com: Content & Filming (Master) item 3305374498.
   first take 401.3–405.55 cut (large-v3 word times patched in, backup in work/).
 - Cut points inside words moved ("under", "it", "deposit", "fit", "clear").
 - Pauses measured against the noise floor (`silence_db: auto`); YouTube about 5:25.
+
+## Finals QA (23 Oct)
+Exports v1: YouTube 5:20, reels 0:23 / 0:26 / 0:37, SRT (90 subtitles), story.
+All four −14.0/−14.1 LUFS, −1.3 to −1.5 dBTP, music 12.6–17.3 dB under voice, 0 caption overlaps.
+Frames at all 66 YouTube cuts: no black or flash frames. Opening now "On a £1.2 million purchase".
+Dropped-sound spans checked with large-v3 and levels: all breaths. Repeat check: only the rates
+lists and parallel phrases.

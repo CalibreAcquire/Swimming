@@ -53,3 +53,12 @@ monday.com: Content & Filming (Master) item 3305366116.
   times there (backup in work/).
 - Renderer now measures pauses against this recording's noise floor (`silence_db: auto`), so long
   pauses are tightened; YouTube about 5:26.
+- Also cut: "and explain… and explain how finance" (171.3–172.4); 19 s of shuffling between takes
+  after "6.5% in the advert" is no longer picked up as speech.
+
+## Finals QA (23 Oct)
+Exports v1: YouTube 5:15, reels 0:19 / 0:29 / 0:29 / 0:21, SRT (100 subtitles), story.
+All five −14.0/−14.1 LUFS, −1.4 to −1.6 dBTP, music 11.9–17.4 dB under voice, 0 caption overlaps.
+Frames at all 76 YouTube cuts: no black or flash frames (black runs are the black cards). Plan
+warnings: no untranscribed kept sound; dropped-sound spans checked, all breaths. Repeat check on
+the render: only legitimate parallel phrases. SRT: "wifi", "rooms", "Fabian House" correct.
