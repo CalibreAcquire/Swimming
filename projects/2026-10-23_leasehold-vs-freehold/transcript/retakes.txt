@@ -21,3 +21,45 @@
  135.97- 138.66  The practical differences come down to a few things.
  138.95- 139.95  First, leaf slip.
  140.75- 145.84  A lease with under 80 years remaining can affect mortgage availability and resale value.
+ 146.44- 148.57  Under 70 years, this gets worse.
+ 149.60- 150.76  then there's service charge.
+ 151.26- 153.56  This is the one investors tend to underestimate.
+ 154.31- 159.61  It typically increases every year and unexpected building costs get passed on to leaseholders.
+ 160.96- 165.78  I bone the flat where a leak in the lift shaft meant every resident had to cover a share of the repair.
+ 166.53- 169.13  It ate into the return far more than I had planned for.
+ 170.76- 171.91  There's also ground for it.
+ 172.35- 177.19  A smaller cost and service charge in most cases, but still one that doesn't exist for freehold.
+ 177.88- 178.84  and then there's control.
+ 179.43- 185.35  alterations, subletting and change of use can require the free holder's consent on a leasehold property.
+ 186.25- 188.66  On a free hold, that decision sits with you.
+ 189.61- 192.20  but freehold comes with its own responsibilities.
+ 192.86- 196.36  As the freeholder, you're responsible for all external works.
+ 196.66- 199.29  the roof, the structure, the fabric of the building.
+ 199.97- 202.20  There's no freeholder above to share those costs with.
+ 203.68- 204.51  a significant f -
+ 205.30- 211.82  A significant repair bill lands entirely with you and that needs to be factored into how you hold and manage the asset.
+ 213.22- 215.53  before I get into which one I'd actually favour.
+ 215.85- 223.90  If you want to run the numbers on the deal you're looking at, a built calculator is exactly for mixed use, HMO and single residential deals, so you can see exactly what I'm talking
+ 253.91- 264.72  If you want to run the numbers on a deal that you're looking at, I built calculators for mixed use, HMO and single residential deals so you can see exactly what it returns. Completely free.
+ 265.03- 268.13  Comment the words sent below or use the link below to get access.
+ 269.47- 272.18  Freehold isn't automatically the better investment.
+ 272.48- 274.58  and leasehold isn't automatically the worst one.
+ 275.00- 281.35  A leasehold flat with 900 years remaining and a low ground rent behaves very differently to one with 60 years left.
+ 281.66- 283.23  and an escalating rent clause.
+ 287.28- 289.30  I won't rule out a leasehold completely.
+ 289.71- 293.28  but I'd want a strong grow shield going in so that the service charge...
+ 293.54- 294.48  and the grammar in
+ 294.77- 297.54  don't leave me with a low net yield once I'm accounted for.
+ 298.45- 305.12  What matters is understanding the specific lease terms or the specific freehold title before you commit.
+ 305.51- 306.87  not the label on the listing.
+ 319.99- 326.91  If you do find this useful, send it to someone who's looking at buying a property. It could save them a significant amount on their next deal.
+ 327.46- 330.86  If you want to be kept up to date with new property strategies then subscribe.
+ 332.01- 337.90  And lastly, if you'd like access to properties before they reach the upper market, you can register using the link below.
+ 338.16- 342.25  and if we have positions available we'll have the option to join our off -market list.
+ 342.61- 343.57  I'll see you in the next video.
+ 345.58- 346.24  Thank you. Thank you.
+
+CANDIDATE RETAKES (earlier attempt -> restart)
+   122.96- 124.50  "You'll typically play..."  ->  "You'll typically pay ground rent and, depending on the lease, a service charge."
+   203.68- 205.30  "a significant f -"  ->  "A significant repair bill lands entirely with you and that needs to be factored into how you hold and manage the asset."
+   319.99- 327.46  "If you do find this useful, send it to someone who's looking at buying a property. It could save them a significant amount on their next deal."  ->  "If you want to be kept up to date with new property strategies then subscribe."

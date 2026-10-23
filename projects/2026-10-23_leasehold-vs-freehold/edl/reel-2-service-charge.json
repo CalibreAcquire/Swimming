@@ -1,0 +1,43 @@
+{
+  "source": "../raw/NAVF9970.MP4",
+  "transcript": "../transcript/transcript.json",
+  "format": "9x16",
+  "max_gap": 0.3,
+  "anchor": [
+    640,
+    290
+  ],
+  "zoom": {
+    "wide": 1.0,
+    "tight": 1.15,
+    "every": 2.6
+  },
+  "audio": {
+    "preset": "full"
+  },
+  "cards": [],
+  "broll": [],
+  "captions": "Two buyers can pay | the exact same price | for two different properties | and end up with | completely different levels of | [COST,] | [CONTROL] | and [RISK,] | depending on whether they bought | *freehold* | or [LEASEHOLD.] In this video, | I'm going to break down | exactly what [CHANGES] | between the two, | so you know exactly | what you're [BUYING.] I'm Jake, | founder of | [CALIBRE ACQUIRE.] I've worked in property | for [14 YEARS] | and transacted on over | [£80 MILLION] | of *commercial property investments* | in the past year *alone.* I help investors | get out of *underperforming* assets | into assets that are actually going to | work [HARDER] | for them. [FREEHOLD] | means you own the building | and the *land* that it sits on | [OUTRIGHT.] There's no landlord above you, | no lease to run down | and no [GROUND RENT.] You're free to make decisions | about the property | without needing [PERMISSION] | from anyone else, | subject to *planning* | and any legal restrictions | on the [TITLE.] [LEASEHOLD] | means you own the right | to use the property | for a [FIXED NUMBER] | of years | set out in the lease. The freehold, | the actual land and building, | is owned by someone else, | the [FREEHOLDER.] You'll typically pay | [GROUND RENT] | and, depending on the lease, | a [SERVICE CHARGE.] You may also need | the *freeholder's permission* | for certain [CHANGES] | to the property. The *practical differences* | come down to | a few things. First, | [LEASE LENGTH.] A lease with under | [80 YEARS] | remaining | can affect *mortgage availability* | and [RESALE VALUE.] Under [70 YEARS,] | this gets *worse.* Then there's | [SERVICE CHARGE.] This is the one | investors tend to [UNDERESTIMATE.] It typically [INCREASES] | every year, | and *unexpected building costs* | get passed on | to [LEASEHOLDERS.] I've owned a flat | where a leak in the *lift shaft* | meant every resident | had to cover a share | of the [REPAIR.] It ate into the return | far more | than I'd [PLANNED FOR.] There's also | [GROUND RENT.] A *smaller cost* | than service charge | in most cases, | but still one | that doesn't exist | for [FREEHOLD.] And then there's | [CONTROL.] Alterations, | subletting | and change of use | can require the *freeholder's consent* | on a [LEASEHOLD] property. On a freehold, | that decision | sits with [YOU.] But freehold comes | with its own [RESPONSIBILITIES.] As the freeholder, | you're responsible | for all [EXTERNAL WORKS,] | the *roof,* | the *structure,* | the *fabric* of the building. There's no freeholder above | to share those costs with. A significant | [REPAIR BILL] | lands *entirely* with you, | and that needs to be factored | into how you *hold* | and *manage* the asset. Before I get into | which one I'd actually [FAVOUR,] | if you want to run the numbers | on a deal that you're looking at, | I built calculators | for [MIXED-USE,] | [HMO] | and *single residential* deals, | so you can see exactly | what it [RETURNS.] Completely [FREE.] Comment the word [SEND] below, | or use the link below | to get access. Freehold isn't | *automatically* | the better investment, | and leasehold isn't | automatically | the [WORST] one. A leasehold flat | with [900 YEARS] remaining | and a *low ground rent* | behaves very differently | to one with [60 YEARS] left | and an *escalating rent clause.* I wouldn't rule out | leasehold [COMPLETELY,] | but I'd want a strong | [GROSS YIELD] | going in, | so that the service charge | and the ground rent | don't leave me | with a low [NET YIELD] | once they're accounted for. What matters is understanding | the *specific lease terms* | or the *specific freehold title* | before you [COMMIT,] | not the label | on the [LISTING.] If you did find this useful, | send it to someone | who's looking at buying a property. It could save them | a *significant amount* | on their [NEXT DEAL.] If you want to be kept up to date | with new property strategies, | then [SUBSCRIBE.] And lastly, | if you'd like access to properties | before they reach the *open market,* | you can register | using the link below, | and if we have positions available, | we'll have the option | to join our [OFF-MARKET LIST.] I'll see you | in the next video.",
+  "window": [
+    149.5,
+    169.25
+  ],
+  "cuts": [],
+  "shots": [
+    {
+      "at": 160.9,
+      "zoom": 1.0,
+      "move": "push",
+      "to": 1.15
+    }
+  ],
+  "title_card": {
+    "text": "Buying leasehold? / [WATCH THE] / [SERVICE CHARGE]",
+    "dur": 2.8
+  },
+  "music": {
+    "track": 744,
+    "start": 40,
+    "bed": -27
+  }
+}
