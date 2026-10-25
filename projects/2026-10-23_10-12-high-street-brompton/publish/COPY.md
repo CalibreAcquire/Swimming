@@ -6,9 +6,9 @@ No other companies, portals or data sources named. All figures from the investme
 (brochure, October 2026), subject to contract. No £Xm "transacted" line in this video.
 
 Files (all named `2026-10-23_10-12-high-street-brompton_…`):
-- YouTube: `_youtube_v3.mp4` (2:23), captions `_youtube_v3.srt`
-- Reels: `_reel1-the-deal_v2.mp4` (0:19), `_reel2-the-building_v3.mp4` (0:25), `_reel3-the-numbers_v4.mp4` (0:30)
-  (latest versions: repeated lines at 1:08 and 1:49 cut, pauses tightened, clipped words fixed)
+- YouTube: `_youtube_v4.mp4` (2:23), captions `_youtube_v4.srt`
+- Reels: `_reel1-the-deal_v3.mp4` (0:19), `_reel2-the-building_v4.mp4` (0:25), `_reel3-the-numbers_v5.mp4` (0:30)
+  (latest versions: lighting B and property photos throughout, repeats cut, pauses tightened)
 - Thumbnails (`thumbnails/`): `_thumb-A_v1.jpg`, `_thumb-B_v1.jpg`, `_thumb-C_v1.jpg`
 - Reel / Short covers (`thumbnails/`): `_reel1-cover_v1.jpg` to `_reel3-cover_v1.jpg`
 - Story: `_story_v1.png`
@@ -63,7 +63,7 @@ mixed use freehold for sale, property for sale Brompton, Medway investment prope
 ```
 
 ### Captions file
-Upload `_youtube_v3.srt` (Subtitles > Add language > English > Upload file > With timing).
+Upload `_youtube_v4.srt` (Subtitles > Add language > English > Upload file > With timing).
 
 ### Pinned comment
 ```

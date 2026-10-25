@@ -71,3 +71,12 @@ calibre_edit.py now warns when a window end or cut start falls inside a word.
   Cut 155.62–159.2 in the YouTube and Reel 3. Plan now warns on kept sound with no words.
   Exports: `_youtube_v3.mp4` (2:23) + `.srt`, `_reel3-the-numbers_v4.mp4` (0:30); Reel 1 v2 and
   Reel 2 v3 unchanged. QA −14.0 LUFS, −1.3/−1.5 dBTP, 0 overlaps.
+
+## v4 (25 Oct, Jake: "looks dull")
+- Lighting: Jake picked grade B from an A/B/C test (brighter mid-tones, warmer skin, blacks kept).
+- Property photos over most of the building description: 21 in the YouTube (was 7), push/pull/pan
+  moves, soft bottom shade (`broll_shade: 0.45`) so captions read on white rooms. Room photos
+  matched to the house number being described. Zoom rhythm every 4 s.
+- Exports: `_youtube_v4.mp4` (2:23) + `.srt`, `_reel1-the-deal_v3.mp4`, `_reel2-the-building_v4.mp4`,
+  `_reel3-the-numbers_v5.mp4`. QA −14.0/−14.1 LUFS, −1.3 dBTP, 0 overlaps; black runs are the cards.
+- Jake posting it on the evening of 25 Oct (the 16:10 slot passed during the re-edit).
