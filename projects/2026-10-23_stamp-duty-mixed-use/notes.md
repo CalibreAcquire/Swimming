@@ -57,3 +57,6 @@ All four −14.0/−14.1 LUFS, −1.3 to −1.5 dBTP, music 12.6–17.3 dB under
 Frames at all 66 YouTube cuts: no black or flash frames. Opening now "On a £1.2 million purchase".
 Dropped-sound spans checked with large-v3 and levels: all breaths. Repeat check: only the rates
 lists and parallel phrases.
+
+## v2 (25 Oct)
+Lighting grade B (Jake's choice on the listing test) on all four. Exports `_youtube_v2.mp4` + `.srt` (text unchanged), reels `_v2`. QA −14.0/−14.1 LUFS, −1.3 to −1.5 dBTP, 0 overlaps. Outlook events point at v2.

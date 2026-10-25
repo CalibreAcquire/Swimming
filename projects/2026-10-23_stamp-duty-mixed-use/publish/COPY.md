@@ -6,9 +6,9 @@ the reels contain it). Calculator posts use "comment SEND". Rates are as at the 
 (October 2026); re-check before posting if there's a Budget change in between.
 
 Files (all named `2026-10-23_stamp-duty-mixed-use_…`):
-- YouTube: `_youtube_v1.mp4` (5:20), captions `_youtube_v1.srt`
-- Reels: `_reel1-74k-difference_v1.mp4` (0:23), `_reel2-genuine-commercial_v1.mp4` (0:26),
-  `_reel3-full-cost_v1.mp4` (0:37)
+- YouTube: `_youtube_v2.mp4` (5:20), captions `_youtube_v2.srt`
+- Reels: `_reel1-74k-difference_v2.mp4` (0:23), `_reel2-genuine-commercial_v2.mp4` (0:26),
+  `_reel3-full-cost_v2.mp4` (0:37)
 - Thumbnails (`thumbnails/`): `_thumb-A_v1.jpg`, `_thumb-B_v1.jpg`, `_thumb-C_v1.jpg`
 - Reel / Short covers (`thumbnails/`): `_reel1-cover_v1.jpg` to `_reel3-cover_v1.jpg`
 - Story: `_story_v1.png`
@@ -65,7 +65,7 @@ stamp duty mixed use, mixed use stamp duty, SDLT mixed use property, non residen
 ```
 
 ### Captions file
-Upload `_youtube_v1.srt` (Subtitles > Add language > English > Upload file > With timing).
+Upload `_youtube_v2.srt` (Subtitles > Add language > English > Upload file > With timing).
 
 ### Pinned comment
 ```
