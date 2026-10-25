@@ -62,3 +62,6 @@ All five −14.0/−14.1 LUFS, −1.4 to −1.6 dBTP, music 11.9–17.4 dB under
 Frames at all 76 YouTube cuts: no black or flash frames (black runs are the black cards). Plan
 warnings: no untranscribed kept sound; dropped-sound spans checked, all breaths. Repeat check on
 the render: only legitimate parallel phrases. SRT: "wifi", "rooms", "Fabian House" correct.
+
+## v2 (25 Oct)
+Lighting grade B on all five. Exports `_youtube_v2.mp4` + `.srt` (text unchanged), reels `_v2`. QA −14.0/−14.1 LUFS, −1.4 to −1.6 dBTP, 0 overlaps. Outlook events point at v2.

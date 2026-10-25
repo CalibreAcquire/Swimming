@@ -5,9 +5,9 @@ Jake's own phrasing from the video. The £30m line is YouTube only, never on Ins
 the reels contain it). Calculator posts use "comment SEND".
 
 Files (all named `2026-10-23_gross-vs-net-yield_…`):
-- YouTube: `_youtube_v1.mp4` (5:15), captions `_youtube_v1.srt`
-- Reels: `_reel1-6-5-to-4-1_v1.mp4` (0:19), `_reel2-the-flat_v1.mp4` (0:29),
-  `_reel3-two-traps_v1.mp4` (0:29), `_reel4-ask-for-these_v1.mp4` (0:21)
+- YouTube: `_youtube_v2.mp4` (5:15), captions `_youtube_v2.srt`
+- Reels: `_reel1-6-5-to-4-1_v2.mp4` (0:19), `_reel2-the-flat_v2.mp4` (0:29),
+  `_reel3-two-traps_v2.mp4` (0:29), `_reel4-ask-for-these_v2.mp4` (0:21)
 - Thumbnails (`thumbnails/`): `_thumb-A_v1.jpg`, `_thumb-B_v1.jpg`, `_thumb-C_v1.jpg`
 - Reel / Short covers (`thumbnails/`): `_reel1-cover_v1.jpg` to `_reel4-cover_v1.jpg`
 - Story: `_story_v1.png`
@@ -64,7 +64,7 @@ gross yield vs net yield, net yield, gross yield, rental yield explained, how to
 ```
 
 ### Captions file
-Upload `_youtube_v1.srt` (Subtitles > Add language > English > Upload file > With timing).
+Upload `_youtube_v2.srt` (Subtitles > Add language > English > Upload file > With timing).
 
 ### Pinned comment
 ```

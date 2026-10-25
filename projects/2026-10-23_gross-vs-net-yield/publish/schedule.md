@@ -7,10 +7,10 @@ launch event asks Jake to check that Brompton is still for sale (the video says 
 
 | When | Post | File | Outlook event id |
 |------|------|------|------------------|
-| Sun 15 Nov 11:40 | YouTube video + Reel 1 + Short 1 + Story | `_youtube_v1.mp4`, `_reel1-6-5-to-4-1_v1.mp4`, `_story_v1.png` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8kQAA |
-| Tue 17 Nov 15:10 | Reel 2 + Short 2: £250,000 flat, the real numbers | `_reel2-the-flat_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8lQAA |
-| Sun 22 Nov 11:40 | Reel 3 + Short 3: Two traps in advertised yields | `_reel3-two-traps_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8mgAA |
-| Sat 28 Nov 11:40 | Reel 4 + Short 4: Before you offer, ask for these | `_reel4-ask-for-these_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8ngAA |
+| Sun 15 Nov 11:40 | YouTube video + Reel 1 + Short 1 + Story | `_youtube_v2.mp4`, `_reel1-6-5-to-4-1_v2.mp4`, `_story_v1.png` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8kQAA |
+| Tue 17 Nov 15:10 | Reel 2 + Short 2: £250,000 flat, the real numbers | `_reel2-the-flat_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8lQAA |
+| Sun 22 Nov 11:40 | Reel 3 + Short 3: Two traps in advertised yields | `_reel3-two-traps_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8mgAA |
+| Sat 28 Nov 11:40 | Reel 4 + Short 4: Before you offer, ask for these | `_reel4-ask-for-these_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZA8ngAA |
 
 monday.com item 3305366116.
 
