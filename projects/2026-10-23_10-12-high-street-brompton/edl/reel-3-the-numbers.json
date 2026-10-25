@@ -31,7 +31,64 @@
       159.2
     ]
   ],
-  "broll": [],
+  "broll": [
+    {
+      "from": 111.45,
+      "to": 114.6,
+      "file": "../raw/photos/exterior/DSC00647.jpg",
+      "focus": [
+        0.5,
+        0.38
+      ],
+      "zoom": 1.15,
+      "move": "pull"
+    },
+    {
+      "from": 118.2,
+      "to": 121.4,
+      "file": "../raw/photos/12a/DSC00582.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "push"
+    },
+    {
+      "from": 121.5,
+      "to": 123.9,
+      "file": "../raw/photos/10a/DSC00533.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "pan",
+      "dir": -1
+    },
+    {
+      "from": 145.3,
+      "to": 148.1,
+      "file": "../raw/photos/exterior/DSC00647-2.jpg",
+      "focus": [
+        0.5,
+        0.4
+      ],
+      "zoom": 1.12,
+      "move": "pan"
+    },
+    {
+      "from": 150.7,
+      "to": 153.4,
+      "file": "../raw/photos/12a/DSC00570.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "push"
+    }
+  ],
   "shots": [
     {
       "at": 145.25,
@@ -49,5 +106,7 @@
     "start": 55,
     "bed": -27
   },
-  "silence_db": "auto"
+  "silence_db": "auto",
+  "grade": "curves=master='0/0 0.12/0.09 0.45/0.52 0.8/0.86 1/1',eq=saturation=1.12,colorbalance=rm=0.035:gm=0.005:bm=-0.035:rh=0.01:bh=-0.02",
+  "broll_shade": 0.45
 }

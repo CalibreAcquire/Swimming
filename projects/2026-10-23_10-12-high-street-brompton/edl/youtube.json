@@ -30,7 +30,7 @@
   "zoom": {
     "wide": 1.0,
     "tight": 1.28,
-    "every": 5.0
+    "every": 4.0
   },
   "shots": [
     {
@@ -69,67 +69,231 @@
         0.5,
         0.38
       ],
-      "zoom": 1.12
+      "zoom": 1.12,
+      "move": "push"
     },
     {
       "from": 35.75,
-      "to": 40.8,
+      "to": 38.0,
       "file": "../raw/photos/exterior/DSC00647-2.jpg",
       "focus": [
         0.5,
         0.38
       ],
-      "zoom": 1.1
+      "zoom": 1.12,
+      "move": "pan"
     },
     {
-      "from": 66.55,
-      "to": 69.6,
+      "from": 38.0,
+      "to": 41.0,
+      "file": "../raw/photos/shop2/DSC00617.jpg",
+      "focus": [
+        0.5,
+        0.45
+      ],
+      "zoom": 1.1,
+      "move": "push"
+    },
+    {
+      "from": 45.0,
+      "to": 48.1,
+      "file": "../raw/photos/exterior/DSC00647.jpg",
+      "focus": [
+        0.5,
+        0.35
+      ],
+      "zoom": 1.18,
+      "move": "pull"
+    },
+    {
+      "from": 64.85,
+      "to": 67.5,
+      "file": "../raw/photos/exterior/DSC00647-2.jpg",
+      "focus": [
+        0.5,
+        0.72
+      ],
+      "zoom": 1.15,
+      "move": "push"
+    },
+    {
+      "from": 67.6,
+      "to": 70.0,
       "file": "../raw/photos/shop1/DSC00457.jpg",
       "focus": [
         0.5,
         0.5
       ],
-      "zoom": 1.08
+      "zoom": 1.1,
+      "move": "pan"
     },
     {
-      "from": 69.6,
-      "to": 72.4,
+      "from": 70.0,
+      "to": 72.3,
       "file": "../raw/photos/shop2/DSC00602.jpg",
       "focus": [
         0.5,
         0.5
       ],
-      "zoom": 1.08
+      "zoom": 1.1,
+      "move": "push"
     },
     {
-      "from": 75.7,
-      "to": 79.5,
+      "from": 72.3,
+      "to": 75.4,
+      "file": "../raw/photos/shop1/DSC00468.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.12,
+      "move": "pull"
+    },
+    {
+      "from": 75.6,
+      "to": 78.0,
       "file": "../raw/photos/10a/DSC00516.jpg",
       "focus": [
         0.5,
         0.55
       ],
-      "zoom": 1.08
+      "zoom": 1.1,
+      "move": "push"
     },
     {
-      "from": 79.5,
+      "from": 78.0,
+      "to": 80.1,
+      "file": "../raw/photos/10a/DSC00524.jpg",
+      "focus": [
+        0.5,
+        0.55
+      ],
+      "zoom": 1.1,
+      "move": "pan",
+      "dir": -1
+    },
+    {
+      "from": 80.1,
       "to": 82.3,
       "file": "../raw/photos/12a/DSC00563.jpg",
       "focus": [
         0.5,
         0.55
       ],
-      "zoom": 1.08
+      "zoom": 1.1,
+      "move": "push"
     },
     {
-      "from": 86.5,
-      "to": 90.1,
+      "from": 82.3,
+      "to": 84.8,
+      "file": "../raw/photos/12a/DSC00551.jpg",
+      "focus": [
+        0.5,
+        0.55
+      ],
+      "zoom": 1.12,
+      "move": "pull"
+    },
+    {
+      "from": 84.8,
+      "to": 87.3,
+      "file": "../raw/photos/12a/DSC00593.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "pan"
+    },
+    {
+      "from": 87.3,
+      "to": 91.6,
       "file": "../raw/photos/shop2/DSC00617.jpg",
       "focus": [
         0.5,
         0.45
       ],
-      "zoom": 1.08
+      "zoom": 1.15,
+      "move": "pull"
+    },
+    {
+      "from": 118.2,
+      "to": 121.4,
+      "file": "../raw/photos/12a/DSC00582.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "push"
+    },
+    {
+      "from": 121.5,
+      "to": 123.9,
+      "file": "../raw/photos/10a/DSC00533.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "pan",
+      "dir": -1
+    },
+    {
+      "from": 131.3,
+      "to": 133.7,
+      "file": "../raw/photos/12a/DSC00575.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "push"
+    },
+    {
+      "from": 133.7,
+      "to": 136.1,
+      "file": "../raw/photos/shop1/DSC00463.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "pan"
+    },
+    {
+      "from": 136.5,
+      "to": 141.4,
+      "file": "../raw/photos/exterior/DSC00647-2.jpg",
+      "focus": [
+        0.5,
+        0.45
+      ],
+      "zoom": 1.2,
+      "move": "pull"
+    },
+    {
+      "from": 194.6,
+      "to": 198.0,
+      "file": "../raw/photos/shop1/DSC00480.jpg",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "zoom": 1.1,
+      "move": "push"
+    },
+    {
+      "from": 198.5,
+      "to": 202.6,
+      "file": "../raw/photos/exterior/DSC00647.jpg",
+      "focus": [
+        0.5,
+        0.4
+      ],
+      "zoom": 1.14,
+      "move": "pan",
+      "dir": -1
     }
   ],
   "cards": [
@@ -195,5 +359,7 @@
     }
   ],
   "captions": "This freehold | in [BROMPTON] | brings in [£90,320] a year | from [10 UNITS] | as *one freehold asset,* | and it's available for sale | at offers in the region of | [£1,000,000.] It's [10 AND 12 HIGH STREET,] | two *adjoining buildings* | with a *self-contained flat* | to the rear. I'll take you through | the *location,* | the *building* | and the [NUMBERS.] Brompton sits | between *Chatham* | and *Gillingham* | in [MEDWAY, KENT.] Chatham Historic Dockyard | is [HALF A MILE] away, | Brompton Barracks | is *closer still,* | and the University of Greenwich | Medway campus | is about [A MILE] away. Gillingham station | is also around a mile away, | with trains into *St Pancras* | in about [44 MINUTES.] On the ground floor | there are [TWO SHOPS,] | a hair studio at number 10 | and a nail parlour business | at number 12, | each on a [10-YEAR LEASE] | at [£10,000] a year. Above the shops | there are [TWO HMOS,] | three rooms over number 10 | and four rooms over number 12, | averaging [£680] a month per room, | *bills included.* And to the rear, | with its own access | on *Westcourt Street,* | there's a self-contained flat | let at [£13,200] a year. In total, | it's [3,829 SQ FT] | across all *five units.* Now the [NUMBERS.] The passing rent | is [£90,320] a year, | which is a [9% GROSS YIELD] | at the asking price. The landlord pays the bills | on the *HMO rooms,* | which come to [£995] a month. Take those off | and the income is [£78,380,] | or [7.8% NET YIELD.] Residential makes up | [78%] of the income | and the shops make up [22%.] Because it's a *mixed-use* building, | stamp duty is charged | at *non-residential rates.* At the asking price, | that's [£39,500.] With a [30% DEPOSIT] | and interest-only finance | at [6%,] | the income after interest | is [£36,380] a year, | which is a [10.7% RETURN] | on the cash you put in. Those figures are *illustrative* | and set out in the | *investment summary.* The shop leases | have *tenant breaks* | in [JANUARY 2027] | and [JULY 2028.] The full lease events | are set out | in the investment summary. The building is sold | with the *tenants in place,* | and viewings are | strictly by [APPOINTMENT.] It's available now | before the *full launch* | across all major property platforms. If you'd like | the investment summary | or a viewing, | register at calibreacquire.co.uk/register. I look at every registration | [PERSONALLY,] | and I'll be in touch | if it's a good fit.",
-  "silence_db": "auto"
+  "silence_db": "auto",
+  "grade": "curves=master='0/0 0.12/0.09 0.45/0.52 0.8/0.86 1/1',eq=saturation=1.12,colorbalance=rm=0.035:gm=0.005:bm=-0.035:rh=0.01:bh=-0.02",
+  "broll_shade": 0.45
 }

@@ -27,9 +27,11 @@ Edit file keys (times are SOURCE seconds unless noted):
   cards                      [{"from": t, "to": t, "style": "black"|"white", "text": markup}]
   title_card                 {"text": markup, "dur": s}  hook title over the opening (reels)
   broll                      [{"from": t, "to": t, "file": path, "start": s, "focus": [fx, fy],
-                               "zoom": z, "move": "none"}]  property footage / photos over the
+                               "zoom": z, "move": "push"|"pull"|"pan"|"none", "dir": 1|-1}]  property footage / photos over the
                              talking head while he speaks (video: "start" into the clip; image:
                              slow push-in to "zoom")
+  broll_shade                0-1: dark fade over the bottom half of B-roll so captions read on
+                             bright photos (0.45 suits white interiors; off by default)
   grade                      ffmpeg filter string for the colour grade
   audio                      {"preset": "basic"|"clean"|"studio"|"deep"|"full", "pitch": semitones}
                              voice processing, see voice.py
@@ -873,14 +875,40 @@ def render_broll(edit, i, a, dur, b, tmp, draft):
     cover = (f"scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase:flags=lanczos,"
              f"crop={W * 2}:{H * 2}:(iw-{W * 2})*{fx}:(ih-{H * 2})*{fy}")
     if src.lower().endswith(IMAGE_EXT):
-        z1 = 1.0 if b.get("move") == "none" else b.get("zoom", 1.08)
-        vf = (f"{cover},zoompan=z='1+({z1}-1)*on/{max(1, n - 1)}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
+        move = b.get("move", "push")
+        z1 = 1.0 if move == "none" else b.get("zoom", 1.08)
+        t = f"on/{max(1, n - 1)}"
+        e = f"({t})*({t})*(3-2*({t}))"  # eased, so the move starts and settles gently
+        if move == "pull":    # starts close, eases out to the full frame
+            z, x = f"{z1}-({z1}-1)*{e}", "iw/2-(iw/zoom/2)"
+        elif move == "pan":   # held slightly close, drifts left to right (or "dir": -1)
+            d = b.get("dir", 1)
+            z, x = f"{z1}", f"(iw-iw/zoom)*({'' if d > 0 else '1-'}{e})"
+        else:                 # push: slow, steady push-in to "zoom" (as on earlier videos)
+            z, x = f"1+({z1}-1)*{t}", "iw/2-(iw/zoom/2)"
+        vf = (f"{cover},zoompan=z='{z}':x='{x}':y='ih/2-(ih/zoom/2)':"
               f"d={n}:s={W}x{H}:fps={FPS},setsar=1")
         cmd = ["ffmpeg", "-v", "error", "-y", "-i", src]
     else:
         vf = f"{cover},scale={W}:{H}:flags=lanczos,fps={FPS},setsar=1"
         cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(b.get("start", 0)), "-i", src, "-an"]
-    run(cmd + ["-vf", vf, "-frames:v", str(n), "-c:v", "libx264", "-preset", "ultrafast" if draft else "veryfast",
+    shade = edit.cfg.get("broll_shade", 0)
+    if shade:  # soft dark fade over the bottom of bright photos so white captions stay readable
+        from PIL import Image
+        grad = os.path.join(tmp, f"shade_{W}x{H}_{shade}.png")
+        if not os.path.exists(grad):
+            g = Image.new("RGBA", (W, H))
+            top = int(H * 0.5)
+            for y in range(top, H):
+                t = (y - top) / (H - top)
+                a = int(255 * shade * t * t * (3 - 2 * t))
+                g.paste((0, 0, 0, a), (0, y, W, y + 1))
+            g.save(grad)
+        cmd += ["-i", grad]
+        args = ["-filter_complex", f"[0:v]{vf}[v];[v][1:v]overlay=0:0:format=auto,format=yuv420p"]
+    else:
+        args = ["-vf", vf]
+    run(cmd + args + ["-frames:v", str(n), "-c:v", "libx264", "-preset", "ultrafast" if draft else "veryfast",
                "-crf", "14", "-pix_fmt", "yuv420p", out])
     return out
 
