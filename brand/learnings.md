@@ -86,3 +86,4 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Listings: put property photos over most of the building description, with push, pull and pan moves, and `broll_shade: 0.45` so captions read on white rooms (25 Oct 2026).
 - Never use the line "Everything will remain confidential" (Jake, 26 Oct 2026). If it's in a script, leave it out of the edit, captions, cards and copy; end the valuation CTA on the URL.
 - Dividend tax: "up to 2%" is wrong, so a take that says it gets cut rather than kept (Jake approved the cut, 26 Oct 2026).
+- Office grade, update (26 Oct 2026): the 25 Oct warm grade looked orange on the Budget video. Jake chose the neutral version: `curves=master='0/0 0.12/0.09 0.45/0.52 0.8/0.86 1/1',eq=saturation=1.04,colorbalance=rm=-0.01:bm=0.015:rh=-0.01:bh=0.01` (same brightness, white wall reads white). Use this as `grade` on office footage from now on, not the warm one above.

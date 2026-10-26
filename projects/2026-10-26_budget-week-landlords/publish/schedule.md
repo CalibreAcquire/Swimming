@@ -8,11 +8,11 @@ Digital threshold.
 
 | When | Post | File | Outlook event id |
 |------|------|------|------------------|
-| Mon 26 Oct 20:00 | YouTube video + Reel 1 + Short 1 + Story | `_youtube_v1.mp4`, `_reel1-already-law_v1.mp4`, `_story_v1.png` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5fQAA |
-| Tue 27 Oct 09:55 | Reel 4 + Short 4: Capital gains tax at 40%? | `_reel4-capital-gains_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5fwAA |
-| Wed 28 Oct 09:10 | Reel 3 + Short 3: Exchange, not completion | `_reel3-exchange-not-completion_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5gQAA |
-| Thu 5 Nov 11:40 (15:40 Dubai) | Reel 2 + Short 2: The real rate is 55% | `_reel2-the-real-rate_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5gwAA |
-| Fri 13 Nov 11:40 | Reel 5 + Short 5: Making Tax Digital | `_reel5-making-tax-digital_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5hQAA |
+| Mon 26 Oct 20:00 | YouTube video + Reel 1 + Short 1 + Story | `_youtube_v2.mp4`, `_reel1-already-law_v2.mp4`, `_story_v1.png` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5fQAA |
+| Tue 27 Oct 09:55 | Reel 4 + Short 4: Capital gains tax at 40%? | `_reel4-capital-gains_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5fwAA |
+| Wed 28 Oct 09:10 | Reel 3 + Short 3: Exchange, not completion | `_reel3-exchange-not-completion_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5gQAA |
+| Thu 5 Nov 11:40 (15:40 Dubai) | Reel 2 + Short 2: The real rate is 55% | `_reel2-the-real-rate_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5gwAA |
+| Fri 13 Nov 11:40 | Reel 5 + Short 5: Making Tax Digital | `_reel5-making-tax-digital_v2.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5hQAA |
 
 monday.com item 3310591394.
 

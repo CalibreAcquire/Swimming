@@ -94,4 +94,4 @@ speech-level sound as a breath (it had clipped the end of "2027" and would have 
 Jake: "the videos look a bit orange". Grade B adds warmth on top of the lamp light (wall R−B 16 vs 10
 in the raw). Test clip `exports/…_colour-test_ABC.mp4` and still: A camera colour (sat 1.06, no
 colour shift), B neutral (sat 1.04, rm −0.01 bm +0.015 rh −0.01 bh +0.01), C cooler (rm −0.02
-bm +0.025 rh −0.015 bh +0.015). Same brightness curve throughout. Waiting on Jake's pick; then v2.
+bm +0.025 rh −0.015 bh +0.015). Same brightness curve throughout. Jake picked B (neutral); v2 of the YouTube video and all five reels rendered with it. Thumbnails, covers and Story were already neutral (made from raw), so they stay v1.
