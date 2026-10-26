@@ -235,6 +235,15 @@ class Edit:
         seg = db[max(0, int(a * 100)):int(b * 100)]
         return len(seg) == 0 or (seg > thr + 10).mean() < 0.35
 
+    def _speech(self, a, b):
+        """True when [a, b] holds speech-level sound (only with measured levels)."""
+        mode = self.cfg.get("silence_db")
+        if mode is None or b <= a:
+            return False
+        db, thr = self._levels(mode)
+        seg = db[max(0, int(a * 100)):int(b * 100)]
+        return len(seg) > 0 and (seg > thr + 14).sum() >= 8  # 80 ms above speech level
+
     def _in_silence(self, t):
         for a, b in self.silences:
             if a < t < b:
@@ -283,17 +292,22 @@ class Edit:
             if sil:
                 e = sil[0]
             else:
-                nxt = [a for a, b in self.silences if a >= e and a - e < 0.3]
+                # whisper often ends a word early (the "-ber" of "November"): with measured
+                # levels, run on to the next pause if it starts within half a second
+                reach = 0.5 if c.get("silence_db") is not None else 0.3
+                nxt = [a for a, b in self.silences if a >= e and a - e < reach]
                 if nxt:
                     e = min(nxt)
             # breaths: a short burst, a pause, then a word whose timing swallows both
             # (whisper stretches the word over the breath). Start after the pause;
             # likewise drop a breath after the last word.
+            # With measured levels, only trim what is quieter than speech: a dip inside a
+            # word ("twenty | twenty-seven") or a short word on its own ("Fourth.") is not a breath.
             for a, b in self.silences:
-                if s < a < s + 0.7 and b - a >= 0.12 and g[0]["e"] > b:
+                if s < a < s + 0.7 and b - a >= 0.12 and g[0]["e"] > b and not self._speech(s, a):
                     s = b
             for a, b in reversed(self.silences):
-                if e - 0.7 < b < e and b - a >= 0.12 and g[-1]["s"] < a:
+                if e - 0.7 < b < e and b - a >= 0.12 and g[-1]["s"] < a and not self._speech(b, e):
                     e = a
             # split on long silences inside the group (whisper sometimes stretches words over pauses)
             pieces, start = [], s
