@@ -13,3 +13,5 @@ each clip. When Jake picks one, put its filter in `DEFAULT_GRADE` and record it 
 | 4 | Cooler | `colorchannelmixer=rr=0.96:gg=0.988:bb=1.04,eq=saturation=0.92` | −3 |
 
 The white balance numbers are measured on this office's wall; another location needs its own measurement.
+
+**Decision (26 Oct 2026): Jake chose 1, white balance only.** It is now `DEFAULT_GRADE`.

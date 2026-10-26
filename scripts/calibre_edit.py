@@ -75,7 +75,9 @@ FONT_STYLES = {
     "card_label":  ("Montserrat SemiBold", "Montserrat-600.ttf", 0, 0),
 }
 
-DEFAULT_GRADE = "null"  # no colour adjustment (Jake, 26 Oct 2026); look options in looks/README.md
+# white balance only, measured on the office wall (Jake chose look 1, 26 Oct 2026; looks/README.md).
+# Footage from another location needs its own measurement: set "grade" in that EDL.
+DEFAULT_GRADE = "colorchannelmixer=rr=0.973:bb=1.028"
 
 
 # ---------------------------------------------------------------- utilities
