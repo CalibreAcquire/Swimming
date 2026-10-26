@@ -116,3 +116,4 @@ v4 (8:28). Reels 1, 2, 4 v3 unaffected (Reel 1's opening is under its title card
 `_youtube_v3.mp4` / `.srt`.
 v4 QA: −14.1 LUFS / −1.3 dBTP, music 18.1 dB under, 0 overlaps; black only on black cards; frames at
 the 11 new joins clean with the right caption words; .srt words match v1. Final: YouTube v4 (8:28).
+Stamp duty and gross vs net stay as they are (Jake, 26 Oct: no re-grade or breath re-check).

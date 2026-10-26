@@ -17,4 +17,4 @@ Digital threshold.
 monday.com item 3310591394.
 
 Google Drive: YouTube › Edited › Budget week: confirmed vs rumour (folder 1pxITc5ubFONHzSXmR8tVoc9cS8ekOSqk, Reels 1gPVSqKCqjCIJGAk8zyPJtJe977CKZJOC). Uploaded 26 Oct: subtitles (.srt) and the publish pack as a Google Doc (1QuFCol9fzhL2GH70WMuG8ttv-O9lqsdlcWKSDOGxLU0). Videos and images are added by Jake.
-Drive subtitles now `_youtube_v4.srt` (148n5W_-WiPNZ_xhq8iKXGnOGKm2keBYI); the older one is renamed "OLD – don't use".
+Drive subtitles now `_youtube_v4.srt` (148n5W_-WiPNZ_xhq8iKXGnOGKm2keBYI). The old subtitles and the first (broken) publish pack were binned on 26 Oct with Jake's OK.
