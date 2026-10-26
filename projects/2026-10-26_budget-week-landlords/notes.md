@@ -109,3 +109,8 @@ each new start re-transcribed to check the first word): 0:00 "On Wednesday", 2:2
 5:10 "Then there's capital gains tax", 5:28 "To put that in pounds", 5:46 "Some form", 6:05 "The Bank
 of England", 6:29 "First, run each property". Reels 1, 2 and 4 share three of these joins; Reels 3 and
 5 had none, so they stay v2. Running time 8:34 → about 8:28.
+v3 QA found "On" (0:00) and "If" (2:35) missing from the .srt, and "If" from the burned captions: the
+moved word starts passed whisper's word ends. `fix_word_starts.py` now gives each moved word a length
+and pushes the following words along; .srt words now match v1 exactly (1,455). YouTube re-rendered as
+v4 (8:28). Reels 1, 2, 4 v3 unaffected (Reel 1's opening is under its title card). Do not use
+`_youtube_v3.mp4` / `.srt`.
