@@ -84,3 +84,5 @@ file and CLAUDE.md disagree, ask Jake once, then record the answer here.
 - Hidden repeats: whisper leaves a repeated line out of the transcript ("which is a 10.7%" said twice at 1:49 in the listing). The plan now warns about kept sound with no words. Act on every such warning before rendering (23 Oct 2026).
 - Office talking head looked dull. Jake chose grade B (25 Oct 2026): `curves=master='0/0 0.12/0.09 0.45/0.52 0.8/0.86 1/1',eq=saturation=1.12,colorbalance=rm=0.035:gm=0.005:bm=-0.035:rh=0.01:bh=-0.02`. Use it as `grade` on office footage. The old default desaturated and cooled the picture. Show lighting or look changes as a short A/B/C test clip before rendering.
 - Listings: put property photos over most of the building description, with push, pull and pan moves, and `broll_shade: 0.45` so captions read on white rooms (25 Oct 2026).
+- Never use the line "Everything will remain confidential" (Jake, 26 Oct 2026). If it's in a script, leave it out of the edit, captions, cards and copy; end the valuation CTA on the URL.
+- Dividend tax: "up to 2%" is wrong, so a take that says it gets cut rather than kept (Jake approved the cut, 26 Oct 2026).

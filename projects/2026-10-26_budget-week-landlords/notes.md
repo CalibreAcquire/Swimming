@@ -52,7 +52,8 @@ re-checked with large-v3 on short clips.
   moving properties you already own into a company can trigger stamp duty and capital gains tax."
 - "It is what it is" isn't in the video.
 - The final line ("Everything will remain confidential…") wasn't said, so the video ends on the
-  instant valuation URL.
+  instant valuation URL. Jake doesn't want that line used (26 Oct).
+- Dividend clause cut: approved by Jake (26 Oct).
 
 ## Graphics
 39 full-screen cards (black/white, no yellow), following each point: already law, in this video,
