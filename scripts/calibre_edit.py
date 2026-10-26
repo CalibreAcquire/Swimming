@@ -75,7 +75,7 @@ FONT_STYLES = {
     "card_label":  ("Montserrat SemiBold", "Montserrat-600.ttf", 0, 0),
 }
 
-DEFAULT_GRADE = "eq=contrast=1.05:saturation=0.94:gamma=0.99,colorbalance=rh=-0.02:bh=0.02:rm=-0.01"
+DEFAULT_GRADE = "null"  # no colour adjustment (Jake, 26 Oct 2026); look options in looks/README.md
 
 
 # ---------------------------------------------------------------- utilities
