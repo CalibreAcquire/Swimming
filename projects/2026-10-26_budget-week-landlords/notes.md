@@ -114,3 +114,5 @@ moved word starts passed whisper's word ends. `fix_word_starts.py` now gives eac
 and pushes the following words along; .srt words now match v1 exactly (1,455). YouTube re-rendered as
 v4 (8:28). Reels 1, 2, 4 v3 unaffected (Reel 1's opening is under its title card). Do not use
 `_youtube_v3.mp4` / `.srt`.
+v4 QA: −14.1 LUFS / −1.3 dBTP, music 18.1 dB under, 0 overlaps; black only on black cards; frames at
+the 11 new joins clean with the right caption words; .srt words match v1. Final: YouTube v4 (8:28).
