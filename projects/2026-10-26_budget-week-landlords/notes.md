@@ -117,3 +117,9 @@ v4 (8:28). Reels 1, 2, 4 v3 unaffected (Reel 1's opening is under its title card
 v4 QA: −14.1 LUFS / −1.3 dBTP, music 18.1 dB under, 0 overlaps; black only on black cards; frames at
 the 11 new joins clean with the right caption words; .srt words match v1. Final: YouTube v4 (8:28).
 Stamp duty and gross vs net stay as they are (Jake, 26 Oct: no re-grade or breath re-check).
+
+## Reels in look 1 (26 Oct, evening)
+Jake chose look 1 (white balance only) and asked for the reels again (not the YouTube video). Reel EDLs
+no longer set a grade, so they use the new default. Reel 1 v4, Reel 2 v4, Reel 3 v3, Reel 4 v4, Reel 5 v3:
+−14.0 to −14.1 LUFS, −1.2 to −1.5 dBTP, music 13–15 dB under, 0 overlaps. Diary events, monday and copy
+updated.
