@@ -1,0 +1,138 @@
+Budget week: what's already confirmed for landlords and what's rumour
+(Script sent by Jake on 26 Oct 2026. Note from Jake: he didn't say "It is what it is.")
+
+[B1] On Wednesday, John Healey delivers his first Budget as Chancellor.
+The biggest tax change for landlords this year won't be in his speech.
+It was announced last November, it's already law, and it starts in April 2027 whatever he says on the day.
+
+[B2] In this video, I'll go through what's already confirmed for landlords, what's been ruled out, and what's still only a rumour.
+I'll show you what the April 2027 change does to a typical landlord's tax bill, with real numbers.
+And at the end, I'll go through four things worth checking in your own portfolio before Wednesday.
+
+[B3] Every Budget, the same thing happens.
+The headlines fill up with what might change, and some landlords make big decisions on the back of them.
+If you already own a property that isn't performing, that pressure is worse, because you're already wondering whether to hold it or sell it.
+But a decision made on a rumour is made before you know what's actually changing.
+
+[B4] I'm Jake, Founder of Calibre Acquire.
+I've been in property for 14 years, and last year we transacted over £30 million in mixed-use buildings, residential blocks and commercial property.
+I help investors get out of underperforming property assets and into ones that work harder for them.
+
+[B5] Let's start with what's already confirmed, because none of this depends on Wednesday.
+First, property income tax.
+From 6 April 2027, rental profit gets its own tax rates.
+The basic rate goes from 20% to 22%, the higher rate from 40% to 42%, and the additional rate from 45% to 47%.
+This was announced at last November's Budget, and it became law in March this year.
+
+[B6] The tax credit you get on mortgage interest also goes up, from 20% to 22%.
+So landlords with bigger mortgages feel slightly less of the increase.
+
+[B7] There's also a change to how your personal allowance is used.
+From April 2027, it goes against your salary first, and only then against your rental income.
+If you earn a good salary, this probably makes no difference to you, because your job already uses up your allowance.
+
+[B8] Then there's Making Tax Digital.
+Since April this year, landlords with combined rental and self-employed income over £50,000 have had to keep digital records and report to HMRC every quarter.
+From April 2027, that threshold drops to £30,000.
+It's based on your income before expenses, not your profit.
+
+[B9] And there's the High Value Council Tax Surcharge, which most people call the mansion tax.
+It applies to residential property in England worth £2 million or more, from April 2028.
+For most landlords watching this, it won't apply.
+
+[B10] If you're considering a property and want to stress test it within a few minutes, I built a set of free deal calculators that let you do that.
+There's one for mixed-use, one for HMOs, and one for single residential.
+Comment "send" below and I'll send them over, or use the link in the description.
+
+[B11] Here's what the April 2027 change actually means in pounds.
+Take a landlord on a good salary, so they're already a higher-rate taxpayer.
+Their rental income, after running costs but before mortgage interest, is £30,000 a year.
+Their mortgage interest is £12,000 a year.
+So their real profit, the money they actually keep before tax, is £18,000.
+
+[B12] Today, they pay 40% on the full £30,000, which is £12,000.
+They get a 20% credit on the £12,000 of interest, which is £2,400 back.
+So their tax bill is £9,600.
+
+[B13] From April 2027, it's 42% on £30,000, which is £12,600.
+The credit becomes 22% of £12,000, which is £2,640 back.
+So their tax bill is £9,960.
+
+[B14] That's £360 a year more.
+On its own, that's not the number to worry about.
+The number to look at is £9,960 of tax on £18,000 of real profit.
+That's an effective tax rate of 55%.
+
+[B15] That's down to Section 24, which stopped individual landlords deducting their mortgage interest in full.
+The April 2027 change adds a bit more on top of a cost that was already there.
+
+[B16] I learned this myself.
+I owned a one-bed flat in Brentwood in my own name.
+On paper, it yielded about 6%.
+Once the service charge, ground rent and tax were paid, it was losing money every month.
+I sold it at a £30,000 loss to get out of it.
+(It is what it is. - not said)
+Holding it for longer would have cost me more.
+
+[B17] Some landlords look at a limited company as the answer.
+A company can deduct its mortgage interest in full, and it pays corporation tax instead of income tax.
+But taking money out of a company has its own tax, dividend tax rates went up by 2% in April this year, and moving properties you already own into a company can trigger stamp duty and capital gains tax.
+It works well for some people and badly for others, so speak to an accountant before you make that move.
+I'll cover it properly in a separate video next month.
+
+[B18] Now, what's been ruled out.
+Stamp duty.
+In July, the Prime Minister said there would be no change to stamp duty in this Budget.
+He also ruled out replacing stamp duty and council tax with a single annual property tax, for now.
+So if you're buying, your stamp duty bill on Thursday will be the same as it is today.
+
+[B19] Then there's capital gains tax.
+There was talk of bringing it in line with income tax, which would have taken the higher rate on property gains from 24% to 40% or more.
+The Chancellor is reported to have rejected that.
+But it's been reported, not announced, and a smaller increase is still possible.
+
+[B20] To put that in pounds, a higher-rate landlord with a £200,000 gain pays about £47,000 in tax today, after the £3,000 allowance.
+At 40%, that same gain would have cost nearly £79,000.
+
+[B21] That leaves what's still a rumour.
+A smaller rise in capital gains tax.
+Some form of council tax reform, which the Prime Minister has said he supports, without giving any detail.
+And wider tax rises, which the Chancellor hasn't ruled out.
+I'm recording this before the Budget, so anything I've called a rumour could be confirmed or dropped on Wednesday.
+
+[B22] The Budget also isn't the only thing moving.
+The Bank of England base rate is 3.75%.
+It was held in September, but three of the nine committee members voted to raise it to 4%.
+Inflation rose to 3.5% in September, up from 3.1% in August.
+The next rate decision is on Thursday 5 November.
+
+[B23] So here are the four things worth checking before Wednesday.
+
+[B24] First, run each property on the April 2027 rates and work out what you actually keep after tax.
+Not the yield on paper, the money that ends up with you.
+
+[B25] Second, if you're selling and the capital gains rumours worry you, it's worth knowing that for tax purposes, a sale usually happens when contracts are exchanged, not when it completes.
+The last time capital gains tax went up, in October 2024, the new rates applied from Budget day.
+But you can't get a sale to exchange in two days.
+One of our sales, a block of five flats on Holloway Road, took 12 months from agreeing the deal to completion.
+Rushing a sale because of a rumour usually means accepting a weaker price or skipping checks on the legal work.
+
+[B26] Third, check whether Making Tax Digital applies to you from April.
+If your rental and self-employed income before expenses was over £30,000 in the 2025 to 2026 tax year, it does.
+
+[B27] Fourth, separate the property from the headlines.
+If a property is performing well, a Budget rumour isn't a reason to sell it.
+If it isn't performing, that's a reason to look at it, whatever the Chancellor says on Wednesday.
+The decision should come from the property, not from the speech.
+
+[B28] If you found this useful, send it to someone who's looking at their portfolio before the Budget.
+It could save them a significant amount on their next deal.
+I'll go through what was actually announced the day after the Budget, so if you want to be kept up to date with new property strategies, subscribe.
+
+[B29] If you're looking to move out of a weaker property and into a freehold building in a strong location, our registered investors see new properties first, with one week's exclusivity before they go to the open market.
+If you want to be notified when properties like this become available, you can register at www.calibreacquire.co.uk/register.
+I look at every registration personally and reach out if it's a good fit.
+
+[B30] And if you own a property and want to know what it's worth today, we built an instant valuation tool that we use for our own internal valuations.
+It's at www.calibreacquire.co.uk/instant-valuation.
+Everything will remain confidential until you tell us otherwise.
