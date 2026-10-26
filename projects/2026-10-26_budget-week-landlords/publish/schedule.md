@@ -15,3 +15,5 @@ Digital threshold.
 | Fri 13 Nov 11:40 | Reel 5 + Short 5: Making Tax Digital | `_reel5-making-tax-digital_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_xZ5hQAA |
 
 monday.com item 3310591394.
+
+Google Drive: YouTube › Edited › Budget week: confirmed vs rumour (folder 1pxITc5ubFONHzSXmR8tVoc9cS8ekOSqk, Reels 1gPVSqKCqjCIJGAk8zyPJtJe977CKZJOC). Uploaded 26 Oct: subtitles (.srt) and the publish pack as a Google Doc (1QuFCol9fzhL2GH70WMuG8ttv-O9lqsdlcWKSDOGxLU0). Videos and images are added by Jake.
