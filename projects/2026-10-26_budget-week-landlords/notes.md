@@ -74,3 +74,17 @@ speech-level sound as a breath (it had clipped the end of "2027" and would have 
 3. Exchange, not completion (0:32): pre-Budget.
 4. Capital gains tax at 40%? (0:32): pre-Budget.
 5. Making Tax Digital from £30,000 (0:20): evergreen.
+
+## QA (26 Oct, v1)
+- Loudness: YouTube −14.0 LUFS / −1.0 dBTP, music 18.0 dB under voice. Reels −14.0 to −14.1 LUFS,
+  −1.4 to −1.5 dBTP, music 13–14 dB under voice. Reel 5's music start was past the end of the
+  track (bed came out 1 dB under the voice); `voice.py` now wraps it, Reels 4 and 5 re-rendered.
+- Caption overlaps: 0 on all six.
+- Black frames: every black stretch is a black card; no flash frames.
+- Frames either side of all 130 cuts checked: Jake in shot throughout, no out-of-shot frames.
+- SRT proofread against the script: £ figures, Healey, HMRC, URLs correct; Budget, Making Tax
+  Digital, High Value Council Tax Surcharge, Section 24 capitalised (`srt_terms` in the EDL). Small
+  differences from the script are as spoken ("The Bank of England rate", "in 2025 to 2026 tax
+  year", "significant amount on the next deal"), re-checked with large-v3.
+- No "It is what it is", no swearing, no other companies or sources named. £30m line YouTube only.
+- Reels 1080×1920, captions clear of the bottom 20% and the right-hand icons.

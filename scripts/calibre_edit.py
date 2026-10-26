@@ -1036,10 +1036,10 @@ GLOSSARY_CASE = {w.lower().strip(".,"): w.strip(".,") for w in _GLOSSARY
 GLOSSARY_PHRASES = [w.split() for w in _GLOSSARY if " " in w and any(c.isupper() for c in w)]
 
 
-def _phrase_case(words):
+def _phrase_case(words, phrases=GLOSSARY_PHRASES):
     """Apply multi-word glossary terms to a list of {"text": ...} words, in place."""
     bare = [re.sub(r"[^\w'-]", "", w["text"]).lower() for w in words]
-    for ph in GLOSSARY_PHRASES:
+    for ph in phrases:
         low = [p.lower() for p in ph]
         for i in range(len(words) - len(ph) + 1):
             if bare[i:i + len(ph)] == low:
@@ -1070,6 +1070,8 @@ def srt(edit_path, out):
             text = text[:1].upper() + text[1:]
         words.append(dict(text=text, s=edit.out_time(t["s"]), e=edit.out_time(t["e"])))
     _phrase_case(words)
+    # per-video terms cased anywhere in the subtitles, e.g. "srt_terms": ["Budget", "Section 24"]
+    _phrase_case(words, [t.split() for t in edit.cfg.get("srt_terms", [])])
 
     sentences, cur = [], []
     for w in words:

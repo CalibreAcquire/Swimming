@@ -203,8 +203,13 @@ def mix_music(voice_wav, out_wav, music):
     """
     dur = sf.info(voice_wav).duration
     src = music_file(music["track"])
+    track_len = sf.info(src).duration if src.endswith(".wav") else float(subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src],
+        capture_output=True, text=True).stdout.strip() or 0)
     start = music.get("start", 0.0)
-    gain = music.get("bed", -30.0) - integrated_lufs(src, start, min(dur, 120))
+    if track_len and start >= track_len - 5:  # a start past the end measured silence and blew up the gain
+        start = start % max(1.0, track_len - 5)
+    gain = music.get("bed", -30.0) - integrated_lufs(src, start, min(dur, track_len - start, 120) if track_len else min(dur, 120))
     fade_out = min(3.0, dur / 4)
     premix = out_wav + ".premix.wav"
     fc = (f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{dur:.3f},asetpts=N/SR/TB,"
