@@ -4,10 +4,10 @@ House writing style: no emojis, no long dashes, plain first person, Jake's phras
 video. The £30m line is YouTube only; none of the reels contain it. Calculator posts use
 "comment SEND". Recorded before the Budget on Wednesday 28 October 2026: post before the speech.
 
-Files (all named `2026-10-26_budget-week-landlords_…`). Use the v2 videos (neutral colour, 26 Oct); thumbnails, covers and Story stay v1:
-- YouTube: `_youtube_v2.mp4` (about 8:34), captions `_youtube_v2.srt`
-- Reels: `_reel1-already-law_v2.mp4` (0:33), `_reel2-the-real-rate_v2.mp4` (1:02),
-  `_reel3-exchange-not-completion_v2.mp4` (0:32), `_reel4-capital-gains_v2.mp4` (0:32),
+Files (all named `2026-10-26_budget-week-landlords_…`). Final videos: YouTube v4, Reels 1, 2 and 4 v3, Reels 3 and 5 v2 (neutral colour, deep breaths trimmed); thumbnails, covers and Story stay v1:
+- YouTube: `_youtube_v4.mp4` (8:28), captions `_youtube_v4.srt`
+- Reels: `_reel1-already-law_v3.mp4` (0:33), `_reel2-the-real-rate_v3.mp4` (1:01),
+  `_reel3-exchange-not-completion_v2.mp4` (0:32), `_reel4-capital-gains_v3.mp4` (0:31),
   `_reel5-making-tax-digital_v2.mp4` (0:20)
 - Thumbnails (`thumbnails/`): `_thumb-A_v1.jpg`, `_thumb-B_v1.jpg`, `_thumb-C_v1.jpg`
 - Reel / Short covers (`thumbnails/`): `_reel1-cover_v1.jpg` to `_reel5-cover_v1.jpg`
@@ -65,7 +65,7 @@ budget 2026 landlords, autumn budget property, landlord tax 2027, property incom
 ```
 
 ### Captions file
-Upload `_youtube_v2.srt` (Subtitles > Add language > English > Upload file > With timing).
+Upload `_youtube_v4.srt` (Subtitles > Add language > English > Upload file > With timing).
 
 ### Pinned comment
 ```
