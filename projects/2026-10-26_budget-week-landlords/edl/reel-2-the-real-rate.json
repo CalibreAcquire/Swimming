@@ -50,6 +50,5 @@
     "start": 40,
     "bed": -27
   },
-  "silence_db": "auto",
-  "grade": "curves=master='0/0 0.12/0.09 0.45/0.52 0.8/0.86 1/1',eq=saturation=1.04,colorbalance=rm=-0.01:bm=0.015:rh=-0.01:bh=0.01"
+  "silence_db": "auto"
 }
