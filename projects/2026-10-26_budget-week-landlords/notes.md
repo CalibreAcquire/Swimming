@@ -98,3 +98,14 @@ bm +0.025 rh −0.015 bh +0.015). Same brightness curve throughout. Jake picked 
 - v2 QA (26 Oct): same cuts and subtitles as v1. YouTube −14.0 LUFS / −1.0 dBTP, music 18 dB under;
   reels −14.0 to −14.1 LUFS, −1.0 to −1.5 dBTP, music 13–14.5 dB under; 0 caption overlaps. Wall
   R−B 6.5 (v1 15.9). Diary events, monday item and the Drive .srt name updated to v2.
+
+## Breaths (26 Oct, v3)
+Jake: "6:05 too much of a pause and me deep breathing… a few times". Whisper had stretched take-opening
+words back over the breath before them ("Bank" from 794.54, voice at 795.82), so the pause trimming
+kept 1.5 s of pause and breath at 6:05. New `scripts/breath_check.py` (Silero VAD) found the others.
+Takes now start just before the voice (word starts fixed in `transcript/phrases_large_fixed.json`,
+each new start re-transcribed to check the first word): 0:00 "On Wednesday", 2:22 "And then there's",
+2:36 "If you're considering", 3:39 "So their tax bill", 4:23 "Some landlords", 4:42 "It works well",
+5:10 "Then there's capital gains tax", 5:28 "To put that in pounds", 5:46 "Some form", 6:05 "The Bank
+of England", 6:29 "First, run each property". Reels 1, 2 and 4 share three of these joins; Reels 3 and
+5 had none, so they stay v2. Running time 8:34 → about 8:28.
