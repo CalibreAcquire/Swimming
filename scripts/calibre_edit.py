@@ -85,7 +85,7 @@ OUTROS = os.path.join(REPO, "brand", "outros")
 OUTRO_LUFS = -14.0  # the outros arrive at about -8.6 LUFS, peaking at 0 dBFS
 
 
-def outro_clip(fmt):
+def outro_clip(fmt, fps=FPS):
     """Jake's outro for this format, scaled to the output size at FPS with its audio at
     OUTRO_LUFS (a plain gain, so the sting keeps its shape). Cached in brand/outros/cache."""
     info = json.load(open(os.path.join(OUTROS, "outros.json")))[fmt]
@@ -94,7 +94,7 @@ def outro_clip(fmt):
         run(["curl", "-sSL", "-o", src,
              f"https://drive.usercontent.google.com/download?id={info['drive_id']}&export=download&confirm=t"])
     F = FORMATS[fmt]
-    out = os.path.join(OUTROS, "cache", f"{fmt}_{F['W']}x{F['H']}_{FPS}.mp4")
+    out = os.path.join(OUTROS, "cache", f"{fmt}_{F['W']}x{F['H']}_{fps}.mp4")
     if os.path.exists(out) and os.path.getmtime(out) > os.path.getmtime(src):
         return out
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -102,7 +102,7 @@ def outro_clip(fmt):
                           capture_output=True, text=True).stderr
     lufs = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", meas)[-1])
     run(["ffmpeg", "-v", "error", "-y", "-i", src,
-         "-vf", f"scale={F['W']}:{F['H']}:flags=lanczos,fps={FPS},setsar=1,format=yuv420p",
+         "-vf", f"scale={F['W']}:{F['H']}:flags=lanczos,fps={fps},setsar=1,format=yuv420p",
          "-af", f"volume={OUTRO_LUFS - lufs:.2f}dB,aresample={SR},aformat=channel_layouts=stereo",
          "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-c:a", "pcm_s16le", out])
     return out
