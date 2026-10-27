@@ -7,7 +7,7 @@ Portrait only (Jake, 27 Oct): no YouTube long-form version.
 
 Files (all named `2026-10-27_64-high-street-brentwood_…`):
 - Reel / Short: `exports/_reel_v1.mp4` (0:53 + outro, 9:16)
-- Cover: `thumbnails/_reel-cover_v1.jpg`
+- Cover: `thumbnails/_reel-cover-A_v1.jpg`
 
 ---
 
@@ -22,7 +22,7 @@ Comment BRENTWOOD and we'll send you the full pack: price, rent, yield and floor
 
 #Brentwood #Essex #PropertyForSale #CommercialProperty #PropertyInvestment #Freehold #calibreacquire
 ```
-Cover: Edit cover > add from camera roll > `_reel-cover_v1.jpg`.
+Cover: Edit cover > add from camera roll > `_reel-cover-A_v1.jpg`.
 
 ## YouTube Short (same file)
 Title: `64 High Street, Brentwood: freehold, three restaurants, all let`

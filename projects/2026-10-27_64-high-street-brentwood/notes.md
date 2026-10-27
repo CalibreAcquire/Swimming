@@ -43,3 +43,4 @@ Jake approved v1 as the final ("This is fine, give me the final version"). Cover
 soft dark band behind the text. Posting Fri 30 Oct 09:40 UK. Caption leaves out Lee's "fully
 repairing and insuring" (not in the brochure; lease terms are "available on request").
 Caption changed to a teaser (Jake, 27 Oct): no price, rent or yield; comment BRENTWOOD for the full pack. Diary event and Drive pack updated.
+Cover: Jake chose A (golden-hour walk-up, premium layout from edl/make_covers.py), 27 Oct. The first plain cover (_reel-cover_v1.jpg) is not used.
