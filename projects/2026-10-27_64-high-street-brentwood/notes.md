@@ -36,3 +36,9 @@ font, not too big, middle of the screen. He may add voiceover later.
 - "There wasn't any sound." Checked the export: AAC stereo 48 kHz, sound throughout (−14.1 LUFS; the
   first 5 s are music and street sound only, speech from 0:06; a transcription of the export reads the
   Q&A back correctly; mono fold-down fine). Asked Jake to check the player's mute / the phone's silent switch.
+
+## Final (27 Oct)
+Jake approved v1 as the final ("This is fine, give me the final version"). Cover: Las Tapas frontage,
+"64 High Street / Brentwood" and "Freehold · three restaurants · all let" in the plain listing style,
+soft dark band behind the text. Posting Fri 30 Oct 09:40 UK. Caption leaves out Lee's "fully
+repairing and insuring" (not in the brochure; lease terms are "available on request").
