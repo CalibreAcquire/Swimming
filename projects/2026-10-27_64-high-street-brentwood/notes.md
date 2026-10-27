@@ -42,3 +42,4 @@ Jake approved v1 as the final ("This is fine, give me the final version"). Cover
 "64 High Street / Brentwood" and "Freehold · three restaurants · all let" in the plain listing style,
 soft dark band behind the text. Posting Fri 30 Oct 09:40 UK. Caption leaves out Lee's "fully
 repairing and insuring" (not in the brochure; lease terms are "available on request").
+Caption changed to a teaser (Jake, 27 Oct): no price, rent or yield; comment BRENTWOOD for the full pack. Diary event and Drive pack updated.

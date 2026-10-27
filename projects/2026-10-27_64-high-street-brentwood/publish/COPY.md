@@ -12,16 +12,13 @@ Files (all named `2026-10-27_64-high-street-brentwood_…`):
 ---
 
 ## Instagram reel
+Teaser caption (Jake, 27 Oct): hold the numbers back; the full pack goes to people who comment BRENTWOOD.
 ```
 64 High Street, Brentwood. Now available for sale.
 
-- Freehold, three restaurant units, all let
-- Passing rent £57,400 a year
-- Offers in the region of £700,000, an 8.20% gross yield
-- No residential element
-- Brentwood town centre, on the corner of High Street and South Street, about 10 minutes' walk from the Elizabeth line
+A freehold restaurant investment in Brentwood town centre. Three units, all let.
 
-To receive the investment summary or arrange a viewing, apply to join the list: calibreacquire.co.uk/register
+Comment BRENTWOOD and we'll send you the full pack: price, rent, yield and floor plans.
 
 #Brentwood #Essex #PropertyForSale #CommercialProperty #PropertyInvestment #Freehold #calibreacquire
 ```
@@ -29,5 +26,6 @@ Cover: Edit cover > add from camera roll > `_reel-cover_v1.jpg`.
 
 ## YouTube Short (same file)
 Title: `64 High Street, Brentwood: freehold, three restaurants, all let`
-Description: `Offers in the region of £700,000. £57,400 a year, 8.20% gross yield. To receive the investment summary, apply to join the list: calibreacquire.co.uk/register`
+Description: `A freehold restaurant investment in Brentwood town centre. Three units, all let. For the full pack (price, rent, yield and floor plans), apply to join the list: calibreacquire.co.uk/register`
 Thumbnail: the cover file (desktop Studio > Content > Shorts > edit > Thumbnail > Upload).
+YouTube has no comment-keyword reply, so the Short points to the register page instead.
