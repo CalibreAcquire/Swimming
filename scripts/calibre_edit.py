@@ -36,6 +36,8 @@ Edit file keys (times are SOURCE seconds unless noted):
   audio                      {"preset": "basic"|"clean"|"studio"|"deep"|"full", "pitch": semitones}
                              voice processing, see voice.py
   music                      {"track": id from brand/music/library.json, "start": s, "bed": LUFS, "duck": ratio}
+  outro                      true (default) appends Jake's outro for the format (brand/outros: YouTube
+                             outro on 16x9, reel/Short outro on 9x16); false leaves it off
 """
 import json, math, os, re, subprocess, sys, difflib, shutil, tempfile, wave
 from concurrent.futures import ThreadPoolExecutor
@@ -78,6 +80,32 @@ FONT_STYLES = {
 # white balance only, measured on the office wall (Jake chose look 1, 26 Oct 2026; looks/README.md).
 # Footage from another location needs its own measurement: set "grade" in that EDL.
 DEFAULT_GRADE = "colorchannelmixer=rr=0.973:bb=1.028"
+
+OUTROS = os.path.join(REPO, "brand", "outros")
+OUTRO_LUFS = -14.0  # the outros arrive at about -8.6 LUFS, peaking at 0 dBFS
+
+
+def outro_clip(fmt):
+    """Jake's outro for this format, scaled to the output size at FPS with its audio at
+    OUTRO_LUFS (a plain gain, so the sting keeps its shape). Cached in brand/outros/cache."""
+    info = json.load(open(os.path.join(OUTROS, "outros.json")))[fmt]
+    src = os.path.join(OUTROS, info["file"])
+    if not os.path.exists(src):
+        run(["curl", "-sSL", "-o", src,
+             f"https://drive.usercontent.google.com/download?id={info['drive_id']}&export=download&confirm=t"])
+    F = FORMATS[fmt]
+    out = os.path.join(OUTROS, "cache", f"{fmt}_{F['W']}x{F['H']}_{FPS}.mp4")
+    if os.path.exists(out) and os.path.getmtime(out) > os.path.getmtime(src):
+        return out
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    meas = subprocess.run(["ffmpeg", "-i", src, "-af", "ebur128", "-f", "null", "-"],
+                          capture_output=True, text=True).stderr
+    lufs = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", meas)[-1])
+    run(["ffmpeg", "-v", "error", "-y", "-i", src,
+         "-vf", f"scale={F['W']}:{F['H']}:flags=lanczos,fps={FPS},setsar=1,format=yuv420p",
+         "-af", f"volume={OUTRO_LUFS - lufs:.2f}dB,aresample={SR},aformat=channel_layouts=stereo",
+         "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-c:a", "pcm_s16le", out])
+    return out
 
 
 # ---------------------------------------------------------------- utilities
@@ -970,18 +998,27 @@ def render(edit_path, out, draft=False):
               f"[s][wm]overlay={W - wm - m}:{m}:enable='eq(0,{when()})'[a];"
               f"[a][cw]overlay=(W-w)/2:H-h-{m + 20}:enable='{when('black')}'[b];"
               f"[b][cb]overlay=(W-w)/2:H-h-{m + 20}:enable='{when('white')}'[v]")
+        maps, outro_in = ["-map", "[v]", "-map", "1:a"], []
+        if edit.cfg.get("outro", True):
+            o = 5 + len(broll_files)
+            D = edit.duration
+            fc += (f";[v]trim=duration={D:.3f},setpts=PTS-STARTPTS[vm];"
+                   f"[1:a]atrim=duration={D:.3f},asetpts=PTS-STARTPTS[am];"
+                   f"[vm][am][{o}:v][{o}:a]concat=n=2:v=1:a=1[vo][ao]")
+            maps, outro_in = ["-map", "[vo]", "-map", "[ao]"], ["-i", outro_clip(edit.fmt)]
         run(["ffmpeg", "-v", "error", "-y", "-i", base, "-i", audio,
              "-i", os.path.join(LOGOS, "monogram-white.png"),
              "-i", os.path.join(LOGOS, "monogram-white.png"),
              "-i", os.path.join(LOGOS, "monogram-black.png"),
-             *[x for f in broll_files for x in ("-i", f)],
-             "-filter_complex", fc, "-map", "[v]", "-map", "1:a",
+             *[x for f in broll_files for x in ("-i", f)], *outro_in,
+             "-filter_complex", fc, *maps,
              "-c:v", "libx264", "-preset", "veryfast" if draft else "slow", "-crf", "20" if draft else "17",
              "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "320k", "-ar", "48000",
              "-movflags", "+faststart", "-shortest", out])
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
-    print(f"rendered {out}  {edit.duration:.1f}s  {len(edit.segments)} segments")
+    print(f"rendered {out}  {edit.duration:.1f}s  {len(edit.segments)} segments"
+          + ("  + outro" if edit.cfg.get("outro", True) else ""))
 
 
 # ---------------------------------------------------------------- plan / stills

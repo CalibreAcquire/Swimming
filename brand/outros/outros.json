@@ -1,0 +1,5 @@
+{
+  "_note": "Jake's outros, added to the end of every video (27 Oct 2026). The .mp4 files are not in git; calibre_edit.py downloads them from Drive when missing.",
+  "16x9": {"file": "outro_youtube.mp4", "drive_id": "1Kz_y3FQmUqHHxO2kqW8XzetPoduhGZBR", "for": "YouTube / long form"},
+  "9x16": {"file": "outro_reel.mp4", "drive_id": "1pYiykWvn48xwsuFfns3uvlYdSNst-ULe", "for": "reels and Shorts"}
+}
