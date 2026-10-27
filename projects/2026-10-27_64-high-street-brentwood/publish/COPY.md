@@ -27,5 +27,9 @@ Cover: Edit cover > add from camera roll > `_reel-cover_v1.jpg`.
 ## YouTube Short (same file)
 Title: `64 High Street, Brentwood: freehold, three restaurants, all let`
 Description: `A freehold restaurant investment in Brentwood town centre. Three units, all let. For the full pack (price, rent, yield and floor plans), apply to join the list: calibreacquire.co.uk/register`
+Tags:
+```
+brentwood, brentwood essex, brentwood high street, essex property, commercial property for sale, freehold investment, restaurant investment, commercial property investment, investment property for sale, tenanted investment, property investment uk, property for sale essex, Calibre Acquire
+```
 Thumbnail: the cover file (desktop Studio > Content > Shorts > edit > Thumbnail > Upload).
 YouTube has no comment-keyword reply, so the Short points to the register page instead.
