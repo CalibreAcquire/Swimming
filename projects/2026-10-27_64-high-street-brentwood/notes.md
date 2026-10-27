@@ -30,3 +30,9 @@ font, not too big, middle of the screen. He may add voiceover later.
 
 ## QA v1
 −14.1 LUFS, −1.5 dBTP, music 21 dB under voice. 52.9 s + 4.6 s outro. Black only in the outro.
+
+## Jake's feedback on v1 (27 Oct)
+- "Let's just do portrait, don't worry about YouTube for this." No 16:9 version.
+- "There wasn't any sound." Checked the export: AAC stereo 48 kHz, sound throughout (−14.1 LUFS; the
+  first 5 s are music and street sound only, speech from 0:06; a transcription of the export reads the
+  Q&A back correctly; mono fold-down fine). Asked Jake to check the player's mute / the phone's silent switch.
