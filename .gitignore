@@ -14,3 +14,4 @@ brand/music/cache/
 *.mp3
 projects/*/exports/*.ass
 brand/outros/cache/
+*.part
