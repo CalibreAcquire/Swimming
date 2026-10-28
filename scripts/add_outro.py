@@ -64,7 +64,9 @@ def add(path):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", path, "-i", outro, "-filter_complex", fc,
                     "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-preset", "slow", "-crf", "16",
                     "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", str(fps_i),
-                    "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", out], check=True)
+                    "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-movflags", "+faststart", "-f", "mp4", out + ".part"],
+                   check=True)
+    os.replace(out + ".part", out)  # never leave a half-written export under the final name
     print(f"{out}  {probe(out)[3]:.1f}s (was {dur:.1f}s)")
     return out
 
