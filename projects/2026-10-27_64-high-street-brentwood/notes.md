@@ -52,3 +52,4 @@ the golden-hour walk-up, Las Tapas / the Italian / the Indian inside and out, pl
 "Comment BRENTWOOD for the full pack"). 20.6 s + outro. New listing_edit.py option `music_led`
 (ambience stays at its set level, no ducking). v1 had the side-on walk past another business's
 shopfront under "Now available for sale"; v2 drops that shot. −14.1 LUFS, −1.4 dBTP.
+v3 (28 Oct): Jake: the walk past Gail's was aesthetic and intentional. Shot restored with no text on it; 'Now available for sale' moved to the next shot. 22.0 s + outro, −14.0 LUFS.

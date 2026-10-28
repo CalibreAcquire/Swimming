@@ -53,11 +53,12 @@ shot(K + KIM[1], 2.0, 1.4)
 shot(K + KIM[10], 1.0, 1.4)
 line(a + 0.2, t - 0.1, "All let")
 shot(K + KIM[17], 1.0, 1.4)
-# back on the street
+# back on the street: the walk past the bakery is intentional (Jake); no "for sale" text over
+# another business's shopfront, so the line goes on the next shot
+shot(J + "IMG_6653.MOV", 2.2, 1.6, ambience=True)
 a = t
-# (not IMG_6653: it passes another business's shopfront, which would sit under "for sale")
-shot(J + "IMG_6655.MOV", 4.0, 2.6, ambience=True)
-line(a + 0.3, t - 0.1, "Now available for sale")
+shot(J + "IMG_6655.MOV", 4.2, 2.4, ambience=True)
+line(a + 0.15, t - 0.1, "Now available for sale")
 a = t
 shot(K + KIM[7], 5.0, 3.0, focus=[0.5, 0.6])
 line(a + 0.2, t, "Comment BRENTWOOD\\Nfor the full pack")
