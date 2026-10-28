@@ -6,7 +6,8 @@ brochure (64-High-Street-Brentwood-Brochure.pdf, October 2026), subject to contr
 Portrait only (Jake, 27 Oct): no YouTube long-form version.
 
 Files (all named `2026-10-27_64-high-street-brentwood_…`):
-- Reel / Short: `exports/_reel_v1.mp4` (0:53 + outro, 9:16)
+- Reel 1 / Short: `exports/_reel_v1.mp4` (0:53 + outro, 9:16), Q&A with Lee
+- Reel 2 / Short: `exports/_reel2-teaser_v3.mp4` (0:22 + outro), music-led teaser; same caption, tags and cover
 - Cover: `thumbnails/_reel-cover-A_v1.jpg`
 
 ---
