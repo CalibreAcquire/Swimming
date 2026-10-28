@@ -19,6 +19,8 @@ EDL keys (times in OUTPUT seconds unless noted; paths relative to the EDL):
   text          [{"from", "to", "text", "size": px (default 50), "y": 0-1 (default 0.5)}]
                   "\\N" breaks a line; captions and titles both use this
   music         {"track", "start", "bed", "duck"}  as voice.mix_music
+  music_led     true for a reel without speech: the audio clips stay at their set gains (ambience)
+                and the music isn't ducked; the mix is still mastered to -14 LUFS
   grade         ffmpeg filter for colour (default none: location footage keeps its own colour)
   outro         true (default): Jake's outro for the format, from brand/outros
 """
@@ -124,6 +126,10 @@ def render_audio(edl, base, tmp, total):
     lay = os.path.join(tmp, "laid.wav")
     run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", ";".join(fc), "-map", "[m]",
          "-ar", str(SR), lay])
+    if edl.get("music_led"):  # no speech: keep the ambience where it was laid, music on top, no ducking
+        mixed = os.path.join(tmp, "mix.wav")
+        voice.mix_music(lay, mixed, dict(edl["music"], duck=1))
+        return mixed
     vo = os.path.join(tmp, "voice.wav")
     voice.loudnorm(lay, vo, "acompressor=threshold=-22dB:ratio=2.5:attack=8:release=160:makeup=2")
     if edl.get("music"):

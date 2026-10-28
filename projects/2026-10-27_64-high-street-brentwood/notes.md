@@ -44,3 +44,11 @@ soft dark band behind the text. Posting Fri 30 Oct 09:40 UK. Caption leaves out 
 repairing and insuring" (not in the brochure; lease terms are "available on request").
 Caption changed to a teaser (Jake, 27 Oct): no price, rent or yield; comment BRENTWOOD for the full pack. Diary event and Drive pack updated.
 Cover: Jake chose A (golden-hour walk-up, premium layout from edl/make_covers.py), 27 Oct. The first plain cover (_reel-cover_v1.jpg) is not used.
+
+## Reel 2: teaser (28 Oct)
+Jake asked for another version. Built a music-led teaser (edl/build_reel2.py, edl/reel2.json): no Q&A,
+the golden-hour walk-up, Las Tapas / the Italian / the Indian inside and out, plain centred lines
+("A freehold restaurant investment", "Three restaurants", "All let", "Now available for sale",
+"Comment BRENTWOOD for the full pack"). 20.6 s + outro. New listing_edit.py option `music_led`
+(ambience stays at its set level, no ducking). v1 had the side-on walk past another business's
+shopfront under "Now available for sale"; v2 drops that shot. −14.1 LUFS, −1.4 dBTP.

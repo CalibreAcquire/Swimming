@@ -1,0 +1,148 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../raw/jake/IMG_6655.MOV",
+   "in": 0.5,
+   "dur": 2.2,
+   "move": "push"
+  },
+  {
+   "file": "../raw/jake/IMG_6648.MOV",
+   "in": 0.8,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/exterior_shop3_static1.mp4",
+   "in": 2.0,
+   "dur": 1.5,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.6
+   ]
+  },
+  {
+   "file": "../raw/kim/internal_shop3_1.MP4",
+   "in": 2.0,
+   "dur": 1.5,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/internal_shop3_DJI_20261020_112220_135_video.MP4",
+   "in": 3.0,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/exterior_shop2_DJI_20261020_120305_618_video.MP4",
+   "in": 1.5,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/internal_shop2_DJI_20261020_110152_513_video.MP4",
+   "in": 2.0,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/exterior_shop1_stable1.mp4",
+   "in": 2.0,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/internal_shop1_IMG_3531.MOV",
+   "in": 1.0,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/internal_shop3_IMG_3549.MOV",
+   "in": 1.0,
+   "dur": 1.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/jake/IMG_6655.MOV",
+   "in": 4.0,
+   "dur": 2.6,
+   "move": "push"
+  },
+  {
+   "file": "../raw/kim/exterior_shop3_static2.mp4",
+   "in": 5.0,
+   "dur": 3.0,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.6
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "file": "../raw/jake/IMG_6655.MOV",
+   "a": 0.5,
+   "b": 2.7,
+   "at": 0.0,
+   "gain": -9.9
+  },
+  {
+   "file": "../raw/jake/IMG_6648.MOV",
+   "a": 0.8,
+   "b": 2.2,
+   "at": 2.2,
+   "gain": -2.4
+  },
+  {
+   "file": "../raw/jake/IMG_6655.MOV",
+   "a": 4.0,
+   "b": 6.6,
+   "at": 15.0,
+   "gain": -9.4
+  }
+ ],
+ "text": [
+  {
+   "from": 0.3,
+   "to": 2.1,
+   "text": "64 High Street\\NBrentwood"
+  },
+  {
+   "from": 5.3,
+   "to": 7.9,
+   "text": "A freehold restaurant investment"
+  },
+  {
+   "from": 8.2,
+   "to": 10.7,
+   "text": "Three restaurants"
+  },
+  {
+   "from": 11.0,
+   "to": 13.5,
+   "text": "All let"
+  },
+  {
+   "from": 15.3,
+   "to": 17.5,
+   "text": "Now available for sale"
+  },
+  {
+   "from": 17.8,
+   "to": 20.6,
+   "text": "Comment BRENTWOOD\\Nfor the full pack"
+  }
+ ],
+ "music": {
+  "track": 770,
+  "start": 20,
+  "bed": -27
+ },
+ "music_led": true,
+ "outro": true
+}
