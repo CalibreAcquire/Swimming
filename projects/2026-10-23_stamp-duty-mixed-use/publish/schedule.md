@@ -14,3 +14,5 @@ events carry a check: if the Budget changes stamp duty rates, hold the post and 
 monday.com item 3305374498.
 
 Google Drive: YouTube › Edited › Stamp duty on mixed-use (folder 1G93VW70sCPiAW9k4IL4-KgJzsyLzjIVj, Reels 1cW4eRrYTgt8UvKllv2ZkJjsyFogWfK9M). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

@@ -13,3 +13,5 @@ monday.com item 3313493528.
 
 Google Drive: New Listings › 64 High St, Brentwood (1BsjNCwgIMIQsITK439y56S0wAlbWTE0Z): publish pack as a
 Google Doc with the teaser caption, tags and cover A (1xgJBjwdiJBoOWjTD26hyEtsPnOM3wf7PXXBR9H_ZU6E); the previous version is renamed "OLD – don't use". Jake adds the video and cover.
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

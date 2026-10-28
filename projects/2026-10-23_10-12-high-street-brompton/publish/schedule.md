@@ -13,3 +13,5 @@ to paste. Times are UK time (Dubai is UK + 4 h). Listing launches quickly; slots
 monday.com: Content & Filming (Master) item 3305252775 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3305252775).
 
 Google Drive: YouTube › New Listings › 10-12 High Street, Brompton (folder 1ZYZt9Zo_JMGNfyZSeia9kLQLpAilYFcT). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

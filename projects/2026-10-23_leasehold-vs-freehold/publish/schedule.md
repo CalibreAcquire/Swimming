@@ -13,3 +13,5 @@ Tue/Thu/Sat slots, clear of the 17 and 24 Nov filming sessions.
 | Thu 26 Nov 11:40 | Reel 4 + Short 4: Freehold isn't automatically better | `_reel4-not-automatically-better_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_ZAptgAA |
 
 monday.com: Content & Filming (Master) item 3304694673 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3304694673).
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

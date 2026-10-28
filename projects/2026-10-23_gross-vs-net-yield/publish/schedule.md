@@ -15,3 +15,5 @@ launch event asks Jake to check that Brompton is still for sale (the video says 
 monday.com item 3305366116.
 
 Google Drive: YouTube › Edited › Gross yield vs net yield (folder 1nBpt4Xx-oc4H_BJjFZXAqUqPoL6zq2hG, Reels 1tVdxHremRduSSavcp-vNizG1U6WiBvvL). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

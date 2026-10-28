@@ -21,3 +21,5 @@ timing fix (captions briefly overlapped). Both events now name the v2 files. Ree
 already on Instagram; it's a ~0.15 s overlap, not worth re-posting.
 
 monday.com: Content & Filming (Master) item 3219062138 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219062138).
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

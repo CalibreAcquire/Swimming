@@ -13,3 +13,5 @@ shoots and calls, the Craig posts (30 Oct, 3 Nov, 7 Nov), the BoE video (6 Nov),
 | Sat 14 Nov 10:40 | Reel 4 + Short 4: Who would buy it later? | `_reel4-exit-strategy_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_X-2awAA |
 
 monday.com: Content & Filming (Master) item 3219062109 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219062109).
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.

@@ -14,3 +14,5 @@ his shoots, calls and the 6 Nov BoE video.
 Moved on 22 Oct from 12, 14 and 20 Nov after Jake said he's fine to upload from Dubai.
 
 monday.com: Content & Filming (Master) item 3219054484 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219054484).
+
+TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
