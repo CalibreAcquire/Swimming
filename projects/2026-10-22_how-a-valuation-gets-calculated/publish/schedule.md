@@ -23,3 +23,5 @@ already on Instagram; it's a ~0.15 s overlap, not worth re-posting.
 monday.com: Content & Filming (Master) item 3219062138 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219062138).
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): reel2 is now `_reel2-what-sets-the-value_v2.mp4` (ends on the outro). TikTok catch-up events: Reel 1 `_reel1-not-a-guess_v3.mp4` Thu 29 Oct 07:45 (AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC-SzvWAAA), Reel 4 `_reel4-overpaying_v2.mp4` Mon 2 Nov 11:55 (...-SzvXgAA), Reel 3 `_reel3-deal-calculators_v3.mp4` Fri 6 Nov 11:55 (...-SzvYAAA).

@@ -15,3 +15,5 @@ monday.com: Content & Filming (Master) item 3305252775 (https://calibreacquire-t
 Google Drive: YouTube › New Listings › 10-12 High Street, Brompton (folder 1ZYZt9Zo_JMGNfyZSeia9kLQLpAilYFcT). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): `_reel2-the-building_v5.mp4`, `_reel3-the-numbers_v6.mp4`. TikTok catch-up: Reel 1 `_reel1-the-deal_v4.mp4` Sat 31 Oct 10:55 (AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC-SzvWgAA).

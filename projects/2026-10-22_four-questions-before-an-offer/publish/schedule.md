@@ -15,3 +15,5 @@ shoots and calls, the Craig posts (30 Oct, 3 Nov, 7 Nov), the BoE video (6 Nov),
 monday.com: Content & Filming (Master) item 3219062109 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219062109).
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): all files are now v2 (end on the outro); the v1 .srt still lines up. Events updated.

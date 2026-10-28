@@ -15,3 +15,5 @@ Tue/Thu/Sat slots, clear of the 17 and 24 Nov filming sessions.
 monday.com: Content & Filming (Master) item 3304694673 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3304694673).
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): all files are now v2 (end on the outro); the v1 .srt still lines up. Events updated.

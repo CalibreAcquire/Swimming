@@ -20,3 +20,5 @@ Google Drive: YouTube › Edited › Budget week: confirmed vs rumour (folder 1p
 Drive subtitles now `_youtube_v4.srt` (148n5W_-WiPNZ_xhq8iKXGnOGKm2keBYI). The old subtitles and the first (broken) publish pack were binned on 26 Oct with Jake's OK.
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): `_reel2-the-real-rate_v5.mp4`, `_reel5-making-tax-digital_v4.mp4`. TikTok before the Budget speech, Wed 28 Oct 10:50 (AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC-SzvBAAA): `_reel1-already-law_v5.mp4`, `_reel3-exchange-not-completion_v4.mp4`, `_reel4-capital-gains_v5.mp4` (skip if past 12:30).

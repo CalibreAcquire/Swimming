@@ -16,3 +16,5 @@ Moved on 22 Oct from 12, 14 and 20 Nov after Jake said he's fine to upload from 
 monday.com: Content & Filming (Master) item 3219054484 (https://calibreacquire-team.monday.com/boards/5104004037/pulses/3219054484).
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): all files are now v2 (end on the outro): `_youtube_v2.mp4` (the v1 .srt still lines up), `_reel1-sold-in-weeks_v2.mp4`, `_reel2-phone-to-ring_v2.mp4`, `_reel3-database-first_v2.mp4`. Events updated.

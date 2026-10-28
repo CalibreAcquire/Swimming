@@ -16,3 +16,5 @@ monday.com item 3305374498.
 Google Drive: YouTube › Edited › Stamp duty on mixed-use (folder 1G93VW70sCPiAW9k4IL4-KgJzsyLzjIVj, Reels 1cW4eRrYTgt8UvKllv2ZkJjsyFogWfK9M). Uploaded 23 Oct: subtitles (.srt) and the publish pack as a Google Doc. Videos and images are added by Jake.
 
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
+
+Outros (28 Oct 2026): `_reel2-genuine-commercial_v3.mp4`, `_reel3-full-cost_v3.mp4`. TikTok catch-up: Reel 1 `_reel1-74k-difference_v3.mp4` Sun 1 Nov 11:55 (AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC-SzvXAAA).
