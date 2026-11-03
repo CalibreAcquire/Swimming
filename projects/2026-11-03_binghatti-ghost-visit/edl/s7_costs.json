@@ -37,9 +37,15 @@
    ]
   },
   {
+   "file": "../raw/IMG_0076.MOV",
+   "in": 5.2,
+   "dur": 2.2,
+   "move": "none"
+  },
+  {
    "file": "../raw/IMG_0080.MOV",
-   "in": 13.0,
-   "dur": 3.4,
+   "in": 10.0,
+   "dur": 6.8,
    "move": "push",
    "focus": [
     0.5,
@@ -77,11 +83,18 @@
    "gain": 3.9
   },
   {
-   "file": "../raw/IMG_0080.MOV",
-   "a": 13.0,
-   "b": 16.4,
+   "file": "../raw/IMG_0076.MOV",
+   "a": 5.2,
+   "b": 7.4,
    "at": 11.5,
-   "gain": -9.4
+   "gain": -4.8
+  },
+  {
+   "file": "../raw/IMG_0080.MOV",
+   "a": 10.0,
+   "b": 16.8,
+   "at": 13.7,
+   "gain": -8.6
   }
  ],
  "text": [
@@ -106,8 +119,8 @@
    "text": "5% VAT on\\Ncommercial units"
   },
   {
-   "from": 11.7,
-   "to": 14.9,
+   "from": 14.7,
+   "to": 20.5,
    "text": "Comment DUBAI\\Nfor the full cost breakdown",
    "y": 0.3
   }

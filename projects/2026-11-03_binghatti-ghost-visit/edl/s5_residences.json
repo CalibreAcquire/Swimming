@@ -9,8 +9,8 @@
    "move": "push"
   },
   {
-   "file": "../raw/IMG_0076.MOV",
-   "in": 4.6,
+   "file": "../raw/IMG_0073.MOV",
+   "in": 5.0,
    "dur": 2.0,
    "move": "push"
   },
@@ -61,9 +61,15 @@
    ]
   },
   {
+   "file": "../raw/IMG_0076.MOV",
+   "in": 5.2,
+   "dur": 2.2,
+   "move": "none"
+  },
+  {
    "file": "../raw/IMG_0080.MOV",
-   "in": 13.0,
-   "dur": 3.4,
+   "in": 10.0,
+   "dur": 6.8,
    "move": "push",
    "focus": [
     0.5,
@@ -80,11 +86,11 @@
    "gain": -8.2
   },
   {
-   "file": "../raw/IMG_0076.MOV",
-   "a": 4.6,
-   "b": 6.6,
+   "file": "../raw/IMG_0073.MOV",
+   "a": 5.0,
+   "b": 7.0,
    "at": 2.4,
-   "gain": -4.8
+   "gain": -3.3
   },
   {
    "file": "../raw/IMG_0071.MOV",
@@ -136,11 +142,18 @@
    "gain": 8.2
   },
   {
-   "file": "../raw/IMG_0080.MOV",
-   "a": 13.0,
-   "b": 16.4,
+   "file": "../raw/IMG_0076.MOV",
+   "a": 5.2,
+   "b": 7.4,
    "at": 19.6,
-   "gain": -9.4
+   "gain": -4.8
+  },
+  {
+   "file": "../raw/IMG_0080.MOV",
+   "a": 10.0,
+   "b": 16.8,
+   "at": 21.8,
+   "gain": -8.6
   }
  ],
  "text": [
@@ -165,8 +178,8 @@
    "text": "From AED 799,999\\Nabout £162,500"
   },
   {
-   "from": 19.8,
-   "to": 23.0,
+   "from": 22.8,
+   "to": 28.6,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

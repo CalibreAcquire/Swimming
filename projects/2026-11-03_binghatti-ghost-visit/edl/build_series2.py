@@ -62,20 +62,21 @@ TOWER = {"focus": [0.5, 0.35]}
 NIGHT, SUNSET, BURJ = "spectre_render_night.png", "spectre_render_sunset.png", "spectre_render_burj.png"
 
 
-def end(r, s=CTA):  # Jake walking out of the entrance towards camera
+def end(r, s=CTA):
+    """Jake walking out of the development: from behind through the lobby doors (0076), cut on the
+    doorway to the head-on shot (0080) of him stepping out and walking to camera (Jake, 3 Nov)."""
+    r.shot("IMG_0076.MOV", 5.2, 2.2, move="none")
     a = r.t
-    r.shot("IMG_0080.MOV", 13.0, 3.4, focus=[0.5, 0.5])
-    r.line(a + 0.2, r.t, s, y=0.3)
+    r.shot("IMG_0080.MOV", 10.0, 6.8, focus=[0.5, 0.5])
+    r.line(a + 1.0, r.t, s, y=0.3)
 
 
 # 2. The view (teaser), more of the visit
 r = Reel()
 r.say("The view\\NBinghatti, Al Jaddaf", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0055.MOV", 0.4, 2.0))
-r.shot("IMG_0076.MOV", 4.6, 2.0).shot("IMG_0073.MOV", 0.6, 2.0).shot("IMG_0072.MOV", 4.8, 2.0)
+r.shot("IMG_0074.MOV", 0.2, 2.0).shot("IMG_0073.MOV", 0.6, 2.0).shot("IMG_0072.MOV", 4.8, 2.0)
 r.say("10 Binghatti developments\\Nin Al Jaddaf", ("IMG_0068.MOV", 0.2, 2.6), ("IMG_0065.MOV", 3.4, 2.4, F), y=0.37)
-a = r.t
-r.shot("IMG_0069.MOV", 0.2, 3.2, focus=[0.45, 0.5])
-r.line(a + 0.2, r.t, CTA, y=0.37)
+end(r)
 r.save("s2_view", 609, 35)
 
 # 3. Retail: shops below two towers
@@ -93,14 +94,14 @@ r = Reel()
 r.say("The offices at\\NBinghatti Spectre", (NIGHT, 0, 2.6, {"zoom": 1.1, "focus": [0.6, 0.45]}))
 r.say("705 to 4,018 sq ft", ("IMG_0072.MOV", 4.6, 2.4), ("IMG_0077.MOV", 7.6, 2.0, {"focus": [0.5, 0.5]}))
 r.say("128 of 230 sold\\Nsince the September launch", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_0073.MOV", 5.0, 2.2))
-r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_0076.MOV", 4.6, 2.2), ("IMG_0074.MOV", 0.2, 2.2))  # communal areas, not a flat
+r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_0078.MOV", 1.5, 2.2), ("IMG_0074.MOV", 0.2, 2.2))  # communal areas, not a flat
 r.say("Handover\\NDecember 2028", (BURJ, 0, 2.6, {"focus": [0.66, 0.5]}))
 end(r)
 r.save("s4_offices", 744, 75)
 
 # 5. Ghost residences: plenty of the apartment
 r = Reel()
-r.say("Binghatti in Al Jaddaf\\NThe residences", ("IMG_0078.MOV", 0.5, 2.4), ("IMG_0076.MOV", 4.6, 2.0))
+r.say("Binghatti in Al Jaddaf\\NThe residences", ("IMG_0078.MOV", 0.5, 2.4), ("IMG_0073.MOV", 5.0, 2.0))
 r.say("Studio to\\Nthree-bedroom apartments", ("IMG_0071.MOV", 1.0, 2.4), ("IMG_0070.MOV", 0.3, 2.0))
 r.say("Freehold\\NReady now or handover by 2028", ("IMG_0060.MOV", 3.0, 2.2), ("IMG_0063.MOV", 0.2, 2.0), ("IMG_0064.MOV", 0.3, 1.8))
 r.say("From AED 799,999\\Nabout £162,500", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0065.MOV", 3.4, 2.2, F))
