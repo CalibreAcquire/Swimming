@@ -23,7 +23,14 @@ GRADE = "eq=contrast=1.06:saturation=0.94:gamma=0.98,colorbalance=rh=-0.02:bh=0.
 
 
 def frame(video, t, cx):
-    """9:16 crop of the source frame around x=cx, scaled to 1080x1920."""
+    """9:16 crop of the source frame around x=cx, scaled to 1080x1920. A still photo (.jpg/.png,
+    e.g. the property) works too: t is ignored and the photo keeps its own colour."""
+    if video.lower().endswith((".jpg", ".jpeg", ".png")):
+        img = Image.open(video).convert("RGB")
+        sw, sh = img.size
+        cw = sh * 9 / 16
+        x0 = min(max(0, cx - cw / 2), sw - cw)
+        return img.crop((round(x0), 0, round(x0 + cw), sh)).resize((W, H), Image.LANCZOS)
     out = tempfile.mktemp(suffix=".png")
     probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
                             "stream=width,height", "-of", "csv=p=0", video], capture_output=True, text=True)

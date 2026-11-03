@@ -8,8 +8,8 @@ his shoots, calls and the 6 Nov BoE video.
 | When | Post | File | Outlook event id |
 |------|------|------|------------------|
 | Fri 30 Oct 12:40 | YouTube video + Reel 1 + Short 1 + Story | `_youtube_v1.mp4`, `_reel1-sold-in-weeks_v1.mp4`, `_story_v1.png` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_C3O-gAA |
-| Tue 3 Nov 14:10 | Reel 2 + Short 2: Why your property isn't selling | `_reel2-phone-to-ring_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_C3PAQAA |
-| Sat 7 Nov 11:40 | Reel 3 + Short 3: Database first, then a full campaign | `_reel3-database-first_v1.mp4` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_C3PBAAA |
+| Tue 3 Nov 14:10 | Reel 2 + Short 2: Why your property isn't selling | `_reel2-phone-to-ring_v2.mp4`, cover `_reel2-cover_v2.jpg` (drone) | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_C3PAQAA |
+| Sat 7 Nov 11:40 | Reel 3 + Short 3: Database first, then a full campaign | `_reel3-database-first_v2.mp4`, cover `_reel3-cover_v2.jpg` (interior) | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC_C3PBAAA |
 
 Moved on 22 Oct from 12, 14 and 20 Nov after Jake said he's fine to upload from Dubai.
 
