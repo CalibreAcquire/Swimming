@@ -19,3 +19,9 @@ Jake: include the residential and commercial options; start with teasers, then m
 - 5 costs: 4% DLD, AED 4,200 + about AED 620, 5% VAT on commercial (one-page summary and Buyer Costs tab).
 - 6 Al Jaddaf (market report, 12 months to late Oct): apartment sales more than tripled, price per sq ft up 22%, studio rent AED 48,723 average.
 Script changes: `listing_edit.py` takes stills (png/jpg loop for the shot) and frames a landscape source on its focus point (the first crop was centred, so renders lost the towers; v1 and v2 of reel 4 had it). QA: all −14.0 to −14.4 LUFS, peaks −1.6 to −2.1 dBTP (reel 6 re-limited, track 175 again). Every text frame checked.
+
+## 3 Nov, evening: second pass with all the footage
+I had only listed the first page of the Drive folder (5 clips); the folder holds 25 clips and 5 photos (each uploaded twice). All downloaded to raw/ (one copy each): entrance, lobby, concierge, lifts, kitchen, living, bedrooms, bathrooms, gardens, neighbouring towers.
+Jake: emphasis on the shops and offices as an investment; include towers, flats, residents, shops directly below. Spectre Project Facts: 4B + G + 3P + 26 floors, Tower A 508 apartments, Tower B 204 apartments + 235 offices, 19 ground-floor shops (712 apartments). Residents: our estimate 1,472 (1.5/2/3/4 per studio/1/2/3 bed), shown as "around 1,500" and flagged in the reminder. The live feed says 230 offices (128 sold, 102 left), so the offices reel says "128 sold since the September launch" rather than a total.
+Rebuilt reels 2 to 7 (`edl/build_series2.py`). Commercial figures sit over Spectre renders or communal areas, never over an apartment (v1 of reels 3 and 4 had the office price over a bedroom and the shop count over the Ghost entrance). Every reel ends on Jake walking out of the Ghost entrance with the CTA.
+QA: −14.0 to −14.4 LUFS, peaks −1.8 to −4.1 dBTP (all re-limited). Every text frame checked.

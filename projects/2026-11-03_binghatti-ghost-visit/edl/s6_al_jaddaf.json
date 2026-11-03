@@ -1,0 +1,139 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../raw/IMG_0081.MOV",
+   "in": 0.3,
+   "dur": 3.0,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "in": 1.2,
+   "dur": 2.6,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../work/spectre_render_burj.png",
+   "in": 0,
+   "dur": 2.6,
+   "move": "push",
+   "focus": [
+    0.66,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_0082.MOV",
+   "in": 0.4,
+   "dur": 2.8,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "file": "../raw/IMG_0078.MOV",
+   "in": 1.5,
+   "dur": 2.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0080.MOV",
+   "in": 13.0,
+   "dur": 3.4,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "file": "../raw/IMG_0081.MOV",
+   "a": 0.3,
+   "b": 3.3,
+   "at": 0.0,
+   "gain": -8.1
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "a": 1.2,
+   "b": 3.8,
+   "at": 3.0,
+   "gain": -12.1
+  },
+  {
+   "file": "../raw/IMG_0082.MOV",
+   "a": 0.4,
+   "b": 3.1999999999999997,
+   "at": 8.2,
+   "gain": -11.7
+  },
+  {
+   "file": "../raw/IMG_0078.MOV",
+   "a": 1.5,
+   "b": 3.9,
+   "at": 11.0,
+   "gain": -9.5
+  },
+  {
+   "file": "../raw/IMG_0080.MOV",
+   "a": 13.0,
+   "b": 16.4,
+   "at": 13.4,
+   "gain": -9.4
+  }
+ ],
+ "text": [
+  {
+   "from": 0.2,
+   "to": 2.9,
+   "text": "Al Jaddaf, Dubai\\NThe last 12 months"
+  },
+  {
+   "from": 3.2,
+   "to": 5.5,
+   "text": "Shop rents\\Nup 17% to 20%"
+  },
+  {
+   "from": 5.8,
+   "to": 8.1,
+   "text": "Shops let at about\\NAED 173 per sq ft a year"
+  },
+  {
+   "from": 8.4,
+   "to": 10.9,
+   "text": "Apartment sales\\Nmore than tripled"
+  },
+  {
+   "from": 11.2,
+   "to": 13.3,
+   "text": "Price per sq ft\\Nup 22%"
+  },
+  {
+   "from": 13.6,
+   "to": 16.8,
+   "text": "Comment DUBAI\\Nfor prices and availability",
+   "y": 0.3
+  }
+ ],
+ "music": {
+  "track": 132,
+  "start": 30,
+  "bed": -27
+ },
+ "music_led": true,
+ "outro": true
+}

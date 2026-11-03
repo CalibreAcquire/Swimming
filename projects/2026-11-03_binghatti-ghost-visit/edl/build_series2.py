@@ -1,0 +1,126 @@
+"""Dubai series, second pass (Jake, 3 Nov: lots of residential footage is fine, but the emphasis and
+information should be on the shops and offices as an investment; use all the clips in Drive; include how
+many towers, flats and residents, with the shops directly below).
+
+  2 the view (teaser, v2)   more of the visit: entrance, lobby, lifts, the apartment, the view
+  3 retail                  Spectre: 2 towers, 712 apartments, 235 offices, ~1,500 residents, 19 shops below
+  4 offices                 Spectre offices: sizes, 128 of 230 sold, from AED 1,864,999, handover Dec 2028
+  5 residences              Ghost: studio to 3 bed, freehold, ready, studios from AED 1,162,500
+  6 al jaddaf               shop rents up 17-20%, AED 173 per sq ft; sales more than tripled; price per sq ft +22%
+  7 costs                   what a buyer pays on top
+
+Sources (Drive › Binghatti – Investor Data): Spectre Project Facts (towers and unit counts), the one-page
+summary and live feed (22 Oct 2026), the Al Jaddaf and JVC market report (26 Oct 2026), the 2026 DLD extract.
+Residents: an estimate from the unit mix (1.5 per studio, 2 per 1 bed, 3 per 2 bed, 4 per 3 bed = 1,472).
+Run from the project folder: python3 edl/build_series2.py
+"""
+import json, os, re, subprocess
+
+R, W = "../raw/", "../work/"
+STILL = (".png", ".jpg", ".JPG")
+
+
+class Reel:
+    def __init__(self):
+        self.shots, self.audio, self.text, self.t = [], [], [], 0.0
+
+    def shot(self, file, src_in, dur, **kw):
+        still = file.endswith(STILL)
+        path = (W if file.startswith("spectre") else R) + file
+        if not still:  # room/street sound low under the music (map 0:a:0: spatial audio)
+            r = subprocess.run(["ffmpeg", "-ss", str(src_in), "-t", str(dur), "-i", os.path.join("edl", path),
+                                "-map", "0:a:0", "-af", "ebur128=framelog=quiet", "-f", "null", "-"],
+                               capture_output=True, text=True)
+            lufs = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)[-1])
+            self.audio.append(dict(file=path, a=src_in, b=src_in + dur, at=round(self.t, 3), gain=round(-40 - lufs, 2)))
+        self.shots.append(dict(file=path, **{"in": src_in}, dur=dur, move=kw.pop("move", "push"), **kw))
+        self.t += dur
+        return self
+
+    def line(self, a, b, s, **kw):
+        self.text.append(dict(**{"from": round(a, 2), "to": round(b, 2)}, text=s, **kw))
+
+    def say(self, s, *shots, y=None):
+        """Shots back to back with one line across them."""
+        a = self.t
+        for sh in shots:
+            self.shot(*sh[:3], **(sh[3] if len(sh) > 3 else {}))
+        self.line(a + 0.2, self.t - 0.1, s, **({"y": y} if y else {}))
+        return self
+
+    def save(self, name, track, start):
+        edl = dict(format="9x16", fps=30, shots=self.shots, audio=self.audio, text=self.text,
+                   music={"track": track, "start": start, "bed": -27}, music_led=True, outro=True)
+        json.dump(edl, open(f"edl/{name}.json", "w"), indent=1, ensure_ascii=False)
+        print(f"{name}: {len(self.shots)} shots, {self.t:.1f}s + outro")
+
+
+CTA = "Comment DUBAI\\Nfor prices and availability"
+F = {"focus": [0.5, 0.4]}
+TOWER = {"focus": [0.5, 0.35]}
+NIGHT, SUNSET, BURJ = "spectre_render_night.png", "spectre_render_sunset.png", "spectre_render_burj.png"
+
+
+def end(r, s=CTA):  # Jake walking out of the entrance towards camera
+    a = r.t
+    r.shot("IMG_0080.MOV", 13.0, 3.4, focus=[0.5, 0.5])
+    r.line(a + 0.2, r.t, s, y=0.3)
+
+
+# 2. The view (teaser), more of the visit
+r = Reel()
+r.say("The view from\\NBinghatti Ghost", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0055.MOV", 0.4, 2.0))
+r.shot("IMG_0076.MOV", 4.6, 2.0).shot("IMG_0073.MOV", 0.6, 2.0).shot("IMG_0072.MOV", 4.8, 2.0)
+r.say("Al Jaddaf, Dubai", ("IMG_0068.MOV", 0.2, 2.6), ("IMG_0065.MOV", 3.4, 2.4, F), y=0.37)
+a = r.t
+r.shot("IMG_0069.MOV", 0.2, 3.2, focus=[0.45, 0.5])
+r.line(a + 0.2, r.t, CTA, y=0.37)
+r.save("s2_view", 609, 35)
+
+# 3. Retail: shops below two towers
+r = Reel()
+r.say("Binghatti Spectre\\NAl Jaddaf, Dubai", (NIGHT, 0, 2.6, {"focus": [0.62, 0.5]}))
+r.say("Two towers\\N712 apartments, 235 offices", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_0078.MOV", 0.5, 2.0))
+r.say("Around 1,500 residents\\Nonce complete", ("IMG_0073.MOV", 0.5, 2.6), ("IMG_0072.MOV", 4.6, 2.0))
+r.say("19 shops on the ground floor\\Ndirectly below", (BURJ, 0, 2.6, {"focus": [0.66, 0.5], "move": "pull"}), ("IMG_0074.MOV", 0.2, 2.2))
+r.say("7 shops left\\NFrom AED 8,922,999", (NIGHT, 0, 2.8, {"zoom": 1.12, "focus": [0.6, 0.5]}))  # commercial figures over Spectre, not Ghost
+end(r)
+r.save("s3_retail", 770, 20)
+
+# 4. Offices
+r = Reel()
+r.say("The offices at\\NBinghatti Spectre", (NIGHT, 0, 2.6, {"zoom": 1.1, "focus": [0.6, 0.45]}))
+r.say("705 to 4,018 sq ft", ("IMG_0072.MOV", 4.6, 2.4), ("IMG_0077.MOV", 7.6, 2.0, {"focus": [0.5, 0.5]}))
+r.say("128 of 230 sold\\Nsince the September launch", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_0073.MOV", 5.0, 2.2))
+r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_0076.MOV", 4.6, 2.2), ("IMG_0074.MOV", 0.2, 2.2))  # communal areas, not a flat
+r.say("Handover\\NDecember 2028", (BURJ, 0, 2.6, {"focus": [0.66, 0.5]}))
+end(r)
+r.save("s4_offices", 744, 75)
+
+# 5. Ghost residences: plenty of the apartment
+r = Reel()
+r.say("Binghatti Ghost\\NCompleted 2026", ("IMG_0078.MOV", 0.5, 2.4), ("IMG_0076.MOV", 4.6, 2.0))
+r.say("Studio to\\Nthree-bedroom apartments", ("IMG_0071.MOV", 1.0, 2.4), ("IMG_0070.MOV", 0.3, 2.0))
+r.say("Freehold\\NReady now", ("IMG_0060.MOV", 3.0, 2.2), ("IMG_0063.MOV", 0.2, 2.0), ("IMG_0064.MOV", 0.3, 1.8))
+r.say("Studios from AED 1,162,500\\Nabout £236,000", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0065.MOV", 3.4, 2.2, F))
+end(r)
+r.save("s5_residences", 175, 10)
+
+# 6. Al Jaddaf in numbers (12 months to late October 2026), shops first
+r = Reel()
+r.say("Al Jaddaf, Dubai\\NThe last 12 months", ("IMG_0081.MOV", 0.3, 3.0, {"focus": [0.5, 0.5]}))
+r.say("Shop rents\\Nup 17% to 20%", ("IMG_0084.MOV", 1.2, 2.6, {"focus": [0.5, 0.5]}))
+r.say("Shops let at about\\NAED 173 per sq ft a year", (BURJ, 0, 2.6, {"focus": [0.66, 0.5]}))
+r.say("Apartment sales\\Nmore than tripled", ("IMG_0082.MOV", 0.4, 2.8, {"focus": [0.5, 0.45]}))
+r.say("Price per sq ft\\Nup 22%", ("IMG_0078.MOV", 1.5, 2.4))
+end(r)
+r.save("s6_al_jaddaf", 132, 30)
+
+# 7. The costs on top (built to be saved)
+r = Reel()
+r.say("Buying in Dubai\\NThe costs on top", ("IMG_0061.MOV", 0.2, 2.3), ("IMG_0059.MOV", 0.2, 1.4))
+r.say("4% Dubai Land\\NDepartment registration", ("IMG_0070.MOV", 0.3, 2.6))
+r.say("About AED 4,800 in\\Nregistration and admin fees", ("IMG_0056.MOV", 0.3, 2.6))
+r.say("5% VAT on\\Ncommercial units", (NIGHT, 0, 2.6, {"focus": [0.62, 0.5]}))
+end(r, "Comment DUBAI\\Nfor the full cost breakdown")
+r.save("s7_costs", 609, 80)

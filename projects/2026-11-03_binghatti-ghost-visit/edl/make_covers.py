@@ -83,4 +83,9 @@ cover("work/cov/bed.png", P + "G_v1.jpg", "centre", 840,
       "CormorantGaramond-500-Italic.ttf", 132, ["The costs on top"], "Buying in Dubai", label="DUBAI  ·  UAE")
 cover("work/cov/sunset.png", P + "H_v1.jpg", "top", 360,
       "CormorantGaramond-500.ttf", 132, ["Al Jaddaf"], "The last 12 months in numbers", label="DUBAI  ·  UAE")
-print("covers A to H written")
+# second pass (commercial emphasis): I retail, J offices
+cover("work/cov/burj.png", P + "I_v1.jpg", "bottom", 1180,
+      "CormorantGaramond-500.ttf", 128, ["Binghatti Spectre"], "19 shops below 712 apartments", label="AL JADDAF  ·  DUBAI")
+cover("work/cov/night.png", P + "J_v1.jpg", "bottom", 1180,
+      "CormorantGaramond-500-Italic.ttf", 140, ["The offices"], "Binghatti Spectre, from AED 1,864,999", label="AL JADDAF  ·  DUBAI")
+print("covers A to J written")

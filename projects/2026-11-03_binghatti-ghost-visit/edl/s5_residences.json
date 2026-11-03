@@ -1,0 +1,181 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../raw/IMG_0078.MOV",
+   "in": 0.5,
+   "dur": 2.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0076.MOV",
+   "in": 4.6,
+   "dur": 2.0,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0071.MOV",
+   "in": 1.0,
+   "dur": 2.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0070.MOV",
+   "in": 0.3,
+   "dur": 2.0,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0060.MOV",
+   "in": 3.0,
+   "dur": 2.2,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0063.MOV",
+   "in": 0.2,
+   "dur": 2.0,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0064.MOV",
+   "in": 0.3,
+   "dur": 1.8,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0054.MOV",
+   "in": 0.4,
+   "dur": 2.6,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0065.MOV",
+   "in": 3.4,
+   "dur": 2.2,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "file": "../raw/IMG_0080.MOV",
+   "in": 13.0,
+   "dur": 3.4,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "file": "../raw/IMG_0078.MOV",
+   "a": 0.5,
+   "b": 2.9,
+   "at": 0.0,
+   "gain": -8.2
+  },
+  {
+   "file": "../raw/IMG_0076.MOV",
+   "a": 4.6,
+   "b": 6.6,
+   "at": 2.4,
+   "gain": -4.8
+  },
+  {
+   "file": "../raw/IMG_0071.MOV",
+   "a": 1.0,
+   "b": 3.4,
+   "at": 4.4,
+   "gain": 2.2
+  },
+  {
+   "file": "../raw/IMG_0070.MOV",
+   "a": 0.3,
+   "b": 2.3,
+   "at": 6.8,
+   "gain": 3.7
+  },
+  {
+   "file": "../raw/IMG_0060.MOV",
+   "a": 3.0,
+   "b": 5.2,
+   "at": 8.8,
+   "gain": 9.2
+  },
+  {
+   "file": "../raw/IMG_0063.MOV",
+   "a": 0.2,
+   "b": 2.2,
+   "at": 11.0,
+   "gain": 7.1
+  },
+  {
+   "file": "../raw/IMG_0064.MOV",
+   "a": 0.3,
+   "b": 2.1,
+   "at": 13.0,
+   "gain": 7.9
+  },
+  {
+   "file": "../raw/IMG_0054.MOV",
+   "a": 0.4,
+   "b": 3.0,
+   "at": 14.8,
+   "gain": 8.3
+  },
+  {
+   "file": "../raw/IMG_0065.MOV",
+   "a": 3.4,
+   "b": 5.6,
+   "at": 17.4,
+   "gain": 8.2
+  },
+  {
+   "file": "../raw/IMG_0080.MOV",
+   "a": 13.0,
+   "b": 16.4,
+   "at": 19.6,
+   "gain": -9.4
+  }
+ ],
+ "text": [
+  {
+   "from": 0.2,
+   "to": 4.3,
+   "text": "Binghatti Ghost\\NCompleted 2026"
+  },
+  {
+   "from": 4.6,
+   "to": 8.7,
+   "text": "Studio to\\Nthree-bedroom apartments"
+  },
+  {
+   "from": 9.0,
+   "to": 14.7,
+   "text": "Freehold\\NReady now"
+  },
+  {
+   "from": 15.0,
+   "to": 19.5,
+   "text": "Studios from AED 1,162,500\\Nabout £236,000"
+  },
+  {
+   "from": 19.8,
+   "to": 23.0,
+   "text": "Comment DUBAI\\Nfor prices and availability",
+   "y": 0.3
+  }
+ ],
+ "music": {
+  "track": 175,
+  "start": 10,
+  "bed": -27
+ },
+ "music_led": true,
+ "outro": true
+}
