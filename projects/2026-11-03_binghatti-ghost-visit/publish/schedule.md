@@ -10,3 +10,5 @@ All four go on Instagram, YouTube Shorts and TikTok (one file each). Captions, S
 | Fri 6 Nov 16:40 / 20:40 | 4 The numbers (check the price first) | `_reel4-the-numbers_v3.mp4`, `_reel-cover-E_v1.jpg` | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC--4qSwAA |
 
 The first teaser (`_reel-teaser_v2.mp4`, unbranded) is superseded by reel 1 now Binghatti has signed off co-branding. Cover B is spare.
+
+monday item: 3328855376 (Content & Filming (Master), group Filmed — Needs Distribution).
