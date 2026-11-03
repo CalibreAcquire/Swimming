@@ -69,4 +69,11 @@ cover("work/cov/window.png", P + "A_v1.jpg", "top", 360,
 # B: the tower from the garden path, text low over the planting
 cover("work/cov/tower.png", P + "B_v1.jpg", "bottom", 1180,
       "CormorantGaramond-500-Italic.ttf", 132, ["A private viewing"], "Comment DUBAI", label="DUBAI  ·  UAE")
-print("covers A, B written")
+# one cover per reel, each on a different picture (Jake, 3 Nov: covers mustn't repeat on the grid)
+cover("work/cov/view.png", P + "C_v1.jpg", "centre", 840,
+      "CormorantGaramond-500-Italic.ttf", 140, ["The view"], "Binghatti Ghost", label="AL JADDAF  ·  DUBAI")
+cover("work/cov/tower.png", P + "D_v1.jpg", "bottom", 1180,
+      "CormorantGaramond-500.ttf", 128, ["Binghatti Ghost"], "The walkthrough", label="AL JADDAF  ·  DUBAI")
+cover("work/cov/hall.png", P + "E_v1.jpg", "centre", 840,
+      "CormorantGaramond-500.ttf", 128, ["Binghatti Ghost"], "From AED 1,162,500", label="AL JADDAF  ·  DUBAI")
+print("covers A to E written")

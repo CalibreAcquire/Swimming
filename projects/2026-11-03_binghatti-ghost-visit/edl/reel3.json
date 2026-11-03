@@ -1,0 +1,109 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "in": 0.6,
+   "dur": 3.0,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "in": 6.4,
+   "dur": 3.4,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "file": "../raw/IMG_0059.MOV",
+   "in": 0.1,
+   "dur": 2.9,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_0066.MOV",
+   "in": 0.2,
+   "dur": 5.1,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "file": "../raw/IMG_0069.MOV",
+   "in": 0.1,
+   "dur": 3.6,
+   "move": "push",
+   "focus": [
+    0.45,
+    0.5
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "a": 0.6,
+   "b": 3.6,
+   "at": 0.0,
+   "gain": -12.1
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "a": 6.4,
+   "b": 9.8,
+   "at": 3.0,
+   "gain": -9.1
+  },
+  {
+   "file": "../raw/IMG_0059.MOV",
+   "a": 0.1,
+   "b": 3.0,
+   "at": 6.4,
+   "gain": 4.5
+  },
+  {
+   "file": "../raw/IMG_0066.MOV",
+   "a": 0.2,
+   "b": 5.3,
+   "at": 9.3,
+   "gain": 4.2
+  },
+  {
+   "file": "../raw/IMG_0069.MOV",
+   "a": 0.1,
+   "b": 3.7,
+   "at": 14.4,
+   "gain": -1.2
+  }
+ ],
+ "text": [
+  {
+   "from": 0.25,
+   "to": 2.9,
+   "text": "Walk through\\NBinghatti Ghost"
+  },
+  {
+   "from": 14.6,
+   "to": 18.0,
+   "text": "Comment DUBAI\\Nfor prices and availability",
+   "y": 0.37
+  }
+ ],
+ "music": {
+  "track": 770,
+  "start": 45,
+  "bed": -27
+ },
+ "music_led": true,
+ "outro": true
+}

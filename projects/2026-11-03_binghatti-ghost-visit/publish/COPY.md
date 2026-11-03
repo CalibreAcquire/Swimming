@@ -1,4 +1,4 @@
-# Dubai ghost visit: teaser reel
+# Dubai ghost visit: teaser reel (superseded by the Binghatti Ghost set below)
 
 - Video (Instagram reel, YouTube Short, TikTok): `exports/2026-11-03_binghatti-ghost-visit_reel-teaser_v2.mp4` (0:15 + outro, 0:19.5)
 - Cover: `thumbnails/2026-11-03_binghatti-ghost-visit_reel-cover-A_v1.jpg` (Jake at the window). Option B: the tower.
@@ -19,3 +19,6 @@ Comment DUBAI and we'll send you prices, floor plans and availability.
 - Title: `A private viewing in Dubai`
 - Description: `Offices and retail units across six projects in Al Jaddaf and JVC. For prices, floor plans and availability, apply to join the list: calibreacquire.co.uk/register`
 - Tags: `dubai property, dubai real estate, dubai commercial property, dubai office for sale, al jaddaf, jvc dubai, jumeirah village circle, dubai property investment, invest in dubai, dubai off plan, property investment uk, Calibre Acquire`
+
+# Binghatti Ghost set (3 Nov 2026)
+Captions, Short titles, descriptions and tags for reels 1–4 are in the Outlook events (see schedule.md). Common Short tags: binghatti ghost, binghatti, al jaddaf, dubai property, dubai real estate, ready property dubai, dubai property investment, invest in dubai, property investment uk, Calibre Acquire.
