@@ -88,4 +88,9 @@ cover("work/cov/burj.png", P + "I_v1.jpg", "bottom", 1180,
       "CormorantGaramond-500.ttf", 128, ["Binghatti Spectre"], "19 shops below 712 apartments", label="AL JADDAF  ·  DUBAI")
 cover("work/cov/night.png", P + "J_v1.jpg", "bottom", 1180,
       "CormorantGaramond-500-Italic.ttf", 140, ["The offices"], "Binghatti Spectre, from AED 1,864,999", label="AL JADDAF  ·  DUBAI")
-print("covers A to J written")
+# area-wide versions (Jake, 3 Nov: not Ghost specifically, the Binghatti developments in Al Jaddaf)
+cover("work/cov/view.png", P + "C_v2.jpg", "centre", 840,
+      "CormorantGaramond-500-Italic.ttf", 140, ["The view"], "Binghatti, Al Jaddaf", label="AL JADDAF  ·  DUBAI")
+cover("work/cov/hall.png", P + "E_v2.jpg", "centre", 840,
+      "CormorantGaramond-500-Italic.ttf", 136, ["The residences"], "From AED 799,999", label="AL JADDAF  ·  DUBAI")
+print("covers written")

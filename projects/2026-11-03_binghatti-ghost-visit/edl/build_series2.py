@@ -5,7 +5,8 @@ many towers, flats and residents, with the shops directly below).
   2 the view (teaser, v2)   more of the visit: entrance, lobby, lifts, the apartment, the view
   3 retail                  Spectre: 2 towers, 712 apartments, 235 offices, ~1,500 residents, 19 shops below
   4 offices                 Spectre offices: sizes, 128 of 230 sold, from AED 1,864,999, handover Dec 2028
-  5 residences              Ghost: studio to 3 bed, freehold, ready, studios from AED 1,162,500
+  5 residences              Binghatti in Al Jaddaf (10 developments with stock on 22 Oct): studio to 3 bed,
+                             ready now or handover by 2028, from AED 799,999 (Starfall and Wraith entry units)
   6 al jaddaf               shop rents up 17-20%, AED 173 per sq ft; sales more than tripled; price per sq ft +22%
   7 costs                   what a buyer pays on top
 
@@ -69,9 +70,9 @@ def end(r, s=CTA):  # Jake walking out of the entrance towards camera
 
 # 2. The view (teaser), more of the visit
 r = Reel()
-r.say("The view from\\NBinghatti Ghost", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0055.MOV", 0.4, 2.0))
+r.say("The view\\NBinghatti, Al Jaddaf", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0055.MOV", 0.4, 2.0))
 r.shot("IMG_0076.MOV", 4.6, 2.0).shot("IMG_0073.MOV", 0.6, 2.0).shot("IMG_0072.MOV", 4.8, 2.0)
-r.say("Al Jaddaf, Dubai", ("IMG_0068.MOV", 0.2, 2.6), ("IMG_0065.MOV", 3.4, 2.4, F), y=0.37)
+r.say("10 Binghatti developments\\Nin Al Jaddaf", ("IMG_0068.MOV", 0.2, 2.6), ("IMG_0065.MOV", 3.4, 2.4, F), y=0.37)
 a = r.t
 r.shot("IMG_0069.MOV", 0.2, 3.2, focus=[0.45, 0.5])
 r.line(a + 0.2, r.t, CTA, y=0.37)
@@ -99,10 +100,10 @@ r.save("s4_offices", 744, 75)
 
 # 5. Ghost residences: plenty of the apartment
 r = Reel()
-r.say("Binghatti Ghost\\NCompleted 2026", ("IMG_0078.MOV", 0.5, 2.4), ("IMG_0076.MOV", 4.6, 2.0))
+r.say("Binghatti in Al Jaddaf\\NThe residences", ("IMG_0078.MOV", 0.5, 2.4), ("IMG_0076.MOV", 4.6, 2.0))
 r.say("Studio to\\Nthree-bedroom apartments", ("IMG_0071.MOV", 1.0, 2.4), ("IMG_0070.MOV", 0.3, 2.0))
-r.say("Freehold\\NReady now", ("IMG_0060.MOV", 3.0, 2.2), ("IMG_0063.MOV", 0.2, 2.0), ("IMG_0064.MOV", 0.3, 1.8))
-r.say("Studios from AED 1,162,500\\Nabout £236,000", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0065.MOV", 3.4, 2.2, F))
+r.say("Freehold\\NReady now or handover by 2028", ("IMG_0060.MOV", 3.0, 2.2), ("IMG_0063.MOV", 0.2, 2.0), ("IMG_0064.MOV", 0.3, 1.8))
+r.say("From AED 799,999\\Nabout £162,500", ("IMG_0054.MOV", 0.4, 2.6), ("IMG_0065.MOV", 3.4, 2.2, F))
 end(r)
 r.save("s5_residences", 175, 10)
 
