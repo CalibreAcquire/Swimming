@@ -1,0 +1,121 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../work/spectre_render_sunset.png",
+   "in": 0,
+   "dur": 2.6,
+   "move": "push",
+   "focus": [
+    0.82,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "in": 1.2,
+   "dur": 2.8,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "in": 7.0,
+   "dur": 2.6,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "file": "../raw/IMG_0066.MOV",
+   "in": 3.0,
+   "dur": 2.8,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "file": "../raw/IMG_0069.MOV",
+   "in": 0.2,
+   "dur": 3.4,
+   "move": "push",
+   "focus": [
+    0.45,
+    0.5
+   ]
+  }
+ ],
+ "audio": [
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "a": 1.2,
+   "b": 4.0,
+   "at": 2.6,
+   "gain": -12.0
+  },
+  {
+   "file": "../raw/IMG_0084.MOV",
+   "a": 7.0,
+   "b": 9.6,
+   "at": 5.4,
+   "gain": -9.1
+  },
+  {
+   "file": "../raw/IMG_0066.MOV",
+   "a": 3.0,
+   "b": 5.8,
+   "at": 8.0,
+   "gain": 2.6
+  },
+  {
+   "file": "../raw/IMG_0069.MOV",
+   "a": 0.2,
+   "b": 3.6,
+   "at": 10.8,
+   "gain": -1.3
+  }
+ ],
+ "text": [
+  {
+   "from": 0.2,
+   "to": 2.5,
+   "text": "Al Jaddaf, Dubai\\NThe last 12 months"
+  },
+  {
+   "from": 2.8,
+   "to": 5.3,
+   "text": "Apartment sales\\Nmore than tripled"
+  },
+  {
+   "from": 5.6,
+   "to": 7.9,
+   "text": "Price per sq ft\\Nup 22%"
+  },
+  {
+   "from": 8.2,
+   "to": 10.7,
+   "text": "Studios let for about\\NAED 48,700 a year"
+  },
+  {
+   "from": 11.0,
+   "to": 14.2,
+   "text": "Comment DUBAI\\Nfor prices and availability",
+   "y": 0.37
+  }
+ ],
+ "music": {
+  "track": 175,
+  "start": 40,
+  "bed": -27
+ },
+ "music_led": true,
+ "outro": true
+}

@@ -11,7 +11,7 @@ Usage: listing_edit.py <edl.json> <out.mp4> [--draft]
 EDL keys (times in OUTPUT seconds unless noted; paths relative to the EDL):
   format        "9x16" (1080x1920) or "16x9" (1920x1080)
   fps           output frame rate (default 30)
-  shots         [{"file", "in": source s, "dur": s, "move": "push"|"pull"|"none",
+  shots         [{"file" (video, or a .png/.jpg still), "in": source s, "dur": s, "move": "push"|"pull"|"none",
                   "zoom": start zoom (1.0), "focus": [fx, fy] 0-1 point to zoom into}]
                   played back to back; their total is the video length (before the outro)
   audio         [{"file", "a": source s, "b": source s, "at": output s, "gain": dB}]  speech
@@ -87,9 +87,13 @@ def render_shot(edl, i, s, base, tmp, W, H, fps, draft):
     # cover the frame, then a time-varying zoom (eval=frame) and a crop around the focus point
     zoom = f"({z0}+({z1}-{z0})*min(t/{dur},1))"
     vf = (f"fps={fps},{grade},scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,"
-          f"crop={W}:{H},scale=w='ceil({W}*{zoom}/2)*2':h=-2:eval=frame:flags=bicubic,"
+          f"crop={W}:{H}:x='(iw-{W})*{fx}':y='(ih-{H})*{fy}',"  # a landscape source (render) is framed on the focus too
+          f"scale=w='ceil({W}*{zoom}/2)*2':h=-2:eval=frame:flags=bicubic,"
           f"crop={W}:{H}:x='(iw-{W})*{fx}':y='(ih-{H})*{fy}',setsar=1,format=yuv420p")
-    run(["ffmpeg", "-v", "error", "-y", "-ss", f"{s['in']:.3f}", "-i", src, "-t", f"{dur:.3f}", "-an",
+    # a still (render, photo) loops for the shot's length; the push-in gives it the same movement
+    inp = (["-loop", "1", "-framerate", str(fps), "-i", src] if src.lower().endswith((".png", ".jpg", ".jpeg"))
+           else ["-ss", f"{s['in']:.3f}", "-i", src])
+    run(["ffmpeg", "-v", "error", "-y", *inp, "-t", f"{dur:.3f}", "-an",
          "-vf", vf, "-frames:v", str(round(dur * fps)), "-r", str(fps),
          "-c:v", "libx264", "-preset", "ultrafast" if draft else "medium", "-crf", "14", out])
     return out

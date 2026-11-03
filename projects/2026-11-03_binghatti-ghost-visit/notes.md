@@ -11,3 +11,11 @@ Jake: Binghatti gave sign-off on co-branding; the building is Binghatti Ghost (A
 Built 4 reels (`edl/build_reels.py`): 1 teaser (744), 2 the view (609), 3 walkthrough (770), 4 the numbers (175). Each opens on a different shot, has its own track and its own cover (A, C, D, E).
 QA: all −14.1 to −14.4 LUFS. Reel 4 v1 peaked at −0.9 dBTP (track 175); v3 re-limits the audio only (video copied): −14.4 LUFS, −2.2 dBTP. Frames checked at every text line; CTA sits above Jake's head.
 Open: reel 4's price is from 22 Oct, so the event says to check it before posting. All four use the same 22 s of footage; more clips (other rooms, amenities, the view at dusk) would make the next batch less repetitive.
+
+## 3 Nov, later still: the information series
+Jake: include the residential and commercial options; start with teasers, then more information each video. Reels 3 to 6 (`edl/build_series.py`):
+- 3 residences (Ghost): studio to 3 bed (2026 DLD extract shows Ghost sales of studios, 1, 2 and 3 beds, freehold, ready resales from October), studios from AED 1,162,500 (live feed 22 Oct).
+- 4 commercial (Spectre): no Ghost commercial units are in the 11 Oct commercial availability list, so the commercial reel uses Spectre (one-page summary: offices 705 to 4,018 sq ft from AED 1,864,999; retail from AED 8,922,999; handover 31 Dec 2028). Visuals: three renders from Binghatti's Spectre office brochure (pp. 2, 3 and the right half of 4), supplied for the campaign; no watermark.
+- 5 costs: 4% DLD, AED 4,200 + about AED 620, 5% VAT on commercial (one-page summary and Buyer Costs tab).
+- 6 Al Jaddaf (market report, 12 months to late Oct): apartment sales more than tripled, price per sq ft up 22%, studio rent AED 48,723 average.
+Script changes: `listing_edit.py` takes stills (png/jpg loop for the shot) and frames a landscape source on its focus point (the first crop was centred, so renders lost the towers; v1 and v2 of reel 4 had it). QA: all −14.0 to −14.4 LUFS, peaks −1.6 to −2.1 dBTP (reel 6 re-limited, track 175 again). Every text frame checked.

@@ -76,4 +76,11 @@ cover("work/cov/tower.png", P + "D_v1.jpg", "bottom", 1180,
       "CormorantGaramond-500.ttf", 128, ["Binghatti Ghost"], "The walkthrough", label="AL JADDAF  ·  DUBAI")
 cover("work/cov/hall.png", P + "E_v1.jpg", "centre", 840,
       "CormorantGaramond-500.ttf", 128, ["Binghatti Ghost"], "From AED 1,162,500", label="AL JADDAF  ·  DUBAI")
-print("covers A to E written")
+# the information reels (3 Nov, later): E is reel 3 (residences); F to H below
+cover("work/cov/burj.png", P + "F_v1.jpg", "bottom", 1180,
+      "CormorantGaramond-500.ttf", 128, ["Binghatti Spectre"], "Offices and retail", label="AL JADDAF  ·  DUBAI")
+cover("work/cov/bed.png", P + "G_v1.jpg", "centre", 840,
+      "CormorantGaramond-500-Italic.ttf", 132, ["The costs on top"], "Buying in Dubai", label="DUBAI  ·  UAE")
+cover("work/cov/sunset.png", P + "H_v1.jpg", "top", 360,
+      "CormorantGaramond-500.ttf", 132, ["Al Jaddaf"], "The last 12 months in numbers", label="DUBAI  ·  UAE")
+print("covers A to H written")
