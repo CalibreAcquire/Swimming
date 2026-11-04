@@ -31,3 +31,6 @@ Jake: 1,500 residents is fine. Don't tie it to Ghost; the footage can stand for 
 
 ## 3 Nov, 19:45: the walk-out ending
 Jake: stitch the clip of him walking out from behind with the head-on one at the end. `end()` in build_series2.py: 0076 5.2–7.4 (from behind, through the lobby doors, no push so the cut stays clean) then 0080 10.0–16.8 (head-on, stepping out of the entrance and walking to camera), CTA from 1 s into the head-on shot. Other uses of 0076 swapped out so it doesn't repeat. Reels 2 to 7 re-rendered: 2 v4, 3 v3, 4 v3, 5 v3, 6 v2, 7 v2 (25 to 33 s with the outro), −14.0 to −14.4 LUFS, peaks −2.1 to −4.1 dBTP. Join checked on frames.
+
+## 4 Nov: jitter and the walk-out
+Jake: the videos looked jittery. Cause: listing_edit.py zoomed at the output size in whole pixels, so push-ins were still for two frames then jumped (43 of 74 frames static on reel 4's first shot). Now zoompan on a 3x frame: 0 static frames. Walk-out: behind shot 5.4–6.6 (cut as he reaches the doors), head-on 10.0–15.8 (a second shorter). Final files: reel2 v5, reel3 v4, reel4 v4, reel5 v4, reel6 v3, reel7 v3 (23 to 31 s with the outro), −14.0 to −14.4 LUFS, peaks −2.0 to −4.2 dBTP. Events updated.
