@@ -73,10 +73,11 @@ def end(r, s=CTA):
 
 # Jake, 4 Nov: more footage in Drive with better views (4K: skyline, balcony, living room, kitchen,
 # corridor, lift lobby, the district from the street; photos of the empty ground-floor shopfronts).
+# IMG_6716 (lift lobby) is out: Jake turns and looks back at the camera (Jake, 4 Nov).
 # 2. The view (teaser)
 r = Reel()
 r.say("The view\\NBinghatti, Al Jaddaf", ("IMG_6720.MOV", 0.2, 2.6), ("IMG_6719.MOV", 2.2, 2.8))
-r.shot("IMG_6715.MOV", 0.2, 2.2).shot("IMG_6716.MOV", 0.0, 1.7)
+r.shot("IMG_6715.MOV", 0.2, 2.2).shot("IMG_0072.MOV", 4.8, 1.7)
 r.say("10 Binghatti developments\\Nin Al Jaddaf", ("IMG_6717.MOV", 0.2, 2.6), ("IMG_6727.MOV", 3.0, 3.0, {"focus": [0.5, 0.5]}), y=0.37)
 end(r)
 r.save("s2_view", 609, 35)
@@ -85,7 +86,7 @@ r.save("s2_view", 609, 35)
 r = Reel()
 r.say("Binghatti Spectre\\NAl Jaddaf, Dubai", (NIGHT, 0, 2.6, {"focus": [0.62, 0.5]}))
 r.say("Two towers\\N712 apartments, 235 offices", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_6726.MOV", 0.5, 2.2))
-r.say("Around 1,500 residents\\Nonce complete", ("IMG_6715.MOV", 0.2, 2.3), ("IMG_6716.MOV", 0.0, 1.7))
+r.say("Around 1,500 residents\\Nonce complete", ("IMG_6715.MOV", 0.2, 2.3), ("IMG_0072.MOV", 4.8, 1.7))
 r.say("19 shops on the ground floor\\Ndirectly below", ("IMG_6731.jpg", 0, 2.2), ("IMG_6734.jpg", 0, 2.2))
 r.say("7 shops left\\NFrom AED 8,922,999", (NIGHT, 0, 2.6, {"zoom": 1.12, "focus": [0.6, 0.5]}))
 end(r)
@@ -95,7 +96,7 @@ r.save("s3_retail", 770, 20)
 r = Reel()
 r.say("The offices at\\NBinghatti Spectre", (NIGHT, 0, 2.6, {"zoom": 1.1, "focus": [0.6, 0.45]}))
 r.say("705 to 4,018 sq ft", ("IMG_6715.MOV", 0.3, 2.2), ("IMG_0072.MOV", 4.6, 2.0))
-r.say("128 sold\\Nsince the September launch", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_6716.MOV", 0.0, 1.7))
+r.say("128 sold\\Nsince the September launch", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_0073.MOV", 5.0, 1.7))
 r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_6726.MOV", 0.5, 2.2), ("IMG_0074.MOV", 0.2, 2.0))  # communal areas, not a flat
 r.say("Handover\\NDecember 2028", (BURJ, 0, 2.6, {"focus": [0.66, 0.5]}))
 end(r)

@@ -21,8 +21,8 @@
    "move": "push"
   },
   {
-   "file": "../raw/IMG_6716.MOV",
-   "in": 0.0,
+   "file": "../raw/IMG_0072.MOV",
+   "in": 4.8,
    "dur": 1.7,
    "move": "push"
   },
@@ -82,11 +82,11 @@
    "gain": -3.6
   },
   {
-   "file": "../raw/IMG_6716.MOV",
-   "a": 0.0,
-   "b": 1.7,
+   "file": "../raw/IMG_0072.MOV",
+   "a": 4.8,
+   "b": 6.5,
    "at": 7.6,
-   "gain": -4.2
+   "gain": 0.2
   },
   {
    "file": "../raw/IMG_6717.MOV",
