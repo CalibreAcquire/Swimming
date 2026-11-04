@@ -65,9 +65,9 @@ NIGHT, SUNSET, BURJ = "spectre_render_night.png", "spectre_render_sunset.png", "
 def end(r, s=CTA):
     """Jake walking out of the development: from behind through the lobby doors (0076), cut on the
     doorway to the head-on shot (0080) of him stepping out and walking to camera (Jake, 3 Nov)."""
-    r.shot("IMG_0076.MOV", 5.2, 2.2, move="none")
+    r.shot("IMG_0076.MOV", 5.4, 1.2, move="none")  # cut sooner, as he reaches the doors (Jake, 4 Nov)
     a = r.t
-    r.shot("IMG_0080.MOV", 10.0, 6.8, focus=[0.5, 0.5])
+    r.shot("IMG_0080.MOV", 10.0, 5.8, focus=[0.5, 0.5])  # a second shorter at the end (Jake, 4 Nov)
     r.line(a + 1.0, r.t, s, y=0.3)
 
 

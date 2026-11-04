@@ -62,14 +62,14 @@
   },
   {
    "file": "../raw/IMG_0076.MOV",
-   "in": 5.2,
-   "dur": 2.2,
+   "in": 5.4,
+   "dur": 1.2,
    "move": "none"
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "in": 10.0,
-   "dur": 6.8,
+   "dur": 5.8,
    "move": "push",
    "focus": [
     0.5,
@@ -143,17 +143,17 @@
   },
   {
    "file": "../raw/IMG_0076.MOV",
-   "a": 5.2,
-   "b": 7.4,
+   "a": 5.4,
+   "b": 6.6000000000000005,
    "at": 19.6,
-   "gain": -4.8
+   "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
-   "b": 16.8,
-   "at": 21.8,
-   "gain": -8.6
+   "b": 15.8,
+   "at": 20.8,
+   "gain": -8.5
   }
  ],
  "text": [
@@ -178,8 +178,8 @@
    "text": "From AED 799,999\\Nabout £162,500"
   },
   {
-   "from": 22.8,
-   "to": 28.6,
+   "from": 21.8,
+   "to": 26.6,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

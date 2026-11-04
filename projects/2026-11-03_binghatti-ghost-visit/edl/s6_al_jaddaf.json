@@ -50,14 +50,14 @@
   },
   {
    "file": "../raw/IMG_0076.MOV",
-   "in": 5.2,
-   "dur": 2.2,
+   "in": 5.4,
+   "dur": 1.2,
    "move": "none"
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "in": 10.0,
-   "dur": 6.8,
+   "dur": 5.8,
    "move": "push",
    "focus": [
     0.5,
@@ -96,17 +96,17 @@
   },
   {
    "file": "../raw/IMG_0076.MOV",
-   "a": 5.2,
-   "b": 7.4,
+   "a": 5.4,
+   "b": 6.6000000000000005,
    "at": 13.4,
-   "gain": -4.8
+   "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
-   "b": 16.8,
-   "at": 15.6,
-   "gain": -8.6
+   "b": 15.8,
+   "at": 14.6,
+   "gain": -8.5
   }
  ],
  "text": [
@@ -136,8 +136,8 @@
    "text": "Price per sq ft\\Nup 22%"
   },
   {
-   "from": 16.6,
-   "to": 22.4,
+   "from": 15.6,
+   "to": 20.4,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }
