@@ -23,43 +23,39 @@
    ]
   },
   {
-   "file": "../raw/IMG_0078.MOV",
+   "file": "../raw/IMG_6726.MOV",
    "in": 0.5,
-   "dur": 2.0,
+   "dur": 2.2,
    "move": "push"
   },
   {
-   "file": "../raw/IMG_0073.MOV",
-   "in": 0.5,
-   "dur": 2.6,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0072.MOV",
-   "in": 4.6,
-   "dur": 2.0,
-   "move": "push"
-  },
-  {
-   "file": "../work/spectre_render_burj.png",
-   "in": 0,
-   "dur": 2.6,
-   "move": "pull",
-   "focus": [
-    0.66,
-    0.5
-   ]
-  },
-  {
-   "file": "../raw/IMG_0074.MOV",
+   "file": "../raw/IMG_6715.MOV",
    "in": 0.2,
+   "dur": 2.3,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6716.MOV",
+   "in": 0.0,
+   "dur": 1.7,
+   "move": "push"
+  },
+  {
+   "file": "../work/IMG_6731.jpg",
+   "in": 0,
+   "dur": 2.2,
+   "move": "push"
+  },
+  {
+   "file": "../work/IMG_6734.jpg",
+   "in": 0,
    "dur": 2.2,
    "move": "push"
   },
   {
    "file": "../work/spectre_render_night.png",
    "in": 0,
-   "dur": 2.8,
+   "dur": 2.6,
    "move": "push",
    "zoom": 1.12,
    "focus": [
@@ -86,45 +82,38 @@
  ],
  "audio": [
   {
-   "file": "../raw/IMG_0078.MOV",
+   "file": "../raw/IMG_6726.MOV",
    "a": 0.5,
-   "b": 2.5,
+   "b": 2.7,
    "at": 5.2,
-   "gain": -8.5
+   "gain": -4.9
   },
   {
-   "file": "../raw/IMG_0073.MOV",
-   "a": 0.5,
-   "b": 3.1,
-   "at": 7.2,
-   "gain": -2.7
-  },
-  {
-   "file": "../raw/IMG_0072.MOV",
-   "a": 4.6,
-   "b": 6.6,
-   "at": 9.8,
-   "gain": 0.3
-  },
-  {
-   "file": "../raw/IMG_0074.MOV",
+   "file": "../raw/IMG_6715.MOV",
    "a": 0.2,
-   "b": 2.4000000000000004,
-   "at": 14.4,
-   "gain": -4.3
+   "b": 2.5,
+   "at": 7.4,
+   "gain": -3.6
+  },
+  {
+   "file": "../raw/IMG_6716.MOV",
+   "a": 0.0,
+   "b": 1.7,
+   "at": 9.7,
+   "gain": -4.2
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 19.4,
+   "at": 18.4,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 20.6,
+   "at": 19.6,
    "gain": -8.5
   }
  ],
@@ -136,27 +125,27 @@
   },
   {
    "from": 2.8,
-   "to": 7.1,
+   "to": 7.3,
    "text": "Two towers\\N712 apartments, 235 offices"
   },
   {
-   "from": 7.4,
-   "to": 11.7,
+   "from": 7.6,
+   "to": 11.3,
    "text": "Around 1,500 residents\\Nonce complete"
   },
   {
-   "from": 12.0,
-   "to": 16.5,
+   "from": 11.6,
+   "to": 15.7,
    "text": "19 shops on the ground floor\\Ndirectly below"
   },
   {
-   "from": 16.8,
-   "to": 19.3,
+   "from": 16.0,
+   "to": 18.3,
    "text": "7 shops left\\NFrom AED 8,922,999"
   },
   {
-   "from": 21.6,
-   "to": 26.4,
+   "from": 20.6,
+   "to": 25.4,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

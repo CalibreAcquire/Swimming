@@ -3,62 +3,62 @@
  "fps": 30,
  "shots": [
   {
-   "file": "../raw/IMG_0078.MOV",
-   "in": 0.5,
-   "dur": 2.4,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0073.MOV",
-   "in": 5.0,
-   "dur": 2.0,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0071.MOV",
-   "in": 1.0,
-   "dur": 2.4,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0070.MOV",
+   "file": "../raw/IMG_6713.MOV",
    "in": 0.3,
-   "dur": 2.0,
+   "dur": 2.2,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6727.MOV",
+   "in": 3.0,
+   "dur": 2.4,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_6717.MOV",
+   "in": 0.2,
+   "dur": 2.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6718.MOV",
+   "in": 0.2,
+   "dur": 2.2,
    "move": "push"
   },
   {
    "file": "../raw/IMG_0060.MOV",
    "in": 3.0,
-   "dur": 2.2,
+   "dur": 2.0,
    "move": "push"
   },
   {
    "file": "../raw/IMG_0063.MOV",
    "in": 0.2,
-   "dur": 2.0,
+   "dur": 1.8,
    "move": "push"
   },
   {
-   "file": "../raw/IMG_0064.MOV",
-   "in": 0.3,
-   "dur": 1.8,
+   "file": "../raw/IMG_6719.MOV",
+   "in": 2.0,
+   "dur": 2.4,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6720.MOV",
+   "in": 0.2,
+   "dur": 2.6,
    "move": "push"
   },
   {
    "file": "../raw/IMG_0054.MOV",
    "in": 0.4,
-   "dur": 2.6,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0065.MOV",
-   "in": 3.4,
    "dur": 2.2,
-   "move": "push",
-   "focus": [
-    0.5,
-    0.4
-   ]
+   "move": "push"
   },
   {
    "file": "../raw/IMG_0076.MOV",
@@ -79,107 +79,107 @@
  ],
  "audio": [
   {
-   "file": "../raw/IMG_0078.MOV",
-   "a": 0.5,
-   "b": 2.9,
-   "at": 0.0,
-   "gain": -8.2
-  },
-  {
-   "file": "../raw/IMG_0073.MOV",
-   "a": 5.0,
-   "b": 7.0,
-   "at": 2.4,
-   "gain": -3.3
-  },
-  {
-   "file": "../raw/IMG_0071.MOV",
-   "a": 1.0,
-   "b": 3.4,
-   "at": 4.4,
-   "gain": 2.2
-  },
-  {
-   "file": "../raw/IMG_0070.MOV",
+   "file": "../raw/IMG_6713.MOV",
    "a": 0.3,
-   "b": 2.3,
-   "at": 6.8,
-   "gain": 3.7
+   "b": 2.5,
+   "at": 0.0,
+   "gain": -13.3
+  },
+  {
+   "file": "../raw/IMG_6727.MOV",
+   "a": 3.0,
+   "b": 5.4,
+   "at": 2.2,
+   "gain": -7.9
+  },
+  {
+   "file": "../raw/IMG_6717.MOV",
+   "a": 0.2,
+   "b": 2.6,
+   "at": 4.6,
+   "gain": 4.4
+  },
+  {
+   "file": "../raw/IMG_6718.MOV",
+   "a": 0.2,
+   "b": 2.4000000000000004,
+   "at": 7.0,
+   "gain": 3.5
   },
   {
    "file": "../raw/IMG_0060.MOV",
    "a": 3.0,
-   "b": 5.2,
-   "at": 8.8,
+   "b": 5.0,
+   "at": 9.2,
    "gain": 9.2
   },
   {
    "file": "../raw/IMG_0063.MOV",
    "a": 0.2,
-   "b": 2.2,
-   "at": 11.0,
-   "gain": 7.1
+   "b": 2.0,
+   "at": 11.2,
+   "gain": 7.3
   },
   {
-   "file": "../raw/IMG_0064.MOV",
-   "a": 0.3,
-   "b": 2.1,
+   "file": "../raw/IMG_6719.MOV",
+   "a": 2.0,
+   "b": 4.4,
    "at": 13.0,
-   "gain": 7.9
+   "gain": -11.0
+  },
+  {
+   "file": "../raw/IMG_6720.MOV",
+   "a": 0.2,
+   "b": 2.8000000000000003,
+   "at": 15.4,
+   "gain": -11.2
   },
   {
    "file": "../raw/IMG_0054.MOV",
    "a": 0.4,
-   "b": 3.0,
-   "at": 14.8,
+   "b": 2.6,
+   "at": 18.0,
    "gain": 8.3
-  },
-  {
-   "file": "../raw/IMG_0065.MOV",
-   "a": 3.4,
-   "b": 5.6,
-   "at": 17.4,
-   "gain": 8.2
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 19.6,
+   "at": 20.2,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 20.8,
+   "at": 21.4,
    "gain": -8.5
   }
  ],
  "text": [
   {
    "from": 0.2,
-   "to": 4.3,
+   "to": 4.5,
    "text": "Binghatti in Al Jaddaf\\NThe residences"
   },
   {
-   "from": 4.6,
-   "to": 8.7,
+   "from": 4.8,
+   "to": 9.1,
    "text": "Studio to\\Nthree-bedroom apartments"
   },
   {
-   "from": 9.0,
-   "to": 14.7,
+   "from": 9.4,
+   "to": 15.3,
    "text": "Freehold\\NReady now or handover by 2028"
   },
   {
-   "from": 15.0,
-   "to": 19.5,
+   "from": 15.6,
+   "to": 20.1,
    "text": "From AED 799,999\\Nabout £162,500"
   },
   {
-   "from": 21.8,
-   "to": 26.6,
+   "from": 22.4,
+   "to": 27.2,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

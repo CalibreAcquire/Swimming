@@ -3,49 +3,43 @@
  "fps": 30,
  "shots": [
   {
-   "file": "../raw/IMG_0054.MOV",
-   "in": 0.4,
-   "dur": 2.6,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0055.MOV",
-   "in": 0.4,
-   "dur": 2.0,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0074.MOV",
-   "in": 0.2,
-   "dur": 2.0,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0073.MOV",
-   "in": 0.6,
-   "dur": 2.0,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0072.MOV",
-   "in": 4.8,
-   "dur": 2.0,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_0068.MOV",
+   "file": "../raw/IMG_6720.MOV",
    "in": 0.2,
    "dur": 2.6,
    "move": "push"
   },
   {
-   "file": "../raw/IMG_0065.MOV",
-   "in": 3.4,
-   "dur": 2.4,
+   "file": "../raw/IMG_6719.MOV",
+   "in": 2.2,
+   "dur": 2.8,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6715.MOV",
+   "in": 0.2,
+   "dur": 2.2,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6716.MOV",
+   "in": 0.0,
+   "dur": 1.7,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6717.MOV",
+   "in": 0.2,
+   "dur": 2.6,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6727.MOV",
+   "in": 3.0,
+   "dur": 3.0,
    "move": "push",
    "focus": [
     0.5,
-    0.4
+    0.5
    ]
   },
   {
@@ -67,84 +61,77 @@
  ],
  "audio": [
   {
-   "file": "../raw/IMG_0054.MOV",
-   "a": 0.4,
-   "b": 3.0,
-   "at": 0.0,
-   "gain": 8.3
-  },
-  {
-   "file": "../raw/IMG_0055.MOV",
-   "a": 0.4,
-   "b": 2.4,
-   "at": 2.6,
-   "gain": 4.0
-  },
-  {
-   "file": "../raw/IMG_0074.MOV",
-   "a": 0.2,
-   "b": 2.2,
-   "at": 4.6,
-   "gain": -4.5
-  },
-  {
-   "file": "../raw/IMG_0073.MOV",
-   "a": 0.6,
-   "b": 2.6,
-   "at": 6.6,
-   "gain": -2.4
-  },
-  {
-   "file": "../raw/IMG_0072.MOV",
-   "a": 4.8,
-   "b": 6.8,
-   "at": 8.6,
-   "gain": 0.2
-  },
-  {
-   "file": "../raw/IMG_0068.MOV",
+   "file": "../raw/IMG_6720.MOV",
    "a": 0.2,
    "b": 2.8000000000000003,
-   "at": 10.6,
-   "gain": 0.7
+   "at": 0.0,
+   "gain": -11.2
   },
   {
-   "file": "../raw/IMG_0065.MOV",
-   "a": 3.4,
-   "b": 5.8,
-   "at": 13.2,
-   "gain": 8.1
+   "file": "../raw/IMG_6719.MOV",
+   "a": 2.2,
+   "b": 5.0,
+   "at": 2.6,
+   "gain": -10.7
+  },
+  {
+   "file": "../raw/IMG_6715.MOV",
+   "a": 0.2,
+   "b": 2.4000000000000004,
+   "at": 5.4,
+   "gain": -3.6
+  },
+  {
+   "file": "../raw/IMG_6716.MOV",
+   "a": 0.0,
+   "b": 1.7,
+   "at": 7.6,
+   "gain": -4.2
+  },
+  {
+   "file": "../raw/IMG_6717.MOV",
+   "a": 0.2,
+   "b": 2.8000000000000003,
+   "at": 9.3,
+   "gain": 4.4
+  },
+  {
+   "file": "../raw/IMG_6727.MOV",
+   "a": 3.0,
+   "b": 6.0,
+   "at": 11.9,
+   "gain": -8.0
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 15.6,
+   "at": 14.9,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 16.8,
+   "at": 16.1,
    "gain": -8.5
   }
  ],
  "text": [
   {
    "from": 0.2,
-   "to": 4.5,
+   "to": 5.3,
    "text": "The view\\NBinghatti, Al Jaddaf"
   },
   {
-   "from": 10.8,
-   "to": 15.5,
+   "from": 9.5,
+   "to": 14.8,
    "text": "10 Binghatti developments\\Nin Al Jaddaf",
    "y": 0.37
   },
   {
-   "from": 17.8,
-   "to": 22.6,
+   "from": 17.1,
+   "to": 21.9,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

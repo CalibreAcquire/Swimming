@@ -14,20 +14,16 @@
    ]
   },
   {
-   "file": "../raw/IMG_0072.MOV",
-   "in": 4.6,
-   "dur": 2.4,
+   "file": "../raw/IMG_6715.MOV",
+   "in": 0.3,
+   "dur": 2.2,
    "move": "push"
   },
   {
-   "file": "../raw/IMG_0077.MOV",
-   "in": 7.6,
+   "file": "../raw/IMG_0072.MOV",
+   "in": 4.6,
    "dur": 2.0,
-   "move": "push",
-   "focus": [
-    0.5,
-    0.5
-   ]
+   "move": "push"
   },
   {
    "file": "../work/spectre_render_sunset.png",
@@ -40,21 +36,21 @@
    ]
   },
   {
-   "file": "../raw/IMG_0073.MOV",
-   "in": 5.0,
-   "dur": 2.2,
+   "file": "../raw/IMG_6716.MOV",
+   "in": 0.0,
+   "dur": 1.7,
    "move": "push"
   },
   {
-   "file": "../raw/IMG_0078.MOV",
-   "in": 1.5,
+   "file": "../raw/IMG_6726.MOV",
+   "in": 0.5,
    "dur": 2.2,
    "move": "push"
   },
   {
    "file": "../raw/IMG_0074.MOV",
    "in": 0.2,
-   "dur": 2.2,
+   "dur": 2.0,
    "move": "push"
   },
   {
@@ -86,52 +82,52 @@
  ],
  "audio": [
   {
+   "file": "../raw/IMG_6715.MOV",
+   "a": 0.3,
+   "b": 2.5,
+   "at": 2.6,
+   "gain": -3.6
+  },
+  {
    "file": "../raw/IMG_0072.MOV",
    "a": 4.6,
-   "b": 7.0,
-   "at": 2.6,
-   "gain": -0.3
+   "b": 6.6,
+   "at": 4.8,
+   "gain": 0.3
   },
   {
-   "file": "../raw/IMG_0077.MOV",
-   "a": 7.6,
-   "b": 9.6,
-   "at": 5.0,
-   "gain": -7.2
+   "file": "../raw/IMG_6716.MOV",
+   "a": 0.0,
+   "b": 1.7,
+   "at": 9.4,
+   "gain": -4.2
   },
   {
-   "file": "../raw/IMG_0073.MOV",
-   "a": 5.0,
-   "b": 7.2,
-   "at": 9.6,
-   "gain": -3.2
-  },
-  {
-   "file": "../raw/IMG_0078.MOV",
-   "a": 1.5,
-   "b": 3.7,
-   "at": 11.8,
-   "gain": -9.7
+   "file": "../raw/IMG_6726.MOV",
+   "a": 0.5,
+   "b": 2.7,
+   "at": 11.1,
+   "gain": -4.9
   },
   {
    "file": "../raw/IMG_0074.MOV",
    "a": 0.2,
-   "b": 2.4000000000000004,
-   "at": 14.0,
-   "gain": -4.3
+   "b": 2.2,
+   "at": 13.3,
+   "gain": -4.5
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 18.8,
+   "at": 17.9,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 20.0,
+   "at": 19.1,
    "gain": -8.5
   }
  ],
@@ -143,27 +139,27 @@
   },
   {
    "from": 2.8,
-   "to": 6.9,
+   "to": 6.7,
    "text": "705 to 4,018 sq ft"
   },
   {
-   "from": 7.2,
-   "to": 11.7,
-   "text": "128 of 230 sold\\Nsince the September launch"
+   "from": 7.0,
+   "to": 11.0,
+   "text": "128 sold\\Nsince the September launch"
   },
   {
-   "from": 12.0,
-   "to": 16.1,
+   "from": 11.3,
+   "to": 15.2,
    "text": "From AED 1,864,999\\Nabout £379,000"
   },
   {
-   "from": 16.4,
-   "to": 18.7,
+   "from": 15.5,
+   "to": 17.8,
    "text": "Handover\\NDecember 2028"
   },
   {
-   "from": 21.0,
-   "to": 25.8,
+   "from": 20.1,
+   "to": 24.9,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

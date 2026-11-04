@@ -3,9 +3,9 @@
  "fps": 30,
  "shots": [
   {
-   "file": "../raw/IMG_0081.MOV",
-   "in": 0.3,
-   "dur": 3.0,
+   "file": "../raw/IMG_6727.MOV",
+   "in": 0.5,
+   "dur": 3.2,
    "move": "push",
    "focus": [
     0.5,
@@ -13,38 +13,26 @@
    ]
   },
   {
-   "file": "../raw/IMG_0084.MOV",
-   "in": 1.2,
-   "dur": 2.6,
-   "move": "push",
-   "focus": [
-    0.5,
-    0.5
-   ]
-  },
-  {
-   "file": "../work/spectre_render_burj.png",
+   "file": "../work/IMG_6733.jpg",
    "in": 0,
    "dur": 2.6,
-   "move": "push",
-   "focus": [
-    0.66,
-    0.5
-   ]
+   "move": "push"
   },
   {
-   "file": "../raw/IMG_0082.MOV",
-   "in": 0.4,
+   "file": "../work/IMG_6736.jpg",
+   "in": 0,
+   "dur": 2.6,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6712.MOV",
+   "in": 0.3,
    "dur": 2.8,
-   "move": "push",
-   "focus": [
-    0.5,
-    0.45
-   ]
+   "move": "push"
   },
   {
-   "file": "../raw/IMG_0078.MOV",
-   "in": 1.5,
+   "file": "../raw/IMG_6720.MOV",
+   "in": 0.2,
    "dur": 2.4,
    "move": "push"
   },
@@ -67,77 +55,70 @@
  ],
  "audio": [
   {
-   "file": "../raw/IMG_0081.MOV",
-   "a": 0.3,
-   "b": 3.3,
+   "file": "../raw/IMG_6727.MOV",
+   "a": 0.5,
+   "b": 3.7,
    "at": 0.0,
-   "gain": -8.1
+   "gain": -6.2
   },
   {
-   "file": "../raw/IMG_0084.MOV",
-   "a": 1.2,
-   "b": 3.8,
-   "at": 3.0,
-   "gain": -12.1
+   "file": "../raw/IMG_6712.MOV",
+   "a": 0.3,
+   "b": 3.0999999999999996,
+   "at": 8.4,
+   "gain": -14.8
   },
   {
-   "file": "../raw/IMG_0082.MOV",
-   "a": 0.4,
-   "b": 3.1999999999999997,
-   "at": 8.2,
-   "gain": -11.7
-  },
-  {
-   "file": "../raw/IMG_0078.MOV",
-   "a": 1.5,
-   "b": 3.9,
-   "at": 11.0,
-   "gain": -9.5
+   "file": "../raw/IMG_6720.MOV",
+   "a": 0.2,
+   "b": 2.6,
+   "at": 11.2,
+   "gain": -11.2
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 13.4,
+   "at": 13.6,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 14.6,
+   "at": 14.8,
    "gain": -8.5
   }
  ],
  "text": [
   {
    "from": 0.2,
-   "to": 2.9,
+   "to": 3.1,
    "text": "Al Jaddaf, Dubai\\NThe last 12 months"
   },
   {
-   "from": 3.2,
-   "to": 5.5,
+   "from": 3.4,
+   "to": 5.7,
    "text": "Shop rents\\Nup 17% to 20%"
   },
   {
-   "from": 5.8,
-   "to": 8.1,
+   "from": 6.0,
+   "to": 8.3,
    "text": "Shops let at about\\NAED 173 per sq ft a year"
   },
   {
-   "from": 8.4,
-   "to": 10.9,
+   "from": 8.6,
+   "to": 11.1,
    "text": "Apartment sales\\Nmore than tripled"
   },
   {
-   "from": 11.2,
-   "to": 13.3,
+   "from": 11.4,
+   "to": 13.5,
    "text": "Price per sq ft\\Nup 22%"
   },
   {
-   "from": 15.6,
-   "to": 20.4,
+   "from": 15.8,
+   "to": 20.6,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }
