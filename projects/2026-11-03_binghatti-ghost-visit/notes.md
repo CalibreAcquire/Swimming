@@ -34,3 +34,6 @@ Jake: stitch the clip of him walking out from behind with the head-on one at the
 
 ## 4 Nov: jitter and the walk-out
 Jake: the videos looked jittery. Cause: listing_edit.py zoomed at the output size in whole pixels, so push-ins were still for two frames then jumped (43 of 74 frames static on reel 4's first shot). Now zoompan on a 3x frame: 0 static frames. Walk-out: behind shot 5.4–6.6 (cut as he reaches the doors), head-on 10.0–15.8 (a second shorter). Final files: reel2 v5, reel3 v4, reel4 v4, reel5 v4, reel6 v3, reel7 v3 (23 to 31 s with the outro), −14.0 to −14.4 LUFS, peaks −2.0 to −4.2 dBTP. Events updated.
+
+## 4 Nov, late morning: the new footage
+Jake added 12 4K clips (IMG_6712-6720, 6726, 6727; 6714 is 0.8 s, unused) and 15 HEIC photos (converted to work/*.jpg with pillow-heif): skyline and balcony views, living room, kitchen, corridor, lift lobby, the district from the street, ground-floor frontage, and empty shopfronts (6731-6736). Reels 2 to 7 rebuilt with them; shop lines now sit over the shopfronts. Final: reel2 v6, reel3 v5, reel4 v5, reel5 v5, reel6 v4, reel7 v4 (23 to 32 s), −14.0 to −14.4 LUFS, peaks −2.1 to −4.6 dBTP; every text frame checked. Events updated.
