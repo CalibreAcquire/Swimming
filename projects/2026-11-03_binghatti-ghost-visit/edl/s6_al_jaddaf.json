@@ -5,10 +5,32 @@
   {
    "file": "../raw/IMG_6727.MOV",
    "in": 0.5,
-   "dur": 3.2,
+   "dur": 3.0,
    "move": "push",
    "focus": [
     0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_6712.MOV",
+   "in": 0.3,
+   "dur": 2.6,
+   "move": "push"
+  },
+  {
+   "file": "../raw/IMG_6713.MOV",
+   "in": 0.3,
+   "dur": 2.4,
+   "move": "push"
+  },
+  {
+   "file": "../work/spectre_render_sunset.png",
+   "in": 0,
+   "dur": 2.6,
+   "move": "push",
+   "focus": [
+    0.82,
     0.5
    ]
   },
@@ -22,18 +44,6 @@
    "file": "../work/IMG_6736.jpg",
    "in": 0,
    "dur": 2.6,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_6712.MOV",
-   "in": 0.3,
-   "dur": 2.8,
-   "move": "push"
-  },
-  {
-   "file": "../raw/IMG_6720.MOV",
-   "in": 0.2,
-   "dur": 2.4,
    "move": "push"
   },
   {
@@ -57,68 +67,73 @@
   {
    "file": "../raw/IMG_6727.MOV",
    "a": 0.5,
-   "b": 3.7,
+   "b": 3.5,
    "at": 0.0,
-   "gain": -6.2
+   "gain": -6.1
   },
   {
    "file": "../raw/IMG_6712.MOV",
    "a": 0.3,
-   "b": 3.0999999999999996,
-   "at": 8.4,
+   "b": 2.9,
+   "at": 3.0,
    "gain": -14.8
   },
   {
-   "file": "../raw/IMG_6720.MOV",
-   "a": 0.2,
-   "b": 2.6,
-   "at": 11.2,
-   "gain": -11.2
+   "file": "../raw/IMG_6713.MOV",
+   "a": 0.3,
+   "b": 2.6999999999999997,
+   "at": 5.6,
+   "gain": -13.3
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 13.6,
+   "at": 15.8,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 14.8,
+   "at": 17.0,
    "gain": -8.5
   }
  ],
  "text": [
   {
    "from": 0.2,
-   "to": 3.1,
-   "text": "Al Jaddaf, Dubai\\NThe last 12 months"
+   "to": 2.9,
+   "text": "Commercial property in Dubai\\NThe last 12 months"
   },
   {
-   "from": 3.4,
-   "to": 5.7,
-   "text": "Shop rents\\Nup 17% to 20%"
+   "from": 3.2,
+   "to": 5.5,
+   "text": "Office prices per sq ft\\Nup 59%"
   },
   {
-   "from": 6.0,
-   "to": 8.3,
+   "from": 5.8,
+   "to": 7.9,
+   "text": "Office sales\\Nup 48%"
+  },
+  {
+   "from": 8.2,
+   "to": 10.5,
+   "text": "In JVC, office prices\\Nup 34% per sq ft"
+  },
+  {
+   "from": 10.8,
+   "to": 13.1,
+   "text": "Al Jaddaf shop rents\\Nup 19%"
+  },
+  {
+   "from": 13.4,
+   "to": 15.7,
    "text": "Shops let at about\\NAED 173 per sq ft a year"
   },
   {
-   "from": 8.6,
-   "to": 11.1,
-   "text": "Apartment sales\\Nmore than tripled"
-  },
-  {
-   "from": 11.4,
-   "to": 13.5,
-   "text": "Price per sq ft\\Nup 22%"
-  },
-  {
-   "from": 15.8,
-   "to": 20.6,
+   "from": 18.0,
+   "to": 22.8,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

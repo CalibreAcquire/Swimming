@@ -90,23 +90,27 @@ r.say("10 Binghatti developments\\Nin Al Jaddaf", ("IMG_6717.MOV", 0.2, 2.6), ("
 end(r)
 r.save("s2_view", 609, 35)
 
-# 3. Retail: shops below two towers
+# 3. Retail: shops below two towers, with the investment case (publish/investment_case.md; Jake, 4 Nov: "go")
 r = Reel()
-r.say("Binghatti Spectre\\NAl Jaddaf, Dubai", (NIGHT, 0, 2.6, {"focus": [0.62, 0.5]}))
-r.say("Two towers\\N712 apartments, 235 offices", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_6726.MOV", 0.5, 2.2))
-r.say("Around 1,500 residents\\Nonce complete", ("IMG_6715.MOV", 0.2, 2.3), ("IMG_0072.MOV", 4.8, 1.7))
-r.say("19 shops on the ground floor\\Ndirectly below", ("IMG_6731.jpg", 0, 2.2), ("IMG_6734.jpg", 0, 2.2))
-r.say("7 shops left\\NFrom AED 8,922,999", (NIGHT, 0, 2.6, {"zoom": 1.12, "focus": [0.6, 0.5]}))
+r.say("Binghatti Spectre\\NAl Jaddaf, Dubai", (NIGHT, 0, 2.4, {"focus": [0.62, 0.5]}))
+r.say("Two towers\\N712 apartments, 235 offices", (SUNSET, 0, 2.4, {"focus": [0.82, 0.5]}), ("IMG_6726.MOV", 0.5, 2.0))
+r.say("Around 1,500 residents\\Nonce complete", ("IMG_6715.MOV", 0.2, 2.2), ("IMG_0072.MOV", 4.8, 1.6))
+r.say("19 shops on the ground floor\\Ndirectly below", ("IMG_6731.jpg", 0, 2.2), ("IMG_6734.jpg", 0, 2.0))
+r.say("Shop rents in Al Jaddaf\\Nup 19% in a year", ("IMG_6733.jpg", 0, 2.6))
+r.say("The last 7 shops: about 4% below\\Nwhat earlier buyers paid per sq ft", (BURJ, 0, 2.8, {"focus": [0.66, 0.5], "move": "pull"}))
+r.say("From AED 8,922,999", (NIGHT, 0, 2.2, {"zoom": 1.12, "focus": [0.6, 0.5]}))
 end(r)
 r.save("s3_retail", 770, 20)
 
-# 4. Offices
+# 4. Offices, with the investment case
 r = Reel()
-r.say("The offices at\\NBinghatti Spectre", (NIGHT, 0, 2.6, {"zoom": 1.1, "focus": [0.6, 0.45]}))
-r.say("705 to 4,018 sq ft", ("IMG_6715.MOV", 0.3, 2.2), ("IMG_0072.MOV", 4.6, 2.0))
-r.say("128 sold\\Nsince the September launch", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}), ("IMG_0073.MOV", 5.0, 1.7))
-r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_6726.MOV", 0.5, 2.2), ("IMG_0074.MOV", 0.2, 2.0))  # communal areas, not a flat
-r.say("Handover\\NDecember 2028", (BURJ, 0, 2.6, {"focus": [0.66, 0.5]}))
+r.say("The offices at\\NBinghatti Spectre", (NIGHT, 0, 2.4, {"zoom": 1.1, "focus": [0.6, 0.45]}))
+r.say("705 to 4,018 sq ft", ("IMG_6715.MOV", 0.3, 2.0), ("IMG_0072.MOV", 4.6, 1.8))
+r.say("128 sold in the\\Nfirst seven weeks", (SUNSET, 0, 2.4, {"focus": [0.82, 0.5]}), ("IMG_0073.MOV", 5.0, 1.7))
+r.say("Dubai office prices per sq ft\\Nup 59% in a year", ("IMG_6727.MOV", 3.0, 2.8, {"focus": [0.5, 0.5]}))
+r.say("Two-thirds of Dubai office lettings\\Nare under 1,000 sq ft", ("IMG_6712.MOV", 0.3, 2.8))
+r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_6726.MOV", 0.5, 2.2), ("IMG_0074.MOV", 0.2, 1.8))  # communal areas, not a flat
+r.say("Handover\\NDecember 2028", (BURJ, 0, 2.2, {"focus": [0.66, 0.5]}))
 end(r)
 r.save("s4_offices", 744, 75)
 
@@ -119,13 +123,14 @@ r.say("From AED 799,999\\Nabout £162,500", ("IMG_6720.MOV", 0.2, 2.6), ("IMG_00
 end(r)
 r.save("s5_residences", 175, 10)
 
-# 6. Al Jaddaf in numbers (12 months to late October 2026), shops first
+# 6. Commercial property in numbers (12 months to late October 2026): capital and rental growth
 r = Reel()
-r.say("Al Jaddaf, Dubai\\NThe last 12 months", ("IMG_6727.MOV", 0.5, 3.2, {"focus": [0.5, 0.5]}))
-r.say("Shop rents\\Nup 17% to 20%", ("IMG_6733.jpg", 0, 2.6))
+r.say("Commercial property in Dubai\\NThe last 12 months", ("IMG_6727.MOV", 0.5, 3.0, {"focus": [0.5, 0.5]}))
+r.say("Office prices per sq ft\\Nup 59%", ("IMG_6712.MOV", 0.3, 2.6))
+r.say("Office sales\\Nup 48%", ("IMG_6713.MOV", 0.3, 2.4))
+r.say("In JVC, office prices\\Nup 34% per sq ft", (SUNSET, 0, 2.6, {"focus": [0.82, 0.5]}))
+r.say("Al Jaddaf shop rents\\Nup 19%", ("IMG_6733.jpg", 0, 2.6))
 r.say("Shops let at about\\NAED 173 per sq ft a year", ("IMG_6736.jpg", 0, 2.6))
-r.say("Apartment sales\\Nmore than tripled", ("IMG_6712.MOV", 0.3, 2.8))
-r.say("Price per sq ft\\Nup 22%", ("IMG_6720.MOV", 0.2, 2.4))
 end(r)
 r.save("s6_al_jaddaf", 132, 30)
 

@@ -5,7 +5,7 @@
   {
    "file": "../work/spectre_render_night.png",
    "in": 0,
-   "dur": 2.6,
+   "dur": 2.4,
    "move": "push",
    "focus": [
     0.62,
@@ -15,7 +15,7 @@
   {
    "file": "../work/spectre_render_sunset.png",
    "in": 0,
-   "dur": 2.6,
+   "dur": 2.4,
    "move": "push",
    "focus": [
     0.82,
@@ -25,19 +25,19 @@
   {
    "file": "../raw/IMG_6726.MOV",
    "in": 0.5,
-   "dur": 2.2,
+   "dur": 2.0,
    "move": "push"
   },
   {
    "file": "../raw/IMG_6715.MOV",
    "in": 0.2,
-   "dur": 2.3,
+   "dur": 2.2,
    "move": "push"
   },
   {
    "file": "../raw/IMG_0072.MOV",
    "in": 4.8,
-   "dur": 1.7,
+   "dur": 1.6,
    "move": "push"
   },
   {
@@ -49,13 +49,29 @@
   {
    "file": "../work/IMG_6734.jpg",
    "in": 0,
-   "dur": 2.2,
+   "dur": 2.0,
    "move": "push"
+  },
+  {
+   "file": "../work/IMG_6733.jpg",
+   "in": 0,
+   "dur": 2.6,
+   "move": "push"
+  },
+  {
+   "file": "../work/spectre_render_burj.png",
+   "in": 0,
+   "dur": 2.8,
+   "move": "pull",
+   "focus": [
+    0.66,
+    0.5
+   ]
   },
   {
    "file": "../work/spectre_render_night.png",
    "in": 0,
-   "dur": 2.6,
+   "dur": 2.2,
    "move": "push",
    "zoom": 1.12,
    "focus": [
@@ -84,68 +100,78 @@
   {
    "file": "../raw/IMG_6726.MOV",
    "a": 0.5,
-   "b": 2.7,
-   "at": 5.2,
-   "gain": -4.9
+   "b": 2.5,
+   "at": 4.8,
+   "gain": -4.6
   },
   {
    "file": "../raw/IMG_6715.MOV",
    "a": 0.2,
-   "b": 2.5,
-   "at": 7.4,
+   "b": 2.4000000000000004,
+   "at": 6.8,
    "gain": -3.6
   },
   {
    "file": "../raw/IMG_0072.MOV",
    "a": 4.8,
-   "b": 6.5,
-   "at": 9.7,
-   "gain": 0.2
+   "b": 6.4,
+   "at": 9.0,
+   "gain": 0.1
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 18.4,
+   "at": 22.4,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 19.6,
+   "at": 23.6,
    "gain": -8.5
   }
  ],
  "text": [
   {
    "from": 0.2,
-   "to": 2.5,
+   "to": 2.3,
    "text": "Binghatti Spectre\\NAl Jaddaf, Dubai"
   },
   {
-   "from": 2.8,
-   "to": 7.3,
+   "from": 2.6,
+   "to": 6.7,
    "text": "Two towers\\N712 apartments, 235 offices"
   },
   {
-   "from": 7.6,
-   "to": 11.3,
+   "from": 7.0,
+   "to": 10.5,
    "text": "Around 1,500 residents\\Nonce complete"
   },
   {
-   "from": 11.6,
-   "to": 15.7,
+   "from": 10.8,
+   "to": 14.7,
    "text": "19 shops on the ground floor\\Ndirectly below"
   },
   {
-   "from": 16.0,
-   "to": 18.3,
-   "text": "7 shops left\\NFrom AED 8,922,999"
+   "from": 15.0,
+   "to": 17.3,
+   "text": "Shop rents in Al Jaddaf\\Nup 19% in a year"
   },
   {
-   "from": 20.6,
-   "to": 25.4,
+   "from": 17.6,
+   "to": 20.1,
+   "text": "The last 7 shops: about 4% below\\Nwhat earlier buyers paid per sq ft"
+  },
+  {
+   "from": 20.4,
+   "to": 22.3,
+   "text": "From AED 8,922,999"
+  },
+  {
+   "from": 24.6,
+   "to": 29.4,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

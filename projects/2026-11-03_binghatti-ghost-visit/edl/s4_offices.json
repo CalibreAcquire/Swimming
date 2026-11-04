@@ -5,7 +5,7 @@
   {
    "file": "../work/spectre_render_night.png",
    "in": 0,
-   "dur": 2.6,
+   "dur": 2.4,
    "move": "push",
    "zoom": 1.1,
    "focus": [
@@ -16,19 +16,19 @@
   {
    "file": "../raw/IMG_6715.MOV",
    "in": 0.3,
-   "dur": 2.2,
+   "dur": 2.0,
    "move": "push"
   },
   {
    "file": "../raw/IMG_0072.MOV",
    "in": 4.6,
-   "dur": 2.0,
+   "dur": 1.8,
    "move": "push"
   },
   {
    "file": "../work/spectre_render_sunset.png",
    "in": 0,
-   "dur": 2.6,
+   "dur": 2.4,
    "move": "push",
    "focus": [
     0.82,
@@ -42,6 +42,22 @@
    "move": "push"
   },
   {
+   "file": "../raw/IMG_6727.MOV",
+   "in": 3.0,
+   "dur": 2.8,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/IMG_6712.MOV",
+   "in": 0.3,
+   "dur": 2.8,
+   "move": "push"
+  },
+  {
    "file": "../raw/IMG_6726.MOV",
    "in": 0.5,
    "dur": 2.2,
@@ -50,13 +66,13 @@
   {
    "file": "../raw/IMG_0074.MOV",
    "in": 0.2,
-   "dur": 2.0,
+   "dur": 1.8,
    "move": "push"
   },
   {
    "file": "../work/spectre_render_burj.png",
    "in": 0,
-   "dur": 2.6,
+   "dur": 2.2,
    "move": "push",
    "focus": [
     0.66,
@@ -84,82 +100,106 @@
   {
    "file": "../raw/IMG_6715.MOV",
    "a": 0.3,
-   "b": 2.5,
-   "at": 2.6,
-   "gain": -3.6
+   "b": 2.3,
+   "at": 2.4,
+   "gain": -3.5
   },
   {
    "file": "../raw/IMG_0072.MOV",
    "a": 4.6,
-   "b": 6.6,
-   "at": 4.8,
-   "gain": 0.3
+   "b": 6.3999999999999995,
+   "at": 4.4,
+   "gain": 0.0
   },
   {
    "file": "../raw/IMG_0073.MOV",
    "a": 5.0,
    "b": 6.7,
-   "at": 9.4,
+   "at": 8.6,
    "gain": -3.3
+  },
+  {
+   "file": "../raw/IMG_6727.MOV",
+   "a": 3.0,
+   "b": 5.8,
+   "at": 10.3,
+   "gain": -7.8
+  },
+  {
+   "file": "../raw/IMG_6712.MOV",
+   "a": 0.3,
+   "b": 3.0999999999999996,
+   "at": 13.1,
+   "gain": -14.8
   },
   {
    "file": "../raw/IMG_6726.MOV",
    "a": 0.5,
    "b": 2.7,
-   "at": 11.1,
+   "at": 15.9,
    "gain": -4.9
   },
   {
    "file": "../raw/IMG_0074.MOV",
    "a": 0.2,
-   "b": 2.2,
-   "at": 13.3,
-   "gain": -4.5
+   "b": 2.0,
+   "at": 18.1,
+   "gain": -4.7
   },
   {
    "file": "../raw/IMG_0076.MOV",
    "a": 5.4,
    "b": 6.6000000000000005,
-   "at": 17.9,
+   "at": 22.1,
    "gain": -4.5
   },
   {
    "file": "../raw/IMG_0080.MOV",
    "a": 10.0,
    "b": 15.8,
-   "at": 19.1,
+   "at": 23.3,
    "gain": -8.5
   }
  ],
  "text": [
   {
    "from": 0.2,
-   "to": 2.5,
+   "to": 2.3,
    "text": "The offices at\\NBinghatti Spectre"
   },
   {
-   "from": 2.8,
-   "to": 6.7,
+   "from": 2.6,
+   "to": 6.1,
    "text": "705 to 4,018 sq ft"
   },
   {
-   "from": 7.0,
-   "to": 11.0,
-   "text": "128 sold\\Nsince the September launch"
+   "from": 6.4,
+   "to": 10.2,
+   "text": "128 sold in the\\Nfirst seven weeks"
   },
   {
-   "from": 11.3,
-   "to": 15.2,
+   "from": 10.5,
+   "to": 13.0,
+   "text": "Dubai office prices per sq ft\\Nup 59% in a year"
+  },
+  {
+   "from": 13.3,
+   "to": 15.8,
+   "text": "Two-thirds of Dubai office lettings\\Nare under 1,000 sq ft"
+  },
+  {
+   "from": 16.1,
+   "to": 19.8,
    "text": "From AED 1,864,999\\Nabout £379,000"
   },
   {
-   "from": 15.5,
-   "to": 17.8,
+   "from": 20.1,
+   "to": 22.0,
    "text": "Handover\\NDecember 2028"
   },
   {
-   "from": 20.1,
-   "to": 24.9,
+   "from": 24.3,
+   "to": 29.1,
    "text": "Comment DUBAI\\Nfor prices and availability",
    "y": 0.3
   }

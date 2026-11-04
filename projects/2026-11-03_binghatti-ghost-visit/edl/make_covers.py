@@ -93,4 +93,7 @@ cover("work/cov/view.png", P + "C_v2.jpg", "centre", 840,
       "CormorantGaramond-500-Italic.ttf", 140, ["The view"], "Binghatti, Al Jaddaf", label="AL JADDAF  ·  DUBAI")
 cover("work/cov/hall.png", P + "E_v2.jpg", "centre", 840,
       "CormorantGaramond-500-Italic.ttf", 136, ["The residences"], "From AED 799,999", label="AL JADDAF  ·  DUBAI")
+# reel 6 is now commercial-wide (4 Nov)
+cover("work/cov/sunset.png", P + "H_v2.jpg", "top", 360,
+      "CormorantGaramond-500.ttf", 120, ["Commercial property"], "The last 12 months in numbers", label="DUBAI  ·  UAE")
 print("covers written")
