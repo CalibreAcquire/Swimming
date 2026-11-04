@@ -17,3 +17,5 @@ monday.com: Content & Filming (Master) item 3304694673 (https://calibreacquire-t
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
 
 Outros (28 Oct 2026): all files are now v2 (end on the outro); the v1 .srt still lines up. Events updated.
+
+4 Nov: YouTube file re-encoded smaller for download: `_youtube_v3.mp4` (112 MB, 2-pass 4 Mbps; v2 was 189 MB). Same edit and audio; v1 .srt still lines up. Event updated.

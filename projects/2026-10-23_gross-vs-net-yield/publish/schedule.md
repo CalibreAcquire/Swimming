@@ -19,3 +19,5 @@ Google Drive: YouTube › Edited › Gross yield vs net yield (folder 1nBpt4Xx-o
 TikTok (28 Oct 2026): every reel/Short slot above also covers TikTok (same file, same cover, the Instagram caption); the step is in each Outlook event. YouTube Short tags are in each event too.
 
 Outros (28 Oct 2026): all files are now v3 (end on the outro); the v2 .srt still lines up. Events updated.
+
+4 Nov: YouTube file re-encoded smaller for download: `_youtube_v5.mp4` (120 MB, 2-pass 2.7 Mbps; v3 was 267 MB). Same edit and audio; v2 .srt still lines up. Event updated.
