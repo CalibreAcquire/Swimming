@@ -4,7 +4,7 @@ Jake, 3 Nov: teasers first, then more information each video; lots of residentia
 
 | Slot (UK / Dubai) | Reel | Files | Outlook event id |
 |---|---|---|---|
-| Tue 3 Nov 19:10 / 23:10 | 1 Teaser | `_reel1-teaser_v1.mp4`, cover A | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC--4qQgAA |
+| Wed 4 Nov (Jake posting now; was Tue 3 Nov 19:10) | 1 Teaser | `_reel1-teaser_v2.mp4`, cover A | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC--4qQgAA |
 | Wed 4 Nov 16:40 / 20:40 | 2 The view (teaser, area-wide) | `_reel2-the-view_v6.mp4`, cover C v2 | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC--4qRAAA |
 | Thu 5 Nov 11:40 / 15:40 | 3 Spectre shops (check price and count) | `_reel3-retail_v5.mp4`, cover I | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC--4qSAAA |
 | Fri 6 Nov 16:40 / 20:40 | 4 Spectre offices (check price) | `_reel4-offices_v5.mp4`, cover J | AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AetV7L6Ps9kOttSjakFRACwAC--4qSwAA |

@@ -74,6 +74,14 @@ def end(r, s=CTA):
 # Jake, 4 Nov: more footage in Drive with better views (4K: skyline, balcony, living room, kitchen,
 # corridor, lift lobby, the district from the street; photos of the empty ground-floor shopfronts).
 # IMG_6716 (lift lobby) is out: Jake turns and looks back at the camera (Jake, 4 Nov).
+# 1. Teaser (v2, 4 Nov): re-cut with the new footage, smooth zoom and the walk-out ending to match the series
+r = Reel()
+r.say("Binghatti\\NAl Jaddaf, Dubai", ("IMG_6727.MOV", 0.5, 2.6, {"focus": [0.5, 0.5]}), ("IMG_6726.MOV", 0.5, 2.0))
+r.shot("IMG_0074.MOV", 0.2, 1.8).shot("IMG_0073.MOV", 5.0, 1.8)
+r.say("A private viewing", ("IMG_6717.MOV", 0.2, 2.4), ("IMG_6720.MOV", 0.2, 2.4), y=0.37)
+end(r)
+r.save("s1_teaser", 744, 30)
+
 # 2. The view (teaser)
 r = Reel()
 r.say("The view\\NBinghatti, Al Jaddaf", ("IMG_6720.MOV", 0.2, 2.6), ("IMG_6719.MOV", 2.2, 2.8))
