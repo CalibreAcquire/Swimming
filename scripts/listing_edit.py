@@ -84,12 +84,15 @@ def render_shot(edl, i, s, base, tmp, W, H, fps, draft):
         z0, z1 = z0 + 0.05, z0
     fx, fy = s.get("focus", [0.5, 0.45])
     grade = edl.get("grade") or "null"
-    # cover the frame, then a time-varying zoom (eval=frame) and a crop around the focus point
-    zoom = f"({z0}+({z1}-{z0})*min(t/{dur},1))"
-    vf = (f"fps={fps},{grade},scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,"
-          f"crop={W}:{H}:x='(iw-{W})*{fx}':y='(ih-{H})*{fy}',"  # a landscape source (render) is framed on the focus too
-          f"scale=w='ceil({W}*{zoom}/2)*2':h=-2:eval=frame:flags=bicubic,"
-          f"crop={W}:{H}:x='(iw-{W})*{fx}':y='(ih-{H})*{fy}',setsar=1,format=yuv420p")
+    # cover the frame at SS x the output size, framed on the focus point (a landscape render too), then
+    # zoompan down to the output. Zooming at the output size moved in whole pixels: two frames still, then a
+    # jump, which reads as jitter (Jake, 4 Nov). At 3x the steps are a third of a pixel, so the push is smooth.
+    SS = 3
+    n = max(round(dur * fps) - 1, 1)
+    vf = (f"fps={fps},{grade},scale={W * SS}:{H * SS}:force_original_aspect_ratio=increase:flags=bicubic,"
+          f"crop={W * SS}:{H * SS}:x='(iw-{W * SS})*{fx}':y='(ih-{H * SS})*{fy}',"
+          f"zoompan=z='{z0}+({z1}-{z0})*min(on/{n},1)':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}'"
+          f":d=1:s={W}x{H}:fps={fps},setsar=1,format=yuv420p")
     # a still (render, photo) loops for the shot's length; the push-in gives it the same movement
     inp = (["-loop", "1", "-framerate", str(fps), "-i", src] if src.lower().endswith((".png", ".jpg", ".jpeg"))
            else ["-ss", f"{s['in']:.3f}", "-i", src])
