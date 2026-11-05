@@ -15,7 +15,8 @@ EDL keys (times in OUTPUT seconds unless noted; paths relative to the EDL):
                   "zoom": start zoom (1.0), "focus": [fx, fy] 0-1 point to zoom into}]
                   played back to back; their total is the video length (before the outro)
   audio         [{"file", "a": source s, "b": source s, "at": output s, "gain": dB}]  speech
-                  and ambience laid on the timeline; speech clips are levelled to each other
+                  and ambience laid on the timeline; speech clips are levelled to each other.
+                  Leave it empty for a music-only reel
   text          [{"from", "to", "text", "size": px (default 50), "y": 0-1 (default 0.5)}]
                   "\\N" breaks a line; captions and titles both use this
   music         {"track", "start", "bed", "duck"}  as voice.mix_music
@@ -118,11 +119,15 @@ def render_audio(edl, base, tmp, total):
             g = a["gain"]
         fade = min(0.03, d / 4)
         parts.append((raw, a["at"], g, d, fade))
-    if not parts:
+    if not parts:  # music only (Jake, 5 Nov: no on-location sound on the Dubai reels)
         silent = os.path.join(tmp, "voice.wav")
         run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", f"anullsrc=r={SR}:cl=stereo",
              "-t", f"{total:.3f}", silent])
-        return silent
+        if not edl.get("music"):
+            return silent
+        mixed = os.path.join(tmp, "mix.wav")
+        voice.mix_music(silent, mixed, dict(edl["music"], duck=1))
+        return mixed
     ins, fc = [], []
     for k, (raw, at, g, d, fade) in enumerate(parts):
         ins += ["-i", raw]

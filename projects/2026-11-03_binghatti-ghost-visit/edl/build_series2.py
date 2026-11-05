@@ -19,6 +19,7 @@ import json, os, re, subprocess
 
 R, W = "../raw/", "../work/"
 STILL = (".png", ".jpg", ".JPG")
+AMBIENCE = False  # Jake, 5 Nov: silence the footage, music only
 
 
 class Reel:
@@ -28,7 +29,7 @@ class Reel:
     def shot(self, file, src_in, dur, **kw):
         still = file.endswith(STILL)
         path = (W if file.startswith("spectre") or file.endswith(".jpg") else R) + file  # renders and converted photos live in work/
-        if not still:  # room/street sound low under the music (map 0:a:0: spatial audio)
+        if not still and AMBIENCE:  # room/street sound low under the music (map 0:a:0: spatial audio)
             r = subprocess.run(["ffmpeg", "-ss", str(src_in), "-t", str(dur), "-i", os.path.join("edl", path),
                                 "-map", "0:a:0", "-af", "ebur128=framelog=quiet", "-f", "null", "-"],
                                capture_output=True, text=True)
