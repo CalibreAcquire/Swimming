@@ -1,65 +1,125 @@
 {
-  "source": "https://mixkit.co/free-stock-music/",
-  "tracks": [
-    {
-      "id": 132,
-      "title": "Hazy After Hours",
-      "artist": "Alejandro Maga\u00f1a (A. M.)",
-      "genre": "Electronica",
-      "seconds": 127,
-      "url": "https://assets.mixkit.co/music/132/132.mp3",
-      "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
-      "notes": "Hazy late-night electronica, very low overlap (4%) but bigger dynamics."
-    },
-    {
-      "id": 175,
-      "title": "Digital Clouds",
-      "artist": "Alejandro Maga\u00f1a (A. M.)",
-      "genre": "Chillout",
-      "seconds": 101,
-      "url": "https://assets.mixkit.co/music/175/175.mp3",
-      "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
-      "notes": "Light chill, 129 bpm, low overlap (8%). Short (1:41) \u2014 reels."
-    },
-    {
-      "id": 183,
-      "title": "Roses",
-      "artist": "Andrew Ev",
-      "genre": "Chillout",
-      "seconds": 267,
-      "url": "https://assets.mixkit.co/music/183/183.mp3",
-      "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
-      "notes": "Chill, 112 bpm, long (4:27); bigger dynamics \u2014 check sections before use."
-    },
-    {
-      "id": 609,
-      "title": "Moon Walk",
-      "artist": "Eugenio Mininni",
-      "genre": "Electronica",
-      "seconds": 205,
-      "url": "https://assets.mixkit.co/music/609/609.mp3",
-      "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
-      "notes": "Calm cinematic electronica, 99 bpm. Low overlap (9%). Good for explainer pieces."
-    },
-    {
-      "id": 744,
-      "title": "House 02",
-      "artist": "Lily J",
-      "genre": "House",
-      "seconds": 113,
-      "url": "https://assets.mixkit.co/music/744/744.mp3",
-      "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
-      "notes": "Elegant deep house, very steady energy (3.9 dB swing), 123 bpm. Default for reels."
-    },
-    {
-      "id": 770,
-      "title": "Autofahren",
-      "artist": "Mauro Urbina",
-      "genre": "Deep House",
-      "seconds": 284,
-      "url": "https://assets.mixkit.co/music/770/770.mp3",
-      "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
-      "notes": "Luxury deep house; steady, cinematic. Low speech-band overlap (8%). Default for YouTube."
-    }
-  ]
+ "source": "https://mixkit.co/free-stock-music/",
+ "tracks": [
+  {
+   "id": 132,
+   "title": "Hazy After Hours",
+   "artist": "Alejandro Magaña (A. M.)",
+   "genre": "Electronica",
+   "seconds": 127,
+   "url": "https://assets.mixkit.co/music/132/132.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Hazy late-night electronica, very low overlap (4%) but bigger dynamics."
+  },
+  {
+   "id": 175,
+   "title": "Digital Clouds",
+   "artist": "Alejandro Magaña (A. M.)",
+   "genre": "Chillout",
+   "seconds": 101,
+   "url": "https://assets.mixkit.co/music/175/175.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Light chill, 129 bpm, low overlap (8%). Short (1:41) — reels."
+  },
+  {
+   "id": 183,
+   "title": "Roses",
+   "artist": "Andrew Ev",
+   "genre": "Chillout",
+   "seconds": 267,
+   "url": "https://assets.mixkit.co/music/183/183.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Chill, 112 bpm, long (4:27); bigger dynamics — check sections before use."
+  },
+  {
+   "id": 609,
+   "title": "Moon Walk",
+   "artist": "Eugenio Mininni",
+   "genre": "Electronica",
+   "seconds": 205,
+   "url": "https://assets.mixkit.co/music/609/609.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Calm cinematic electronica, 99 bpm. Low overlap (9%). Good for explainer pieces."
+  },
+  {
+   "id": 744,
+   "title": "House 02",
+   "artist": "Lily J",
+   "genre": "House",
+   "seconds": 113,
+   "url": "https://assets.mixkit.co/music/744/744.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Elegant deep house, very steady energy (3.9 dB swing), 123 bpm. Default for reels."
+  },
+  {
+   "id": 770,
+   "title": "Autofahren",
+   "artist": "Mauro Urbina",
+   "genre": "Deep House",
+   "seconds": 284,
+   "url": "https://assets.mixkit.co/music/770/770.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Luxury deep house; steady, cinematic. Low speech-band overlap (8%). Default for YouTube."
+  },
+  {
+   "id": 443,
+   "title": "Serene View",
+   "artist": "Arulo",
+   "genre": "Chillout",
+   "seconds": 114,
+   "url": "https://assets.mixkit.co/music/443/443.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Chilled, atmospheric, soft (dark tone, gentle beat). Steady from 14 s. Dubai reels, 5 Nov."
+  },
+  {
+   "id": 135,
+   "title": "Sleepy Cat",
+   "artist": "Alejandro Magaña (A. M.)",
+   "genre": "Downtempo",
+   "seconds": 119,
+   "url": "https://assets.mixkit.co/music/135/135.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Chilled downtempo, about 68 bpm. Steady from 50 s."
+  },
+  {
+   "id": 698,
+   "title": "Pop 06",
+   "artist": "Grigoriy Nuzhny",
+   "genre": "Downtempo",
+   "seconds": 153,
+   "url": "https://assets.mixkit.co/music/698/698.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Relaxed, reflective downtempo, about 66 bpm. Steady from 16 s."
+  },
+  {
+   "id": 750,
+   "title": "Relaxation 04",
+   "artist": "Lily J",
+   "genre": "Chillout",
+   "seconds": 130,
+   "url": "https://assets.mixkit.co/music/750/750.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Atmospheric, relaxed, soft beat. Steady from 19 s."
+  },
+  {
+   "id": 169,
+   "title": "Zanarkand Forest",
+   "artist": "Alejandro Magaña (A. M.)",
+   "genre": "Chillout",
+   "seconds": 113,
+   "url": "https://assets.mixkit.co/music/169/169.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Relaxed atmospheric electronica, very even (under 4 dB swing from 25 s)."
+  },
+  {
+   "id": 184,
+   "title": "Vastness",
+   "artist": "Andrew Ev",
+   "genre": "Chillout",
+   "seconds": 230,
+   "url": "https://assets.mixkit.co/music/184/184.mp3",
+   "licence": "Mixkit Stock Music Free License (commercial use, no attribution)",
+   "notes": "Slow, spacious, cinematic chill, about 59 bpm. Steady from 30 s."
+  }
+ ]
 }

@@ -107,8 +107,8 @@
   }
  ],
  "music": {
-  "track": 175,
-  "start": 10,
+  "track": 750,
+  "start": 19,
   "bed": -27
  },
  "music_led": true,

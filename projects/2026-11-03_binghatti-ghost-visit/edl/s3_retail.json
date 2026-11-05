@@ -141,8 +141,8 @@
   }
  ],
  "music": {
-  "track": 770,
-  "start": 20,
+  "track": 135,
+  "start": 50,
   "bed": -27
  },
  "music_led": true,

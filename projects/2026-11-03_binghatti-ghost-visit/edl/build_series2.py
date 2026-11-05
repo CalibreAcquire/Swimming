@@ -20,6 +20,7 @@ import json, os, re, subprocess
 R, W = "../raw/", "../work/"
 STILL = (".png", ".jpg", ".JPG")
 AMBIENCE = False  # Jake, 5 Nov: silence the footage, music only
+# Jake, 5 Nov: "something a bit more chilled": reels 2 to 7 moved to chill/downtempo tracks (443, 135, 698, 750, 169, 184)
 
 
 class Reel:
@@ -89,7 +90,7 @@ r.say("The view\\NBinghatti, Al Jaddaf", ("IMG_6720.MOV", 0.2, 2.6), ("IMG_6719.
 r.shot("IMG_6715.MOV", 0.2, 2.2).shot("IMG_0072.MOV", 4.8, 1.7)
 r.say("10 Binghatti developments\\Nin Al Jaddaf", ("IMG_6717.MOV", 0.2, 2.6), ("IMG_6727.MOV", 3.0, 3.0, {"focus": [0.5, 0.5]}), y=0.37)
 end(r)
-r.save("s2_view", 609, 35)
+r.save("s2_view", 443, 14)
 
 # 3. Retail: shops below two towers, with the investment case (publish/investment_case.md; Jake, 4 Nov: "go")
 r = Reel()
@@ -101,7 +102,7 @@ r.say("Shop rents in Al Jaddaf\\Nup 19% in a year", ("IMG_6733.jpg", 0, 2.6))
 r.say("The last 7 shops: about 4% below\\Nwhat earlier buyers paid per sq ft", (BURJ, 0, 2.8, {"focus": [0.66, 0.5], "move": "pull"}))
 r.say("From AED 8,922,999", (NIGHT, 0, 2.2, {"zoom": 1.12, "focus": [0.6, 0.5]}))
 end(r)
-r.save("s3_retail", 770, 20)
+r.save("s3_retail", 135, 50)
 
 # 4. Offices, with the investment case
 r = Reel()
@@ -113,7 +114,7 @@ r.say("Two-thirds of Dubai office lettings\\Nare under 1,000 sq ft", ("IMG_6712.
 r.say("From AED 1,864,999\\Nabout £379,000", ("IMG_6726.MOV", 0.5, 2.2), ("IMG_0074.MOV", 0.2, 1.8))  # communal areas, not a flat
 r.say("Handover\\NDecember 2028", (BURJ, 0, 2.2, {"focus": [0.66, 0.5]}))
 end(r)
-r.save("s4_offices", 744, 75)
+r.save("s4_offices", 698, 16)
 
 # 5. Residences across the area: plenty of the apartment
 r = Reel()
@@ -122,7 +123,7 @@ r.say("Studio to\\Nthree-bedroom apartments", ("IMG_6717.MOV", 0.2, 2.4), ("IMG_
 r.say("Freehold\\NReady now or handover by 2028", ("IMG_0060.MOV", 3.0, 2.0), ("IMG_0063.MOV", 0.2, 1.8), ("IMG_6719.MOV", 2.0, 2.4))
 r.say("From AED 799,999\\Nabout £162,500", ("IMG_6720.MOV", 0.2, 2.6), ("IMG_0054.MOV", 0.4, 2.2))
 end(r)
-r.save("s5_residences", 175, 10)
+r.save("s5_residences", 750, 19)
 
 # 6. Commercial property in numbers (12 months to late October 2026): capital and rental growth
 r = Reel()
@@ -133,7 +134,7 @@ r.say("In JVC, office prices\\Nup 34% per sq ft", (SUNSET, 0, 2.6, {"focus": [0.
 r.say("Al Jaddaf shop rents\\Nup 19%", ("IMG_6733.jpg", 0, 2.6))
 r.say("Shops let at about\\NAED 173 per sq ft a year", ("IMG_6736.jpg", 0, 2.6))
 end(r)
-r.save("s6_al_jaddaf", 132, 30)
+r.save("s6_al_jaddaf", 169, 25)
 
 # 7. The costs on top (built to be saved)
 r = Reel()
@@ -142,4 +143,4 @@ r.say("4% Dubai Land\\NDepartment registration", ("IMG_6718.MOV", 0.2, 2.4))
 r.say("About AED 4,800 in\\Nregistration and admin fees", ("IMG_0056.MOV", 0.3, 2.6))
 r.say("5% VAT on\\Ncommercial units", ("IMG_6732.jpg", 0, 2.6))
 end(r, "Comment DUBAI\\Nfor the full cost breakdown")
-r.save("s7_costs", 609, 80)
+r.save("s7_costs", 184, 30)
