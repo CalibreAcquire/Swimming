@@ -1,6 +1,8 @@
 # YouTube playbook (Paddy Galloway interview, 10 Nov 2026)
 
-The full document is a Claude Doc: https://claude.ai/artifact/B9oNiY7zaZhUS37Gek6CRV
+The full document is a Google Doc in Drive › YouTube (Jake's copy, the one to keep up to date):
+https://docs.google.com/document/d/1q-ay_XWxLmIAW_dhLMVofcms6M8YfqN9pkJuVJh7E1A/edit
+(First drafted as a Claude Doc, https://claude.ai/artifact/B9oNiY7zaZhUS37Gek6CRV; the two don't sync.)
 
 Rules I apply as the editor (until Jake decides otherwise on the open points in the doc):
 
