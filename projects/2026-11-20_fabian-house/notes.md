@@ -10,9 +10,9 @@ The mic cuts out at 228.5 s (3:48), straight after "We took over the management.
 recording in Drive. Lost: rents up 30% / yield 5.4%, the missed completion and the two-month wait, the lesson,
 nine flats vs one building, stamp duty £228,250 vs about £387,500, the close.
 Asked Jake (15 Nov) to re-record from "He's holding it. We took over the management…" to the end (about 2½
-Jake (15 Nov, evening): will re-film. Thu 19 Nov 09:00 diary event now holds the exact lines from "He's holding it" to the end, with mic and framing checks.
 minutes), ideally in the Thursday 19 Nov 09:00 Fabian slot or sooner, and to upload the full-size C0396.MP4 if
 it's still on the card.
+Jake (15 Nov, evening): will re-film. Thu 19 Nov 09:00 diary event now holds the exact lines from "He's holding it" to the end, with mic and framing checks.
 
 ## Take selection, part 1 (source 4.7–224.4, before the dropout)
 | Section | Take used | Cut | Reason |
