@@ -2,3254 +2,2920 @@
  "language": "en",
  "segments": [
   {
-   "start": 5.3,
-   "end": 13.18,
-   "text": " We sold at Fabian House a freehold block of nine flats and two shops in Shadwell for 4,775,000",
+   "start": 0.0,
+   "end": 41.2118,
+   "text": "We sold Fabian House, a freehold block of 9 flats and 2 shops in Shadwell for $4 .775 million. It had one viewing and one offer, and it was agreed before it was advertised anywhere. The completion date came and went and the buyers money for the next 2 months the whole deal hung on one thing, whether the seller would wait. In this video, I'll go through how the building came to us, how it was priced at 4 .1 % yield, who buys a block like this, and why. What nearly stopped it, and what the buyer got, and.",
    "words": [
     {
-     "w": " We",
-     "s": 5.3,
-     "e": 5.76
+     "w": "We",
+     "s": 4.82,
+     "e": 5.46
     },
     {
-     "w": " sold",
-     "s": 5.76,
-     "e": 6.2
+     "w": "sold",
+     "s": 5.46,
+     "e": 6.1
     },
     {
-     "w": " at",
-     "s": 6.2,
-     "e": 6.36
+     "w": "Fabian",
+     "s": 6.1,
+     "e": 6.64
     },
     {
-     "w": " Fabian",
-     "s": 6.36,
-     "e": 6.74
+     "w": "House,",
+     "s": 6.64,
+     "e": 7.02
     },
     {
-     "w": " House",
-     "s": 6.74,
-     "e": 7.14
+     "w": "a",
+     "s": 7.24,
+     "e": 7.42
     },
     {
-     "w": " a",
-     "s": 7.14,
-     "e": 7.52
+     "w": "freehold",
+     "s": 7.42,
+     "e": 7.82
     },
     {
-     "w": " freehold",
-     "s": 7.52,
-     "e": 7.9
+     "w": "block",
+     "s": 7.82,
+     "e": 8.12
     },
     {
-     "w": " block",
-     "s": 7.9,
-     "e": 8.2
+     "w": "of",
+     "s": 8.12,
+     "e": 8.36
     },
     {
-     "w": " of",
-     "s": 8.2,
-     "e": 8.48
+     "w": "9",
+     "s": 8.36,
+     "e": 8.68
     },
     {
-     "w": " nine",
-     "s": 8.48,
-     "e": 8.78
+     "w": "flats",
+     "s": 8.68,
+     "e": 9.12
     },
     {
-     "w": " flats",
-     "s": 8.78,
-     "e": 9.18
+     "w": "and",
+     "s": 9.12,
+     "e": 9.54
     },
     {
-     "w": " and",
-     "s": 9.18,
-     "e": 9.68
+     "w": "2",
+     "s": 9.54,
+     "e": 9.86
     },
     {
-     "w": " two",
-     "s": 9.68,
-     "e": 9.98
+     "w": "shops",
+     "s": 9.86,
+     "e": 10.18
     },
     {
-     "w": " shops",
-     "s": 9.98,
-     "e": 10.26
+     "w": "in",
+     "s": 10.18,
+     "e": 10.42
     },
     {
-     "w": " in",
-     "s": 10.26,
-     "e": 10.54
+     "w": "Shadwell",
+     "s": 10.42,
+     "e": 10.86
     },
     {
-     "w": " Shadwell",
-     "s": 10.54,
-     "e": 10.96
+     "w": "for",
+     "s": 10.86,
+     "e": 11.2
     },
     {
-     "w": " for",
-     "s": 10.96,
-     "e": 11.32
+     "w": "$4",
+     "s": 11.2,
+     "e": 11.56
     },
     {
-     "w": " 4",
-     "s": 11.32,
-     "e": 11.66
+     "w": ".775",
+     "s": 11.56,
+     "e": 12.74
     },
     {
-     "w": ",775",
-     "s": 11.66,
-     "e": 12.82
+     "w": "million.",
+     "s": 12.74,
+     "e": 13.12
     },
     {
-     "w": ",000",
-     "s": 12.82,
-     "e": 13.18
-    }
-   ]
-  },
-  {
-   "start": 13.18,
-   "end": 18.34,
-   "text": " It had one viewing and one offer and it was agreed before it was advertised anywhere",
-   "words": [
-    {
-     "w": " It",
-     "s": 13.18,
-     "e": 13.82
+     "w": "It",
+     "s": 13.42,
+     "e": 13.78
     },
     {
-     "w": " had",
-     "s": 13.82,
-     "e": 14.1
+     "w": "had",
+     "s": 13.78,
+     "e": 14.0
     },
     {
-     "w": " one",
-     "s": 14.1,
-     "e": 14.38
+     "w": "one",
+     "s": 14.0,
+     "e": 14.24
     },
     {
-     "w": " viewing",
-     "s": 14.38,
-     "e": 14.68
+     "w": "viewing",
+     "s": 14.24,
+     "e": 14.6
     },
     {
-     "w": " and",
-     "s": 14.68,
-     "e": 15.08
+     "w": "and",
+     "s": 14.6,
+     "e": 14.96
     },
     {
-     "w": " one",
-     "s": 15.08,
-     "e": 15.3
+     "w": "one",
+     "s": 14.96,
+     "e": 15.2
     },
     {
-     "w": " offer",
-     "s": 15.3,
-     "e": 15.74
+     "w": "offer,",
+     "s": 15.2,
+     "e": 15.54
     },
     {
-     "w": " and",
-     "s": 15.74,
-     "e": 16.16
+     "w": "and",
+     "s": 15.96,
+     "e": 16.04
     },
     {
-     "w": " it",
-     "s": 16.16,
-     "e": 16.24
+     "w": "it",
+     "s": 16.04,
+     "e": 16.14
     },
     {
-     "w": " was",
-     "s": 16.24,
-     "e": 16.44
+     "w": "was",
+     "s": 16.14,
+     "e": 16.32
     },
     {
-     "w": " agreed",
-     "s": 16.44,
-     "e": 16.78
+     "w": "agreed",
+     "s": 16.32,
+     "e": 16.68
     },
     {
-     "w": " before",
-     "s": 16.78,
-     "e": 17.12
+     "w": "before",
+     "s": 16.68,
+     "e": 17.02
     },
     {
-     "w": " it",
-     "s": 17.12,
-     "e": 17.26
+     "w": "it",
+     "s": 17.02,
+     "e": 17.06
     },
     {
-     "w": " was",
-     "s": 17.26,
-     "e": 17.5
+     "w": "was",
+     "s": 17.06,
+     "e": 17.38
     },
     {
-     "w": " advertised",
-     "s": 17.5,
-     "e": 18.04
+     "w": "advertised",
+     "s": 17.38,
+     "e": 17.94
     },
     {
-     "w": " anywhere",
-     "s": 18.04,
-     "e": 18.34
-    }
-   ]
-  },
-  {
-   "start": 18.9,
-   "end": 21.86,
-   "text": " The completion date came and went and the buyer's money",
-   "words": [
+     "w": "anywhere.",
+     "s": 17.94,
+     "e": 18.52
+    },
     {
-     "w": " The",
-     "s": 18.9,
-     "e": 19.36
+     "w": "The",
+     "s": 19.1,
+     "e": 19.3
     },
     {
-     "w": " completion",
-     "s": 19.36,
-     "e": 19.84
+     "w": "completion",
+     "s": 19.3,
+     "e": 19.72
     },
     {
-     "w": " date",
-     "s": 19.84,
-     "e": 20.22
+     "w": "date",
+     "s": 19.72,
+     "e": 20.12
     },
     {
-     "w": " came",
-     "s": 20.22,
-     "e": 20.52
+     "w": "came",
+     "s": 20.12,
+     "e": 20.44
     },
     {
-     "w": " and",
-     "s": 20.52,
-     "e": 20.74
+     "w": "and",
+     "s": 20.44,
+     "e": 20.64
     },
     {
-     "w": " went",
-     "s": 20.74,
-     "e": 20.94
+     "w": "went",
+     "s": 20.64,
+     "e": 20.84
     },
     {
-     "w": " and",
-     "s": 20.94,
-     "e": 21.14
+     "w": "and",
+     "s": 20.84,
+     "e": 21.02
     },
     {
-     "w": " the",
-     "s": 21.14,
-     "e": 21.32
+     "w": "the",
+     "s": 21.02,
+     "e": 21.2
     },
     {
-     "w": " buyer's",
-     "s": 21.32,
-     "e": 21.64
+     "w": "buyers",
+     "s": 21.2,
+     "e": 21.4
     },
     {
-     "w": " money",
-     "s": 21.64,
-     "e": 21.86
-    }
-   ]
-  },
-  {
-   "start": 22.72,
-   "end": 27.8,
-   "text": " For the next two months the whole deal hung on one thing whether the seller would wait",
-   "words": [
+     "w": "money",
+     "s": 21.4,
+     "e": 21.74
+    },
     {
-     "w": " For",
-     "s": 22.72,
-     "e": 23.32
+     "w": "for",
+     "s": 21.74,
+     "e": 23.2
     },
     {
-     "w": " the",
-     "s": 23.32,
-     "e": 23.46
+     "w": "the",
+     "s": 23.2,
+     "e": 23.3
     },
     {
-     "w": " next",
-     "s": 23.46,
-     "e": 23.74
+     "w": "next",
+     "s": 23.3,
+     "e": 23.62
     },
     {
-     "w": " two",
-     "s": 23.74,
-     "e": 23.94
+     "w": "2",
+     "s": 23.62,
+     "e": 23.84
     },
     {
-     "w": " months",
-     "s": 23.94,
-     "e": 24.3
+     "w": "months",
+     "s": 23.84,
+     "e": 24.22
     },
     {
-     "w": " the",
-     "s": 24.3,
-     "e": 24.58
+     "w": "the",
+     "s": 24.22,
+     "e": 24.46
     },
     {
-     "w": " whole",
-     "s": 24.58,
-     "e": 24.88
+     "w": "whole",
+     "s": 24.46,
+     "e": 24.76
     },
     {
-     "w": " deal",
-     "s": 24.88,
-     "e": 25.12
+     "w": "deal",
+     "s": 24.76,
+     "e": 25.0
     },
     {
-     "w": " hung",
-     "s": 25.12,
-     "e": 25.36
+     "w": "hung",
+     "s": 25.0,
+     "e": 25.26
     },
     {
-     "w": " on",
-     "s": 25.36,
-     "e": 25.58
+     "w": "on",
+     "s": 25.26,
+     "e": 25.48
     },
     {
-     "w": " one",
-     "s": 25.58,
-     "e": 25.86
+     "w": "one",
+     "s": 25.48,
+     "e": 25.76
     },
     {
-     "w": " thing",
-     "s": 25.86,
-     "e": 26.36
+     "w": "thing,",
+     "s": 25.76,
+     "e": 26.16
     },
     {
-     "w": " whether",
-     "s": 26.36,
-     "e": 26.7
+     "w": "whether",
+     "s": 26.38,
+     "e": 26.62
     },
     {
-     "w": " the",
-     "s": 26.7,
-     "e": 26.98
+     "w": "the",
+     "s": 26.62,
+     "e": 26.88
     },
     {
-     "w": " seller",
-     "s": 26.98,
-     "e": 27.18
+     "w": "seller",
+     "s": 26.88,
+     "e": 27.1
     },
     {
-     "w": " would",
-     "s": 27.18,
-     "e": 27.54
+     "w": "would",
+     "s": 27.1,
+     "e": 27.44
     },
     {
-     "w": " wait",
-     "s": 27.54,
-     "e": 27.8
-    }
-   ]
-  },
-  {
-   "start": 27.8,
-   "end": 34.16,
-   "text": " In this video I'll go through how the building came to us how it was priced at 4.1% yield",
-   "words": [
+     "w": "wait.",
+     "s": 27.44,
+     "e": 27.7
+    },
     {
-     "w": " In",
-     "s": 27.8,
-     "e": 28.54
+     "w": "In",
+     "s": 27.7,
+     "e": 28.44
     },
     {
-     "w": " this",
-     "s": 28.54,
-     "e": 28.78
+     "w": "this",
+     "s": 28.44,
+     "e": 28.68
     },
     {
-     "w": " video",
-     "s": 28.78,
-     "e": 29.2
+     "w": "video,",
+     "s": 28.68,
+     "e": 29.08
     },
     {
-     "w": " I'll",
-     "s": 29.2,
-     "e": 29.5
+     "w": "I'll",
+     "s": 29.14,
+     "e": 29.4
     },
     {
-     "w": " go",
-     "s": 29.5,
-     "e": 29.74
+     "w": "go",
+     "s": 29.4,
+     "e": 29.62
     },
     {
-     "w": " through",
-     "s": 29.74,
-     "e": 29.96
+     "w": "through",
+     "s": 29.62,
+     "e": 29.86
     },
     {
-     "w": " how",
-     "s": 29.96,
-     "e": 30.24
+     "w": "how",
+     "s": 29.86,
+     "e": 30.14
     },
     {
-     "w": " the",
-     "s": 30.24,
-     "e": 30.4
+     "w": "the",
+     "s": 30.14,
+     "e": 30.3
     },
     {
-     "w": " building",
-     "s": 30.4,
-     "e": 30.62
+     "w": "building",
+     "s": 30.3,
+     "e": 30.5
     },
     {
-     "w": " came",
-     "s": 30.62,
-     "e": 30.92
+     "w": "came",
+     "s": 30.5,
+     "e": 30.82
     },
     {
-     "w": " to",
-     "s": 30.92,
-     "e": 31.12
+     "w": "to",
+     "s": 30.82,
+     "e": 31.04
     },
     {
-     "w": " us",
-     "s": 31.12,
-     "e": 31.5
+     "w": "us,",
+     "s": 31.04,
+     "e": 31.34
     },
     {
-     "w": " how",
-     "s": 31.5,
-     "e": 32.0
+     "w": "how",
+     "s": 31.78,
+     "e": 31.92
     },
     {
-     "w": " it",
-     "s": 32.0,
-     "e": 32.18
+     "w": "it",
+     "s": 31.92,
+     "e": 32.04
     },
     {
-     "w": " was",
-     "s": 32.18,
-     "e": 32.42
+     "w": "was",
+     "s": 32.04,
+     "e": 32.34
     },
     {
-     "w": " priced",
-     "s": 32.42,
-     "e": 32.64
+     "w": "priced",
+     "s": 32.34,
+     "e": 32.54
     },
     {
-     "w": " at",
-     "s": 32.64,
-     "e": 32.88
+     "w": "at",
+     "s": 32.54,
+     "e": 32.78
     },
     {
-     "w": " 4",
-     "s": 32.88,
-     "e": 33.2
+     "w": "4",
+     "s": 32.78,
+     "e": 33.08
     },
     {
      "w": ".1",
-     "s": 33.2,
-     "e": 33.62
+     "s": 33.08,
+     "e": 33.52
     },
     {
      "w": "%",
-     "s": 33.62,
-     "e": 33.88
+     "s": 33.52,
+     "e": 33.78
     },
     {
-     "w": " yield",
-     "s": 33.88,
-     "e": 34.16
-    }
-   ]
-  },
-  {
-   "start": 34.16,
-   "end": 40.32,
-   "text": " Who buys a block like this and why what nearly stopped it and what the buyer got and",
-   "words": [
-    {
-     "w": " Who",
-     "s": 34.16,
-     "e": 34.84
+     "w": "yield,",
+     "s": 33.78,
+     "e": 34.04
     },
     {
-     "w": " buys",
-     "s": 34.84,
-     "e": 35.12
+     "w": "who",
+     "s": 34.62,
+     "e": 34.76
     },
     {
-     "w": " a",
-     "s": 35.12,
+     "w": "buys",
+     "s": 34.76,
+     "e": 35.0
+    },
+    {
+     "w": "a",
+     "s": 35.0,
+     "e": 35.2
+    },
+    {
+     "w": "block",
+     "s": 35.2,
      "e": 35.32
     },
     {
-     "w": " block",
+     "w": "like",
      "s": 35.32,
-     "e": 35.44
+     "e": 35.58
     },
     {
-     "w": " like",
-     "s": 35.44,
-     "e": 35.68
+     "w": "this,",
+     "s": 35.58,
+     "e": 35.88
     },
     {
-     "w": " this",
-     "s": 35.68,
-     "e": 36.0
-    },
-    {
-     "w": " and",
-     "s": 36.0,
+     "w": "and",
+     "s": 35.92,
      "e": 36.18
     },
     {
-     "w": " why",
+     "w": "why.",
      "s": 36.18,
-     "e": 36.6
+     "e": 36.4
     },
     {
-     "w": " what",
-     "s": 36.6,
-     "e": 37.32
+     "w": "What",
+     "s": 37.04,
+     "e": 37.22
     },
     {
-     "w": " nearly",
-     "s": 37.32,
-     "e": 37.64
+     "w": "nearly",
+     "s": 37.22,
+     "e": 37.58
     },
     {
-     "w": " stopped",
-     "s": 37.64,
-     "e": 37.98
+     "w": "stopped",
+     "s": 37.58,
+     "e": 37.88
     },
     {
-     "w": " it",
-     "s": 37.98,
-     "e": 38.42
+     "w": "it,",
+     "s": 37.88,
+     "e": 38.24
     },
     {
-     "w": " and",
-     "s": 38.42,
-     "e": 38.58
+     "w": "and",
+     "s": 38.4,
+     "e": 38.52
     },
     {
-     "w": " what",
-     "s": 38.58,
-     "e": 38.72
+     "w": "what",
+     "s": 38.52,
+     "e": 38.64
     },
     {
-     "w": " the",
-     "s": 38.72,
-     "e": 38.96
+     "w": "the",
+     "s": 38.64,
+     "e": 38.86
     },
     {
-     "w": " buyer",
-     "s": 38.96,
-     "e": 39.2
+     "w": "buyer",
+     "s": 38.86,
+     "e": 39.06
     },
     {
-     "w": " got",
-     "s": 39.2,
-     "e": 39.76
+     "w": "got,",
+     "s": 39.06,
+     "e": 39.54
     },
     {
-     "w": " and",
-     "s": 39.76,
-     "e": 40.32
+     "w": "and.",
+     "s": 39.72,
+     "e": 40.0
     }
    ]
   },
   {
-   "start": 41.6,
-   "end": 49.26,
-   "text": " What nearly stopped it and what the buyer got the nine separate flats would never have given him including a stamp duty difference of",
+   "start": 41.6192,
+   "end": 228.227,
+   "text": "What nearly stopped it, and what the buyer got, the 9 separate flats would never have given him including a stamp duty difference of around 159 ,000. If you own flats that cost more to run every year, or you're trying to find a whole building and the portals only show you single units, this deal is worth watching to the end. I'm Jake, the founder of Calibre Acquire, based in London, I've been in property for 14 years and last year we transacted on over 30 million. I help investors get out of underperforming property assets and into ones that work harder for them. Fabian House is on Cannon Street Road in E1. It's free hold. There are two shops on the ground floor and the basement and nine flats above, seven two -bedroom and three two -bedrooms. There are two shops on the ground floor, a basement and nine flats above, seven two -bedroom There are two shops on the ground floor, a basement, and nine flats above, seven two -bedroom and two three -bedroom. The Sellers family built it. The site used to be a warehouse they used in the fashion trade. They knocked it down and put up the block. As far as I know, he's now retired. It was sold with the tenants in place. The rent at the time was 196 ,800 a year. It came from a letter, apart from a derelict pub in Shadwell, the site of this business, it was the first big sale to come out of a letter campaign. It was marketed at 5 million, the price agreed was 4 .775 million and it didn't move between offer and completion. On the rent at the time, that's a gross yield of about 4 .1%. For a lot of investors, 4 .1 % in East London sounds low, so why would anyone pay it? Because the rent wasn't the full rent. Let at market levels, the building could produce $278 ,400 a year. That's $81 ,600 more than it was earning. At the price paid, the yield on that full rent is about 5 .8%. Think of it like a salary that hasn't had a pay rise in years. The job is the same and the pay catches up when the contracts are renewed. The buyer is paying for the building as is with the gap built in. Split across the flats the price works out at $530 ,000 per flat and that's before you count the two shops and the basement. If you're thinking about buying or selling a property we've built a valuation report that does the work for you. We put the details in and you'll have a full report in a few minutes. It took us hours to build and we normally charge \u00a3190 for it, use the code socials and it's free. It's at www .calibreacquire .co .uk forward slash valuation dash promotion. The buyer was a private landlord who already owns several blocks in the area. For him, it was one more building on streets he already knows. He's holding it, we took over the management and the rent",
    "words": [
     {
-     "w": " What",
-     "s": 41.6,
+     "w": "What",
+     "s": 41.52,
      "e": 42.16
     },
     {
-     "w": " nearly",
+     "w": "nearly",
      "s": 42.16,
-     "e": 42.54
+     "e": 42.56
     },
     {
-     "w": " stopped",
-     "s": 42.54,
+     "w": "stopped",
+     "s": 42.56,
      "e": 42.88
     },
     {
-     "w": " it",
+     "w": "it,",
      "s": 42.88,
-     "e": 43.4
+     "e": 43.48
     },
     {
-     "w": " and",
-     "s": 43.4,
-     "e": 43.62
+     "w": "and",
+     "s": 43.54,
+     "e": 43.58
     },
     {
-     "w": " what",
-     "s": 43.62,
-     "e": 43.7
+     "w": "what",
+     "s": 43.58,
+     "e": 43.74
     },
     {
-     "w": " the",
-     "s": 43.7,
+     "w": "the",
+     "s": 43.74,
      "e": 43.92
     },
     {
-     "w": " buyer",
+     "w": "buyer",
      "s": 43.92,
-     "e": 44.12
+     "e": 44.1
     },
     {
-     "w": " got",
-     "s": 44.12,
+     "w": "got,",
+     "s": 44.1,
      "e": 44.44
     },
     {
-     "w": " the",
-     "s": 44.44,
-     "e": 44.72
+     "w": "the",
+     "s": 44.58,
+     "e": 44.68
     },
     {
-     "w": " nine",
-     "s": 44.72,
-     "e": 44.98
+     "w": "9",
+     "s": 44.68,
+     "e": 45.0
     },
     {
-     "w": " separate",
-     "s": 44.98,
-     "e": 45.42
+     "w": "separate",
+     "s": 45.0,
+     "e": 45.46
     },
     {
-     "w": " flats",
-     "s": 45.42,
-     "e": 45.84
+     "w": "flats",
+     "s": 45.46,
+     "e": 45.8
     },
     {
-     "w": " would",
-     "s": 45.84,
-     "e": 46.24
+     "w": "would",
+     "s": 45.8,
+     "e": 46.22
     },
     {
-     "w": " never",
-     "s": 46.24,
+     "w": "never",
+     "s": 46.22,
      "e": 46.48
     },
     {
-     "w": " have",
+     "w": "have",
      "s": 46.48,
-     "e": 46.68
+     "e": 46.66
     },
     {
-     "w": " given",
-     "s": 46.68,
-     "e": 46.8
+     "w": "given",
+     "s": 46.66,
+     "e": 46.78
     },
     {
-     "w": " him",
-     "s": 46.8,
-     "e": 47.14
+     "w": "him",
+     "s": 46.78,
+     "e": 47.12
     },
     {
-     "w": " including",
-     "s": 47.14,
-     "e": 47.5
+     "w": "including",
+     "s": 47.12,
+     "e": 47.52
     },
     {
-     "w": " a",
-     "s": 47.5,
-     "e": 47.78
+     "w": "a",
+     "s": 47.52,
+     "e": 47.76
     },
     {
-     "w": " stamp",
-     "s": 47.78,
+     "w": "stamp",
+     "s": 47.76,
      "e": 47.94
     },
     {
-     "w": " duty",
+     "w": "duty",
      "s": 47.94,
      "e": 48.18
     },
     {
-     "w": " difference",
+     "w": "difference",
      "s": 48.18,
-     "e": 48.9
+     "e": 48.8
     },
     {
-     "w": " of",
-     "s": 48.9,
-     "e": 49.26
-    }
-   ]
-  },
-  {
-   "start": 49.26,
-   "end": 49.5,
-   "text": " around",
-   "words": [
+     "w": "of",
+     "s": 48.8,
+     "e": 49.24
+    },
     {
-     "w": " around",
-     "s": 49.26,
-     "e": 49.5
-    }
-   ]
-  },
-  {
-   "start": 50.12,
-   "end": 57.28,
-   "text": " 159,000 if you own flats that cost more to run every year or you're trying to find a whole building and the portals",
-   "words": [
+     "w": "around",
+     "s": 49.24,
+     "e": 49.68
+    },
     {
-     "w": " 159",
-     "s": 50.12,
+     "w": "159",
+     "s": 49.68,
      "e": 50.4
     },
     {
-     "w": ",000",
+     "w": ",000.",
      "s": 50.4,
-     "e": 51.08
+     "e": 51.12
     },
     {
-     "w": " if",
-     "s": 51.08,
+     "w": "If",
+     "s": 51.38,
      "e": 51.72
     },
     {
-     "w": " you",
+     "w": "you",
      "s": 51.72,
-     "e": 51.94
+     "e": 51.92
     },
     {
-     "w": " own",
-     "s": 51.94,
-     "e": 52.14
+     "w": "own",
+     "s": 51.92,
+     "e": 52.12
     },
     {
-     "w": " flats",
-     "s": 52.14,
-     "e": 52.48
+     "w": "flats",
+     "s": 52.12,
+     "e": 52.5
     },
     {
-     "w": " that",
-     "s": 52.48,
+     "w": "that",
+     "s": 52.5,
      "e": 52.78
     },
     {
-     "w": " cost",
+     "w": "cost",
      "s": 52.78,
      "e": 52.94
     },
     {
-     "w": " more",
+     "w": "more",
      "s": 52.94,
      "e": 53.2
     },
     {
-     "w": " to",
+     "w": "to",
      "s": 53.2,
-     "e": 53.4
+     "e": 53.36
     },
     {
-     "w": " run",
-     "s": 53.4,
-     "e": 53.56
+     "w": "run",
+     "s": 53.36,
+     "e": 53.58
     },
     {
-     "w": " every",
-     "s": 53.56,
+     "w": "every",
+     "s": 53.58,
      "e": 53.98
     },
     {
-     "w": " year",
+     "w": "year,",
      "s": 53.98,
      "e": 54.36
     },
     {
-     "w": " or",
-     "s": 54.36,
+     "w": "or",
+     "s": 54.58,
      "e": 54.68
     },
     {
-     "w": " you're",
+     "w": "you're",
      "s": 54.68,
      "e": 54.86
     },
     {
-     "w": " trying",
+     "w": "trying",
      "s": 54.86,
-     "e": 55.08
+     "e": 55.1
     },
     {
-     "w": " to",
-     "s": 55.08,
-     "e": 55.3
+     "w": "to",
+     "s": 55.1,
+     "e": 55.32
     },
     {
-     "w": " find",
-     "s": 55.3,
+     "w": "find",
+     "s": 55.32,
      "e": 55.46
     },
     {
-     "w": " a",
+     "w": "a",
      "s": 55.46,
      "e": 55.64
     },
     {
-     "w": " whole",
+     "w": "whole",
      "s": 55.64,
      "e": 55.8
     },
     {
-     "w": " building",
+     "w": "building",
      "s": 55.8,
-     "e": 56.22
+     "e": 56.2
     },
     {
-     "w": " and",
-     "s": 56.22,
-     "e": 56.66
+     "w": "and",
+     "s": 56.2,
+     "e": 56.7
     },
     {
-     "w": " the",
-     "s": 56.66,
-     "e": 56.84
+     "w": "the",
+     "s": 56.7,
+     "e": 56.88
     },
     {
-     "w": " portals",
-     "s": 56.84,
+     "w": "portals",
+     "s": 56.88,
      "e": 57.28
-    }
-   ]
-  },
-  {
-   "start": 57.28,
-   "end": 61.24,
-   "text": " Only show you single units this deal is worth watching to the end",
-   "words": [
-    {
-     "w": " Only",
-     "s": 57.28,
-     "e": 57.66
     },
     {
-     "w": " show",
-     "s": 57.66,
+     "w": "only",
+     "s": 57.28,
+     "e": 57.68
+    },
+    {
+     "w": "show",
+     "s": 57.68,
      "e": 57.86
     },
     {
-     "w": " you",
+     "w": "you",
      "s": 57.86,
-     "e": 58.06
+     "e": 58.08
     },
     {
-     "w": " single",
-     "s": 58.06,
+     "w": "single",
+     "s": 58.08,
      "e": 58.38
     },
     {
-     "w": " units",
+     "w": "units,",
      "s": 58.38,
-     "e": 58.86
+     "e": 58.82
     },
     {
-     "w": " this",
-     "s": 58.86,
-     "e": 59.54
+     "w": "this",
+     "s": 59.34,
+     "e": 59.52
     },
     {
-     "w": " deal",
-     "s": 59.54,
-     "e": 59.72
+     "w": "deal",
+     "s": 59.52,
+     "e": 59.68
     },
     {
-     "w": " is",
-     "s": 59.72,
-     "e": 59.92
+     "w": "is",
+     "s": 59.68,
+     "e": 59.88
     },
     {
-     "w": " worth",
-     "s": 59.92,
+     "w": "worth",
+     "s": 59.88,
      "e": 60.1
     },
     {
-     "w": " watching",
+     "w": "watching",
      "s": 60.1,
      "e": 60.46
     },
     {
-     "w": " to",
+     "w": "to",
      "s": 60.46,
      "e": 60.66
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 60.66,
      "e": 60.8
     },
     {
-     "w": " end",
+     "w": "end.",
      "s": 60.8,
-     "e": 61.24
-    }
-   ]
-  },
-  {
-   "start": 61.24,
-   "end": 67.68,
-   "text": " I'm Jake the founder of calibreacquire based in London. I've been in property for 14 years and last year",
-   "words": [
+     "e": 61.08
+    },
     {
-     "w": " I'm",
-     "s": 61.24,
+     "w": "I'm",
+     "s": 61.66,
      "e": 61.94
     },
     {
-     "w": " Jake",
+     "w": "Jake,",
      "s": 61.94,
-     "e": 62.24
+     "e": 62.22
     },
     {
-     "w": " the",
-     "s": 62.24,
-     "e": 62.58
+     "w": "the",
+     "s": 62.4,
+     "e": 62.64
     },
     {
-     "w": " founder",
-     "s": 62.58,
+     "w": "founder",
+     "s": 62.64,
      "e": 62.88
     },
     {
-     "w": " of",
+     "w": "of",
      "s": 62.88,
      "e": 63.12
     },
     {
-     "w": " calibreacquire",
+     "w": "Calibre",
      "s": 63.12,
+     "e": 63.48
+    },
+    {
+     "w": "Acquire,",
+     "s": 63.48,
      "e": 63.98
     },
     {
-     "w": " based",
-     "s": 63.98,
-     "e": 64.42
+     "w": "based",
+     "s": 64.24,
+     "e": 64.44
     },
     {
-     "w": " in",
-     "s": 64.42,
+     "w": "in",
+     "s": 64.44,
      "e": 64.6
     },
     {
-     "w": " London.",
+     "w": "London,",
      "s": 64.6,
-     "e": 65.0
+     "e": 64.98
     },
     {
-     "w": " I've",
-     "s": 65.06,
-     "e": 65.22
+     "w": "I've",
+     "s": 65.16,
+     "e": 65.28
     },
     {
-     "w": " been",
-     "s": 65.22,
+     "w": "been",
+     "s": 65.28,
      "e": 65.38
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 65.38,
-     "e": 65.58
+     "e": 65.56
     },
     {
-     "w": " property",
-     "s": 65.58,
+     "w": "property",
+     "s": 65.56,
      "e": 65.8
     },
     {
-     "w": " for",
+     "w": "for",
      "s": 65.8,
-     "e": 66.06
+     "e": 66.0
     },
     {
-     "w": " 14",
-     "s": 66.06,
-     "e": 66.44
+     "w": "14",
+     "s": 66.0,
+     "e": 66.42
     },
     {
-     "w": " years",
-     "s": 66.44,
+     "w": "years",
+     "s": 66.42,
      "e": 66.9
     },
     {
-     "w": " and",
+     "w": "and",
      "s": 66.9,
-     "e": 67.3
+     "e": 67.24
     },
     {
-     "w": " last",
-     "s": 67.3,
-     "e": 67.54
+     "w": "last",
+     "s": 67.24,
+     "e": 67.52
     },
     {
-     "w": " year",
-     "s": 67.54,
+     "w": "year",
+     "s": 67.52,
      "e": 67.68
-    }
-   ]
-  },
-  {
-   "start": 67.68,
-   "end": 74.96,
-   "text": " We transacted on over 30 million help investors get out underperforming property assets and into ones that work harder for them",
-   "words": [
+    },
     {
-     "w": " We",
+     "w": "we",
      "s": 67.68,
-     "e": 67.9
+     "e": 67.92
     },
     {
-     "w": " transacted",
-     "s": 67.9,
-     "e": 68.54
+     "w": "transacted",
+     "s": 67.92,
+     "e": 68.56
     },
     {
-     "w": " on",
-     "s": 68.54,
+     "w": "on",
+     "s": 68.56,
      "e": 68.76
     },
     {
-     "w": " over",
+     "w": "over",
      "s": 68.76,
-     "e": 69.22
+     "e": 69.18
     },
     {
-     "w": " 30",
-     "s": 69.22,
+     "w": "30",
+     "s": 69.18,
      "e": 69.58
     },
     {
-     "w": " million",
+     "w": "million.",
      "s": 69.58,
-     "e": 70.18
+     "e": 69.86
     },
     {
-     "w": " help",
-     "s": 70.18,
+     "w": "I",
+     "s": 69.86,
+     "e": 70.42
+    },
+    {
+     "w": "help",
+     "s": 70.42,
      "e": 70.56
     },
     {
-     "w": " investors",
+     "w": "investors",
      "s": 70.56,
      "e": 70.98
     },
     {
-     "w": " get",
+     "w": "get",
      "s": 70.98,
-     "e": 71.26
+     "e": 71.22
     },
     {
-     "w": " out",
-     "s": 71.26,
-     "e": 71.5
+     "w": "out",
+     "s": 71.22,
+     "e": 71.44
     },
     {
-     "w": " underperforming",
-     "s": 71.5,
-     "e": 72.26
+     "w": "of",
+     "s": 71.44,
+     "e": 71.62
     },
     {
-     "w": " property",
-     "s": 72.26,
+     "w": "underperforming",
+     "s": 71.62,
+     "e": 72.24
+    },
+    {
+     "w": "property",
+     "s": 72.24,
      "e": 72.54
     },
     {
-     "w": " assets",
+     "w": "assets",
      "s": 72.54,
-     "e": 73.2
+     "e": 73.12
     },
     {
-     "w": " and",
-     "s": 73.2,
+     "w": "and",
+     "s": 73.12,
      "e": 73.5
     },
     {
-     "w": " into",
+     "w": "into",
      "s": 73.5,
      "e": 73.68
     },
     {
-     "w": " ones",
+     "w": "ones",
      "s": 73.68,
      "e": 73.86
     },
     {
-     "w": " that",
+     "w": "that",
      "s": 73.86,
-     "e": 74.08
+     "e": 74.06
     },
     {
-     "w": " work",
-     "s": 74.08,
+     "w": "work",
+     "s": 74.06,
      "e": 74.22
     },
     {
-     "w": " harder",
+     "w": "harder",
      "s": 74.22,
      "e": 74.48
     },
     {
-     "w": " for",
+     "w": "for",
      "s": 74.48,
-     "e": 74.68
+     "e": 74.64
     },
     {
-     "w": " them",
-     "s": 74.68,
-     "e": 74.96
-    }
-   ]
-  },
-  {
-   "start": 75.6,
-   "end": 78.92,
-   "text": " Fabian House is on Cannon Street Road in E1. It's freehold",
-   "words": [
-    {
-     "w": " Fabian",
-     "s": 75.6,
-     "e": 76.08
+     "w": "them.",
+     "s": 74.64,
+     "e": 75.48
     },
     {
-     "w": " House",
-     "s": 76.08,
-     "e": 76.38
+     "w": "Fabian",
+     "s": 75.88,
+     "e": 76.1
     },
     {
-     "w": " is",
-     "s": 76.38,
-     "e": 76.54
+     "w": "House",
+     "s": 76.1,
+     "e": 76.36
     },
     {
-     "w": " on",
-     "s": 76.54,
+     "w": "is",
+     "s": 76.36,
+     "e": 76.56
+    },
+    {
+     "w": "on",
+     "s": 76.56,
      "e": 76.76
     },
     {
-     "w": " Cannon",
+     "w": "Cannon",
      "s": 76.76,
      "e": 76.92
     },
     {
-     "w": " Street",
+     "w": "Street",
      "s": 76.92,
-     "e": 77.22
+     "e": 77.2
     },
     {
-     "w": " Road",
-     "s": 77.22,
-     "e": 77.5
+     "w": "Road",
+     "s": 77.2,
+     "e": 77.48
     },
     {
-     "w": " in",
-     "s": 77.5,
+     "w": "in",
+     "s": 77.48,
      "e": 77.7
     },
     {
-     "w": " E1.",
+     "w": "E1.",
      "s": 77.7,
-     "e": 78.1
+     "e": 78.06
     },
     {
-     "w": " It's",
-     "s": 78.3,
-     "e": 78.52
+     "w": "It's",
+     "s": 78.28,
+     "e": 78.48
     },
     {
-     "w": " freehold",
-     "s": 78.52,
+     "w": "free",
+     "s": 78.48,
+     "e": 78.7
+    },
+    {
+     "w": "hold.",
+     "s": 78.7,
      "e": 78.92
-    }
-   ]
-  },
-  {
-   "start": 78.92,
-   "end": 85.54,
-   "text": " There are two shops on the ground floor and the basement and nine flats above seven two-bedroom and three two-bedrooms",
-   "words": [
-    {
-     "w": " There",
-     "s": 78.92,
-     "e": 79.48
     },
     {
-     "w": " are",
-     "s": 79.48,
-     "e": 79.64
+     "w": "There",
+     "s": 79.44,
+     "e": 79.5
     },
     {
-     "w": " two",
-     "s": 79.64,
-     "e": 79.88
+     "w": "are",
+     "s": 79.5,
+     "e": 79.66
     },
     {
-     "w": " shops",
-     "s": 79.88,
+     "w": "two",
+     "s": 79.66,
+     "e": 79.86
+    },
+    {
+     "w": "shops",
+     "s": 79.86,
      "e": 80.1
     },
     {
-     "w": " on",
+     "w": "on",
      "s": 80.1,
      "e": 80.28
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 80.28,
      "e": 80.42
     },
     {
-     "w": " ground",
+     "w": "ground",
      "s": 80.42,
-     "e": 80.62
+     "e": 80.58
     },
     {
-     "w": " floor",
-     "s": 80.62,
+     "w": "floor",
+     "s": 80.58,
      "e": 80.98
     },
     {
-     "w": " and",
+     "w": "and",
      "s": 80.98,
      "e": 81.32
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 81.32,
      "e": 81.48
     },
     {
-     "w": " basement",
+     "w": "basement",
      "s": 81.48,
-     "e": 82.0
+     "e": 81.92
     },
     {
-     "w": " and",
-     "s": 82.0,
-     "e": 82.32
+     "w": "and",
+     "s": 81.92,
+     "e": 82.28
     },
     {
-     "w": " nine",
-     "s": 82.32,
-     "e": 82.52
+     "w": "nine",
+     "s": 82.28,
+     "e": 82.5
     },
     {
-     "w": " flats",
-     "s": 82.52,
-     "e": 82.74
+     "w": "flats",
+     "s": 82.5,
+     "e": 82.72
     },
     {
-     "w": " above",
-     "s": 82.74,
-     "e": 83.3
+     "w": "above,",
+     "s": 82.72,
+     "e": 83.18
     },
     {
-     "w": " seven",
-     "s": 83.3,
+     "w": "seven",
+     "s": 83.6,
      "e": 83.82
     },
     {
-     "w": " two",
+     "w": "two",
      "s": 83.82,
      "e": 84.1
     },
     {
      "w": "-bedroom",
      "s": 84.1,
-     "e": 84.56
+     "e": 84.52
     },
     {
-     "w": " and",
-     "s": 84.56,
-     "e": 84.76
+     "w": "and",
+     "s": 84.52,
+     "e": 84.7
     },
     {
-     "w": " three",
-     "s": 84.76,
+     "w": "three",
+     "s": 84.7,
      "e": 85.0
     },
     {
-     "w": " two",
+     "w": "two",
      "s": 85.0,
      "e": 85.26
     },
     {
-     "w": "-bedrooms",
+     "w": "-bedrooms.",
      "s": 85.26,
-     "e": 85.54
-    }
-   ]
-  },
-  {
-   "start": 86.78,
-   "end": 98.26,
-   "text": " No There are two shops on the ground floor a basement and nine flats above seven two-bedroom",
-   "words": [
-    {
-     "w": " No",
-     "s": 86.78,
-     "e": 87.34
+     "e": 85.64
     },
     {
-     "w": " There",
-     "s": 92.1,
-     "e": 92.66
+     "w": "There",
+     "s": 91.86,
+     "e": 92.38
     },
     {
-     "w": " are",
-     "s": 92.66,
-     "e": 92.88
+     "w": "are",
+     "s": 92.38,
+     "e": 92.9
     },
     {
-     "w": " two",
-     "s": 92.88,
-     "e": 93.14
+     "w": "two",
+     "s": 92.9,
+     "e": 93.16
     },
     {
-     "w": " shops",
-     "s": 93.14,
+     "w": "shops",
+     "s": 93.16,
      "e": 93.44
     },
     {
-     "w": " on",
+     "w": "on",
      "s": 93.44,
-     "e": 93.6
+     "e": 93.62
     },
     {
-     "w": " the",
-     "s": 93.6,
-     "e": 93.76
+     "w": "the",
+     "s": 93.62,
+     "e": 93.78
     },
     {
-     "w": " ground",
-     "s": 93.76,
-     "e": 93.94
+     "w": "ground",
+     "s": 93.78,
+     "e": 93.98
     },
     {
-     "w": " floor",
-     "s": 93.94,
-     "e": 94.34
+     "w": "floor,",
+     "s": 93.98,
+     "e": 94.36
     },
     {
-     "w": " a",
-     "s": 94.34,
-     "e": 94.68
+     "w": "a",
+     "s": 94.56,
+     "e": 94.78
     },
     {
-     "w": " basement",
-     "s": 94.68,
+     "w": "basement",
+     "s": 94.78,
      "e": 95.2
     },
     {
-     "w": " and",
+     "w": "and",
      "s": 95.2,
-     "e": 95.74
+     "e": 95.7
     },
     {
-     "w": " nine",
-     "s": 95.74,
+     "w": "nine",
+     "s": 95.7,
      "e": 96.0
     },
     {
-     "w": " flats",
+     "w": "flats",
      "s": 96.0,
-     "e": 96.24
+     "e": 96.26
     },
     {
-     "w": " above",
-     "s": 96.24,
-     "e": 96.82
+     "w": "above,",
+     "s": 96.26,
+     "e": 96.76
     },
     {
-     "w": " seven",
-     "s": 96.82,
-     "e": 97.38
+     "w": "seven",
+     "s": 97.16,
+     "e": 97.4
     },
     {
-     "w": " two",
-     "s": 97.38,
-     "e": 97.72
+     "w": "two",
+     "s": 97.4,
+     "e": 97.74
     },
     {
      "w": "-bedroom",
-     "s": 97.72,
-     "e": 98.26
-    }
-   ]
-  },
-  {
-   "start": 98.26,
-   "end": 106.34,
-   "text": " and three there are two shops on the ground floor a basement and nine flats above seven",
-   "words": [
-    {
-     "w": " and",
-     "s": 98.26,
-     "e": 98.52
+     "s": 97.74,
+     "e": 98.28
     },
     {
-     "w": " three",
-     "s": 98.52,
-     "e": 99.02
+     "w": "There",
+     "s": 101.02,
+     "e": 101.5
     },
     {
-     "w": " there",
-     "s": 101.2,
-     "e": 101.78
+     "w": "are",
+     "s": 101.5,
+     "e": 101.98
     },
     {
-     "w": " are",
-     "s": 101.78,
-     "e": 101.96
+     "w": "two",
+     "s": 101.98,
+     "e": 102.26
     },
     {
-     "w": " two",
-     "s": 101.96,
-     "e": 102.3
+     "w": "shops",
+     "s": 102.26,
+     "e": 102.62
     },
     {
-     "w": " shops",
-     "s": 102.3,
-     "e": 102.64
+     "w": "on",
+     "s": 102.62,
+     "e": 102.9
     },
     {
-     "w": " on",
-     "s": 102.64,
-     "e": 102.88
-    },
-    {
-     "w": " the",
-     "s": 102.88,
+     "w": "the",
+     "s": 102.9,
      "e": 103.04
     },
     {
-     "w": " ground",
+     "w": "ground",
      "s": 103.04,
      "e": 103.2
     },
     {
-     "w": " floor",
+     "w": "floor,",
      "s": 103.2,
-     "e": 103.6
+     "e": 103.56
     },
     {
-     "w": " a",
-     "s": 103.6,
-     "e": 103.88
+     "w": "a",
+     "s": 103.72,
+     "e": 103.82
     },
     {
-     "w": " basement",
-     "s": 103.88,
-     "e": 104.38
+     "w": "basement,",
+     "s": 103.82,
+     "e": 104.3
     },
     {
-     "w": " and",
-     "s": 104.38,
-     "e": 104.88
+     "w": "and",
+     "s": 104.78,
+     "e": 104.92
     },
     {
-     "w": " nine",
-     "s": 104.88,
-     "e": 105.1
+     "w": "nine",
+     "s": 104.92,
+     "e": 105.12
     },
     {
-     "w": " flats",
-     "s": 105.1,
+     "w": "flats",
+     "s": 105.12,
      "e": 105.38
     },
     {
-     "w": " above",
+     "w": "above,",
      "s": 105.38,
-     "e": 105.84
+     "e": 105.74
     },
     {
-     "w": " seven",
-     "s": 105.84,
-     "e": 106.34
-    }
-   ]
-  },
-  {
-   "start": 106.34,
-   "end": 112.54,
-   "text": " two-bedroom and two three-bedroom the seller's family built it the site used to be a warehouse",
-   "words": [
+     "w": "seven",
+     "s": 106.08,
+     "e": 106.36
+    },
     {
-     "w": " two",
-     "s": 106.34,
-     "e": 106.62
+     "w": "two",
+     "s": 106.36,
+     "e": 106.64
     },
     {
      "w": "-bedroom",
-     "s": 106.62,
-     "e": 107.1
+     "s": 106.64,
+     "e": 107.12
     },
     {
-     "w": " and",
-     "s": 107.1,
-     "e": 107.38
+     "w": "and",
+     "s": 107.12,
+     "e": 107.28
     },
     {
-     "w": " two",
-     "s": 107.38,
-     "e": 107.58
+     "w": "two",
+     "s": 107.28,
+     "e": 107.56
     },
     {
-     "w": " three",
-     "s": 107.58,
+     "w": "three",
+     "s": 107.56,
      "e": 107.8
     },
     {
-     "w": "-bedroom",
+     "w": "-bedroom.",
      "s": 107.8,
-     "e": 108.72
+     "e": 108.2
     },
     {
-     "w": " the",
-     "s": 108.72,
-     "e": 109.36
+     "w": "The",
+     "s": 109.16,
+     "e": 109.42
     },
     {
-     "w": " seller's",
-     "s": 109.36,
-     "e": 109.92
+     "w": "Sellers",
+     "s": 109.42,
+     "e": 109.76
     },
     {
-     "w": " family",
-     "s": 109.92,
-     "e": 110.18
+     "w": "family",
+     "s": 109.76,
+     "e": 110.16
     },
     {
-     "w": " built",
-     "s": 110.18,
-     "e": 110.56
+     "w": "built",
+     "s": 110.16,
+     "e": 110.54
     },
     {
-     "w": " it",
-     "s": 110.56,
-     "e": 110.92
+     "w": "it.",
+     "s": 110.54,
+     "e": 110.88
     },
     {
-     "w": " the",
-     "s": 110.92,
-     "e": 111.32
+     "w": "The",
+     "s": 111.12,
+     "e": 111.36
     },
     {
-     "w": " site",
-     "s": 111.32,
+     "w": "site",
+     "s": 111.36,
      "e": 111.54
     },
     {
-     "w": " used",
+     "w": "used",
      "s": 111.54,
-     "e": 111.82
+     "e": 111.84
     },
     {
-     "w": " to",
-     "s": 111.82,
-     "e": 111.94
+     "w": "to",
+     "s": 111.84,
+     "e": 111.96
     },
     {
-     "w": " be",
-     "s": 111.94,
-     "e": 112.06
+     "w": "be",
+     "s": 111.96,
+     "e": 112.08
     },
     {
-     "w": " a",
-     "s": 112.06,
-     "e": 112.22
+     "w": "a",
+     "s": 112.08,
+     "e": 112.2
     },
     {
-     "w": " warehouse",
-     "s": 112.22,
+     "w": "warehouse",
+     "s": 112.2,
      "e": 112.54
-    }
-   ]
-  },
-  {
-   "start": 112.54,
-   "end": 117.18,
-   "text": " they used in the fashion trade they knocked it down and put up the block as far as",
-   "words": [
+    },
     {
-     "w": " they",
+     "w": "they",
      "s": 112.54,
      "e": 112.9
     },
     {
-     "w": " used",
+     "w": "used",
      "s": 112.9,
      "e": 113.12
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 113.12,
-     "e": 113.28
+     "e": 113.3
     },
     {
-     "w": " the",
-     "s": 113.28,
-     "e": 113.42
+     "w": "the",
+     "s": 113.3,
+     "e": 113.4
     },
     {
-     "w": " fashion",
-     "s": 113.42,
-     "e": 113.74
+     "w": "fashion",
+     "s": 113.4,
+     "e": 113.72
     },
     {
-     "w": " trade",
-     "s": 113.74,
+     "w": "trade.",
+     "s": 113.72,
      "e": 114.12
     },
     {
-     "w": " they",
-     "s": 114.12,
+     "w": "They",
+     "s": 114.32,
      "e": 114.52
     },
     {
-     "w": " knocked",
+     "w": "knocked",
      "s": 114.52,
      "e": 114.74
     },
     {
-     "w": " it",
+     "w": "it",
      "s": 114.74,
      "e": 114.98
     },
     {
-     "w": " down",
+     "w": "down",
      "s": 114.98,
-     "e": 115.28
+     "e": 115.24
     },
     {
-     "w": " and",
-     "s": 115.28,
-     "e": 115.54
+     "w": "and",
+     "s": 115.24,
+     "e": 115.52
     },
     {
-     "w": " put",
-     "s": 115.54,
+     "w": "put",
+     "s": 115.52,
      "e": 115.68
     },
     {
-     "w": " up",
+     "w": "up",
      "s": 115.68,
      "e": 115.84
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 115.84,
-     "e": 116.04
+     "e": 116.02
     },
     {
-     "w": " block",
-     "s": 116.04,
-     "e": 116.3
+     "w": "block.",
+     "s": 116.02,
+     "e": 116.26
     },
     {
-     "w": " as",
-     "s": 116.3,
-     "e": 116.8
+     "w": "As",
+     "s": 116.58,
+     "e": 116.84
     },
     {
-     "w": " far",
-     "s": 116.8,
+     "w": "far",
+     "s": 116.84,
      "e": 117.04
     },
     {
-     "w": " as",
+     "w": "as",
      "s": 117.04,
      "e": 117.18
-    }
-   ]
-  },
-  {
-   "start": 117.18,
-   "end": 121.98,
-   "text": " I know he's now retired it was sold with the tenants in place the rent at the time",
-   "words": [
-    {
-     "w": " I",
-     "s": 117.18,
-     "e": 117.3
     },
     {
-     "w": " know",
-     "s": 117.3,
+     "w": "I",
+     "s": 117.18,
+     "e": 117.32
+    },
+    {
+     "w": "know,",
+     "s": 117.32,
      "e": 117.54
     },
     {
-     "w": " he's",
-     "s": 117.54,
+     "w": "he's",
+     "s": 117.56,
      "e": 117.78
     },
     {
-     "w": " now",
+     "w": "now",
      "s": 117.78,
      "e": 118.0
     },
     {
-     "w": " retired",
+     "w": "retired.",
      "s": 118.0,
-     "e": 118.42
+     "e": 118.38
     },
     {
-     "w": " it",
-     "s": 118.42,
-     "e": 119.12
+     "w": "It",
+     "s": 118.98,
+     "e": 119.14
     },
     {
-     "w": " was",
-     "s": 119.12,
+     "w": "was",
+     "s": 119.14,
      "e": 119.38
     },
     {
-     "w": " sold",
+     "w": "sold",
      "s": 119.38,
-     "e": 119.58
+     "e": 119.56
     },
     {
-     "w": " with",
-     "s": 119.58,
+     "w": "with",
+     "s": 119.56,
      "e": 119.76
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 119.76,
      "e": 119.96
     },
     {
-     "w": " tenants",
+     "w": "tenants",
      "s": 119.96,
-     "e": 120.12
+     "e": 120.14
     },
     {
-     "w": " in",
-     "s": 120.12,
-     "e": 120.44
+     "w": "in",
+     "s": 120.14,
+     "e": 120.46
     },
     {
-     "w": " place",
-     "s": 120.44,
-     "e": 120.78
+     "w": "place.",
+     "s": 120.46,
+     "e": 120.76
     },
     {
-     "w": " the",
-     "s": 120.78,
-     "e": 121.08
+     "w": "The",
+     "s": 120.96,
+     "e": 121.1
     },
     {
-     "w": " rent",
-     "s": 121.08,
+     "w": "rent",
+     "s": 121.1,
      "e": 121.26
     },
     {
-     "w": " at",
+     "w": "at",
      "s": 121.26,
-     "e": 121.46
+     "e": 121.48
     },
     {
-     "w": " the",
-     "s": 121.46,
+     "w": "the",
+     "s": 121.48,
      "e": 121.64
     },
     {
-     "w": " time",
+     "w": "time",
      "s": 121.64,
-     "e": 121.98
-    }
-   ]
-  },
-  {
-   "start": 121.98,
-   "end": 127.48,
-   "text": " Was a hundred ninety six thousand eight hundred a year It came from a letter Apart from a derelict",
-   "words": [
-    {
-     "w": " Was",
-     "s": 121.98,
-     "e": 122.34
+     "e": 122.02
     },
     {
-     "w": " a",
-     "s": 122.34,
+     "w": "was",
+     "s": 122.02,
      "e": 122.4
     },
     {
-     "w": " hundred",
+     "w": "196",
      "s": 122.4,
-     "e": 122.74
+     "e": 123.08
     },
     {
-     "w": " ninety",
-     "s": 122.74,
-     "e": 123.04
+     "w": ",800",
+     "s": 123.08,
+     "e": 124.18
     },
     {
-     "w": " six",
-     "s": 123.04,
-     "e": 123.24
+     "w": "a",
+     "s": 124.18,
+     "e": 124.38
     },
     {
-     "w": " thousand",
-     "s": 123.24,
-     "e": 123.72
+     "w": "year.",
+     "s": 124.38,
+     "e": 124.7
     },
     {
-     "w": " eight",
-     "s": 123.72,
-     "e": 124.02
+     "w": "It",
+     "s": 124.7,
+     "e": 125.32
     },
     {
-     "w": " hundred",
-     "s": 124.02,
-     "e": 124.28
-    },
-    {
-     "w": " a",
-     "s": 124.28,
-     "e": 124.46
-    },
-    {
-     "w": " year",
-     "s": 124.46,
-     "e": 124.94
-    },
-    {
-     "w": " It",
-     "s": 124.94,
-     "e": 125.4
-    },
-    {
-     "w": " came",
-     "s": 125.4,
+     "w": "came",
+     "s": 125.32,
      "e": 125.58
     },
     {
-     "w": " from",
+     "w": "from",
      "s": 125.58,
-     "e": 125.8
+     "e": 125.78
     },
     {
-     "w": " a",
-     "s": 125.8,
+     "w": "a",
+     "s": 125.78,
      "e": 125.94
     },
     {
-     "w": " letter",
+     "w": "letter,",
      "s": 125.94,
-     "e": 126.28
+     "e": 126.24
     },
     {
-     "w": " Apart",
-     "s": 126.28,
-     "e": 126.82
+     "w": "apart",
+     "s": 126.4,
+     "e": 126.86
     },
     {
-     "w": " from",
-     "s": 126.82,
-     "e": 127.02
+     "w": "from",
+     "s": 126.86,
+     "e": 127.04
     },
     {
-     "w": " a",
-     "s": 127.02,
+     "w": "a",
+     "s": 127.04,
      "e": 127.2
     },
     {
-     "w": " derelict",
+     "w": "derelict",
      "s": 127.2,
-     "e": 127.48
-    }
-   ]
-  },
-  {
-   "start": 127.48,
-   "end": 132.4,
-   "text": " Pub in Shadwell The site this business It was the first big sale to come out of a letter campaign",
-   "words": [
-    {
-     "w": " Pub",
-     "s": 127.48,
-     "e": 127.66
+     "e": 127.5
     },
     {
-     "w": " in",
-     "s": 127.66,
-     "e": 127.9
+     "w": "pub",
+     "s": 127.5,
+     "e": 127.68
     },
     {
-     "w": " Shadwell",
-     "s": 127.9,
-     "e": 128.38
+     "w": "in",
+     "s": 127.68,
+     "e": 127.94
     },
     {
-     "w": " The",
-     "s": 128.38,
+     "w": "Shadwell,",
+     "s": 127.94,
+     "e": 128.42
+    },
+    {
+     "w": "the",
+     "s": 128.82,
      "e": 128.86
     },
     {
-     "w": " site",
+     "w": "site",
      "s": 128.86,
-     "e": 129.0
+     "e": 129.02
     },
     {
-     "w": " this",
-     "s": 129.0,
-     "e": 129.26
+     "w": "of",
+     "s": 129.02,
+     "e": 129.18
     },
     {
-     "w": " business",
-     "s": 129.26,
-     "e": 129.66
+     "w": "this",
+     "s": 129.18,
+     "e": 129.28
     },
     {
-     "w": " It",
-     "s": 129.66,
-     "e": 129.86
+     "w": "business,",
+     "s": 129.28,
+     "e": 129.68
     },
     {
-     "w": " was",
-     "s": 129.86,
-     "e": 129.94
+     "w": "it",
+     "s": 129.76,
+     "e": 129.8
     },
     {
-     "w": " the",
-     "s": 129.94,
-     "e": 130.14
+     "w": "was",
+     "s": 129.8,
+     "e": 129.96
     },
     {
-     "w": " first",
-     "s": 130.14,
-     "e": 130.38
+     "w": "the",
+     "s": 129.96,
+     "e": 130.1
     },
     {
-     "w": " big",
-     "s": 130.38,
-     "e": 130.62
+     "w": "first",
+     "s": 130.1,
+     "e": 130.36
     },
     {
-     "w": " sale",
-     "s": 130.62,
-     "e": 130.96
+     "w": "big",
+     "s": 130.36,
+     "e": 130.64
     },
     {
-     "w": " to",
-     "s": 130.96,
-     "e": 131.22
+     "w": "sale",
+     "s": 130.64,
+     "e": 130.92
     },
     {
-     "w": " come",
-     "s": 131.22,
-     "e": 131.36
+     "w": "to",
+     "s": 130.92,
+     "e": 131.2
     },
     {
-     "w": " out",
-     "s": 131.36,
+     "w": "come",
+     "s": 131.2,
+     "e": 131.38
+    },
+    {
+     "w": "out",
+     "s": 131.38,
      "e": 131.52
     },
     {
-     "w": " of",
+     "w": "of",
      "s": 131.52,
      "e": 131.62
     },
     {
-     "w": " a",
+     "w": "a",
      "s": 131.62,
-     "e": 131.74
+     "e": 131.7
     },
     {
-     "w": " letter",
-     "s": 131.74,
+     "w": "letter",
+     "s": 131.7,
      "e": 131.88
     },
     {
-     "w": " campaign",
+     "w": "campaign.",
      "s": 131.88,
-     "e": 132.4
-    }
-   ]
-  },
-  {
-   "start": 132.92,
-   "end": 137.66,
-   "text": " It was marketed at five million The price agreed was four point seven seven five million",
-   "words": [
-    {
-     "w": " It",
-     "s": 132.92,
-     "e": 133.18
+     "e": 132.38
     },
     {
-     "w": " was",
-     "s": 133.18,
-     "e": 133.4
+     "w": "It",
+     "s": 133.1,
+     "e": 133.16
     },
     {
-     "w": " marketed",
-     "s": 133.4,
-     "e": 133.74
+     "w": "was",
+     "s": 133.16,
+     "e": 133.42
     },
     {
-     "w": " at",
-     "s": 133.74,
-     "e": 134.08
+     "w": "marketed",
+     "s": 133.42,
+     "e": 133.72
     },
     {
-     "w": " five",
-     "s": 134.08,
-     "e": 134.24
+     "w": "at",
+     "s": 133.72,
+     "e": 134.0
     },
     {
-     "w": " million",
-     "s": 134.24,
-     "e": 134.62
+     "w": "5",
+     "s": 134.0,
+     "e": 134.26
     },
     {
-     "w": " The",
-     "s": 134.62,
-     "e": 135.0
+     "w": "million,",
+     "s": 134.26,
+     "e": 134.64
     },
     {
-     "w": " price",
-     "s": 135.0,
+     "w": "the",
+     "s": 134.76,
+     "e": 135.04
+    },
+    {
+     "w": "price",
+     "s": 135.04,
      "e": 135.26
     },
     {
-     "w": " agreed",
+     "w": "agreed",
      "s": 135.26,
      "e": 135.54
     },
     {
-     "w": " was",
+     "w": "was",
      "s": 135.54,
-     "e": 135.84
+     "e": 135.82
     },
     {
-     "w": " four",
-     "s": 135.84,
-     "e": 136.08
+     "w": "4",
+     "s": 135.82,
+     "e": 136.12
     },
     {
-     "w": " point",
-     "s": 136.08,
-     "e": 136.4
+     "w": ".775",
+     "s": 136.12,
+     "e": 137.16
     },
     {
-     "w": " seven",
-     "s": 136.4,
-     "e": 136.74
-    },
-    {
-     "w": " seven",
-     "s": 136.74,
-     "e": 136.98
-    },
-    {
-     "w": " five",
-     "s": 136.98,
-     "e": 137.26
-    },
-    {
-     "w": " million",
-     "s": 137.26,
+     "w": "million",
+     "s": 137.16,
      "e": 137.66
-    }
-   ]
-  },
-  {
-   "start": 137.66,
-   "end": 143.02,
-   "text": " And it didn't move between offering completion On the rent at the time That's a gross yield",
-   "words": [
+    },
     {
-     "w": " And",
+     "w": "and",
      "s": 137.66,
-     "e": 138.02
+     "e": 137.98
     },
     {
-     "w": " it",
-     "s": 138.02,
-     "e": 138.22
+     "w": "it",
+     "s": 137.98,
+     "e": 138.24
     },
     {
-     "w": " didn't",
-     "s": 138.22,
-     "e": 138.44
+     "w": "didn't",
+     "s": 138.24,
+     "e": 138.42
     },
     {
-     "w": " move",
-     "s": 138.44,
+     "w": "move",
+     "s": 138.42,
      "e": 138.72
     },
     {
-     "w": " between",
+     "w": "between",
      "s": 138.72,
-     "e": 139.1
+     "e": 139.14
     },
     {
-     "w": " offering",
-     "s": 139.1,
-     "e": 139.44
+     "w": "offer",
+     "s": 139.14,
+     "e": 139.38
     },
     {
-     "w": " completion",
-     "s": 139.44,
-     "e": 140.04
+     "w": "and",
+     "s": 139.38,
+     "e": 139.6
     },
     {
-     "w": " On",
-     "s": 140.04,
-     "e": 140.98
+     "w": "completion.",
+     "s": 139.6,
+     "e": 140.0
     },
     {
-     "w": " the",
-     "s": 140.98,
-     "e": 141.16
+     "w": "On",
+     "s": 140.88,
+     "e": 141.0
     },
     {
-     "w": " rent",
-     "s": 141.16,
-     "e": 141.28
+     "w": "the",
+     "s": 141.0,
+     "e": 141.18
     },
     {
-     "w": " at",
-     "s": 141.28,
+     "w": "rent",
+     "s": 141.18,
+     "e": 141.26
+    },
+    {
+     "w": "at",
+     "s": 141.26,
      "e": 141.46
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 141.46,
      "e": 141.62
     },
     {
-     "w": " time",
+     "w": "time,",
      "s": 141.62,
-     "e": 141.9
+     "e": 141.88
     },
     {
-     "w": " That's",
-     "s": 141.9,
-     "e": 142.3
+     "w": "that's",
+     "s": 142.1,
+     "e": 142.32
     },
     {
-     "w": " a",
-     "s": 142.3,
-     "e": 142.48
+     "w": "a",
+     "s": 142.32,
+     "e": 142.46
     },
     {
-     "w": " gross",
-     "s": 142.48,
+     "w": "gross",
+     "s": 142.46,
      "e": 142.7
     },
     {
-     "w": " yield",
+     "w": "yield",
      "s": 142.7,
      "e": 143.02
-    }
-   ]
-  },
-  {
-   "start": 143.02,
-   "end": 148.88,
-   "text": " Of about four point one percent For a lot of investors Four point one percent in East London",
-   "words": [
+    },
     {
-     "w": " Of",
+     "w": "of",
      "s": 143.02,
-     "e": 143.26
+     "e": 143.24
     },
     {
-     "w": " about",
-     "s": 143.26,
-     "e": 143.58
+     "w": "about",
+     "s": 143.24,
+     "e": 143.66
     },
     {
-     "w": " four",
-     "s": 143.58,
-     "e": 143.9
+     "w": "4",
+     "s": 143.66,
+     "e": 143.94
     },
     {
-     "w": " point",
-     "s": 143.9,
-     "e": 144.12
+     "w": ".1%.",
+     "s": 143.94,
+     "e": 145.32
     },
     {
-     "w": " one",
-     "s": 144.12,
-     "e": 144.38
-    },
-    {
-     "w": " percent",
-     "s": 144.38,
-     "e": 144.74
-    },
-    {
-     "w": " For",
-     "s": 144.74,
+     "w": "For",
+     "s": 145.62,
      "e": 145.88
     },
     {
-     "w": " a",
+     "w": "a",
      "s": 145.88,
-     "e": 145.96
+     "e": 145.92
     },
     {
-     "w": " lot",
-     "s": 145.96,
-     "e": 146.14
+     "w": "lot",
+     "s": 145.92,
+     "e": 146.12
     },
     {
-     "w": " of",
-     "s": 146.14,
-     "e": 146.34
+     "w": "of",
+     "s": 146.12,
+     "e": 146.32
     },
     {
-     "w": " investors",
-     "s": 146.34,
+     "w": "investors,",
+     "s": 146.32,
      "e": 146.82
     },
     {
-     "w": " Four",
-     "s": 146.82,
-     "e": 147.32
+     "w": "4",
+     "s": 147.02,
+     "e": 147.38
     },
     {
-     "w": " point",
-     "s": 147.32,
-     "e": 147.56
+     "w": ".1",
+     "s": 147.38,
+     "e": 147.9
     },
     {
-     "w": " one",
-     "s": 147.56,
-     "e": 147.86
-    },
-    {
-     "w": " percent",
-     "s": 147.86,
+     "w": "%",
+     "s": 147.9,
      "e": 148.14
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 148.14,
      "e": 148.32
     },
     {
-     "w": " East",
+     "w": "East",
      "s": 148.32,
-     "e": 148.5
+     "e": 148.52
     },
     {
-     "w": " London",
-     "s": 148.5,
+     "w": "London",
+     "s": 148.52,
      "e": 148.88
-    }
-   ]
-  },
-  {
-   "start": 148.88,
-   "end": 156.8,
-   "text": " Sounds low so why Would Anyone Pay it Because the rent wasn't the full rent let at market levels the Building Could Produce",
-   "words": [
-    {
-     "w": " Sounds",
-     "s": 148.88,
-     "e": 149.38
     },
     {
-     "w": " low",
-     "s": 149.38,
+     "w": "sounds",
+     "s": 148.88,
+     "e": 149.4
+    },
+    {
+     "w": "low,",
+     "s": 149.4,
      "e": 149.78
     },
     {
-     "w": " so",
-     "s": 149.78,
-     "e": 150.3
+     "w": "so",
+     "s": 150.08,
+     "e": 150.32
     },
     {
-     "w": " why",
-     "s": 150.3,
+     "w": "why",
+     "s": 150.32,
      "e": 150.5
     },
     {
-     "w": " Would",
+     "w": "would",
      "s": 150.5,
-     "e": 150.68
+     "e": 150.7
     },
     {
-     "w": " Anyone",
-     "s": 150.68,
+     "w": "anyone",
+     "s": 150.7,
      "e": 150.92
     },
     {
-     "w": " Pay",
+     "w": "pay",
      "s": 150.92,
-     "e": 151.2
+     "e": 151.18
     },
     {
-     "w": " it",
-     "s": 151.2,
-     "e": 151.94
+     "w": "it?",
+     "s": 151.18,
+     "e": 151.46
     },
     {
-     "w": " Because",
-     "s": 151.94,
-     "e": 152.32
+     "w": "Because",
+     "s": 151.96,
+     "e": 152.36
     },
     {
-     "w": " the",
-     "s": 152.32,
-     "e": 152.54
+     "w": "the",
+     "s": 152.36,
+     "e": 152.56
     },
     {
-     "w": " rent",
-     "s": 152.54,
-     "e": 152.7
+     "w": "rent",
+     "s": 152.56,
+     "e": 152.72
     },
     {
-     "w": " wasn't",
-     "s": 152.7,
+     "w": "wasn't",
+     "s": 152.72,
      "e": 152.98
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 152.98,
-     "e": 153.14
+     "e": 153.18
     },
     {
-     "w": " full",
-     "s": 153.14,
-     "e": 153.36
+     "w": "full",
+     "s": 153.18,
+     "e": 153.34
     },
     {
-     "w": " rent",
-     "s": 153.36,
-     "e": 153.84
+     "w": "rent.",
+     "s": 153.34,
+     "e": 153.66
     },
     {
-     "w": " let",
-     "s": 153.84,
-     "e": 154.28
+     "w": "Let",
+     "s": 153.66,
+     "e": 154.26
     },
     {
-     "w": " at",
-     "s": 154.28,
-     "e": 154.52
+     "w": "at",
+     "s": 154.26,
+     "e": 154.64
     },
     {
-     "w": " market",
-     "s": 154.52,
+     "w": "market",
+     "s": 154.64,
      "e": 154.84
     },
     {
-     "w": " levels",
+     "w": "levels,",
      "s": 154.84,
-     "e": 155.32
+     "e": 155.4
     },
     {
-     "w": " the",
-     "s": 155.32,
-     "e": 155.66
+     "w": "the",
+     "s": 155.6,
+     "e": 155.72
     },
     {
-     "w": " Building",
-     "s": 155.66,
+     "w": "building",
+     "s": 155.72,
      "e": 156.1
     },
     {
-     "w": " Could",
+     "w": "could",
      "s": 156.1,
-     "e": 156.5
+     "e": 156.54
     },
     {
-     "w": " Produce",
-     "s": 156.5,
-     "e": 156.8
-    }
-   ]
-  },
-  {
-   "start": 158.06,
-   "end": 159.26,
-   "text": " 278,000",
-   "words": [
-    {
-     "w": " 278",
-     "s": 158.06,
-     "e": 158.66
+     "w": "produce",
+     "s": 156.54,
+     "e": 157.16
     },
     {
-     "w": ",000",
-     "s": 158.66,
-     "e": 159.26
-    }
-   ]
-  },
-  {
-   "start": 159.26,
-   "end": 161.12,
-   "text": " 400 a year That's",
-   "words": [
-    {
-     "w": " 400",
-     "s": 159.26,
-     "e": 159.7
+     "w": "$278",
+     "s": 157.16,
+     "e": 158.52
     },
     {
-     "w": " a",
-     "s": 159.7,
-     "e": 159.98
+     "w": ",400",
+     "s": 158.52,
+     "e": 159.74
     },
     {
-     "w": " year",
-     "s": 159.98,
-     "e": 160.46
+     "w": "a",
+     "s": 159.74,
+     "e": 159.88
     },
     {
-     "w": " That's",
-     "s": 160.46,
-     "e": 161.12
-    }
-   ]
-  },
-  {
-   "start": 161.12,
-   "end": 163.84,
-   "text": " 81,600 more Than it was earning",
-   "words": [
+     "w": "year.",
+     "s": 159.88,
+     "e": 160.44
+    },
     {
-     "w": " 81",
-     "s": 161.12,
-     "e": 161.56
+     "w": "That's",
+     "s": 160.76,
+     "e": 161.08
+    },
+    {
+     "w": "$81",
+     "s": 161.08,
+     "e": 161.58
     },
     {
      "w": ",600",
-     "s": 161.56,
-     "e": 162.38
+     "s": 161.58,
+     "e": 162.36
     },
     {
-     "w": " more",
-     "s": 162.38,
+     "w": "more",
+     "s": 162.36,
      "e": 162.9
     },
     {
-     "w": " Than",
+     "w": "than",
      "s": 162.9,
-     "e": 163.08
+     "e": 163.1
     },
     {
-     "w": " it",
-     "s": 163.08,
-     "e": 163.2
+     "w": "it",
+     "s": 163.1,
+     "e": 163.18
     },
     {
-     "w": " was",
-     "s": 163.2,
-     "e": 163.38
+     "w": "was",
+     "s": 163.18,
+     "e": 163.4
     },
     {
-     "w": " earning",
-     "s": 163.38,
-     "e": 163.84
-    }
-   ]
-  },
-  {
-   "start": 163.84,
-   "end": 169.48,
-   "text": " At the price paid the Yield on that full rent is about 5.8%",
-   "words": [
+     "w": "earning.",
+     "s": 163.4,
+     "e": 163.76
+    },
     {
-     "w": " At",
-     "s": 163.84,
+     "w": "At",
+     "s": 164.56,
      "e": 164.76
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 164.76,
-     "e": 164.94
+     "e": 164.98
     },
     {
-     "w": " price",
-     "s": 164.94,
+     "w": "price",
+     "s": 164.98,
      "e": 165.26
     },
     {
-     "w": " paid",
+     "w": "paid,",
      "s": 165.26,
-     "e": 165.62
+     "e": 165.6
     },
     {
-     "w": " the",
-     "s": 165.62,
-     "e": 165.98
+     "w": "the",
+     "s": 165.9,
+     "e": 166.04
     },
     {
-     "w": " Yield",
-     "s": 165.98,
+     "w": "yield",
+     "s": 166.04,
      "e": 166.22
     },
     {
-     "w": " on",
+     "w": "on",
      "s": 166.22,
-     "e": 166.36
+     "e": 166.42
     },
     {
-     "w": " that",
-     "s": 166.36,
-     "e": 166.54
+     "w": "that",
+     "s": 166.42,
+     "e": 166.62
     },
     {
-     "w": " full",
-     "s": 166.54,
-     "e": 166.84
+     "w": "full",
+     "s": 166.62,
+     "e": 166.82
     },
     {
-     "w": " rent",
-     "s": 166.84,
-     "e": 167.1
+     "w": "rent",
+     "s": 166.82,
+     "e": 167.12
     },
     {
-     "w": " is",
-     "s": 167.1,
+     "w": "is",
+     "s": 167.12,
      "e": 167.34
     },
     {
-     "w": " about",
+     "w": "about",
      "s": 167.34,
-     "e": 167.68
+     "e": 167.7
     },
     {
-     "w": " 5",
-     "s": 167.68,
+     "w": "5",
+     "s": 167.7,
      "e": 168.02
     },
     {
-     "w": ".8",
+     "w": ".8%.",
      "s": 168.02,
-     "e": 168.5
+     "e": 169.5
     },
     {
-     "w": "%",
-     "s": 168.5,
-     "e": 169.48
-    }
-   ]
-  },
-  {
-   "start": 169.48,
-   "end": 175.18,
-   "text": " Think of it like a salary that hasn't had a pay rise in years the job is the same and the pay catches up",
-   "words": [
-    {
-     "w": " Think",
-     "s": 169.48,
-     "e": 169.86
+     "w": "Think",
+     "s": 169.5,
+     "e": 169.88
     },
     {
-     "w": " of",
-     "s": 169.86,
-     "e": 169.98
+     "w": "of",
+     "s": 169.88,
+     "e": 170.0
     },
     {
-     "w": " it",
-     "s": 169.98,
+     "w": "it",
+     "s": 170.0,
      "e": 170.06
     },
     {
-     "w": " like",
+     "w": "like",
      "s": 170.06,
-     "e": 170.26
+     "e": 170.28
     },
     {
-     "w": " a",
-     "s": 170.26,
+     "w": "a",
+     "s": 170.28,
      "e": 170.36
     },
     {
-     "w": " salary",
+     "w": "salary",
      "s": 170.36,
      "e": 170.7
     },
     {
-     "w": " that",
+     "w": "that",
      "s": 170.7,
      "e": 170.9
     },
     {
-     "w": " hasn't",
+     "w": "hasn't",
      "s": 170.9,
-     "e": 171.18
+     "e": 171.22
     },
     {
-     "w": " had",
-     "s": 171.18,
-     "e": 171.4
+     "w": "had",
+     "s": 171.22,
+     "e": 171.42
     },
     {
-     "w": " a",
-     "s": 171.4,
-     "e": 171.58
+     "w": "a",
+     "s": 171.42,
+     "e": 171.6
     },
     {
-     "w": " pay",
-     "s": 171.58,
-     "e": 171.74
+     "w": "pay",
+     "s": 171.6,
+     "e": 171.76
     },
     {
-     "w": " rise",
-     "s": 171.74,
+     "w": "rise",
+     "s": 171.76,
      "e": 171.96
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 171.96,
      "e": 172.2
     },
     {
-     "w": " years",
+     "w": "years.",
      "s": 172.2,
-     "e": 172.44
+     "e": 172.42
     },
     {
-     "w": " the",
-     "s": 172.44,
-     "e": 172.8
+     "w": "The",
+     "s": 172.7,
+     "e": 172.82
     },
     {
-     "w": " job",
-     "s": 172.8,
+     "w": "job",
+     "s": 172.82,
      "e": 172.98
     },
     {
-     "w": " is",
+     "w": "is",
      "s": 172.98,
-     "e": 173.14
+     "e": 173.2
     },
     {
-     "w": " the",
-     "s": 173.14,
+     "w": "the",
+     "s": 173.2,
      "e": 173.38
     },
     {
-     "w": " same",
+     "w": "same",
      "s": 173.38,
-     "e": 173.72
+     "e": 173.76
     },
     {
-     "w": " and",
-     "s": 173.72,
+     "w": "and",
+     "s": 173.76,
      "e": 174.04
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 174.04,
-     "e": 174.18
+     "e": 174.24
     },
     {
-     "w": " pay",
-     "s": 174.18,
-     "e": 174.4
+     "w": "pay",
+     "s": 174.24,
+     "e": 174.42
     },
     {
-     "w": " catches",
-     "s": 174.4,
-     "e": 174.76
+     "w": "catches",
+     "s": 174.42,
+     "e": 174.74
     },
     {
-     "w": " up",
-     "s": 174.76,
+     "w": "up",
+     "s": 174.74,
      "e": 175.18
-    }
-   ]
-  },
-  {
-   "start": 175.18,
-   "end": 179.32,
-   "text": " When the contracts are renewed The buy is paying for the building as it is",
-   "words": [
+    },
     {
-     "w": " When",
+     "w": "when",
      "s": 175.18,
-     "e": 175.5
+     "e": 175.38
     },
     {
-     "w": " the",
-     "s": 175.5,
-     "e": 175.5
+     "w": "the",
+     "s": 175.38,
+     "e": 175.66
     },
     {
-     "w": " contracts",
-     "s": 175.5,
+     "w": "contracts",
+     "s": 175.66,
      "e": 175.92
     },
     {
-     "w": " are",
+     "w": "are",
      "s": 175.92,
-     "e": 176.16
+     "e": 176.14
     },
     {
-     "w": " renewed",
-     "s": 176.16,
-     "e": 176.5
+     "w": "renewed.",
+     "s": 176.14,
+     "e": 176.44
     },
     {
-     "w": " The",
-     "s": 176.5,
-     "e": 177.1
+     "w": "The",
+     "s": 176.98,
+     "e": 177.16
     },
     {
-     "w": " buy",
-     "s": 177.1,
-     "e": 177.32
+     "w": "buyer",
+     "s": 177.16,
+     "e": 177.34
     },
     {
-     "w": " is",
-     "s": 177.32,
-     "e": 177.5
+     "w": "is",
+     "s": 177.34,
+     "e": 177.58
     },
     {
-     "w": " paying",
-     "s": 177.5,
+     "w": "paying",
+     "s": 177.58,
      "e": 177.78
     },
     {
-     "w": " for",
+     "w": "for",
      "s": 177.78,
      "e": 177.96
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 177.96,
      "e": 178.14
     },
     {
-     "w": " building",
+     "w": "building",
      "s": 178.14,
      "e": 178.42
     },
     {
-     "w": " as",
+     "w": "as",
      "s": 178.42,
-     "e": 178.68
+     "e": 178.7
     },
     {
-     "w": " it",
-     "s": 178.68,
-     "e": 178.92
+     "w": "is",
+     "s": 178.7,
+     "e": 179.12
     },
     {
-     "w": " is",
-     "s": 178.92,
-     "e": 179.32
-    }
-   ]
-  },
-  {
-   "start": 179.32,
-   "end": 182.58,
-   "text": " with the gap built in Split across the flats",
-   "words": [
-    {
-     "w": " with",
-     "s": 179.32,
-     "e": 179.52
+     "w": "with",
+     "s": 179.12,
+     "e": 179.5
     },
     {
-     "w": " the",
-     "s": 179.52,
+     "w": "the",
+     "s": 179.5,
      "e": 179.68
     },
     {
-     "w": " gap",
+     "w": "gap",
      "s": 179.68,
      "e": 179.86
     },
     {
-     "w": " built",
+     "w": "built",
      "s": 179.86,
-     "e": 180.1
+     "e": 180.12
     },
     {
-     "w": " in",
-     "s": 180.1,
+     "w": "in.",
+     "s": 180.12,
      "e": 181.14
     },
     {
-     "w": " Split",
-     "s": 181.14,
+     "w": "Split",
+     "s": 181.34,
      "e": 181.64
     },
     {
-     "w": " across",
+     "w": "across",
      "s": 181.64,
-     "e": 182.02
+     "e": 182.04
     },
     {
-     "w": " the",
-     "s": 182.02,
+     "w": "the",
+     "s": 182.04,
      "e": 182.24
     },
     {
-     "w": " flats",
+     "w": "flats",
      "s": 182.24,
-     "e": 182.58
-    }
-   ]
-  },
-  {
-   "start": 182.58,
-   "end": 188.88,
-   "text": " The price works out at 530,000 per flat And that's before you count the two shops",
-   "words": [
-    {
-     "w": " The",
-     "s": 182.58,
-     "e": 183.12
+     "e": 182.56
     },
     {
-     "w": " price",
-     "s": 183.12,
+     "w": "the",
+     "s": 182.56,
+     "e": 183.1
+    },
+    {
+     "w": "price",
+     "s": 183.1,
      "e": 183.38
     },
     {
-     "w": " works",
+     "w": "works",
      "s": 183.38,
      "e": 183.78
     },
     {
-     "w": " out",
+     "w": "out",
      "s": 183.78,
      "e": 184.12
     },
     {
-     "w": " at",
+     "w": "at",
      "s": 184.12,
-     "e": 184.44
+     "e": 184.46
     },
     {
-     "w": " 530",
-     "s": 184.44,
-     "e": 185.24
+     "w": "$530",
+     "s": 184.46,
+     "e": 185.26
     },
     {
      "w": ",000",
-     "s": 185.24,
-     "e": 185.82
+     "s": 185.26,
+     "e": 185.8
     },
     {
-     "w": " per",
-     "s": 185.82,
-     "e": 186.1
+     "w": "per",
+     "s": 185.8,
+     "e": 186.14
     },
     {
-     "w": " flat",
-     "s": 186.1,
-     "e": 186.54
+     "w": "flat",
+     "s": 186.14,
+     "e": 186.5
     },
     {
-     "w": " And",
-     "s": 186.54,
+     "w": "and",
+     "s": 186.5,
      "e": 187.02
     },
     {
-     "w": " that's",
+     "w": "that's",
      "s": 187.02,
      "e": 187.38
     },
     {
-     "w": " before",
+     "w": "before",
      "s": 187.38,
      "e": 187.72
     },
     {
-     "w": " you",
+     "w": "you",
      "s": 187.72,
      "e": 187.9
     },
     {
-     "w": " count",
+     "w": "count",
      "s": 187.9,
      "e": 188.08
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 188.08,
      "e": 188.28
     },
     {
-     "w": " two",
+     "w": "two",
      "s": 188.28,
      "e": 188.48
     },
     {
-     "w": " shops",
+     "w": "shops",
      "s": 188.48,
-     "e": 188.88
-    }
-   ]
-  },
-  {
-   "start": 188.88,
-   "end": 192.2,
-   "text": " and the basement If you're thinking about buying or selling",
-   "words": [
+     "e": 188.86
+    },
     {
-     "w": " and",
-     "s": 188.88,
+     "w": "and",
+     "s": 188.86,
      "e": 189.22
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 189.22,
-     "e": 189.38
+     "e": 189.36
     },
     {
-     "w": " basement",
-     "s": 189.38,
-     "e": 189.82
+     "w": "basement.",
+     "s": 189.36,
+     "e": 189.74
     },
     {
-     "w": " If",
-     "s": 189.82,
+     "w": "If",
+     "s": 190.56,
      "e": 190.76
     },
     {
-     "w": " you're",
+     "w": "you're",
      "s": 190.76,
-     "e": 190.96
+     "e": 190.98
     },
     {
-     "w": " thinking",
-     "s": 190.96,
-     "e": 191.26
+     "w": "thinking",
+     "s": 190.98,
+     "e": 191.24
     },
     {
-     "w": " about",
-     "s": 191.26,
-     "e": 191.58
+     "w": "about",
+     "s": 191.24,
+     "e": 191.56
     },
     {
-     "w": " buying",
-     "s": 191.58,
+     "w": "buying",
+     "s": 191.56,
      "e": 191.8
     },
     {
-     "w": " or",
+     "w": "or",
      "s": 191.8,
-     "e": 191.96
+     "e": 192.02
     },
     {
-     "w": " selling",
-     "s": 191.96,
+     "w": "selling",
+     "s": 192.02,
      "e": 192.2
-    }
-   ]
-  },
-  {
-   "start": 192.2,
-   "end": 195.08,
-   "text": " a property We built a valuation report that does the",
-   "words": [
-    {
-     "w": " a",
-     "s": 192.2,
-     "e": 192.42
     },
     {
-     "w": " property",
-     "s": 192.42,
+     "w": "a",
+     "s": 192.2,
+     "e": 192.4
+    },
+    {
+     "w": "property",
+     "s": 192.4,
      "e": 192.82
     },
     {
-     "w": " We",
+     "w": "we've",
      "s": 192.82,
-     "e": 193.38
+     "e": 193.46
     },
     {
-     "w": " built",
-     "s": 193.38,
-     "e": 193.58
+     "w": "built",
+     "s": 193.46,
+     "e": 193.6
     },
     {
-     "w": " a",
-     "s": 193.58,
+     "w": "a",
+     "s": 193.6,
      "e": 193.76
     },
     {
-     "w": " valuation",
+     "w": "valuation",
      "s": 193.76,
      "e": 194.2
     },
     {
-     "w": " report",
+     "w": "report",
      "s": 194.2,
-     "e": 194.56
+     "e": 194.54
     },
     {
-     "w": " that",
-     "s": 194.56,
+     "w": "that",
+     "s": 194.54,
      "e": 194.7
     },
     {
-     "w": " does",
+     "w": "does",
      "s": 194.7,
      "e": 194.92
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 194.92,
      "e": 195.08
-    }
-   ]
-  },
-  {
-   "start": 195.08,
-   "end": 197.22,
-   "text": " work for you We put in",
-   "words": [
+    },
     {
-     "w": " work",
+     "w": "work",
      "s": 195.08,
      "e": 195.24
     },
     {
-     "w": " for",
+     "w": "for",
      "s": 195.24,
-     "e": 195.48
+     "e": 195.52
     },
     {
-     "w": " you",
-     "s": 195.48,
-     "e": 196.06
+     "w": "you.",
+     "s": 195.52,
+     "e": 195.92
     },
     {
-     "w": " We",
-     "s": 196.06,
+     "w": "We",
+     "s": 196.38,
      "e": 196.46
     },
     {
-     "w": " put",
+     "w": "put",
      "s": 196.46,
-     "e": 196.64
+     "e": 196.66
     },
     {
-     "w": " in",
-     "s": 196.64,
-     "e": 197.22
-    }
-   ]
-  },
-  {
-   "start": 198.48,
-   "end": 202.34,
-   "text": " Put the details in and you'll have a full report in a few minutes",
-   "words": [
-    {
-     "w": " Put",
-     "s": 198.48,
-     "e": 199.04
+     "w": "the",
+     "s": 196.66,
+     "e": 199.12
     },
     {
-     "w": " the",
-     "s": 199.04,
-     "e": 199.24
-    },
-    {
-     "w": " details",
-     "s": 199.24,
+     "w": "details",
+     "s": 199.12,
      "e": 199.62
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 199.62,
-     "e": 200.14
+     "e": 200.1
     },
     {
-     "w": " and",
-     "s": 200.14,
-     "e": 200.36
+     "w": "and",
+     "s": 200.1,
+     "e": 200.32
     },
     {
-     "w": " you'll",
-     "s": 200.36,
+     "w": "you'll",
+     "s": 200.32,
      "e": 200.54
     },
     {
-     "w": " have",
+     "w": "have",
      "s": 200.54,
-     "e": 200.68
+     "e": 200.66
     },
     {
-     "w": " a",
-     "s": 200.68,
-     "e": 200.82
+     "w": "a",
+     "s": 200.66,
+     "e": 200.8
     },
     {
-     "w": " full",
-     "s": 200.82,
-     "e": 201.02
+     "w": "full",
+     "s": 200.8,
+     "e": 201.0
     },
     {
-     "w": " report",
-     "s": 201.02,
+     "w": "report",
+     "s": 201.0,
      "e": 201.38
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 201.38,
-     "e": 201.66
+     "e": 201.64
     },
     {
-     "w": " a",
-     "s": 201.66,
+     "w": "a",
+     "s": 201.64,
      "e": 201.8
     },
     {
-     "w": " few",
+     "w": "few",
      "s": 201.8,
      "e": 201.9
     },
     {
-     "w": " minutes",
+     "w": "minutes.",
      "s": 201.9,
-     "e": 202.34
-    }
-   ]
-  },
-  {
-   "start": 202.34,
-   "end": 209.52,
-   "text": " It took us hours to build and we normally charge 190 pounds for it use the code socials and it's free. It's at",
-   "words": [
-    {
-     "w": " It",
-     "s": 202.34,
-     "e": 202.82
+     "e": 202.3
     },
     {
-     "w": " took",
-     "s": 202.82,
+     "w": "It",
+     "s": 202.72,
+     "e": 202.88
+    },
+    {
+     "w": "took",
+     "s": 202.88,
      "e": 203.06
     },
     {
-     "w": " us",
+     "w": "us",
      "s": 203.06,
      "e": 203.28
     },
     {
-     "w": " hours",
+     "w": "hours",
      "s": 203.28,
      "e": 203.52
     },
     {
-     "w": " to",
+     "w": "to",
      "s": 203.52,
      "e": 203.76
     },
     {
-     "w": " build",
+     "w": "build",
      "s": 203.76,
-     "e": 203.98
+     "e": 204.04
     },
     {
-     "w": " and",
-     "s": 203.98,
-     "e": 204.32
+     "w": "and",
+     "s": 204.04,
+     "e": 204.3
     },
     {
-     "w": " we",
-     "s": 204.32,
-     "e": 204.48
+     "w": "we",
+     "s": 204.3,
+     "e": 204.46
     },
     {
-     "w": " normally",
-     "s": 204.48,
-     "e": 204.78
+     "w": "normally",
+     "s": 204.46,
+     "e": 204.76
     },
     {
-     "w": " charge",
-     "s": 204.78,
-     "e": 205.06
+     "w": "charge",
+     "s": 204.76,
+     "e": 205.08
     },
     {
-     "w": " 190",
-     "s": 205.06,
-     "e": 205.58
+     "w": "\u00a3190",
+     "s": 205.08,
+     "e": 205.74
     },
     {
-     "w": " pounds",
-     "s": 205.58,
-     "e": 205.92
+     "w": "for",
+     "s": 205.74,
+     "e": 206.12
     },
     {
-     "w": " for",
-     "s": 205.92,
-     "e": 206.14
-    },
-    {
-     "w": " it",
-     "s": 206.14,
+     "w": "it,",
+     "s": 206.12,
      "e": 206.46
     },
     {
-     "w": " use",
-     "s": 206.46,
-     "e": 206.82
+     "w": "use",
+     "s": 206.68,
+     "e": 206.86
     },
     {
-     "w": " the",
-     "s": 206.82,
-     "e": 207.0
+     "w": "the",
+     "s": 206.86,
+     "e": 206.98
     },
     {
-     "w": " code",
-     "s": 207.0,
+     "w": "code",
+     "s": 206.98,
      "e": 207.14
     },
     {
-     "w": " socials",
+     "w": "socials",
      "s": 207.14,
-     "e": 207.92
+     "e": 207.94
     },
     {
-     "w": " and",
-     "s": 207.92,
-     "e": 208.0
+     "w": "and",
+     "s": 207.94,
+     "e": 208.02
     },
     {
-     "w": " it's",
-     "s": 208.0,
-     "e": 208.24
+     "w": "it's",
+     "s": 208.02,
+     "e": 208.22
     },
     {
-     "w": " free.",
-     "s": 208.24,
-     "e": 208.54
+     "w": "free.",
+     "s": 208.22,
+     "e": 208.6
     },
     {
-     "w": " It's",
-     "s": 208.84,
-     "e": 209.26
+     "w": "It's",
+     "s": 209.0,
+     "e": 209.22
     },
     {
-     "w": " at",
-     "s": 209.26,
-     "e": 209.52
-    }
-   ]
-  },
-  {
-   "start": 209.52,
-   "end": 212.6,
-   "text": " www.calibreacquire.co.uk",
-   "words": [
+     "w": "at",
+     "s": 209.22,
+     "e": 209.46
+    },
     {
-     "w": " www",
-     "s": 209.52,
+     "w": "www",
+     "s": 209.46,
      "e": 209.98
     },
     {
@@ -3265,236 +2931,215 @@
     {
      "w": ".uk",
      "s": 212.0,
-     "e": 212.6
-    }
-   ]
-  },
-  {
-   "start": 212.6,
-   "end": 214.86,
-   "text": " forward slash valuation dash promotion",
-   "words": [
-    {
-     "w": " forward",
-     "s": 212.6,
-     "e": 212.92
+     "e": 212.62
     },
     {
-     "w": " slash",
-     "s": 212.92,
+     "w": "forward",
+     "s": 212.62,
+     "e": 212.9
+    },
+    {
+     "w": "slash",
+     "s": 212.9,
      "e": 213.28
     },
     {
-     "w": " valuation",
+     "w": "valuation",
      "s": 213.28,
      "e": 213.94
     },
     {
-     "w": " dash",
+     "w": "dash",
      "s": 213.94,
      "e": 214.24
     },
     {
-     "w": " promotion",
+     "w": "promotion.",
      "s": 214.24,
-     "e": 214.86
-    }
-   ]
-  },
-  {
-   "start": 215.84,
-   "end": 221.48,
-   "text": " The buyer was a private landlord who already owns several blocks in the area for him",
-   "words": [
-    {
-     "w": " The",
-     "s": 215.84,
-     "e": 216.44
+     "e": 214.76
     },
     {
-     "w": " buyer",
-     "s": 216.44,
+     "w": "The",
+     "s": 216.3,
+     "e": 216.5
+    },
+    {
+     "w": "buyer",
+     "s": 216.5,
      "e": 216.72
     },
     {
-     "w": " was",
+     "w": "was",
      "s": 216.72,
-     "e": 216.94
+     "e": 216.96
     },
     {
-     "w": " a",
-     "s": 216.94,
-     "e": 217.2
+     "w": "a",
+     "s": 216.96,
+     "e": 217.18
     },
     {
-     "w": " private",
-     "s": 217.2,
-     "e": 217.5
+     "w": "private",
+     "s": 217.18,
+     "e": 217.52
     },
     {
-     "w": " landlord",
-     "s": 217.5,
+     "w": "landlord",
+     "s": 217.52,
      "e": 217.92
     },
     {
-     "w": " who",
+     "w": "who",
      "s": 217.92,
-     "e": 218.42
+     "e": 218.46
     },
     {
-     "w": " already",
-     "s": 218.42,
+     "w": "already",
+     "s": 218.46,
      "e": 218.82
     },
     {
-     "w": " owns",
+     "w": "owns",
      "s": 218.82,
      "e": 219.16
     },
     {
-     "w": " several",
+     "w": "several",
      "s": 219.16,
      "e": 219.64
     },
     {
-     "w": " blocks",
+     "w": "blocks",
      "s": 219.64,
      "e": 219.92
     },
     {
-     "w": " in",
+     "w": "in",
      "s": 219.92,
      "e": 220.12
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 220.12,
-     "e": 220.34
+     "e": 220.32
     },
     {
-     "w": " area",
-     "s": 220.34,
-     "e": 220.68
+     "w": "area.",
+     "s": 220.32,
+     "e": 220.56
     },
     {
-     "w": " for",
-     "s": 220.68,
-     "e": 221.2
+     "w": "For",
+     "s": 220.98,
+     "e": 221.14
     },
     {
-     "w": " him",
-     "s": 221.2,
-     "e": 221.48
-    }
-   ]
-  },
-  {
-   "start": 221.48,
-   "end": 228.06,
-   "text": " It was one more building on streets. He already knows he's holding it. We took over the management and the rent",
-   "words": [
-    {
-     "w": " It",
-     "s": 221.48,
-     "e": 221.66
+     "w": "him,",
+     "s": 221.14,
+     "e": 221.46
     },
     {
-     "w": " was",
-     "s": 221.66,
+     "w": "it",
+     "s": 221.56,
+     "e": 221.68
+    },
+    {
+     "w": "was",
+     "s": 221.68,
      "e": 221.88
     },
     {
-     "w": " one",
+     "w": "one",
      "s": 221.88,
      "e": 222.08
     },
     {
-     "w": " more",
+     "w": "more",
      "s": 222.08,
-     "e": 222.34
+     "e": 222.32
     },
     {
-     "w": " building",
-     "s": 222.34,
+     "w": "building",
+     "s": 222.32,
      "e": 222.62
     },
     {
-     "w": " on",
+     "w": "on",
      "s": 222.62,
      "e": 223.06
     },
     {
-     "w": " streets.",
+     "w": "streets",
      "s": 223.06,
      "e": 223.32
     },
     {
-     "w": " He",
-     "s": 223.34,
-     "e": 223.66
+     "w": "he",
+     "s": 223.32,
+     "e": 223.64
     },
     {
-     "w": " already",
-     "s": 223.66,
-     "e": 224.02
+     "w": "already",
+     "s": 223.64,
+     "e": 224.04
     },
     {
-     "w": " knows",
-     "s": 224.02,
-     "e": 224.42
+     "w": "knows.",
+     "s": 224.04,
+     "e": 224.34
     },
     {
-     "w": " he's",
-     "s": 224.42,
-     "e": 225.34
+     "w": "He's",
+     "s": 224.96,
+     "e": 225.3
     },
     {
-     "w": " holding",
-     "s": 225.34,
+     "w": "holding",
+     "s": 225.3,
      "e": 225.52
     },
     {
-     "w": " it.",
+     "w": "it,",
      "s": 225.52,
-     "e": 225.94
+     "e": 225.92
     },
     {
-     "w": " We",
-     "s": 225.94,
-     "e": 226.18
+     "w": "we",
+     "s": 226.08,
+     "e": 226.2
     },
     {
-     "w": " took",
-     "s": 226.18,
+     "w": "took",
+     "s": 226.2,
      "e": 226.34
     },
     {
-     "w": " over",
+     "w": "over",
      "s": 226.34,
-     "e": 226.58
+     "e": 226.6
     },
     {
-     "w": " the",
-     "s": 226.58,
-     "e": 226.84
+     "w": "the",
+     "s": 226.6,
+     "e": 226.82
     },
     {
-     "w": " management",
-     "s": 226.84,
-     "e": 227.36
+     "w": "management",
+     "s": 226.82,
+     "e": 227.24
     },
     {
-     "w": " and",
-     "s": 227.36,
+     "w": "and",
+     "s": 227.24,
      "e": 227.76
     },
     {
-     "w": " the",
+     "w": "the",
      "s": 227.76,
      "e": 227.88
     },
     {
-     "w": " rent",
+     "w": "rent",
      "s": 227.88,
      "e": 228.06
     }
