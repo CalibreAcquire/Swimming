@@ -9,7 +9,7 @@ edl = {
     "title": "I Sent 64,998 Letters to London Property Owners",
     "type": "educational",
     "source": "../raw/C0404S03.MP4",
-    "transcript": "../transcript/phrases_large.json",
+    "transcript": "../transcript/phrases_large_fixed.json",
     "format": "16x9",
     "window": [9.45, 430.75],
     "cuts": [
