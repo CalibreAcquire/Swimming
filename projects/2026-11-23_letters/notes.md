@@ -47,3 +47,9 @@ Figures checked: 64,998 / 329 = 197.6 (1 in 200); 64,998 / 11 = 5,909 (about 5,9
 YouTube draft 4:49 + outro: −14.1 LUFS, −1.2 dBTP, music 16.8 dB under voice, 0 caption overlaps.
 Reel A draft 0:21 + outro and Reel B draft 0:36 + outro: −14.1 LUFS, −1.4 dBTP, music 17.1–17.6 dB under, 0 overlaps.
 Sent to Jake as draft1 for review (15 Nov).
+
+## Final v1 (15 Nov)
+`exports/2026-11-23_letters_youtube_v1.mp4` (4:54 incl. outro, 121 MB, 2-pass 3 Mbps from the full-quality render)
++ `.srt` (100 subtitles). −14.0 LUFS, −1.3 dBTP, music 16.8 dB under voice. Opening word "Since" fixed (large-v3
+had stretched it back before the window; `transcript/phrases_large_fixed.json`). No B-roll yet (Monday shoot).
+Jake asked for a YouTube upload: no YouTube connection here, so he uploads and schedules it in Studio.
