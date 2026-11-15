@@ -45,3 +45,5 @@ Figures checked: 64,998 / 329 = 197.6 (1 in 200); 64,998 / 11 = 5,909 (about 5,9
 
 ## QA (draft, 15 Nov)
 YouTube draft 4:49 + outro: −14.1 LUFS, −1.2 dBTP, music 16.8 dB under voice, 0 caption overlaps.
+Reel A draft 0:21 + outro and Reel B draft 0:36 + outro: −14.1 LUFS, −1.4 dBTP, music 17.1–17.6 dB under, 0 overlaps.
+Sent to Jake as draft1 for review (15 Nov).
