@@ -12,4 +12,4 @@ monday.com item 3360413811 (Filmed — Needs Distribution).
 
 Google Drive: YouTube › Edited › I Sent 64,998 Letters to London Property Owners
 (folder 13b8b_Yokh6nUGNQ6rZNHNZBqbZaXcS9M, Reels 1674lQ75WJQRmYkn2boTY39eybwSDmKJ8). Holds the YouTube
-v1 mp4 (Jake uploaded, filed 16 Nov), the .srt and the publish pack Doc. Reel files and covers: Jake drags in.
+v1 mp4 (Jake uploaded, filed 16 Nov), the .srt and the publish pack Doc. Reels folder: both covers and a "Reel copy" Doc (uploaded 16 Nov); the two reel mp4s (30 and 51 MB) are over the connector limit, Jake drags them in.
