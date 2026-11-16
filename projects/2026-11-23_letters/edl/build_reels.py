@@ -4,7 +4,7 @@
 Neither contains the "£30 million" line (Instagram rule). Run from the project folder."""
 import json
 
-BASE = dict(source="../raw/C0404S03.MP4", transcript="../transcript/phrases_large.json", format="9x16",
+BASE = dict(source="../raw/C0404S03.MP4", transcript="../transcript/phrases_large_fixed.json", format="9x16",
             max_gap=0.3, silence_db="auto", anchor=[630, 280], zoom={"wide": 1.0, "tight": 1.15, "every": 2.6},
             audio={"preset": "full"}, cards=[], broll=[], shots=[])
 

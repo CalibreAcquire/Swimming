@@ -1,6 +1,6 @@
 {
  "source": "../raw/C0404S03.MP4",
- "transcript": "../transcript/phrases_large.json",
+ "transcript": "../transcript/phrases_large_fixed.json",
  "format": "9x16",
  "max_gap": 0.3,
  "silence_db": "auto",
