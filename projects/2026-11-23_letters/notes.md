@@ -53,3 +53,8 @@ Sent to Jake as draft1 for review (15 Nov).
 + `.srt` (100 subtitles). −14.0 LUFS, −1.3 dBTP, music 16.8 dB under voice. Opening word "Since" fixed (large-v3
 had stretched it back before the window; `transcript/phrases_large_fixed.json`). No B-roll yet (Monday shoot).
 Jake asked for a YouTube upload: no YouTube connection here, so he uploads and schedules it in Studio.
+
+## Drive (16 Nov)
+Folder: Drive › YouTube › Edited › "I Sent 64,998 Letters to London Property Owners"
+(https://drive.google.com/drive/folders/13b8b_Yokh6nUGNQ6rZNHNZBqbZaXcS9M). Holds the .srt and the publish pack Doc.
+The mp4 (121 MB) is over the connector's 10 MB upload limit: Jake drags it in himself.
