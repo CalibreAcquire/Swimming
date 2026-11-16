@@ -58,3 +58,10 @@ Jake asked for a YouTube upload: no YouTube connection here, so he uploads and s
 Folder: Drive › YouTube › Edited › "I Sent 64,998 Letters to London Property Owners"
 (https://drive.google.com/drive/folders/13b8b_Yokh6nUGNQ6rZNHNZBqbZaXcS9M). Holds the .srt and the publish pack Doc.
 The mp4 (121 MB) is over the connector's 10 MB upload limit: Jake drags it in himself.
+
+## Reel finals v1 (16 Nov)
+`exports/2026-11-23_letters_reelA-letters-to-sales_v1.mp4` (0:21 + outro = 0:26): −14.1 LUFS, −1.5 dBTP, music 18.0 dB under, 0 overlaps.
+`exports/2026-11-23_letters_reelB-four-things_v1.mp4` (0:36 + outro = 0:41): −14.1 LUFS, −1.4 dBTP, music 17.6 dB under, 0 overlaps, no repeats.
+1080×1920 25 fps. Reel EDLs now use `phrases_large_fixed.json` (opening "Since"). Breath before "And then there's speed" removed (plan warning, checked).
+Covers: `thumbnails/_reelA-cover_v1.jpg` ("64,998 letters / 11 SALES"), `_reelB-cover_v1.jpg` ("Four things / to have / READY").
+Copy: `publish/instagram.md`. Slots: `publish/schedule.md` (Reel A with the launch Mon 23 Nov 11:40, Reel B Sun 29 Nov 11:40). monday item 3360413811.
