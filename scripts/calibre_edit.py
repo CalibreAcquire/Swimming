@@ -32,6 +32,9 @@ Edit file keys (times are SOURCE seconds unless noted):
                              slow push-in to "zoom")
   broll_shade                0-1: dark fade over the bottom half of B-roll so captions read on
                              bright photos (0.45 suits white interiors; off by default)
+  look                       "house" (default: VIDEO_STYLE.md) or "warm" (STYLE_WARM.md, Jake's
+                             choice 17 Nov 2026): one-line DM Sans phrase captions, warm grade,
+                             dark grid cards with cream type, count-up figures, boxed hook title
   grade                      ffmpeg filter string for the colour grade
   audio                      {"preset": "basic"|"clean"|"studio"|"deep"|"full", "pitch": semitones}
                              voice processing, see voice.py
@@ -59,10 +62,12 @@ SR = 48000
 FORMATS = {
     "16x9": dict(W=1920, H=1080, cap_base=968, cap_maxw=0.62,
                  italic=96, bold=66, key=150, card_plain=70, card_italic=160, card_key=78, card_label=34,
-                 wm=72, wm_margin=48),
+                 wm=72, wm_margin=48,
+                 wcap=62, wcap_base=930, wcard_label=28, wcard_body=50, wcard_head=84, wcard_num=190),
     "9x16": dict(W=1080, H=1920, cap_base=1460, cap_maxw=0.86,
                  italic=134, bold=92, key=220, card_plain=84, card_italic=176, card_key=96, card_label=40,
-                 wm=64, wm_margin=56),
+                 wm=64, wm_margin=56,
+                 wcap=68, wcap_base=1130, wcard_label=30, wcard_body=54, wcard_head=88, wcard_num=210),
 }
 
 # style -> (ASS family, ttf file, bold, italic)
@@ -75,11 +80,25 @@ FONT_STYLES = {
     "card_key_black": ("Montserrat ExtraBold", "Montserrat-800.ttf", 0, 0),
     "card_key_white": ("Cormorant Garamond Medium", "CormorantGaramond-500-Italic.ttf", 0, 1),
     "card_label":  ("Montserrat SemiBold", "Montserrat-600.ttf", 0, 0),
+    # warm look
+    "warm_cap":    ("DM Sans SemiBold", "DMSans-600.ttf", 0, 0),
+    "warm_title":  ("DM Sans", "DMSans-700.ttf", 1, 0),
+    "warm_label":  ("DM Sans SemiBold", "DMSans-600.ttf", 0, 0),
+    "warm_body":   ("DM Sans Medium", "DMSans-500.ttf", 0, 0),
+    "warm_head":   ("DM Sans Medium", "DMSans-500.ttf", 0, 0),
+    "warm_num":    ("DM Sans SemiBold", "DMSans-600.ttf", 0, 0),
 }
 
 # white balance only, measured on the office wall (Jake chose look 1, 26 Oct 2026; looks/README.md).
 # Footage from another location needs its own measurement: set "grade" in that EDL.
 DEFAULT_GRADE = "colorchannelmixer=rr=0.973:bb=1.028"
+# warm look (STYLE_WARM.md): office white balance, then warm mids and highlights, slightly
+# softer contrast and a gentle vignette. On location, replace the first filter with that
+# location's white balance.
+WARM_GRADE = ("colorchannelmixer=rr=0.973:bb=1.028,colortemperature=temperature=4400:mix=0.88,"
+              "eq=contrast=0.93:brightness=-0.025:saturation=1.05:gamma=0.98,vignette=angle=PI/3.8")
+WARM = dict(bg="&H0A0C0E&", grid="&HD8E6EF&", cream="&HD8E6EF&", label="&H7A8A99&",
+            paper="&HC0D7E5&", ink="&H18212B&")  # ASS BGR: #0E0C0A, #EFE6D8, #998A7A, #E5D7C0, #2B2118
 
 OUTROS = os.path.join(REPO, "brand", "outros")
 OUTRO_LUFS = -14.0  # the outros arrive at about -8.6 LUFS, peaking at 0 dBFS
@@ -543,10 +562,12 @@ def chunk(tokens):
 def display(text, style, card=False):
     if not card:
         text = re.sub(r"[.,;:]+$", "", text)
+    if style.startswith("warm"):
+        return text.upper() if style == "warm_label" else text
     return text.upper() if style in ("key", "card_label") and not (card and style == "key") else text
 
 
-TRACKING = {"card_label": 8}
+TRACKING = {"card_label": 8, "warm_label": 6}
 
 
 class Line:
@@ -659,6 +680,7 @@ ScaledBorderAndShadow: yes
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Cap,Montserrat ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H70000000,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,0,0,0,1
+Style: Box,DM Sans,64,&H00000000,&H00000000,&H00FFFFFF,&H00FFFFFF,1,0,0,0,100,100,0,0,3,20,0,2,0,0,0,1
 Style: Card,Montserrat Medium,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,0,0,0,1
 
 [Events]
@@ -666,7 +688,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
 
 
-def line_event(ln, x, revealed, new, start, end, layer, style, base_tags, colours):
+def line_event(ln, x, revealed, new, start, end, layer, style, base_tags, colours, rise=0, dy=0):
     """One ASS event drawing a line; tokens past `revealed` are invisible (they keep
     their space so the layout doesn't shift), token `new` animates in."""
     parts, k = [], 0
@@ -688,8 +710,11 @@ def line_event(ln, x, revealed, new, start, end, layer, style, base_tags, colour
             words.append(("{" + tags + "}" if tags else "") + word)
             k += 1
         parts.append("{" + head + "}" + " ".join(words))
-    y = ln.baseline + ln.box_below()
-    lead = rf"{{\an2\pos({x:.0f},{y:.0f}){base_tags}}}"
+    y = ln.baseline + ln.box_below() + dy
+    if rise:
+        lead = rf"{{\an2\move({x:.0f},{y + rise:.0f},{x:.0f},{y:.0f},0,320){base_tags}}}"
+    else:
+        lead = rf"{{\an2\pos({x:.0f},{y:.0f}){base_tags}}}"
     return f"Dialogue: {layer},{ass_time(start)},{ass_time(end)},{style},,0,0,0,,{lead}{' '.join(parts)}\n"
 
 
@@ -697,6 +722,8 @@ CAPTION_STYLES = {"bold": "bold", "italic": "italic", "key": "key", "label": "bo
 
 
 def caption_events(edit, card_spans):
+    if is_warm(edit):
+        return warm_caption_events(edit, card_spans)
     F = edit.F
     W = F["W"]
     toks = align(parse_markup(edit.cfg.get("captions", "")), edit.kept_words)
@@ -741,6 +768,8 @@ def caption_events(edit, card_spans):
 
 
 def card_events(edit):
+    if is_warm(edit):
+        return warm_card_events(edit)
     F = edit.F
     W, H = F["W"], F["H"]
     ev, spans = [], []
@@ -789,6 +818,8 @@ def card_events(edit):
 def title_events(edit):
     """Hook title over the opening seconds: {"text": markup, "dur": seconds}.
     Write key words in capitals; titles keep the author's case."""
+    if is_warm(edit):
+        return warm_title_events(edit)
     ti = edit.cfg.get("title_card")
     if not ti:
         return ""
@@ -803,6 +834,173 @@ def title_events(edit):
     dur = ti.get("dur", 3.0)
     tags = r"\bord3\3c&H000000&\3a&H90&\blur4\fad(120,200)"
     return "".join(line_event(ln, W / 2, len(ln.toks), -1, 0, dur, 4, "Cap", tags, colours) for ln in lines)
+
+
+# ---------------------------------------------------------------- warm look (STYLE_WARM.md)
+
+def is_warm(edit):
+    return edit.cfg.get("look", "house") == "warm"
+
+
+def clip_spans(s, e, spans):
+    """Trim [s, e] so it doesn't overlap any (a, b) span."""
+    for a, b in spans:
+        if s < b and e > a:
+            if s >= a:
+                s = b
+            else:
+                e = a
+    return s, e
+
+
+def warm_caption_events(edit, hide):
+    """One line of 2-4 words in DM Sans SemiBold, white, soft shadow, shown a phrase at a
+    time in the lower middle of the frame. Case is kept as written; no colour accents."""
+    F = edit.F
+    W = F["W"]
+    toks = align(parse_markup(edit.cfg.get("captions", "")), edit.kept_words)
+    if not toks:
+        return ""
+    for t in toks:
+        t["text"] = re.sub(r"[.,;:]+$", "", t["text"])
+    sizes = {"warm_cap": F["wcap"]}
+    timed = [ch for ch in chunk(toks) if any(edit.in_kept(t["s"]) or edit.in_kept(t["e"]) for t in ch)]
+    ev = []
+    for n, ch in enumerate(timed):
+        lines = stack(layout_lines(ch, lambda st: "warm_cap", sizes, W * 0.8, card=True),
+                      F["wcap_base"], gap_ratio=0.14)
+        start = edit.out_time(ch[0]["s"])
+        nxt = edit.out_time(timed[n + 1][0]["s"]) if n + 1 < len(timed) else edit.out_time(ch[-1]["e"]) + 0.6
+        end = min(max(edit.out_time(ch[-1]["e"]) + 0.45, start + 0.4), nxt)
+        s, e = clip_spans(start, end, hide)
+        if e - s < 0.08:
+            continue
+        for ln in lines:
+            n_t = len(ln.toks)
+            ev.append(line_event(ln, W / 2, n_t, -1, s, e, 1, "Cap",
+                                 r"\bord0\shad0\1c&H000000&\1a&H70&\blur9\fad(60,0)", {}, dy=4))
+            ev.append(line_event(ln, W / 2, n_t, -1, s, e, 2, "Cap",
+                                 r"\bord0\shad0\1c&HFFFFFF&\fad(60,0)", {}))
+    return "".join(ev)
+
+
+NUM_RE = re.compile(r"^([£$€]?)(\d[\d,]*)(\.\d+)?([%kKmM]?|bn)?$")
+
+
+def count_frames(text, dur=0.75):
+    """Count-up for a figure: [(t, shown text)], ending exactly on `text`."""
+    m = NUM_RE.match(text)
+    if not m:
+        return [(0, text)]
+    pre, whole, dec, suf = m.group(1), m.group(2), m.group(3) or "", m.group(4) or ""
+    target = float(whole.replace(",", "") + dec)
+    places = len(dec) - 1 if dec else 0
+    out, steps = [], max(2, round(dur * FPS))
+    for i in range(steps):
+        p = i / steps
+        v = target * (1 - (1 - p) ** 3)  # ease out
+        num = f"{v:,.{places}f}" if "," in whole or target >= 10000 else f"{v:.{places}f}"
+        out.append((i / FPS, f"{pre}{num}{dec[:0]}{suf}"))
+    out.append((steps / FPS, text))
+    return out
+
+
+def grid_path(W, H, step):
+    p = []
+    for x in range(step // 2, W, step):
+        p.append(f"m {x} 0 l {x + 1} 0 l {x + 1} {H} l {x} {H}")
+    for y in range(step // 2, H, step):
+        p.append(f"m 0 {y} l {W} {y} l {W} {y + 1} l 0 {y + 1}")
+    return " ".join(p)
+
+
+def round_rect(x, y, w, h, r):
+    k = r * 0.45
+    return (f"m {x + r} {y} l {x + w - r} {y} b {x + w - k} {y} {x + w} {y + k} {x + w} {y + r} "
+            f"l {x + w} {y + h - r} b {x + w} {y + h - k} {x + w - k} {y + h} {x + w - r} {y + h} "
+            f"l {x + r} {y + h} b {x + k} {y + h} {x} {y + h - k} {x} {y + h - r} "
+            f"l {x} {y + r} b {x} {y + k} {x + k} {y} {x + r} {y}")
+
+
+def warm_card_events(edit):
+    """Full-screen warm cards: near-black with a faint grid; a small spaced label, cream
+    headline or a large figure that counts up. "panel": true puts the text on a cream paper
+    panel with a soft shadow (dark ink). Lines fade and rise in, one after another.
+      markup: ~LABEL~  *headline*  [FIGURE or big words]  plain = supporting line"""
+    F = edit.F
+    W, H = F["W"], F["H"]
+    ev, spans = [], []
+    for c in edit.cfg.get("cards", []):
+        a, b = edit.out_time(c["from"]), edit.out_time(c["to"])
+        if b - a < 0.3:
+            continue
+        spans.append((a, b, "black"))
+        panel = c.get("panel", False)
+        ev.append(f"Dialogue: 5,{ass_time(a)},{ass_time(b)},Card,,0,0,0,,"
+                  rf"{{\an7\pos(0,0)\p1\bord0\shad0\1c{WARM['bg']}}}m 0 0 l {W} 0 {W} {H} 0 {H}{{\p0}}" "\n")
+        ev.append(f"Dialogue: 5,{ass_time(a)},{ass_time(b)},Card,,0,0,0,,"
+                  rf"{{\an7\pos(0,0)\p1\bord0\shad0\1c{WARM['grid']}\1a&HF3&}}{grid_path(W, H, round(W / 22))}{{\p0}}" "\n")
+        styles = {"bold": "warm_body", "italic": "warm_head", "key": "warm_num", "label": "warm_label"}.get
+        sizes = dict(warm_body=F["wcard_body"], warm_head=F["wcard_head"], warm_num=F["wcard_num"],
+                     warm_label=F["wcard_label"])
+        toks = parse_markup(c["text"])
+        maxw = W * (0.66 if panel else 0.82)
+        lines = stack(layout_lines(toks, styles, sizes, maxw, card=True), 0, gap_ratio=0.6)
+        if len(lines) > 1 and all(r["style"] == "warm_label" for r in lines[0].runs):
+            lines[0].baseline -= F["wcard_label"] * 0.8
+            lines[0].top -= F["wcard_label"] * 0.8
+        top, bottom = lines[0].top, lines[-1].baseline + lines[-1].desc
+        shift = H / 2 - (top + bottom) / 2 - H * 0.03
+        for ln in lines:
+            ln.baseline += shift
+            ln.top += shift
+        ink = WARM["ink"] if panel else WARM["cream"]
+        colours = {"warm_body": rf"\1c{ink}\1a&H20&", "warm_head": rf"\1c{ink}", "warm_num": rf"\1c{ink}",
+                   "warm_label": rf"\1c{WARM['ink'] if panel else WARM['label']}"}
+        if panel:
+            pw = max(ln.width() for ln in lines) + W * 0.12
+            ph = (bottom - top) + W * 0.17
+            px, py = W / 2 - pw / 2, H / 2 - H * 0.03 - ph / 2
+            r = W * 0.025
+            ev.append(f"Dialogue: 5,{ass_time(a)},{ass_time(b)},Card,,0,0,0,,"
+                      rf"{{\an7\move(0,{H * 0.02:.0f},0,{H * 0.012:.0f},0,320)\p1\bord0\shad0\1c&H000000&\1a&H50&\blur24\fad(180,0)}}"
+                      f"{round_rect(px, py, pw, ph, r)}{{\\p0}}\n")
+            ev.append(f"Dialogue: 5,{ass_time(a)},{ass_time(b)},Card,,0,0,0,,"
+                      rf"{{\an7\move(0,{H * 0.012:.0f},0,0,0,320)\p1\bord0\shad0\1c{WARM['paper']}\fad(180,0)}}"
+                      f"{round_rect(px, py, pw, ph, r)}{{\\p0}}\n")
+        step = min(0.35, (b - a) * 0.4 / max(1, len(lines)))
+        for i, ln in enumerate(lines):
+            t0 = a + (0.15 if panel else 0) + i * step
+            tags = r"\bord0\shad0\fad(200,0)"
+            single = len(ln.runs) == 1 and len(ln.toks) == 1 and ln.runs[0]["style"] == "warm_num"
+            if single and c.get("count", True) and NUM_RE.match(ln.toks[0]["text"]):
+                fr = count_frames(ln.toks[0]["text"])
+                orig = ln.toks[0]["text"]
+                for j, (dt, shown) in enumerate(fr):
+                    s0 = t0 + dt
+                    s1 = t0 + fr[j + 1][0] if j + 1 < len(fr) else b
+                    ln.toks[0]["text"] = shown
+                    tg = r"\bord0\shad0" + (r"\fad(120,0)" if j == 0 else "") + (r"\blur1.5" if j < len(fr) - 1 else "")
+                    ev.append(line_event(ln, W / 2, 1, -1, s0, s1, 6, "Card", tg, colours))
+                ln.toks[0]["text"] = orig
+            else:
+                ev.append(line_event(ln, W / 2, len(ln.toks), -1, t0, b, 6, "Card", tags, colours, rise=18))
+    return "".join(ev), spans
+
+
+def warm_title_events(edit):
+    """Hook title: bold black DM Sans on white boxes, one box per line, over the opening."""
+    ti = edit.cfg.get("title_card")
+    if not ti:
+        return ""
+    F = edit.F
+    W = F["W"]
+    sizes = {"warm_title": F["wcap"] * 1.4}
+    toks = parse_markup(ti["text"])
+    lines = stack(layout_lines(toks, lambda st: "warm_title", sizes, W * 0.84, card=True),
+                  F["wcap_base"] - F["wcap"] * 0.6, gap_ratio=0.62)
+    dur = ti.get("dur", 2.5)
+    return "".join(line_event(ln, W / 2, len(ln.toks), -1, 0, dur, 4, "Box", r"\fad(0,150)", {}) for ln in lines)
 
 
 # ---------------------------------------------------------------- render
@@ -831,7 +1029,7 @@ def segment_filter(edit, sg, draft):
     sw, sh = probe_size(edit.src)
     anc = edit.cfg.get("anchor", [sw / 2, sh / 3])
     ax, ay = (anc[0] - x0) / bw, (anc[1] - y0) / bh
-    grade = edit.cfg.get("grade", DEFAULT_GRADE)
+    grade = edit.cfg.get("grade", WARM_GRADE if is_warm(edit) else DEFAULT_GRADE)
     z0 = sg["zoom"]
     move = sg.get("move")
     sharpen = "unsharp=5:5:0.45:5:5:0" if not draft else "null"
