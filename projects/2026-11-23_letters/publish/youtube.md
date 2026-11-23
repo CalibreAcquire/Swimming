@@ -21,5 +21,8 @@ In this video: how 65,000 letters turned into 11 sales, why our East London list
 ## Tags (Show more > Tags)
 off market property london, how to find off market property, property letters to owners, direct to vendor property, mixed use property, commercial property london, property investment uk, buying a building in london, property deal sourcing, east london property, property investor tips, how to buy property before it's advertised, Calibre Acquire
 
-## Thumbnails
-Three for Test & Compare, made from Jake's Mon 16 Nov stills (concept B: outside the pub, "One letter") plus A ("64,998 letters") and C ("11 sold", funnel graphic). To follow.
+## A/B test (title + thumbnail pairs, 23 Nov)
+YouTube's A/B Testing now takes a title with each thumbnail. Made from video frames (no stills arrived).
+1. Thumb B "ONE LETTER sold for £1.25M": I Sent 64,998 Letters to London Property Owners
+2. Thumb A "64,998 letters 11 SALES": How One Letter to a Derelict Pub Became a £1.25 Million Sale
+3. Thumb C "the worst REPLY RATE SOLD MOST": 64,998 Letters, 11 Sales, Nearly £14 Million
