@@ -65,3 +65,8 @@ The mp4 (121 MB) is over the connector's 10 MB upload limit: Jake drags it in hi
 1080×1920 25 fps. Reel EDLs now use `phrases_large_fixed.json` (opening "Since"). Breath before "And then there's speed" removed (plan warning, checked).
 Covers: `thumbnails/_reelA-cover_v1.jpg` ("64,998 letters / 11 SALES"), `_reelB-cover_v1.jpg` ("Four things / to have / READY").
 Copy: `publish/instagram.md`. Slots: `publish/schedule.md` (Reel A with the launch Mon 23 Nov 11:40, Reel B Sun 29 Nov 11:40). monday item 3360413811.
+
+## Thumbnails and Story (23 Nov, launch day)
+No stills arrived from the 16 Nov shoot, so Jake asked for frames from the video. From raw C0404S03 (re-downloaded):
+A 212 s "64,998 / letters / 11 SALES", B 222 s "ONE LETTER / sold for / £1.25M", C 330 s "the worst / REPLY RATE / SOLD MOST".
+Story from thumb A. All four uploaded to the Drive folder. v1 is the published master (no B-roll arrived).
