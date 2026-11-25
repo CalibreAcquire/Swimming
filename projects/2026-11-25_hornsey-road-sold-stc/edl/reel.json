@@ -1,0 +1,187 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../raw/p_2.mp4",
+   "in": 0.6,
+   "dur": 1.9667,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "zoom": 1.0,
+   "grade": "eq=brightness=-0.09:contrast=0.94:saturation=0.95,vignette=angle=PI/3.2"
+  },
+  {
+   "file": "../raw/IMG_1553.MOV",
+   "in": 0.4,
+   "dur": 0.9667,
+   "move": "push",
+   "focus": [
+    0.42,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/p_2-2.mp4",
+   "in": 2.0,
+   "dur": 0.9667,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.28
+   ],
+   "zoom": 1.6
+  },
+  {
+   "file": "../raw/DSC09756.jpg",
+   "in": 0,
+   "dur": 0.9667,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/DJI_20260828_124208_202_video.MP4",
+   "in": 3.0,
+   "dur": 1.0,
+   "move": "none",
+   "focus": [
+    0.44,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/p_3.mp4",
+   "in": 3.0,
+   "dur": 0.9667,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.62
+   ],
+   "zoom": 1.5
+  },
+  {
+   "file": "../raw/DSC09781.jpg",
+   "in": 0,
+   "dur": 0.9667,
+   "move": "push",
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/p_1-1.mp4",
+   "in": 6.0,
+   "dur": 0.9667,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/DSC09774.jpg",
+   "in": 0,
+   "dur": 1.0,
+   "move": "push",
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/DJI_20260828_123833_797_video.MP4",
+   "in": 3.0,
+   "dur": 0.9667,
+   "move": "none",
+   "focus": [
+    0.46,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/p_2-1.mp4",
+   "in": 2.0,
+   "dur": 0.9667,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.25
+   ],
+   "zoom": 1.45
+  },
+  {
+   "file": "../raw/p_1-2.mp4",
+   "in": 2.0,
+   "dur": 0.9667,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/DJI_20260828_124117_877_video.MP4",
+   "in": 2.0,
+   "dur": 1.0,
+   "move": "none",
+   "focus": [
+    0.53,
+    0.5
+   ],
+   "zoom": 1.0
+  },
+  {
+   "file": "../raw/p_2-3.mp4",
+   "in": 1.0,
+   "dur": 1.9333,
+   "move": "pull",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "zoom": 1.0,
+   "grade": "eq=brightness=-0.09:contrast=0.94:saturation=0.95,vignette=angle=PI/3.2"
+  }
+ ],
+ "audio": [],
+ "music": {
+  "track": 744,
+  "start": 15.929,
+  "bed": -27
+ },
+ "music_led": true,
+ "text": [
+  {
+   "from": 0.12,
+   "to": 1.9166999999999998,
+   "y": 0.36,
+   "text": "{\\fnMontserrat SemiBold\\fs46\\fsp10}SOLD SUBJECT TO CONTRACT\\N{\\fnCormorant Garamond Medium\\fs132\\fsp0}479 Hornsey Road"
+  }
+ ],
+ "logos": [
+  {
+   "from": 13.767000000000001,
+   "to": 15.6003,
+   "file": "wordmark-white.png",
+   "width": 640,
+   "y": 0.3
+  }
+ ],
+ "outro": true
+}

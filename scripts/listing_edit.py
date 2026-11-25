@@ -12,7 +12,8 @@ EDL keys (times in OUTPUT seconds unless noted; paths relative to the EDL):
   format        "9x16" (1080x1920) or "16x9" (1920x1080)
   fps           output frame rate (default 30)
   shots         [{"file" (video, or a .png/.jpg still), "in": source s, "dur": s, "move": "push"|"pull"|"none",
-                  "zoom": start zoom (1.0), "focus": [fx, fy] 0-1 point to zoom into}]
+                  "zoom": start zoom (1.0), "focus": [fx, fy] 0-1 point to zoom into,
+                  "grade": this shot's own filter, e.g. darker under a title or logo}]
                   played back to back; their total is the video length (before the outro)
   audio         [{"file", "a": source s, "b": source s, "at": output s, "gain": dB}]  speech
                   and ambience laid on the timeline; speech clips are levelled to each other.
@@ -22,6 +23,9 @@ EDL keys (times in OUTPUT seconds unless noted; paths relative to the EDL):
   music         {"track", "start", "bed", "duck"}  as voice.mix_music
   music_led     true for a reel without speech: the audio clips stay at their set gains (ambience)
                 and the music isn't ducked; the mix is still mastered to -14 LUFS
+  logos         [{"from", "to", "file" (in brand/logos), "width": px, "y": 0-1 centre}] logo images
+                centred on screen (e.g. the wordmark over the closing shot); the corner
+                watermark hides while one is showing
   grade         ffmpeg filter for colour (default none: location footage keeps its own colour)
   outro         true (default): Jake's outro for the format, from brand/outros
 """
@@ -84,7 +88,7 @@ def render_shot(edl, i, s, base, tmp, W, H, fps, draft):
     if move == "pull":
         z0, z1 = z0 + 0.05, z0
     fx, fy = s.get("focus", [0.5, 0.45])
-    grade = edl.get("grade") or "null"
+    grade = s.get("grade") or edl.get("grade") or "null"  # a shot's own grade (e.g. darker under a title)
     # cover the frame at SS x the output size, framed on the focus point (a landscape render too), then
     # zoompan down to the output. Zooming at the output size moved in whole pixels: two frames still, then a
     # jump, which reads as jitter (Jake, 4 Nov). At 3x the steps are a third of a pixel, so the push is smooth.
@@ -174,15 +178,23 @@ def render(edl_path, out, draft=False):
         shutil.copy(ass, os.path.splitext(out)[0] + ".ass")
         wm = 64 if fmt == "9x16" else 72
         m = 56 if fmt == "9x16" else 48
+        logos = edl.get("logos", [])
+        hide = "+".join(f"between(t,{g['from']:.3f},{g['to']:.3f})" for g in logos) or "0"
         fc = (f"[0:v]subtitles={ass}:fontsdir={ce.FONTS}[s];"
               f"[2:v]scale={wm}:-1,format=rgba,colorchannelmixer=aa=0.6[wm];"
-              f"[s][wm]overlay={W - wm - m}:{m}[v0];"
-              f"[v0]trim=duration={total:.3f},setpts=PTS-STARTPTS[v];"
-              f"[1:a]atrim=duration={total:.3f},asetpts=PTS-STARTPTS[a]")
+              f"[s][wm]overlay={W - wm - m}:{m}:enable='eq(0,{hide})'[l0];")
         ins = ["-i", video, "-i", audio, "-i", os.path.join(ce.LOGOS, "monogram-white.png")]
+        for k, g in enumerate(logos):
+            ins += ["-i", os.path.join(ce.LOGOS, g["file"])]
+            y = g.get("y", 0.5) * H
+            fc += (f"[{3 + k}:v]scale={g.get('width', 420)}:-1,format=rgba[lg{k}];"
+                   f"[l{k}][lg{k}]overlay=(W-w)/2:{y:.0f}-h/2:enable='between(t,{g['from']:.3f},{g['to']:.3f})'[l{k + 1}];")
+        fc += (f"[l{len(logos)}]trim=duration={total:.3f},setpts=PTS-STARTPTS[v];"
+               f"[1:a]atrim=duration={total:.3f},asetpts=PTS-STARTPTS[a]")
         if edl.get("outro", True):
+            o = 3 + len(logos)
             ins += ["-i", ce.outro_clip(fmt, fps)]
-            fc += ";[v][a][3:v][3:a]concat=n=2:v=1:a=1[vo][ao]"
+            fc += f";[v][a][{o}:v][{o}:a]concat=n=2:v=1:a=1[vo][ao]"
             maps = ["-map", "[vo]", "-map", "[ao]"]
         else:
             maps = ["-map", "[v]", "-map", "[a]"]
