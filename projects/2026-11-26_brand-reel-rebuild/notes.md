@@ -20,3 +20,10 @@ End: wordmark + calibreacquire.co.uk/register, then Jake's outro.
 
 `edl/build_reel.py` -> `edl/reel.json`, rendered with `scripts/listing_edit.py` (new: "fit" panels).
 v1: 21.9 s + outro, 1080x1920 30 fps, -14.0 LUFS, -1.0 dBTP. Frames checked per shot.
+
+## Drone footage source (26 Nov)
+The drone videos (with and without outlines) were by Mode Photo, Loughton (Skye Don, skye@modephoto.co.uk), sent
+9 Feb 2026 and replaced 12 Feb (white outlines, Jake's request) via Dropbox. That link now shows "File Deleted".
+Jake's brief to them: 339-341 Commercial Road = three terraced buildings; IG10 4HJ extends to the back incl. five garages.
+`611-613 Roman Road.mp4` (12 Feb) is probably theirs. Draft re-request to Skye saved in Jake's Outlook Drafts (not sent).
+When the originals arrive: replace the framed 1080p crops of Loughton and Whitechapel with full-resolution shots.
