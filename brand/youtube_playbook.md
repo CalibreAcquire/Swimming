@@ -20,3 +20,8 @@ Rules I apply as the editor (until Jake decides otherwise on the open points in 
 
 Open decisions for Jake: brand tone vs curiosity titles, the script's intro structure, reach vs qualified audience,
 the Dubai series' link to the channel's through line.
+
+Tools (26 Nov 2026): `scripts/script_check.py` runs the script, title and intro checks above; `scripts/outliers.py`
+finds the outliers. Monthly ideas lists live in `research/ideas/YYYY-MM/` (December 2026: Claude Doc
+https://claude.ai/artifact/7mnHEK32zDhN27SwkCh4jD, 52 ideas cut to 10, recommendation: "Everyone's Buying Flats.
+Here's What We Buy Instead.").
