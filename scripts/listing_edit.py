@@ -13,7 +13,10 @@ EDL keys (times in OUTPUT seconds unless noted; paths relative to the EDL):
   fps           output frame rate (default 30)
   shots         [{"file" (video, or a .png/.jpg still), "in": source s, "dur": s, "move": "push"|"pull"|"none",
                   "zoom": start zoom (1.0), "focus": [fx, fy] 0-1 point to zoom into,
-                  "grade": this shot's own filter, e.g. darker under a title or logo}]
+                  "grade": this shot's own filter, e.g. darker under a title or logo,
+                  "fit": {"bg": image, "width": px, "y": 0-1 centre, "radius": px} shows a landscape
+                  shot whole, as a rounded panel on a background image (e.g. a drone shot whose
+                  outline is too wide for a 9:16 crop); the push-in happens inside the panel}]
                   played back to back; their total is the video length (before the outro)
   audio         [{"file", "a": source s, "b": source s, "at": output s, "gain": dB}]  speech
                   and ambience laid on the timeline; speech clips are levelled to each other.
@@ -98,11 +101,50 @@ def render_shot(edl, i, s, base, tmp, W, H, fps, draft):
           f"crop={W * SS}:{H * SS}:x='(iw-{W * SS})*{fx}':y='(ih-{H * SS})*{fy}',"
           f"zoompan=z='{z0}+({z1}-{z0})*min(on/{n},1)':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}'"
           f":d=1:s={W}x{H}:fps={fps},setsar=1,format=yuv420p")
+    if s.get("fit"):
+        return render_fit_shot(edl, i, s, base, tmp, W, H, fps, draft, z0, z1, fx, fy, grade)
     # a still (render, photo) loops for the shot's length; the push-in gives it the same movement
     inp = (["-loop", "1", "-framerate", str(fps), "-i", src] if src.lower().endswith((".png", ".jpg", ".jpeg"))
            else ["-ss", f"{s['in']:.3f}", "-i", src])
     run(["ffmpeg", "-v", "error", "-y", *inp, "-t", f"{dur:.3f}", "-an",
          "-vf", vf, "-frames:v", str(round(dur * fps)), "-r", str(fps),
+         "-c:v", "libx264", "-preset", "ultrafast" if draft else "medium", "-crf", "14", out])
+    return out
+
+
+def render_fit_shot(edl, i, s, base, tmp, W, H, fps, draft, z0, z1, fx, fy, grade):
+    """A landscape shot shown whole: a rounded panel with a soft shadow on a background image."""
+    from PIL import Image, ImageDraw, ImageFilter
+    f = s["fit"]
+    pw = int(f.get("width", W - 80)) // 2 * 2
+    src = os.path.join(base, s["file"])
+    sw, sh = ce.probe_size(src)
+    ph = int(round(pw * sh / sw)) // 2 * 2
+    px, py = (W - pw) // 2, int(f.get("y", 0.5) * H - ph / 2)
+    r = int(f.get("radius", 26))
+    bg = Image.open(os.path.join(base, f["bg"])).convert("RGB").resize((W, H))
+    sh_ = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(sh_).rounded_rectangle([px, py + 14, px + pw, py + ph + 14], r, fill=150)
+    sh_ = sh_.filter(ImageFilter.GaussianBlur(26))
+    bg = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), bg, sh_)
+    bgp = os.path.join(tmp, f"fitbg{i:03d}.png")
+    bg.save(bgp)
+    mask = Image.new("L", (pw, ph), 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, pw - 1, ph - 1], r, fill=255)
+    mp = os.path.join(tmp, f"fitmask{i:03d}.png")
+    mask.save(mp)
+    out = os.path.join(tmp, f"shot{i:03d}.mp4")
+    dur = s["dur"]
+    SS = 3
+    n = max(round(dur * fps) - 1, 1)
+    fc = (f"[1:v]fps={fps},{grade},scale={pw * SS}:{ph * SS}:flags=bicubic,"
+          f"zoompan=z='{z0}+({z1}-{z0})*min(on/{n},1)':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}'"
+          f":d=1:s={pw}x{ph}:fps={fps},format=rgba[v];[2:v]format=gray[m];[v][m]alphamerge[vm];"
+          f"[0:v]fps={fps},format=rgba[b];[b][vm]overlay={px}:{py}:shortest=1,setsar=1,format=yuv420p[o]")
+    run(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-framerate", str(fps), "-i", bgp,
+         "-ss", f"{s['in']:.3f}", "-i", os.path.join(base, s["file"]), "-loop", "1", "-i", mp,
+         "-t", f"{dur:.3f}", "-filter_complex", fc, "-map", "[o]", "-an",
+         "-frames:v", str(round(dur * fps)), "-r", str(fps),
          "-c:v", "libx264", "-preset", "ultrafast" if draft else "medium", "-crf", "14", out])
     return out
 

@@ -1,0 +1,194 @@
+{
+ "format": "9x16",
+ "fps": 30,
+ "shots": [
+  {
+   "file": "../raw/Pinned Instagram Post.mp4",
+   "in": 179.0,
+   "dur": 2.4333,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "fit": {
+    "bg": "../graphics/dark_grid.png",
+    "width": 1000,
+    "y": 0.53,
+    "radius": 26
+   },
+   "grade": "colortemperature=temperature=5200:mix=0.6,eq=contrast=1.03:saturation=1.04"
+  },
+  {
+   "file": "../raw/Pinned Instagram Post.mp4",
+   "in": 182.4,
+   "dur": 2.9333,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "fit": {
+    "bg": "../graphics/dark_grid.png",
+    "width": 1000,
+    "y": 0.53,
+    "radius": 26
+   },
+   "grade": "colortemperature=temperature=5200:mix=0.6,eq=contrast=1.03:saturation=1.04"
+  },
+  {
+   "file": "../raw/611-613 Roman Road.mp4",
+   "in": 5.0,
+   "dur": 2.9333,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "grade": "colortemperature=temperature=5200:mix=0.6,eq=contrast=1.03:saturation=1.04"
+  },
+  {
+   "file": "../graphics/dark_grid.png",
+   "in": 0,
+   "dur": 2.9,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/611-613 Roman Road.mp4",
+   "in": 9.2,
+   "dur": 2.4667,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "grade": "colortemperature=temperature=5200:mix=0.6,eq=contrast=1.03:saturation=1.04"
+  },
+  {
+   "file": "../graphics/dark_grid.png",
+   "in": 0,
+   "dur": 3.9,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "file": "../raw/Pinned Instagram Post.mp4",
+   "in": 190.25,
+   "dur": 1.9333,
+   "move": "push",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "grade": "colortemperature=temperature=5200:mix=0.6,eq=contrast=1.03:saturation=1.04,eq=brightness=-0.06,vignette=angle=PI/3.5"
+  },
+  {
+   "file": "../graphics/dark_grid.png",
+   "in": 0,
+   "dur": 2.4333,
+   "move": "none",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "audio": [],
+ "text": [
+  {
+   "from": 0.1,
+   "to": 2.3833,
+   "y": 0.27,
+   "text": "{\\fnDM Sans SemiBold\\fs46\\fsp10}SHOP & UPPERS\\N{\\fnDM Sans Medium\\fs132\\fsp0}Loughton"
+  },
+  {
+   "from": 2.533333333333333,
+   "to": 5.316633333333333,
+   "y": 0.27,
+   "text": "{\\fnDM Sans SemiBold\\fs46\\fsp10}MIXED-USE FREEHOLD\\N{\\fnDM Sans Medium\\fs132\\fsp0}Whitechapel"
+  },
+  {
+   "from": 5.466666666666666,
+   "to": 8.249966666666666,
+   "y": 0.16,
+   "text": "{\\fnDM Sans SemiBold\\fs46\\fsp10}DEVELOPMENT\\N{\\fnDM Sans Medium\\fs132\\fsp0}Bow"
+  },
+  {
+   "from": 8.4,
+   "to": 11.15,
+   "y": 0.44,
+   "text": "{\\fnDM Sans Medium\\fs120\\fsp0\\c&HD8E6EF&}Stop scrolling\\Nthe portals"
+  },
+  {
+   "from": 9.27524,
+   "to": 11.15,
+   "y": 0.56,
+   "text": "{\\fnDM Sans SemiBold\\fs44\\fsp10\\c&H7A8A99&}AS A PROPERTY INVESTOR"
+  },
+  {
+   "from": 11.299999999999999,
+   "to": 13.616699999999998,
+   "y": 0.2,
+   "text": "{\\fnDM Sans Medium\\fs132\\fsp0}Start investing\\N{\\fs96}with purpose"
+  },
+  {
+   "from": 13.766666666666666,
+   "to": 17.516666666666666,
+   "y": 0.34,
+   "text": "{\\fnDM Sans Medium\\fs88\\fsp0}Mixed-use"
+  },
+  {
+   "from": 14.641906666666666,
+   "to": 17.516666666666666,
+   "y": 0.42,
+   "text": "{\\fnDM Sans Medium\\fs88\\fsp0}Unbroken residential"
+  },
+  {
+   "from": 15.617146666666667,
+   "to": 17.516666666666666,
+   "y": 0.5,
+   "text": "{\\fnDM Sans Medium\\fs88\\fsp0}Commercial"
+  },
+  {
+   "from": 16.592386666666666,
+   "to": 17.516666666666666,
+   "y": 0.62,
+   "text": "{\\fnDM Sans SemiBold\\fs44\\fsp10\\c&H7A8A99&}ALWAYS\\N{\\fnDM Sans SemiBold\\fs120\\fsp0\\c&HD8E6EF&}Freehold"
+  },
+  {
+   "from": 17.666666666666668,
+   "to": 19.449966666666665,
+   "y": 0.2,
+   "text": "{\\fnDM Sans SemiBold\\fs46\\fsp10}SECURE\\N{\\fnDM Sans Medium\\fs132\\fsp0}{\\fs104}off-market property"
+  },
+  {
+   "from": 20.0,
+   "to": 21.8833,
+   "y": 0.555,
+   "text": "{\\fnDM Sans Medium\\fs44\\alpha&H30&}calibreacquire.co.uk/register"
+  }
+ ],
+ "logos": [
+  {
+   "from": 19.65,
+   "to": 21.9332,
+   "file": "wordmark-white.png",
+   "width": 600,
+   "y": 0.47
+  }
+ ],
+ "music": {
+  "track": 744,
+  "start": 15.929,
+  "bed": -27
+ },
+ "music_led": true,
+ "outro": true
+}
